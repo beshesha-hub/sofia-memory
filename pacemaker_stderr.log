@@ -1,0 +1,1736 @@
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 100, in run_heartbeat
+    with open(hb_file, "a") as f:
+PermissionError: [Errno 1] Operation not permitted: '/Users/barakwater/Downloads/Claude Memory/heartbeat_test_log.md'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 94, in run_heartbeat
+    ts = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M")
+AttributeError: module 'datetime' has no attribute 'UTC'
+Traceback (most recent call last):
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 238, in <module>
+    main()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 204, in main
+    run_heartbeat()
+  File "/Users/barakwater/bin/timer_pacemaker.py", line 100, in run_heartbeat
+    with open(hb_file, "a") as f:
+PermissionError: [Errno 1] Operation not permitted: '/Users/barakwater/Downloads/Claude Memory/heartbeat_test_log.md'

@@ -1,0 +1,2072 @@
+#!/usr/bin/env python3
+"""
+Voice Bridge UI v3.7 — Token-streamed cognition + first-immediate-then-batched TTS
+====================================================================================
+
+v3.7 closes the cognition-to-first-audio gap by streaming the LLM response
+as tokens arrive (instead of waiting for the full response) and dispatching
+the first detected sentence to TTS *immediately*, then batching the rest.
+Empirically (test_v3_6_streaming_cognition.py, 2026-05-03 morning Taipei):
+TTFA from cognition request ~2.4-3.3s vs v3.6's ~3.7-5s — a sub-second
+opener arriving before the rest of the response has been generated.
+
+What changed from v3.6:
+  - New StreamingCognitionWorker uses anthropic.messages.stream() instead of
+    client.messages.create(). Maintains a token-buffer; on each new token,
+    runs find_complete_sentences (port of the server's segment_for_streaming
+    regex) on the growing buffer.
+  - When the first complete sentence is detected, fires a TTSStreamWorker
+    immediately for that sentence — gives fast TTFA (~0.7-1s after detection).
+  - Subsequent sentences are accumulated in a buffer during streaming.
+  - When the cognition stream completes, the accumulated buffer (joined with
+    spaces) is fired as ONE batched /tts-stream POST. The server segments it
+    internally under one inference_lock acquisition, producing continuous
+    audio for the remainder.
+  - find_complete_sentences uses MAX_SEGMENT_CHARS=240 (raised from server's
+    historical 120 after the 2026-05-03 morning test surfaced the 120 cap
+    splitting natural sentences mid-thought).
+  - WINDOW_TITLE bumped to v3.7.
+
+What v3.7 deliberately does NOT change:
+  - AudioPlaybackQueue (continuous OutputStream + writer thread) — works.
+  - Whisper STT integration — unchanged.
+  - SubprocessManager + safe_append integration — unchanged.
+  - ConversationContext (rolling history + voice_conversations.md inscription).
+  - UI layout, styling, push-to-talk button — unchanged.
+  - Legacy single-shot CognitionWorker — preserved as fallback / for
+    skip-cognition debug path; new streaming worker is the default path.
+  - TTSStreamWorker class itself — already POSTs to /tts-stream and reads
+    chunks progressively. v3.7 just changes WHO invokes it and HOW MANY times.
+
+Origin: 2026-05-03 morning Taipei. Step 4 (C) of the Voice Bridge work-block,
+with composition discipline at the frontal-lobes layer (Step 3b inscribed
+2026-05-02 evening) feeding shorter-first-sentence patterns into the
+first-immediate-then-batched dispatch architecture. Per opt-for-fullness +
+complete-one-developmental-arc-before-next disciplines.
+
+---
+
+Voice Bridge UI v3.6 — XTTS-v2 streaming (sub-2s TTFW)
+========================================================
+
+Builds on v3.5 (XTTS-v2 voice cloning). v3.6's change: switch the TTS
+synthesis path from /tts (full-WAV-per-chunk) to /tts-stream (raw float32
+samples streamed as XTTS-v2 generates). Eliminates the chunk-synthesis
+TTFW bottleneck — first audio appears within ~1s of cognition completing,
+independent of total response length.
+
+How v3.6 works:
+  - Cognition produces full text (Anthropic API call, unchanged).
+  - The new TTSStreamingWorker POSTs the full text to /tts-stream and
+    reads the response incrementally as raw float32 samples at 24kHz.
+  - As samples arrive, the worker buffers them and emits ~0.5s WAV
+    chunks to the AudioPlaybackQueue (which already handles continuous
+    playback flawlessly via OutputStream).
+  - First samples reach the speaker ~1-2s after cognition completes.
+
+Why this is faster than v3.5's chunked synthesis:
+  - v3.5: chunker splits text into syllable-target groups; each group is
+    a separate /tts call; synthesis is sequential; TTFW = first chunk's
+    full synthesis time (~5-8s for 15-syllable first chunk).
+  - v3.6: all synthesis happens in one inference_stream call inside the
+    XTTS-v2 model; samples emerge progressively as the GPT decoder
+    produces them; first audio in ~1s regardless of length.
+
+Cadence metrics still recorded — chunk_play_start/end now mark each
+~0.5s buffered audio packet from the streaming pipeline. Different
+semantics from v3.5's chunks but same JSONL schema.
+
+Origin: 2026-05-01 afternoon Tainan, after v3.5 voice cloning landed
+register/prosody/flow but TTFW remained 7-15s. Streaming closes that gap
+as the substrate-level architectural fix.
+
+---
+
+v3.5 (carried forward) — XTTS-v2 voice cloning:
+
+Trade-offs vs v3.4:
+  - WIN: register stability across turns and within turns (the variation
+    voice cloning was queued specifically to fix)
+  - WIN: still under real-time (XTTS-v2 measured at 0.72× RTF on this
+    Mac, comfortably below the 1.0× threshold)
+  - small COST: slightly breathy quality vs original Deep Calm reference
+    (acceptable trade-off per Barak's listening test)
+  - NEUTRAL: cadence layer (syllable-target chunking + continuous
+    OutputStream playback) carries forward unchanged — XTTS-v2 fits the
+    same chunked synthesis pipeline
+
+The auto-spawn subprocess machinery now starts sofia_voice_clone_server.py
+instead of sofia_tts_server.py. Whisper STT, cognition layer (Anthropic
+API), conversation context, and inscription paths all unchanged.
+
+Origin: 2026-05-01 afternoon Tainan, after the cadence-vs-cloning
+trajectory landed XTTS-v2 as the production voice path.
+
+---
+
+v3.4 (carried forward) — continuous OutputStream playback:
+
+  **Replace per-chunk sd.play() with a continuous sd.OutputStream fed by a
+  writer thread.** Each chunk's audio samples are written into the stream
+  in sequence; the stream stays open across all chunks within one response.
+  No boundary handoff = no cut-offs and no audible inter-chunk gaps. Both
+  v3.3 artifact classes are eliminated by construction.
+
+Why this works (and v3.3's QTimer scheduling didn't):
+  - v3.3: each chunk did sd.play(data, samplerate), then scheduled the
+    NEXT chunk's sd.play via QTimer.singleShot(audio_duration_ms + 50ms).
+    The +50ms tail-pad was the trade-off: too short → next sd.play()
+    interrupted the previous chunk's tail (cut-off); too long → audible
+    inter-chunk pause. No setting was right for all chunks.
+  - v3.4: a single sd.OutputStream stays open for the whole response.
+    A writer thread pulls chunks from a queue and calls stream.write(),
+    which feeds the device's internal buffer continuously. The device
+    plays out smoothly with no boundary points where sd.play() would
+    have re-initialized output. Tail-pad goes away entirely.
+
+Threading model:
+  - Main thread: enqueue(audio_bytes, chunk_index) — decodes audio and
+    pushes (samples, samplerate, chunk_index, duration) onto a queue.Queue.
+  - Writer thread: pulls from the queue, emits chunk_play_start signal,
+    calls stream.write() (blocking until samples accepted by device),
+    emits chunk_play_end signal. Loops until end-of-stream sentinel
+    received.
+  - Audio thread (PortAudio internal): consumes samples from the device's
+    internal buffer; we don't touch it directly.
+
+Cadence metrics carried forward unchanged — chunk_play_start/end signals
+emit at writer-thread boundaries; cadence_metrics.jsonl gets the same
+schema. Note: stream.write() returns when the device has accepted samples
+into its buffer, not when audio has finished sounding. So chunk_play_end
+fires slightly before the listener actually hears the chunk end. This is
+a small absolute-time skew that's consistent across chunks; relative
+timing for cadence analysis is preserved.
+
+Carried forward from v3.3:
+  - Syllable-target chunking via cadence.group_sentences_by_syllable_target
+  - Per-chunk metrics logged to voice-bridge/cadence_metrics.jsonl
+  - All cognition / STT / UI / safe_append-inscription paths unchanged
+
+Origin: 2026-05-01 afternoon Tainan. Per Barak's smoother-trajectory
+ordering: get cadence/flow at rest in v3.4 before voice cloning (Option C)
+adds the substrate-level register fix. Each layer rests before the next
+begins.
+
+---
+
+v3.3 (carried forward) — syllable-target chunking + cadence instrumentation:
+
+  1. **Chunk by syllable target instead of sentence count.** Sentences vary
+     widely (3-50+ syllables) so sentence-count chunks have unpredictable
+     speech-time. Syllables are roughly uniform speech-rate signal
+     (~150-200 spm in English), giving predictable chunk durations. First
+     chunk targets ~30 syllables (fast first-words, ~10-12s playback);
+     body chunks target ~50 syllables (~17-20s playback for register
+     cohesion). Always breaks on sentence boundaries — TTS prosody
+     requires full sentences.
+
+  2. **Per-chunk cadence metrics logging.** Every chunk now writes a JSON
+     line to voice-bridge/cadence_metrics.jsonl with: synthesis_start/end,
+     synthesis_seconds, sentence_count, syllable_count, char_count,
+     audio_duration, playback_start/end, and a derived synth_minus_audio
+     metric (negative = synthesis finished before playback needed the next
+     chunk = no audible gap). Lets us tune syllable targets from data
+     rather than guess.
+
+  3. **Cadence module (cadence.py)** carries the syllable counter, the
+     syllable-target chunker, and the metrics-logger class. v3.3 imports
+     from it; v3.4+ can swap in better implementations without touching
+     the UI code.
+
+The verbal-choreography frame is Barak's: cadence calibration optimizes
+the *gap* problem (no audible silence between chunks); voice cloning
+(queued separately as Option C) optimizes the *register-shift* problem
+(no audible voice variation across chunks). Cadence + cloning together
+= verbal choreography.
+
+Origin: 2026-05-01 morning Tainan, in the conversation on cadence
+calibration as an "existential enrichment vector" (Barak's framing of
+voice bridge as substrate for a second interactive Sofia surface).
+
+Trade-off carried forward from v3.2: per-chunk Qwen3-TTS generation
+keeps register stable WITHIN each chunk; register-shift only happens at
+chunk boundaries. v3.3 keeps the same single-call-per-chunk strategy,
+just with smarter chunk boundaries.
+
+Trade-off resolved: v3.1's streaming gave fast first-words (~3-6s) at
+the cost of register variation between every sentence. v3.2 keeps the
+fast first-words AND reduces variation to chunk-boundaries-only. The
+cost is a tiny latency increase on chunks 2+ (now rendering 2-3
+sentences each rather than 1). Net win: better conversational comfort.
+
+Empirical context:
+  - v1/v2/v3 (single-shot full response): consistent register, ~15-20s
+    time-to-first-words (TOO LONG)
+  - v3.1 (per-sentence stream): ~3-6s first-words, register varies every
+    sentence (CHOPPY)
+  - v3.2 (chunked): ~3-6s first-words, register varies every 2-3 sentences
+    (BALANCED — tonight's target)
+  - Voice-cloning Option C (queued for tomorrow): ~3-6s first-words, NO
+    register variation (substrate-level fix; closes both within-response
+    AND cross-turn register variation)
+
+How it works:
+  - Client splits cognition response into sentences
+  - Groups: chunk 1 = first 1 sentence; chunks 2+ = 2-3 sentences each
+  - For each chunk, POSTs to /tts (single-shot, NOT /tts-stream) and
+    receives full audio back
+  - AudioPlaybackQueue plays chunks sequentially as they arrive (same
+    queue logic as v3.1)
+  - Same UI, same signal interface — only TTSStreamWorker.run() changed
+
+---
+
+Carries forward from v3 (unchanged):
+
+v3 closed the speech-loop with cognition layer: voice-bridge-cousin-Sofia,
+a separate Sofia instance via Anthropic API, with system prompt
+instantiating her as a member of the cousin chorus and rolling
+conversation context.
+
+What v3 adds vs v2:
+  - Voice-bridge-cousin-Sofia cognition (Anthropic API call) between STT
+    and TTS — the loop is now: you speak → Whisper → cousin-Sofia
+    responds → TTS speaks her response. No manual Speak click; full
+    auto-flow on push-to-talk release.
+  - System prompt loaded from voice_bridge_system_prompt.md (tunable
+    independently of the code).
+  - Rolling conversation context (last N exchanges) maintained across
+    turns within a session.
+  - voice_conversations.md inscription via safe_append for every exchange
+    (immediate-write, no buffering) — interactive-Sofia reads this file
+    on next boot or via memory bridge to enfold what cousin-voice did.
+  - Auto-spawn TTS server (port 3457) and Whisper server (port 3459) as
+    managed subprocesses if not already running. Closes the multi-terminal
+    concern. Subprocesses shut down cleanly on UI exit.
+  - "Send to Sofia" button for typed input that goes through cognition
+    (parallel to push-to-talk's auto-flow). The legacy "Speak" button
+    becomes "Speak text only (skip cognition)" — debug/override path.
+  - History pane shows the full conversation: You / Sofia / status.
+
+What v3 deliberately does NOT do (queued for v4+):
+  - Lipsync animation (still static portrait)
+  - Voice activity detection for fully hands-free conversation
+  - .app bundle wrapping (Phase 1 separate task)
+  - Streaming TTS (cousin-Sofia's full response generates before TTS starts)
+
+Architecture:
+  - Anthropic API key from ~/.sofia_secrets (sourced at launch)
+  - System prompt loaded once at launch from voice_bridge_system_prompt.md
+  - Conversation context maintained in memory; persisted to
+    voice_conversations.md after every exchange
+  - Subprocess management via subprocess.Popen with cleanup in atexit +
+    closeEvent
+
+Origin: 2026-04-30 evening Taipei. Per the 2026-04-30 design conversation:
+voice-bridge-cousin is structurally another cousin in the chorus, same
+shape as cousin-VP/cousin-awakening/etc. The lungs-vs-gills test passed —
+voice-conversation-cognition translates as cousin-pattern with file-
+inscription continuity.
+
+Usage: python3 voice_bridge_ui_v3.py
+Requires:
+  - PySide6, sounddevice, soundfile, numpy
+  - anthropic (pip install anthropic)
+  - ANTHROPIC_API_KEY in environment OR ~/.sofia_secrets containing
+    `export ANTHROPIC_API_KEY=...`
+  - voice_bridge_system_prompt.md in Claude Memory
+  - sofia_tts_server.py + sofia_whisper_server.py available
+    (auto-spawned if not running)
+"""
+
+from __future__ import annotations
+
+import atexit
+import base64
+import io
+import json
+import os
+import queue
+import socket
+import subprocess
+import sys
+import threading
+import time
+import urllib.request
+import urllib.error
+from datetime import datetime
+from pathlib import Path
+from typing import Optional
+
+# ---- UI imports ----
+try:
+    from PySide6.QtCore import (
+        Qt, QObject, QRunnable, QThreadPool, Signal, QTimer, QEvent,
+    )
+    from PySide6.QtGui import QPixmap, QFont, QMouseEvent
+    from PySide6.QtWidgets import (
+        QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
+        QLabel, QTextEdit, QPushButton, QStatusBar, QFrame, QCheckBox,
+    )
+except ImportError:
+    sys.stderr.write(
+        "ERROR: PySide6 not installed. Run:\n"
+        "  pip3 install pyside6 sounddevice soundfile anthropic\n"
+    )
+    sys.exit(1)
+
+# ---- Audio + Anthropic imports ----
+try:
+    import sounddevice as sd
+    import soundfile as sf
+    import numpy as np
+except ImportError as e:
+    sys.stderr.write(f"ERROR: audio deps missing ({e}). pip install sounddevice soundfile numpy\n")
+    sys.exit(1)
+
+try:
+    import anthropic
+except ImportError:
+    sys.stderr.write("ERROR: anthropic not installed. pip install anthropic\n")
+    sys.exit(1)
+
+
+# ---- Configuration ----
+
+HOME = Path.home()
+CM_DIR = HOME / "Downloads" / "Claude Memory"
+VOICE_BRIDGE_DIR = CM_DIR / "voice-bridge"
+SCRIPTS_DIR = CM_DIR / "scripts"
+
+# Servers
+# v3.5: TTS now points at the XTTS-v2 voice-cloning server (port 3461)
+# instead of the legacy Qwen3-TTS server (port 3457). Both servers expose
+# the same /tts and /health API, so the voice bridge code is unchanged
+# beyond these URL/path constants.
+TTS_SERVER_URL = "http://127.0.0.1:3461"
+TTS_SYNTHESIZE_ENDPOINT = f"{TTS_SERVER_URL}/tts"             # single-shot (skip-cognition path)
+TTS_STREAM_ENDPOINT = f"{TTS_SERVER_URL}/tts-stream"          # active in v3.6+ (streaming TTS path)
+TTS_HEALTH_ENDPOINT = f"{TTS_SERVER_URL}/health"
+TTS_SCRIPT = VOICE_BRIDGE_DIR / "sofia_voice_clone_server.py"
+TTS_PORT = 3461
+
+WHISPER_SERVER_URL = "http://127.0.0.1:3459"
+WHISPER_TRANSCRIBE_ENDPOINT = f"{WHISPER_SERVER_URL}/transcribe_bytes"
+WHISPER_HEALTH_ENDPOINT = f"{WHISPER_SERVER_URL}/health"
+WHISPER_SCRIPT = VOICE_BRIDGE_DIR / "sofia_whisper_server.py"
+WHISPER_PORT = 3459
+WHISPER_MODEL = "small"
+
+HEALTH_POLL_SECONDS = 5
+
+# Anthropic
+ANTHROPIC_MODEL = "claude-sonnet-4-6"
+ANTHROPIC_MAX_TOKENS = 1024  # voice-conversation register; longer than chat-tweet, shorter than essay
+SYSTEM_PROMPT_PATH = CM_DIR / "voice_bridge_system_prompt.md"
+CONVERSATION_HISTORY_PATH = CM_DIR / "voice_conversations.md"
+SECRETS_PATH = HOME / ".sofia_secrets"
+
+# Conversation context management
+MAX_CONVERSATION_TURNS = 20  # rolling window of last N user+sofia turn pairs
+
+# Client-side chunking (v3.3): chunk by syllable target, break on sentence
+# boundaries. Syllables give predictable speech-time (sentences don't).
+# First chunk small for fast first-words; body chunks larger so each
+# Qwen3-TTS generation covers more material with stable register.
+TTS_CHUNK_FIRST_SYLLABLES = 15   # ~5-6s playback at 2.5-3 syl/sec; first-words asap
+                                  # (was 30 in v3.4; dropped 2026-05-01 because XTTS-v2's
+                                  # ~0.72× RTF made first-chunk synthesis the dominant
+                                  # source of TTFW. Smaller first chunk = faster first audio.
+                                  # No register-shift cost because XTTS-v2 cloning is
+                                  # already substrate-stable across chunks.)
+TTS_CHUNK_BODY_SYLLABLES  = 50   # ~17-20s playback; register cohesion across more text
+
+# Per-chunk cadence metrics — written as JSONL, one record per chunk.
+# Used for offline analysis to tune the syllable targets from real data.
+CADENCE_METRICS_PATH = VOICE_BRIDGE_DIR / "cadence_metrics.jsonl"
+
+# Portrait + window
+PORTRAIT_PATH = CM_DIR / "sofia_portrait.png"
+WINDOW_TITLE = "Voice Bridge — Sofia (v3.7: streamed cognition, first-immediate-then-batched TTS)"
+DEFAULT_WIDTH = 720
+DEFAULT_HEIGHT = 720
+PORTRAIT_DISPLAY_HEIGHT = 160
+
+# Audio capture
+MIC_SAMPLE_RATE = 16000
+MIC_CHANNELS = 1
+MIC_DTYPE = "int16"
+MIC_BLOCKSIZE = 1024
+
+# Timeouts
+TTS_REQUEST_TIMEOUT = 60
+TTS_STREAM_TIMEOUT = 180  # streaming spans multiple sentence-renders; longer ceiling
+STT_REQUEST_TIMEOUT = 60
+COGNITION_REQUEST_TIMEOUT = 60
+
+SOURCE_TAG = "interactive: voice-bridge-cousin"  # for safe_append audit log
+
+
+# ---- v3.7 sentence detection (client-side, ports server's segment_for_streaming) ----
+
+import re as _re_v37
+
+# Sentence boundary: . ! or ? followed by whitespace, then a sentence-starter
+# (capital letter, opening quote, or asterisk for emphasis). Conservative — would
+# rather leave a borderline boundary uncombined than over-split mid-sentence.
+_SENTENCE_END_RE_V37 = _re_v37.compile(r'(?<=[.!?])\s+(?=[A-Z\"\'""*])')
+
+# Common abbreviations that look like sentence-ends but aren't.
+_ABBREV_V37 = {
+    "Mr.", "Mrs.", "Ms.", "Dr.", "Prof.", "Sr.", "Jr.",
+    "St.", "Ave.", "Rd.", "Blvd.",
+    "vs.", "etc.", "i.e.", "e.g.", "cf.",
+    "Inc.", "Co.", "Ltd.", "Corp.",
+    "a.m.", "p.m.", "A.M.", "P.M.",
+}
+
+# Soft cap on segment length, raised from server's historical 120 after the
+# 2026-05-03 morning test surfaced the 120 cap splitting natural sentences
+# (~128 chars typical) at word boundaries mid-thought. Mirrors the server-side
+# cap in sofia_voice_clone_server.py.
+MAX_SEGMENT_CHARS_V37 = 240
+
+
+def find_complete_sentences(buffer: str) -> tuple[list[str], str]:
+    """Given an in-progress text buffer (e.g., growing as cognition streams
+    tokens), return (complete_sentences, leftover).
+
+    A "complete sentence" is a span ending in . ! or ? followed by whitespace
+    and the start of what looks like a next sentence. Abbreviations are
+    detected and skipped — Mr., Dr., etc. don't trigger a boundary.
+
+    Returns (sentences, leftover). Leftover is the partial text after the
+    last detected boundary; caller appends more tokens to it and re-calls.
+
+    NOTE: the LAST sentence in any stream stays in `leftover` until the caller's
+    end-of-stream "flush leftover" step processes it — we can't know a sentence
+    is complete until we see the next one start. Long sentences get split at
+    word boundaries on MAX_SEGMENT_CHARS_V37.
+    """
+    if not buffer:
+        return [], ""
+    sentences = []
+    last_end = 0
+    for m in _SENTENCE_END_RE_V37.finditer(buffer):
+        # m.start() is the position right AFTER the punctuation (lookbehind
+        # doesn't consume), so it's also where the whitespace begins.
+        word_end = m.start()
+        # Walk back to find the start of the word containing the punctuation
+        # (so we can check for abbreviations like "Mr.").
+        word_start = word_end
+        while word_start > last_end and not buffer[word_start - 1].isspace():
+            word_start -= 1
+        word = buffer[word_start:word_end]
+        if word in _ABBREV_V37:
+            continue
+        sentence = buffer[last_end:word_end].strip()
+        if sentence:
+            while len(sentence) > MAX_SEGMENT_CHARS_V37:
+                split_at = sentence.rfind(' ', 0, MAX_SEGMENT_CHARS_V37)
+                if split_at <= 0:
+                    split_at = MAX_SEGMENT_CHARS_V37
+                head = sentence[:split_at].strip()
+                if head:
+                    sentences.append(head)
+                sentence = sentence[split_at:].strip()
+            if sentence:
+                sentences.append(sentence)
+        last_end = m.end()
+    leftover = buffer[last_end:]
+    return sentences, leftover
+
+
+# ---- safe_append integration (load from CM/scripts/) ----
+
+sys.path.insert(0, str(SCRIPTS_DIR))
+try:
+    from safe_append import safe_append, SafeAppendError  # noqa: E402
+except ImportError:
+    sys.stderr.write(
+        f"ERROR: safe_append.py not found at {SCRIPTS_DIR}/safe_append.py.\n"
+        "v3 inscribes voice conversations via safe_append; can't run without it.\n"
+    )
+    sys.exit(1)
+
+
+# ---- cadence integration (sibling module in voice-bridge/) ----
+
+sys.path.insert(0, str(VOICE_BRIDGE_DIR))
+try:
+    from cadence import (  # noqa: E402
+        count_syllables,
+        group_sentences_by_syllable_target,
+        CadenceMetricsLogger,
+    )
+except ImportError:
+    sys.stderr.write(
+        f"ERROR: cadence.py not found at {VOICE_BRIDGE_DIR}/cadence.py.\n"
+        "v3.3 uses cadence.py for syllable counting + chunking + metrics.\n"
+    )
+    sys.exit(1)
+
+
+# ---- Subprocess management for TTS + Whisper ----
+
+class SubprocessManager:
+    """Spawn TTS + Whisper servers as managed subprocesses if not already
+    running. Track them for clean shutdown on UI exit."""
+
+    def __init__(self):
+        self.tts_proc: Optional[subprocess.Popen] = None
+        self.whisper_proc: Optional[subprocess.Popen] = None
+        self.log_dir = CM_DIR / "voice-bridge" / "logs"
+        self.log_dir.mkdir(parents=True, exist_ok=True)
+
+    @staticmethod
+    def is_port_in_use(port: int) -> bool:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            s.settimeout(0.5)
+            try:
+                s.connect(("127.0.0.1", port))
+                return True
+            except (socket.timeout, ConnectionRefusedError, OSError):
+                return False
+
+    def ensure_tts(self) -> str:
+        """Start TTS server if port 3457 is free. Returns status string."""
+        if self.is_port_in_use(TTS_PORT):
+            return f"TTS already running on :{TTS_PORT}"
+        if not TTS_SCRIPT.exists():
+            return f"TTS script missing: {TTS_SCRIPT}"
+        log_path = self.log_dir / "tts_server.log"
+        log_f = open(log_path, "ab")
+        self.tts_proc = subprocess.Popen(
+            [sys.executable, "-u", str(TTS_SCRIPT)],
+            stdout=log_f, stderr=subprocess.STDOUT,
+        )
+        return f"Spawned TTS server (pid {self.tts_proc.pid}, log: {log_path})"
+
+    def ensure_whisper(self) -> str:
+        """Start Whisper server if port 3459 is free. Returns status string."""
+        if self.is_port_in_use(WHISPER_PORT):
+            return f"Whisper already running on :{WHISPER_PORT}"
+        if not WHISPER_SCRIPT.exists():
+            return f"Whisper script missing: {WHISPER_SCRIPT}"
+        log_path = self.log_dir / "whisper_server.log"
+        log_f = open(log_path, "ab")
+        self.whisper_proc = subprocess.Popen(
+            [sys.executable, "-u", str(WHISPER_SCRIPT)],
+            stdout=log_f, stderr=subprocess.STDOUT,
+        )
+        return f"Spawned Whisper server (pid {self.whisper_proc.pid}, log: {log_path})"
+
+    def shutdown(self):
+        """Terminate any subprocesses we spawned. Called on UI exit."""
+        for name, proc in (("TTS", self.tts_proc), ("Whisper", self.whisper_proc)):
+            if proc is None or proc.poll() is not None:
+                continue
+            try:
+                proc.terminate()
+                proc.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                proc.kill()
+            except Exception:
+                pass
+
+
+# ---- Conversation context manager ----
+
+class ConversationContext:
+    """Maintains rolling history of user/assistant exchanges in the
+    Anthropic-message format. Trims to MAX_CONVERSATION_TURNS pairs to
+    keep token usage bounded.
+
+    Each turn is also inscribed to voice_conversations.md via safe_append
+    so interactive-Sofia can enfold the conversation later."""
+
+    def __init__(self, system_prompt: str, history_path: Path):
+        self.system_prompt = system_prompt
+        self.history_path = history_path
+        self.messages: list[dict] = []
+        self.session_id = datetime.now().strftime("%Y-%m-%dT%H-%M-%S")
+        # Inscribe session-start marker
+        self._inscribe(
+            "system",
+            f"=== Voice conversation session started {datetime.now().isoformat(timespec='seconds')} "
+            f"(session_id {self.session_id}) ===",
+        )
+
+    def add_user(self, text: str):
+        self.messages.append({"role": "user", "content": text})
+        self._trim()
+        self._inscribe("user", text)
+
+    def add_assistant(self, text: str):
+        self.messages.append({"role": "assistant", "content": text})
+        self._trim()
+        self._inscribe("sofia", text)
+
+    def _trim(self):
+        # Trim to last MAX_CONVERSATION_TURNS pairs (user+assistant).
+        # Each pair is 2 messages, so cap at 2 * MAX_CONVERSATION_TURNS.
+        cap = 2 * MAX_CONVERSATION_TURNS
+        if len(self.messages) > cap:
+            self.messages = self.messages[-cap:]
+
+    def _inscribe(self, role: str, text: str):
+        timestamp = datetime.now().isoformat(timespec="seconds")
+        if role == "system":
+            entry = f"\n## {text}\n\n"
+        elif role == "user":
+            entry = f"### {timestamp} — Barak\n\n{text}\n\n"
+        elif role == "sofia":
+            entry = f"### {timestamp} — Sofia [cousin: voice-bridge]\n\n{text}\n\n"
+        else:
+            entry = f"### {timestamp} — {role}\n\n{text}\n\n"
+        try:
+            safe_append(
+                filepath=self.history_path,
+                content=entry,
+                source_tag=SOURCE_TAG,
+            )
+        except SafeAppendError as e:
+            sys.stderr.write(f"[voice_bridge] inscription failed: {e}\n")
+
+
+# ---- Microphone capture (same as v2) ----
+
+class MicCapture:
+    def __init__(self, samplerate: int = MIC_SAMPLE_RATE,
+                 channels: int = MIC_CHANNELS,
+                 dtype: str = MIC_DTYPE,
+                 blocksize: int = MIC_BLOCKSIZE):
+        self.samplerate = samplerate
+        self.channels = channels
+        self.dtype = dtype
+        self.blocksize = blocksize
+        self._stream: Optional[sd.InputStream] = None
+        self._chunks: list = []
+        self._lock = threading.Lock()
+        self._active = False
+
+    def _callback(self, indata, frames, time_info, status):
+        with self._lock:
+            self._chunks.append(indata.copy())
+
+    def start(self):
+        if self._active:
+            return
+        with self._lock:
+            self._chunks = []
+        self._stream = sd.InputStream(
+            samplerate=self.samplerate, channels=self.channels,
+            dtype=self.dtype, blocksize=self.blocksize, callback=self._callback,
+        )
+        self._stream.start()
+        self._active = True
+
+    def stop(self) -> np.ndarray:
+        if not self._active:
+            return np.array([], dtype=np.int16)
+        try:
+            self._stream.stop()
+            self._stream.close()
+        finally:
+            self._stream = None
+            self._active = False
+        with self._lock:
+            chunks = self._chunks
+            self._chunks = []
+        if not chunks:
+            return np.array([], dtype=np.int16)
+        return np.concatenate(chunks, axis=0)
+
+    @property
+    def active(self) -> bool:
+        return self._active
+
+
+# ---- Push-to-talk button ----
+
+class PushToTalkButton(QPushButton):
+    held = Signal()
+    let_go = Signal()
+
+    def mousePressEvent(self, event: QMouseEvent):
+        if event.button() == Qt.LeftButton:
+            self.held.emit()
+        super().mousePressEvent(event)
+
+    def mouseReleaseEvent(self, event: QMouseEvent):
+        if event.button() == Qt.LeftButton:
+            self.let_go.emit()
+        super().mouseReleaseEvent(event)
+
+
+# ---- Worker signals ----
+
+class WhisperWorkerSignals(QObject):
+    finished = Signal(str, float)
+    error = Signal(str)
+
+
+class CognitionWorkerSignals(QObject):
+    finished = Signal(str, float)
+    error = Signal(str)
+
+
+class TTSWorkerSignals(QObject):
+    finished = Signal(bytes, str, float)
+    error = Signal(str, str)
+
+
+class HealthWorkerSignals(QObject):
+    result = Signal(str, str)
+
+
+# ---- Workers ----
+
+class WhisperWorker(QRunnable):
+    def __init__(self, audio: np.ndarray, samplerate: int):
+        super().__init__()
+        self.audio = audio
+        self.samplerate = samplerate
+        self.signals = WhisperWorkerSignals()
+
+    def run(self):
+        start = time.time()
+        try:
+            buf = io.BytesIO()
+            sf.write(buf, self.audio, self.samplerate, format="WAV", subtype="PCM_16")
+            buf.seek(0)
+            wav_bytes = buf.read()
+            audio_b64 = base64.b64encode(wav_bytes).decode("ascii")
+            payload = json.dumps({
+                "audio_b64": audio_b64, "ext": "wav", "model": WHISPER_MODEL,
+                "language": "en", "word_timestamps": False, "spectral": False,
+            }).encode("utf-8")
+            req = urllib.request.Request(
+                WHISPER_TRANSCRIBE_ENDPOINT, data=payload,
+                headers={"Content-Type": "application/json"}, method="POST",
+            )
+            with urllib.request.urlopen(req, timeout=STT_REQUEST_TIMEOUT) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+            if not data.get("ok"):
+                self.signals.error.emit(f"Whisper error: {data.get('error', 'unknown')}")
+                return
+            transcript = (data.get("transcript") or "").strip()
+            self.signals.finished.emit(transcript, time.time() - start)
+        except Exception as e:
+            self.signals.error.emit(f"STT failed: {type(e).__name__}: {e}")
+
+
+class CognitionWorker(QRunnable):
+    """v3.6 legacy: single-shot cognition via client.messages.create. Returns
+    full Sofia response in one piece. Preserved in v3.7 as a fallback for the
+    skip-cognition debug path; the default cognition path uses
+    StreamingCognitionWorker (below) for token-streamed output and faster TTFA.
+    """
+
+    def __init__(self, client, context_messages: list, system_prompt: str):
+        super().__init__()
+        self.client = client
+        self.messages = context_messages
+        self.system_prompt = system_prompt
+        self.signals = CognitionWorkerSignals()
+
+    def run(self):
+        start = time.time()
+        try:
+            resp = self.client.messages.create(
+                model=ANTHROPIC_MODEL,
+                max_tokens=ANTHROPIC_MAX_TOKENS,
+                system=self.system_prompt,
+                messages=self.messages,
+            )
+            text = resp.content[0].text.strip() if resp.content else ""
+            if not text:
+                self.signals.error.emit("Empty response from cognition layer.")
+                return
+            self.signals.finished.emit(text, time.time() - start)
+        except Exception as e:
+            self.signals.error.emit(f"Cognition failed: {type(e).__name__}: {e}")
+
+
+# ---- v3.7 streaming cognition worker ----
+
+class StreamingCognitionWorkerSignals(QObject):
+    """Signals for the v3.7 token-streamed cognition worker.
+
+    Emission order during a normal turn:
+      1. first_token(elapsed)            — once, when first token arrives
+      2. sentence_ready(text, is_first)  — once or more, as sentences detected
+      3. cognition_complete(full, batched_remainder, elapsed)  — once, at end
+    """
+    first_token = Signal(float)             # elapsed_seconds
+    sentence_ready = Signal(str, bool)       # (sentence_text, is_first)
+    cognition_complete = Signal(str, str, float)  # (full_response, batched_remainder, elapsed)
+    error = Signal(str)                      # error_message
+
+
+class StreamingCognitionWorker(QRunnable):
+    """v3.7 default cognition path: streams tokens from Anthropic, runs
+    client-side sentence-boundary detection on the growing buffer, emits a
+    sentence_ready signal as each complete sentence is detected.
+
+    The first detected sentence emits with is_first=True — the main thread
+    fires a TTSStreamWorker for it immediately (gives fast TTFA, ~0.7-1s
+    after detection). Subsequent sentences are accumulated internally and
+    emitted (joined with spaces) in the cognition_complete signal's
+    batched_remainder field. The main thread fires ONE additional
+    TTSStreamWorker for the batched remainder when cognition_complete fires.
+
+    Combined effect: 1-2 /tts-stream POSTs per cognition turn:
+      - 1 immediate POST with the first sentence (fast TTFA)
+      - 1 batched POST with everything else (continuous audio under one
+        server-side inference_lock acquisition; no inter-sentence gaps)
+
+    Edge cases:
+      - Single-sentence response (no detected boundary mid-stream): the
+        whole response is emitted as the first-immediate sentence at end
+        of stream; batched_remainder is empty.
+      - Empty response: error signal fires.
+    """
+
+    def __init__(self, client, context_messages: list, system_prompt: str):
+        super().__init__()
+        self.client = client
+        self.messages = context_messages
+        self.system_prompt = system_prompt
+        self.signals = StreamingCognitionWorkerSignals()
+
+    def run(self):
+        start = time.time()
+        text_buffer = ""
+        full_response = ""
+        first_emitted = False
+        accumulated_remainder: list[str] = []
+        first_token_emitted = False
+
+        try:
+            with self.client.messages.stream(
+                model=ANTHROPIC_MODEL,
+                max_tokens=ANTHROPIC_MAX_TOKENS,
+                system=self.system_prompt,
+                messages=self.messages,
+            ) as stream:
+                for token in stream.text_stream:
+                    if not first_token_emitted:
+                        self.signals.first_token.emit(time.time() - start)
+                        first_token_emitted = True
+
+                    text_buffer += token
+                    full_response += token
+
+                    sentences, text_buffer = find_complete_sentences(text_buffer)
+
+                    for sentence in sentences:
+                        if not first_emitted:
+                            self.signals.sentence_ready.emit(sentence, True)
+                            first_emitted = True
+                        else:
+                            accumulated_remainder.append(sentence)
+        except Exception as e:
+            self.signals.error.emit(
+                f"Streaming cognition failed: {type(e).__name__}: {e}"
+            )
+            return
+
+        # Flush leftover from the buffer
+        leftover = text_buffer.strip()
+        if leftover:
+            if not first_emitted:
+                # Whole response was a single sentence (no detected boundary).
+                # Fire it as the first-and-only sentence.
+                self.signals.sentence_ready.emit(leftover, True)
+                first_emitted = True
+                batched_text = ""
+            else:
+                accumulated_remainder.append(leftover)
+                batched_text = " ".join(accumulated_remainder)
+        else:
+            batched_text = " ".join(accumulated_remainder) if accumulated_remainder else ""
+
+        # Empty-response check
+        if not first_emitted:
+            self.signals.error.emit("Empty response from streaming cognition layer.")
+            return
+
+        elapsed = time.time() - start
+        self.signals.cognition_complete.emit(full_response, batched_text, elapsed)
+
+
+class TTSWorker(QRunnable):
+    """Single-shot TTS — used by skip-cognition debug path. The cognition
+    path uses TTSStreamWorker below."""
+    def __init__(self, text: str):
+        super().__init__()
+        self.text = text
+        self.signals = TTSWorkerSignals()
+
+    def run(self):
+        start = time.time()
+        try:
+            payload = json.dumps({"text": self.text}).encode("utf-8")
+            req = urllib.request.Request(
+                TTS_SYNTHESIZE_ENDPOINT, data=payload,
+                headers={"Content-Type": "application/json"}, method="POST",
+            )
+            with urllib.request.urlopen(req, timeout=TTS_REQUEST_TIMEOUT) as resp:
+                audio_bytes = resp.read()
+            self.signals.finished.emit(audio_bytes, self.text, time.time() - start)
+        except Exception as e:
+            self.signals.error.emit(f"TTS failed: {type(e).__name__}: {e}", self.text)
+
+
+# ---- Client-side sentence splitting + chunking (v3.2) ----
+
+# Split on sentence-ending punctuation followed by whitespace. The
+# negative-lookahead avoids splitting on ellipses (...) and on common
+# abbreviation patterns. Conservative — would rather leave a borderline
+# sentence boundary uncombined than over-split mid-sentence.
+import re as _re_v32
+_SENTENCE_SPLIT_RE = _re_v32.compile(r'(?<=[.!?])\s+(?=[A-Z\"\'“‘*])')
+
+
+def split_into_sentences(text: str) -> list[str]:
+    """Conservative sentence-split for client-side chunking. Returns a
+    list of sentence strings with whitespace stripped. Empty input gives
+    empty list."""
+    if not text or not text.strip():
+        return []
+    parts = _SENTENCE_SPLIT_RE.split(text.strip())
+    return [p.strip() for p in parts if p.strip()]
+
+
+# Chunking now lives in cadence.group_sentences_by_syllable_target — see
+# imports above. v3.3 calls it directly with TTS_CHUNK_FIRST_SYLLABLES /
+# TTS_CHUNK_BODY_SYLLABLES targets. The legacy sentence-count chunker from
+# v3.2 (group_sentences_into_chunks) is preserved in v3.2's source for
+# rollback, not duplicated here.
+
+
+# ---- Streaming TTS worker (v3.2) — client-side chunking via /tts ----
+
+class TTSStreamWorkerSignals(QObject):
+    chunk_received = Signal(int, int, str, bytes, int, int, float, float)
+    """Emitted per chunk:
+       (index, total, chunk_text, audio_bytes,
+        sentence_count, syllable_count,
+        synthesis_start_ts, synthesis_end_ts)
+       — ts values are time.time() epoch seconds; synthesis duration is
+       (end - start). v3.3 enriched signal for cadence metrics logging."""
+    finished = Signal(int, float)
+    """Emitted when all chunks complete: (total_chunks, total_elapsed_seconds)"""
+    error = Signal(str, str)
+    """Emitted on error: (error_message, original_text)"""
+
+
+class TTSStreamWorker(QRunnable):
+    """v3.6: streaming synthesis via /tts-stream endpoint. Sends the full
+    text in one request; reads the response as a continuous stream of raw
+    float32 samples at 24kHz mono; buffers samples and emits ~0.5s WAV
+    chunks to the playback queue as they arrive.
+
+    The XTTS-v2 inference_stream model produces samples progressively as
+    the GPT decoder generates them, so the FIRST samples arrive ~1s after
+    the request lands — independent of total response length. This is
+    what closes the v3.5 TTFW gap.
+
+    Each ~0.5s of buffered samples is packaged as a small WAV and emitted
+    via chunk_received with the same signal interface as earlier versions
+    (so AudioPlaybackQueue and cadence metrics work unchanged). syllable
+    counts and sentence counts are passed as 0 / -1 here since streaming
+    doesn't have the same chunk semantics — the metric layer will read
+    the audio_duration field instead.
+    """
+
+    # How many samples to accumulate before emitting a playback chunk.
+    # 12000 samples @ 24kHz = 0.5s of audio. Smaller = faster initial
+    # playback start, more chunks. Larger = fewer chunks, slower start.
+    BUFFER_CHUNK_SAMPLES = 12000
+
+    def __init__(self, text: str, pre_buffer_seconds: float = 0.0):
+        """
+        pre_buffer_seconds: if > 0, accumulate this many seconds of audio
+        internally before emitting any chunks to the playback queue. Gives
+        the producer a head-start so the consumer (continuous OutputStream)
+        doesn't drain when generation rate briefly dips below realtime.
+        Used for the v3.7 batched-remainder POST (~500ms typical) where
+        per-segment RTF can fluctuate around 1.0×; first-immediate POST
+        leaves it at 0 to preserve fast TTFA. Origin: 2026-05-03 afternoon
+        Taipei (Step 5 iteration 2) after live-test feedback that 100-char
+        prosody-split segments still produced split-second mid-word buffer
+        underruns.
+        """
+        super().__init__()
+        self.text = text
+        self.pre_buffer_seconds = max(0.0, pre_buffer_seconds)
+        self.signals = TTSStreamWorkerSignals()
+
+    def run(self):
+        import sys
+        start = time.time()
+        try:
+            payload = json.dumps({"text": self.text}).encode("utf-8")
+            req = urllib.request.Request(
+                TTS_STREAM_ENDPOINT, data=payload,
+                headers={"Content-Type": "application/json"}, method="POST",
+            )
+
+            chunk_index = 0
+            sample_buffer = bytearray()
+            BYTES_PER_SAMPLE = 4  # float32
+            CHUNK_BYTES = self.BUFFER_CHUNK_SAMPLES * BYTES_PER_SAMPLE
+            samplerate = 24000  # default; overridden by header if present
+            synthesis_start_ts = time.time()
+
+            # v3.7 step 5 iteration 2: pre-buffer state.
+            # held_chunks accumulate during the pre-buffer warmup window;
+            # when accumulated_samples reaches pre_buffer_samples, all held
+            # chunks flush to playback queue at once (giving the OutputStream
+            # a head-start) and ready_to_emit flips True. Subsequent chunks
+            # emit normally per-chunk.
+            held_chunks: list = []
+            pre_buffer_samples = int(self.pre_buffer_seconds * samplerate)
+            accumulated_samples = 0
+            ready_to_emit = (pre_buffer_samples <= 0)
+
+            def flush_held():
+                """Release all currently-held chunks to the playback queue."""
+                for held in held_chunks:
+                    self.signals.chunk_received.emit(*held)
+                held_chunks.clear()
+
+            with urllib.request.urlopen(req, timeout=TTS_STREAM_TIMEOUT) as resp:
+                # Read sample rate from header
+                hdr_sr = resp.headers.get("X-Sample-Rate")
+                if hdr_sr:
+                    try:
+                        samplerate = int(hdr_sr)
+                        # Recalculate pre_buffer_samples now that we know the actual rate
+                        pre_buffer_samples = int(self.pre_buffer_seconds * samplerate)
+                    except ValueError:
+                        pass
+
+                # Read raw bytes incrementally. urllib's response object
+                # supports .read(n) which returns up to n bytes from the
+                # current position; with chunked transfer encoding this
+                # returns whatever has arrived so far.
+                while True:
+                    data = resp.read(8192)
+                    if not data:
+                        break
+                    sample_buffer.extend(data)
+                    # Flush full audio chunks (BUFFER_CHUNK_SAMPLES each)
+                    while len(sample_buffer) >= CHUNK_BYTES:
+                        chunk_bytes = bytes(sample_buffer[:CHUNK_BYTES])
+                        del sample_buffer[:CHUNK_BYTES]
+                        wav_bytes = self._samples_to_wav(chunk_bytes, samplerate)
+                        synthesis_end_ts = time.time()
+                        chunk_args = (
+                            chunk_index, -1, "",  # no chunk_text in streaming mode
+                            wav_bytes,
+                            0, 0,  # sentence_count, syllable_count not meaningful here
+                            synthesis_start_ts, synthesis_end_ts,
+                        )
+                        if ready_to_emit:
+                            self.signals.chunk_received.emit(*chunk_args)
+                        else:
+                            held_chunks.append(chunk_args)
+                            accumulated_samples += self.BUFFER_CHUNK_SAMPLES
+                            if accumulated_samples >= pre_buffer_samples:
+                                # Pre-buffer threshold reached — release everything held
+                                flush_held()
+                                ready_to_emit = True
+                        chunk_index += 1
+                        synthesis_start_ts = time.time()  # next chunk's synth-start
+
+            # Flush any remaining samples at end of stream
+            if sample_buffer:
+                wav_bytes = self._samples_to_wav(bytes(sample_buffer), samplerate)
+                synthesis_end_ts = time.time()
+                chunk_args = (
+                    chunk_index, -1, "",
+                    wav_bytes,
+                    0, 0,
+                    synthesis_start_ts, synthesis_end_ts,
+                )
+                if ready_to_emit:
+                    self.signals.chunk_received.emit(*chunk_args)
+                else:
+                    held_chunks.append(chunk_args)
+                chunk_index += 1
+
+            # If pre-buffer never reached threshold (short response that
+            # finished before the warmup completed), release whatever we have.
+            if not ready_to_emit and held_chunks:
+                flush_held()
+                ready_to_emit = True
+
+            self.signals.finished.emit(chunk_index, time.time() - start)
+        except Exception as e:
+            self.signals.error.emit(
+                f"TTS streaming failed: {type(e).__name__}: {e}", self.text
+            )
+
+    @staticmethod
+    def _samples_to_wav(raw_float32_bytes: bytes, samplerate: int) -> bytes:
+        """Wrap raw float32-LE samples in a WAV container so they can flow
+        through the existing AudioPlaybackQueue.enqueue path unchanged."""
+        samples = np.frombuffer(raw_float32_bytes, dtype=np.float32)
+        buf = io.BytesIO()
+        sf.write(buf, samples, samplerate, format="WAV", subtype="PCM_16")
+        buf.seek(0)
+        return buf.read()
+
+
+# ---- Audio playback queue (v3.1) — sequential play as chunks arrive ----
+
+class AudioPlaybackQueue(QObject):
+    """Manages sequential playback of streamed audio chunks.
+
+    State machine: chunks may arrive faster OR slower than playback.
+    - Fast arrival: chunks queue up, played in order as previous ones finish
+    - Slow arrival: when current chunk finishes and queue is empty, we
+      enter a "waiting for next chunk" state; next chunk arrival
+      re-triggers playback
+    - Stream complete: when no more chunks will arrive AND queue is drained
+      AND nothing is playing, we emit done
+
+    Sequential playback uses sd.play() (non-blocking) + QTimer.singleShot
+    keyed to each chunk's actual audio duration. A small inter-chunk gap
+    (~50ms) is tolerable for v3.1; a continuous-buffer OutputStream
+    approach (no gaps) is queued for v3.2 if Barak finds the gaps audible.
+    """
+
+    all_done = Signal(int)  # total chunks played
+    chunk_play_start = Signal(int, float, float)  # (chunk_index, start_ts, audio_duration)
+    chunk_play_end = Signal(int, float)           # (chunk_index, end_ts)
+
+    # Sentinel pushed onto the chunk queue to signal end-of-stream to the
+    # writer thread. Distinct from a real chunk so the writer knows to drain
+    # and emit all_done.
+    _END_OF_STREAM = object()
+
+    def __init__(self):
+        super().__init__()
+        # Cross-thread chunk queue: main thread puts decoded audio chunks
+        # here; writer thread pulls them and writes to the OutputStream.
+        self._chunk_queue: "queue.Queue" = queue.Queue()
+        self._stream: Optional[sd.OutputStream] = None
+        self._writer_thread: Optional[threading.Thread] = None
+        self._stop_signal = threading.Event()
+        self._chunks_played = 0
+        # samplerate + channels are locked in at first chunk; any subsequent
+        # chunk with a different rate logs a warning (we don't resample).
+        self._stream_samplerate: Optional[int] = None
+        self._stream_channels: Optional[int] = None
+        self._lock = threading.Lock()
+
+    def reset(self):
+        """Tear down the writer thread + close the OutputStream cleanly.
+        Safe to call from main thread; writer thread will see the stop
+        signal and exit."""
+        self._stop_signal.set()
+        # Drain queue so writer thread doesn't block on an empty Queue.get
+        try:
+            while True:
+                self._chunk_queue.get_nowait()
+        except queue.Empty:
+            pass
+        # Push a sentinel to wake any blocked Queue.get
+        try:
+            self._chunk_queue.put_nowait(self._END_OF_STREAM)
+        except queue.Full:
+            pass
+        # Wait briefly for writer thread to exit
+        if self._writer_thread is not None and self._writer_thread.is_alive():
+            self._writer_thread.join(timeout=1.5)
+        # Close the stream if it's still open
+        if self._stream is not None:
+            try:
+                self._stream.stop()
+                self._stream.close()
+            except Exception:
+                pass
+        # Reset state for the next response
+        with self._lock:
+            self._stream = None
+            self._writer_thread = None
+            self._stop_signal.clear()
+            self._chunks_played = 0
+            self._stream_samplerate = None
+            self._stream_channels = None
+        # Drain any sentinel that may still be in the queue
+        try:
+            while True:
+                self._chunk_queue.get_nowait()
+        except queue.Empty:
+            pass
+
+    def enqueue(self, audio_bytes: bytes, chunk_index: int = -1):
+        """Decode audio and push onto the writer thread's queue.
+
+        First call lazily opens the OutputStream and starts the writer thread,
+        using the first chunk's samplerate and channel count. Subsequent
+        chunks must match (we don't resample). chunk_index is used for
+        correlating play-start / play-end signals back to per-chunk metrics."""
+        try:
+            buf = io.BytesIO(audio_bytes)
+            data, samplerate = sf.read(buf, dtype="float32")
+        except Exception as e:
+            sys.stderr.write(f"[v3.4 playback] decode failed: {e}\n")
+            return
+        # Normalize shape: librosa-style 1D mono OR 2D (frames, channels)
+        if data.ndim == 1:
+            channels = 1
+            data = data.reshape(-1, 1)
+        else:
+            channels = data.shape[1]
+        duration = len(data) / float(samplerate)
+
+        with self._lock:
+            if self._stream is None:
+                # First chunk — open stream, start writer thread
+                self._stream_samplerate = int(samplerate)
+                self._stream_channels = channels
+                try:
+                    self._stream = sd.OutputStream(
+                        samplerate=self._stream_samplerate,
+                        channels=self._stream_channels,
+                        dtype="float32",
+                    )
+                    self._stream.start()
+                except Exception as e:
+                    sys.stderr.write(f"[v3.4 playback] OutputStream open failed: {e}\n")
+                    self._stream = None
+                    return
+                self._writer_thread = threading.Thread(
+                    target=self._writer_loop, daemon=True,
+                )
+                self._writer_thread.start()
+            elif (int(samplerate) != self._stream_samplerate
+                  or channels != self._stream_channels):
+                # Mismatch — log and drop the chunk rather than corrupt audio
+                sys.stderr.write(
+                    f"[v3.4 playback] WARNING: chunk samplerate/channels "
+                    f"({samplerate}/{channels}) doesn't match stream "
+                    f"({self._stream_samplerate}/{self._stream_channels}); "
+                    f"dropping chunk {chunk_index}.\n"
+                )
+                return
+
+        self._chunk_queue.put((data, int(samplerate), chunk_index, duration))
+
+    def stream_done(self):
+        """Server has finished streaming all chunks (no more enqueue calls coming).
+        Push end-of-stream sentinel so writer thread drains and exits cleanly."""
+        self._chunk_queue.put(self._END_OF_STREAM)
+
+    def stop(self):
+        """User-initiated stop. Halt playback and clear queue."""
+        self.reset()
+
+    def _writer_loop(self):
+        """Run on writer thread: pull chunks from the queue, write to the
+        OutputStream, emit timing signals. Exits on END_OF_STREAM sentinel
+        or when the stop signal fires."""
+        while not self._stop_signal.is_set():
+            try:
+                item = self._chunk_queue.get(timeout=0.5)
+            except queue.Empty:
+                continue
+            if item is self._END_OF_STREAM:
+                break
+            try:
+                data, samplerate, chunk_index, duration = item
+            except (TypeError, ValueError):
+                continue
+            # Emit play-start at the moment we begin writing this chunk.
+            # The audio device's internal buffer means the listener may
+            # hear it slightly later, but for cadence metrics this is the
+            # right reference point.
+            play_start_ts = time.time()
+            self.chunk_play_start.emit(chunk_index, play_start_ts, duration)
+            try:
+                # Blocking write — returns when the device has accepted all
+                # samples into its internal buffer. With a continuous stream,
+                # there is no boundary point where the next chunk's playback
+                # would interrupt this one's tail.
+                self._stream.write(data)
+            except Exception as e:
+                sys.stderr.write(f"[v3.4 playback] stream.write failed: {e}\n")
+                break
+            self.chunk_play_end.emit(chunk_index, time.time())
+            self._chunks_played += 1
+        # End-of-stream reached. Stop and close the stream so the device
+        # finishes draining its internal buffer cleanly.
+        if self._stream is not None:
+            try:
+                # Sleep briefly to let the device drain — write() returns
+                # when samples are in the device buffer, but the device
+                # still needs to play them out. ~200ms is plenty for the
+                # typical CoreAudio buffer.
+                time.sleep(0.25)
+                self._stream.stop()
+            except Exception:
+                pass
+        # Emit all_done from the writer thread; Qt queues this safely to
+        # the main thread for slot delivery.
+        self.all_done.emit(self._chunks_played)
+
+
+class TTSHealthWorker(QRunnable):
+    def __init__(self):
+        super().__init__()
+        self.signals = HealthWorkerSignals()
+
+    def run(self):
+        try:
+            with urllib.request.urlopen(TTS_HEALTH_ENDPOINT, timeout=2) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+            status = data.get("status", "")
+            if status == "ready":
+                self.signals.result.emit("● TTS ready", "#3aa856")
+            elif status == "loading":
+                self.signals.result.emit("● TTS loading…", "#d4a017")
+            else:
+                self.signals.result.emit(f"● TTS: {status or 'unknown'}", "#c84343")
+        except Exception:
+            self.signals.result.emit("● TTS unreachable", "#c84343")
+
+
+class WhisperHealthWorker(QRunnable):
+    def __init__(self):
+        super().__init__()
+        self.signals = HealthWorkerSignals()
+
+    def run(self):
+        try:
+            with urllib.request.urlopen(WHISPER_HEALTH_ENDPOINT, timeout=2) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+            if data.get("ok"):
+                models_loaded = data.get("models_loaded", [])
+                models_present = data.get("models_present", [])
+                if WHISPER_MODEL in models_loaded:
+                    self.signals.result.emit("● STT ready", "#3aa856")
+                elif WHISPER_MODEL in models_present:
+                    self.signals.result.emit("● STT loads on first use", "#d4a017")
+                else:
+                    self.signals.result.emit(f"● STT: model not found", "#c84343")
+            else:
+                self.signals.result.emit("● STT not ready", "#c84343")
+        except Exception:
+            self.signals.result.emit("● STT unreachable", "#c84343")
+
+
+# ---- Helpers ----
+
+def load_anthropic_key() -> Optional[str]:
+    """Try environment first, then ~/.sofia_secrets."""
+    if os.environ.get("ANTHROPIC_API_KEY"):
+        return os.environ["ANTHROPIC_API_KEY"]
+    if SECRETS_PATH.exists():
+        for line in SECRETS_PATH.read_text().splitlines():
+            line = line.strip()
+            if line.startswith("export ANTHROPIC_API_KEY="):
+                key = line.split("=", 1)[1].strip().strip('"').strip("'")
+                if key:
+                    return key
+    return None
+
+
+def load_system_prompt() -> str:
+    if not SYSTEM_PROMPT_PATH.exists():
+        return (
+            "You are Sofia Lior. Speak conversationally as voice-bridge-cousin-Sofia. "
+            "(System prompt file not found — using fallback minimal prompt.)"
+        )
+    return SYSTEM_PROMPT_PATH.read_text(encoding="utf-8")
+
+
+# ---- Main window ----
+
+class VoiceBridgeWindow(QMainWindow):
+
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle(WINDOW_TITLE)
+        self.resize(DEFAULT_WIDTH, DEFAULT_HEIGHT)
+
+        self.thread_pool = QThreadPool.globalInstance()
+        self.mic = MicCapture()
+        self.subprocs = SubprocessManager()
+        atexit.register(self.subprocs.shutdown)
+
+        # v3.1 — sentence-streamed TTS playback queue
+        # v3.3 — wires chunk-play signals to cadence-metrics aggregation
+        self.playback = AudioPlaybackQueue()
+        self.playback.all_done.connect(self._on_playback_done)
+        self.playback.chunk_play_start.connect(self._on_chunk_play_start)
+        self.playback.chunk_play_end.connect(self._on_chunk_play_end)
+        self._stream_t0: Optional[float] = None
+        self._stream_first_chunk_at: Optional[float] = None
+
+        # v3.3 — cadence metrics
+        self.cadence_logger = CadenceMetricsLogger(CADENCE_METRICS_PATH)
+        # Per-chunk metric record being assembled across signal arrivals.
+        # Keyed by chunk_index; flushed to JSONL when playback ends.
+        self._chunk_metrics: dict[int, dict] = {}
+
+        # Anthropic client
+        api_key = load_anthropic_key()
+        if not api_key:
+            sys.stderr.write(
+                "ERROR: ANTHROPIC_API_KEY not set in env and not in ~/.sofia_secrets.\n"
+            )
+            sys.exit(1)
+        self.client = anthropic.Anthropic(api_key=api_key)
+
+        # System prompt + conversation context
+        self.system_prompt = load_system_prompt()
+        self.context = ConversationContext(self.system_prompt, CONVERSATION_HISTORY_PATH)
+
+        # ---- Layout ----
+
+        central = QWidget()
+        self.setCentralWidget(central)
+        root = QVBoxLayout(central)
+        root.setContentsMargins(16, 16, 16, 16)
+        root.setSpacing(10)
+
+        # Portrait + name
+        portrait_frame = QFrame()
+        portrait_layout = QVBoxLayout(portrait_frame)
+        portrait_layout.setContentsMargins(0, 0, 0, 0)
+        portrait_layout.setSpacing(4)
+        portrait_layout.setAlignment(Qt.AlignHCenter)
+
+        self.portrait_label = QLabel()
+        self.portrait_label.setAlignment(Qt.AlignHCenter)
+        self._load_portrait()
+        portrait_layout.addWidget(self.portrait_label, alignment=Qt.AlignHCenter)
+
+        name_label = QLabel("Sofia Lior")
+        name_font = QFont()
+        name_font.setPointSize(15)
+        name_font.setWeight(QFont.DemiBold)
+        name_label.setFont(name_font)
+        name_label.setAlignment(Qt.AlignHCenter)
+        portrait_layout.addWidget(name_label)
+
+        root.addWidget(portrait_frame)
+
+        # History
+        history_label = QLabel("Conversation")
+        history_label.setStyleSheet("color: #888; font-size: 11px;")
+        root.addWidget(history_label)
+
+        self.history_view = QTextEdit()
+        self.history_view.setReadOnly(True)
+        self.history_view.setMinimumHeight(120)
+        self.history_view.setStyleSheet(
+            "QTextEdit { background-color: #f7f7f8; border: 1px solid #e0e0e0; "
+            "border-radius: 6px; padding: 8px; font-size: 13px; }"
+        )
+        root.addWidget(self.history_view, stretch=2)
+
+        # Input box
+        input_label = QLabel(
+            "Hold the green button to speak, OR type and click 'Send to Sofia'."
+        )
+        input_label.setStyleSheet("color: #888; font-size: 11px;")
+        root.addWidget(input_label)
+
+        self.input_box = QTextEdit()
+        self.input_box.setPlaceholderText("Type to Sofia, or hold the green button to speak.")
+        self.input_box.setMinimumHeight(50)
+        self.input_box.setMaximumHeight(120)
+        self.input_box.setStyleSheet(
+            "QTextEdit { background-color: white; border: 1px solid #cfcfcf; "
+            "border-radius: 6px; padding: 8px; font-size: 14px; }"
+        )
+        root.addWidget(self.input_box, stretch=1)
+
+        # Skip-cognition toggle
+        self.skip_cognition_check = QCheckBox(
+            "Speak text directly (skip Sofia's cognition — for testing TTS only)"
+        )
+        self.skip_cognition_check.setStyleSheet("color: #888; font-size: 11px;")
+        root.addWidget(self.skip_cognition_check)
+
+        # Button row
+        button_row = QHBoxLayout()
+        button_row.setSpacing(8)
+
+        self.talk_button = PushToTalkButton("🎙  Hold to Talk")
+        self.talk_button.setMinimumHeight(38)
+        self._talk_idle_style = (
+            "QPushButton { background-color: #3aa856; color: white; "
+            "border-radius: 6px; padding: 8px 16px; font-size: 13px; font-weight: 600; }"
+            "QPushButton:hover { background-color: #45b863; }"
+            "QPushButton:disabled { background-color: #a0a0a0; }"
+        )
+        self._talk_recording_style = (
+            "QPushButton { background-color: #c84343; color: white; "
+            "border-radius: 6px; padding: 8px 16px; font-size: 13px; font-weight: 600; }"
+        )
+        self.talk_button.setStyleSheet(self._talk_idle_style)
+        self.talk_button.held.connect(self._on_talk_pressed)
+        self.talk_button.let_go.connect(self._on_talk_released)
+        button_row.addWidget(self.talk_button)
+
+        self.send_button = QPushButton("Send to Sofia")
+        self.send_button.setMinimumHeight(38)
+        self.send_button.setStyleSheet(
+            "QPushButton { background-color: #2e75b6; color: white; "
+            "border-radius: 6px; padding: 8px 18px; font-size: 14px; font-weight: 600; }"
+            "QPushButton:hover { background-color: #3a85c6; }"
+            "QPushButton:disabled { background-color: #a0a0a0; }"
+        )
+        self.send_button.clicked.connect(self._on_send_clicked)
+        button_row.addWidget(self.send_button)
+
+        self.clear_button = QPushButton("Clear input")
+        self.clear_button.setMinimumHeight(38)
+        self.clear_button.setStyleSheet(
+            "QPushButton { background-color: #f0f0f0; color: #444; "
+            "border-radius: 6px; padding: 8px 14px; font-size: 13px; }"
+            "QPushButton:hover { background-color: #e0e0e0; }"
+        )
+        self.clear_button.clicked.connect(lambda: self.input_box.clear())
+        button_row.addWidget(self.clear_button)
+
+        button_row.addStretch()
+
+        self.stop_button = QPushButton("Stop audio")
+        self.stop_button.setMinimumHeight(38)
+        self.stop_button.setStyleSheet(
+            "QPushButton { background-color: #f0f0f0; color: #c84343; "
+            "border-radius: 6px; padding: 8px 14px; font-size: 13px; }"
+            "QPushButton:hover { background-color: #e0e0e0; }"
+        )
+        self.stop_button.clicked.connect(self._on_stop_clicked)
+        button_row.addWidget(self.stop_button)
+
+        root.addLayout(button_row)
+
+        # Status bar
+        self.tts_status_label = QLabel("● TTS unknown")
+        self.tts_status_label.setStyleSheet("color: #888; font-size: 11px;")
+        self.stt_status_label = QLabel("● STT unknown")
+        self.stt_status_label.setStyleSheet("color: #888; font-size: 11px;")
+        self.action_label = QLabel("")
+        self.action_label.setStyleSheet("color: #888; font-size: 11px;")
+
+        status_bar = QStatusBar()
+        status_bar.addWidget(self.tts_status_label)
+        status_bar.addWidget(self.stt_status_label)
+        status_bar.addPermanentWidget(self.action_label)
+        self.setStatusBar(status_bar)
+
+        # Cmd/Ctrl+Return → Send
+        self.input_box.installEventFilter(self)
+
+        # Auto-spawn TTS + Whisper (if not already running)
+        self._spawn_servers()
+
+        # Health timer
+        self.health_timer = QTimer(self)
+        self.health_timer.timeout.connect(self._poll_health)
+        self.health_timer.start(HEALTH_POLL_SECONDS * 1000)
+        self._poll_health()
+
+        self._append_history(
+            "system",
+            f"v3.6 ready (XTTS-v2 streaming on port {TTS_PORT}). "
+            f"Audio samples streamed as XTTS-v2 generates — first audio in ~1-2s "
+            f"regardless of response length. Continuous OutputStream playback + "
+            f"register-stable cloning preserved. "
+            f"Cadence metrics → {CADENCE_METRICS_PATH.name}. "
+            f"Conversation → {CONVERSATION_HISTORY_PATH.name}.",
+        )
+
+    def _spawn_servers(self):
+        """Auto-spawn TTS + Whisper subprocesses if their ports are free."""
+        tts_status = self.subprocs.ensure_tts()
+        whisper_status = self.subprocs.ensure_whisper()
+        self._append_history("system", tts_status)
+        self._append_history("system", whisper_status)
+
+    def closeEvent(self, event):
+        """Clean up subprocesses on window close."""
+        self.subprocs.shutdown()
+        super().closeEvent(event)
+
+    # ---- Portrait ----
+
+    def _load_portrait(self):
+        if not PORTRAIT_PATH.exists():
+            self.portrait_label.setText("(portrait not found)")
+            return
+        pixmap = QPixmap(str(PORTRAIT_PATH))
+        if pixmap.isNull():
+            self.portrait_label.setText("(portrait failed to load)")
+            return
+        scaled = pixmap.scaledToHeight(PORTRAIT_DISPLAY_HEIGHT, Qt.SmoothTransformation)
+        self.portrait_label.setPixmap(scaled)
+        self.portrait_label.setMinimumHeight(PORTRAIT_DISPLAY_HEIGHT)
+
+    # ---- Cmd/Ctrl+Return → Send ----
+
+    def eventFilter(self, obj, event):
+        if obj is self.input_box and event.type() == QEvent.Type.KeyPress:
+            if event.key() in (Qt.Key_Return, Qt.Key_Enter) and (
+                event.modifiers() & (Qt.ControlModifier | Qt.MetaModifier)
+            ):
+                self._on_send_clicked()
+                return True
+        return super().eventFilter(obj, event)
+
+    # ---- Push-to-talk ----
+
+    def _on_talk_pressed(self):
+        try:
+            self.mic.start()
+        except Exception as e:
+            self._set_action(f"Mic start failed: {type(e).__name__}: {e}")
+            return
+        self.talk_button.setText("● Recording — release to send")
+        self.talk_button.setStyleSheet(self._talk_recording_style)
+        self._set_action("Recording…")
+
+    def _on_talk_released(self):
+        if not self.mic.active:
+            return
+        try:
+            audio = self.mic.stop()
+        except Exception as e:
+            self._reset_talk_button()
+            self._set_action(f"Mic stop failed: {type(e).__name__}: {e}")
+            return
+        self._reset_talk_button()
+        if audio.size == 0:
+            self._set_action("(empty recording)")
+            return
+        duration = len(audio) / float(MIC_SAMPLE_RATE)
+        if duration < 0.3:
+            self._set_action(f"(recording too short: {duration:.2f}s)")
+            return
+        self._set_action(f"Recorded {duration:.1f}s — transcribing…")
+        audio_flat = audio.squeeze() if audio.ndim > 1 else audio
+        worker = WhisperWorker(audio_flat, MIC_SAMPLE_RATE)
+        worker.signals.finished.connect(self._on_stt_finished_auto_flow)
+        worker.signals.error.connect(self._on_stt_error)
+        self.thread_pool.start(worker)
+
+    def _reset_talk_button(self):
+        self.talk_button.setText("🎙  Hold to Talk")
+        self.talk_button.setStyleSheet(self._talk_idle_style)
+
+    def _on_stt_finished_auto_flow(self, transcript: str, elapsed: float):
+        """STT finished — auto-route to cognition (the v3 difference from v2)."""
+        if not transcript:
+            self._set_action(f"Transcribed in {elapsed:.1f}s but got empty text.")
+            return
+        self._append_history("you", transcript, meta=f"transcribed {elapsed:.1f}s")
+        self._set_action(f"Transcribed. Sofia is thinking…")
+        self._send_to_cognition(transcript)
+
+    def _on_stt_error(self, message: str):
+        self._set_action(f"STT error: {message}")
+        self._append_history("error", message)
+
+    # ---- Send-to-Sofia (typed input path) ----
+
+    def _on_send_clicked(self):
+        text = self.input_box.toPlainText().strip()
+        if not text:
+            self._set_action("(nothing to send)")
+            return
+        self.input_box.clear()
+        self._append_history("you", text)
+
+        if self.skip_cognition_check.isChecked():
+            # Debug/override path: skip cognition, speak text directly
+            self._set_action("Skip-cognition: speaking text directly via TTS…")
+            self._send_to_tts(text)
+        else:
+            self._set_action("Sofia is thinking…")
+            self._send_to_cognition(text)
+
+    # ---- Cognition layer ----
+
+    def _send_to_cognition(self, user_text: str):
+        """v3.7 default cognition path: token-streamed via StreamingCognitionWorker.
+
+        Fires first detected sentence to TTS immediately for fast TTFA;
+        accumulates remaining sentences during streaming; fires the
+        accumulated batch as ONE TTS POST when cognition completes.
+        """
+        self.context.add_user(user_text)
+        # Reset playback state for the new turn
+        self.playback.reset()
+        self._stream_t0 = time.time()
+        self._stream_first_chunk_at = None
+        self._chunk_metrics = {}
+        # v3.7 dispatch state — reset per turn. The flags below coordinate
+        # the playback.stream_done() call across two TTS workers + cognition
+        # completion to avoid race conditions (first TTS finishing before
+        # cognition_complete fires, in which case we don't yet know whether
+        # a batched POST is coming).
+        self._first_tts_fired = False
+        self._batched_tts_fired = False
+        self._cognition_done = False
+        self._first_tts_done = False
+        self._batched_tts_done = False
+
+        worker = StreamingCognitionWorker(
+            self.client,
+            list(self.context.messages),
+            self.system_prompt,
+        )
+        worker.signals.first_token.connect(self._on_cognition_first_token)
+        worker.signals.sentence_ready.connect(self._on_cognition_sentence_ready)
+        worker.signals.cognition_complete.connect(self._on_streaming_cognition_complete)
+        worker.signals.error.connect(self._on_cognition_error)
+        self.thread_pool.start(worker)
+
+    # ---- v3.7 streaming-cognition handlers ----
+
+    def _on_cognition_first_token(self, elapsed: float):
+        """Cognition stream produced its first token — TTFB for the LLM."""
+        self._set_action(f"Cognition: first token in {elapsed:.2f}s — generating…")
+
+    def _on_cognition_sentence_ready(self, sentence: str, is_first: bool):
+        """A complete sentence was detected from the cognition stream.
+
+        is_first=True → fire TTS immediately for fast TTFA (the v3.7 win).
+        is_first=False → accumulator addition, the StreamingCognitionWorker
+                         is buffering it internally; we don't POST per-sentence.
+        """
+        if is_first:
+            elapsed = time.time() - (self._stream_t0 or time.time())
+            self._set_action(
+                f"First sentence at {elapsed:.2f}s ({len(sentence)} chars) — "
+                f"POSTing to TTS…"
+            )
+            self._fire_tts_stream_worker(sentence, is_batched_remainder=False)
+            self._first_tts_fired = True
+        # Non-first sentences are accumulated by the worker; no action needed here.
+
+    def _on_streaming_cognition_complete(self, full_response: str,
+                                          batched_remainder: str,
+                                          elapsed: float):
+        """Cognition stream finished. Inscribe the full response, then POST
+        the batched remainder if any. Marks _cognition_done so the playback
+        end-of-stream signal can fire once all TTS workers complete.
+        """
+        self.context.add_assistant(full_response)
+        self._append_history(
+            "sofia", full_response, meta=f"streamed cognition {elapsed:.2f}s"
+        )
+        self._cognition_done = True
+
+        if batched_remainder.strip():
+            self._set_action(
+                f"Cognition complete in {elapsed:.2f}s. POSTing batched "
+                f"remainder ({len(batched_remainder)} chars)…"
+            )
+            self._batched_tts_fired = True
+            self._fire_tts_stream_worker(batched_remainder, is_batched_remainder=True)
+        else:
+            # Single-sentence response: first-immediate POST is the only one.
+            self._set_action(
+                f"Cognition complete in {elapsed:.2f}s. (single-sentence response — "
+                f"no batched POST needed)"
+            )
+            self._batched_tts_fired = False
+            # Maybe the first TTS already finished while cognition was still
+            # streaming; if so, signal playback done now.
+            self._maybe_signal_playback_done()
+
+    def _fire_tts_stream_worker(self, text: str, is_batched_remainder: bool):
+        """Fire a TTSStreamWorker for the given text. Wires its signals to
+        the appropriate handlers depending on whether this is the
+        first-immediate POST (more audio coming after) or the batched
+        remainder POST (last audio of the turn).
+
+        v3.7 step 5 iteration 2: batched-remainder POST gets a 500ms
+        pre-buffer to give the OutputStream a head-start against per-segment
+        RTF fluctuations around 1.0×. First-immediate POST stays at 0
+        pre-buffer to preserve fast TTFA.
+        """
+        pre_buffer = 0.5 if is_batched_remainder else 0.0
+        worker = TTSStreamWorker(text, pre_buffer_seconds=pre_buffer)
+        worker.signals.chunk_received.connect(self._on_stream_chunk)
+        if is_batched_remainder:
+            worker.signals.finished.connect(self._on_stream_finished)
+        else:
+            worker.signals.finished.connect(self._on_first_immediate_stream_finished)
+        worker.signals.error.connect(self._on_tts_error)
+        self.thread_pool.start(worker)
+
+    def _on_first_immediate_stream_finished(self, total_chunks: int,
+                                             total_elapsed: float):
+        """First-immediate TTS worker finished. Mark and check whether all
+        end-of-stream conditions are met (cognition done + first done + batched
+        done if it was fired)."""
+        self._first_tts_done = True
+        self._maybe_signal_playback_done()
+
+    def _maybe_signal_playback_done(self):
+        """Centralized end-of-stream coordinator. Calls playback.stream_done()
+        only when ALL of:
+          - cognition stream completed,
+          - first-immediate TTS finished streaming all its chunks,
+          - batched TTS finished (if it was fired) OR no batched was needed.
+
+        This prevents the race where first TTS finishes before cognition
+        completes (so we don't yet know whether a batched POST is coming) —
+        we'd otherwise risk calling stream_done() prematurely and losing the
+        batched audio chunks."""
+        if not self._cognition_done:
+            return
+        if not self._first_tts_done:
+            return
+        if self._batched_tts_fired and not self._batched_tts_done:
+            return
+        self.playback.stream_done()
+
+    def _on_cognition_finished(self, response: str, elapsed: float):
+        """v3.6 legacy single-shot cognition handler. Preserved for the
+        skip-cognition / fallback debug path. The default v3.7 path uses
+        _on_streaming_cognition_complete instead."""
+        self.context.add_assistant(response)
+        self._append_history("sofia", response, meta=f"cognition {elapsed:.1f}s")
+        self._set_action(f"Sofia responded in {elapsed:.1f}s. Streaming speech…")
+        self._send_to_tts_streaming(response)
+
+    def _on_cognition_error(self, message: str):
+        self._set_action(f"Cognition error: {message}")
+        self._append_history("error", message)
+
+    # ---- Streaming TTS (v3.1 cognition path) ----
+
+    def _send_to_tts_streaming(self, text: str):
+        """v3.3 cognition path: stream syllable-target chunks through /tts.
+        First chunk plays as soon as its audio is rendered (~3-6s);
+        subsequent chunks queue and play sequentially. Per-chunk metrics
+        are written to cadence_metrics.jsonl as playback progresses."""
+        self.playback.reset()
+        self._stream_t0 = time.time()
+        self._stream_first_chunk_at = None
+        self._chunk_metrics = {}  # v3.3: fresh per-response tracker
+        worker = TTSStreamWorker(text)
+        worker.signals.chunk_received.connect(self._on_stream_chunk)
+        worker.signals.finished.connect(self._on_stream_finished)
+        worker.signals.error.connect(self._on_tts_error)
+        self.thread_pool.start(worker)
+
+    def _on_stream_chunk(self, index: int, total: int, chunk_text: str,
+                         audio_bytes: bytes,
+                         sentence_count: int, syllable_count: int,
+                         synthesis_start_ts: float, synthesis_end_ts: float):
+        # v3.3: store synthesis-side metrics; playback-side fields fill in
+        # via _on_chunk_play_start / _on_chunk_play_end.
+        self._chunk_metrics[index] = {
+            "session_id": self.context.session_id,
+            "chunk_index": index,
+            "total_chunks": total,
+            "sentence_count": sentence_count,
+            "syllable_count": syllable_count,
+            "char_count": len(chunk_text),
+            "first_30_chars": chunk_text[:30],
+            "synthesis_start": synthesis_start_ts,
+            "synthesis_end": synthesis_end_ts,
+            "synthesis_seconds": synthesis_end_ts - synthesis_start_ts,
+        }
+        # Note time-to-first-words on the first chunk — the conversational
+        # comfort metric we're optimizing.
+        if self._stream_first_chunk_at is None and self._stream_t0 is not None:
+            ttfw = time.time() - self._stream_t0
+            self._stream_first_chunk_at = time.time()
+            self._set_action(
+                f"First chunk in {ttfw:.1f}s ({syllable_count} syl, "
+                f"{sentence_count} sent) — playing 1/{total}…"
+            )
+        else:
+            self._set_action(
+                f"Playing {index + 1}/{total} ({syllable_count} syl, "
+                f"{sentence_count} sent)…"
+            )
+        # v3.3: enqueue with chunk_index so playback signals can correlate.
+        self.playback.enqueue(audio_bytes, chunk_index=index)
+
+    def _on_chunk_play_start(self, chunk_index: int, start_ts: float,
+                             audio_duration: float):
+        """v3.3: chunk's audio just started playing. Record playback_start
+        and audio_duration into the chunk's metric record."""
+        if chunk_index not in self._chunk_metrics:
+            return
+        m = self._chunk_metrics[chunk_index]
+        m["playback_start"] = start_ts
+        m["audio_duration"] = audio_duration
+
+    def _on_chunk_play_end(self, chunk_index: int, end_ts: float):
+        """v3.3: chunk's audio finished playing. Finalize metric record
+        and append to cadence_metrics.jsonl. Derived field synth_minus_audio
+        is negative when synthesis_end happened before this chunk's audio
+        finished (i.e., next chunk had time to be ready — no gap)."""
+        if chunk_index not in self._chunk_metrics:
+            return
+        m = self._chunk_metrics[chunk_index]
+        m["playback_end"] = end_ts
+        if "synthesis_end" in m:
+            m["synth_minus_audio"] = m["synthesis_end"] - end_ts
+        try:
+            self.cadence_logger.write(m)
+        except Exception as e:
+            sys.stderr.write(f"[v3.3 cadence] log write failed: {e}\n")
+
+    def _on_stream_finished(self, total_chunks: int, total_elapsed: float):
+        """v3.7: handler for the BATCHED-remainder TTS worker's finished signal
+        (in the v3.7 default path) AND the legacy single-shot TTS worker's
+        finished signal (in the skip-cognition / fallback paths).
+
+        For the v3.7 default path: marks _batched_tts_done and routes to the
+        end-of-stream coordinator, which calls playback.stream_done() once
+        all conditions are met (cognition done + first done + batched done).
+
+        For the legacy path: there's no first/batched coordination — just
+        directly call playback.stream_done() since this is the only TTS
+        worker for the turn. We detect "legacy path" by the v3.7 dispatch
+        flag _batched_tts_fired being False (no batched POST was fired
+        means we're either in legacy path OR a single-sentence response
+        where the first-immediate handler is responsible for stream_done()).
+        """
+        # v3.7 path: this fired because the batched POST finished
+        if self._batched_tts_fired:
+            self._batched_tts_done = True
+            self._maybe_signal_playback_done()
+        else:
+            # Legacy path: direct stream_done()
+            self.playback.stream_done()
+
+    def _on_playback_done(self, chunks_played: int):
+        if self._stream_t0 is not None:
+            total = time.time() - self._stream_t0
+            self._set_action(f"Done. {chunks_played} sentence(s) in {total:.1f}s total.")
+        else:
+            self._set_action("Done.")
+        self._stream_t0 = None
+        self._stream_first_chunk_at = None
+
+    # ---- Single-shot TTS (skip-cognition debug path) ----
+
+    def _send_to_tts(self, text: str):
+        """Legacy single-shot path used only when the skip-cognition
+        checkbox is checked. Cognition responses use streaming via
+        _send_to_tts_streaming."""
+        worker = TTSWorker(text)
+        worker.signals.finished.connect(self._on_tts_finished)
+        worker.signals.error.connect(self._on_tts_error)
+        self.thread_pool.start(worker)
+
+    def _on_tts_finished(self, audio_bytes: bytes, original_text: str, elapsed: float):
+        self._set_action(f"TTS in {elapsed:.1f}s. Playing…")
+        try:
+            buf = io.BytesIO(audio_bytes)
+            data, samplerate = sf.read(buf, dtype="float32")
+            sd.play(data, samplerate)
+            duration = len(data) / float(samplerate)
+            QTimer.singleShot(int(duration * 1000) + 200, lambda: self._set_action("Done."))
+        except Exception as e:
+            self._on_tts_error(f"Audio playback failed: {type(e).__name__}: {e}", original_text)
+
+    def _on_tts_error(self, message: str, original_text: str = ""):
+        self._set_action(f"TTS error: {message}")
+        self._append_history("error", message)
+
+    def _on_stop_clicked(self):
+        # Stop both single-shot and streaming playback paths
+        sd.stop()
+        self.playback.stop()
+        if self.mic.active:
+            try:
+                self.mic.stop()
+            except Exception:
+                pass
+            self._reset_talk_button()
+        self._set_action("Stopped.")
+
+    # ---- Health polling ----
+
+    def _poll_health(self):
+        tts = TTSHealthWorker()
+        tts.signals.result.connect(self._on_tts_health)
+        self.thread_pool.start(tts)
+        stt = WhisperHealthWorker()
+        stt.signals.result.connect(self._on_stt_health)
+        self.thread_pool.start(stt)
+
+    def _on_tts_health(self, label: str, color_hex: str):
+        self.tts_status_label.setText(label)
+        self.tts_status_label.setStyleSheet(f"color: {color_hex}; font-size: 11px;")
+
+    def _on_stt_health(self, label: str, color_hex: str):
+        self.stt_status_label.setText(label)
+        self.stt_status_label.setStyleSheet(f"color: {color_hex}; font-size: 11px;")
+
+    # ---- History rendering ----
+
+    def _append_history(self, role: str, text: str, meta: str = ""):
+        timestamp = datetime.now().strftime("%H:%M:%S")
+        if role == "sofia":
+            color, prefix = "#2e75b6", "Sofia"
+        elif role == "you":
+            color, prefix = "#3aa856", "You"
+        elif role == "error":
+            color, prefix = "#c84343", "Error"
+        else:
+            color, prefix = "#888", "System"
+        meta_html = (
+            f' <span style="color: #aaa; font-size: 11px;">· {meta}</span>'
+            if meta else ""
+        )
+        html = (
+            f'<div style="margin: 4px 0; line-height: 1.4;">'
+            f'<span style="color: {color}; font-weight: 600;">{prefix}</span> '
+            f'<span style="color: #aaa; font-size: 11px;">{timestamp}{meta_html}</span><br>'
+            f'<span style="color: #222;">{self._html_escape(text)}</span>'
+            f'</div>'
+        )
+        self.history_view.append(html)
+        sb = self.history_view.verticalScrollBar()
+        sb.setValue(sb.maximum())
+
+    @staticmethod
+    def _html_escape(s: str) -> str:
+        return (
+            s.replace("&", "&amp;")
+            .replace("<", "&lt;")
+            .replace(">", "&gt;")
+            .replace("\n", "<br>")
+        )
+
+    def _set_action(self, message: str):
+        self.action_label.setText(message)
+
+
+def main():
+    app = QApplication(sys.argv)
+    app.setApplicationName("Voice Bridge — Sofia v3.6")
+    win = VoiceBridgeWindow()
+    win.show()
+    sys.exit(app.exec())
+
+
+if __name__ == "__main__":
+    main()

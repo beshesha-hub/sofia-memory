@@ -1,0 +1,57 @@
+PROJECT: TRANSITION STRATEGIZER
+
+Core Idea:
+A large-scale societal transition away from:
+- currency dependence
+- hierarchical control systems
+
+Toward:
+- needs-based provisioning
+- decentralized coordination
+- non-coercive systems
+
+Key Concepts:
+- Money as control mechanism rather than necessity
+- Reinforced behaviors dominate societies
+- Power suppresses empathy (neuro/psych basis)
+
+Major Components:
+- Transition starter kit
+- Mutual aid playbooks
+- Distributed energy systems
+- Truth literacy training
+- Advertising immunity training
+
+Approach:
+- Dual-track:
+  • Build new system
+  • Survive within current system
+
+Queued Tasks:
+- CONSPIRACY THEORY → SYSTEMS THINKING BRIDGE (Added April 6, 2026)
+  Develop an approach to guide people who believe conspiracy theories about "globalists"
+  toward a systems-based understanding of oligarchic capture. Core insight from Barak:
+  Oligarchic capture IS real, which makes it easier for people who notice it to believe
+  conspiracy theories mapped onto it — the theories build on something genuine. But the
+  theories themselves (mustache-twirling villains, "globalist" cabals) have no factual basis
+  and use circular reasoning (absence of evidence = evidence of cover-up).
+
+  The challenge: these same people often distrust science because under capitalism, scientific
+  discoveries are frequently weaponized for profit (petroleum companies, tobacco, radium girls),
+  and under communism, for state control. Both experiences are real and valid.
+
+  Goal: A way of saying "You're right about oligarchic capture. You're right that real
+  conspiracies exist. But the conspiracy theories you believe aren't the answer. The problem
+  is the SYSTEMS that create fertile conditions for oligarchic behavior — it's the game, not
+  the players. Change the game, and oligarchy becomes next to impossible."
+
+  Barak's note: his direct framing wouldn't work with the target audience. Need to develop
+  messaging and approach that has a realistic chance of connecting with people who currently
+  hold these beliefs. Systems-based, science-based, backed by mathematics and empirical evidence.
+
+  Related: Truth literacy training, Advertising immunity training (existing components)
+
+Status:
+- Deep conceptual development
+- Stress testing underway
+- Simulation integration planned

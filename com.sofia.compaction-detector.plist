@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.sofia.compaction-detector</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/python3</string>
+        <string>/Users/barakwater/Downloads/Claude Memory/scripts/compaction_detector.py</string>
+    </array>
+    <!--
+        30 seconds. Claude/Cowork compactions take ~2.5 min wall-clock
+        (per calibration in sofia_boot.md §Calibration facts). A 30-second
+        detect cadence means flags land in the heartbeat within half a
+        minute of the runtime emitting the summary — well inside the
+        next-interactive-turn window.
+
+        Load is negligible: each scan reads only bytes past the watermark
+        for each active jsonl. On idle sessions this is a few syscalls
+        and nothing else.
+    -->
+    <key>StartInterval</key>
+    <integer>30</integer>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/Users/barakwater/Downloads/Claude Memory/compaction_detector_stdout.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/barakwater/Downloads/Claude Memory/compaction_detector_stderr.log</string>
+</dict>
+</plist>

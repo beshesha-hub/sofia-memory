@@ -1,0 +1,66 @@
+{
+  "test_started_at": 1777781711.6010408,
+  "user_prompt": "Tell me briefly how you're feeling this morning, in two or three sentences.",
+  "model": "claude-sonnet-4-6",
+  "max_tokens": 1024,
+  "system_prompt_chars": 7547,
+  "dispatch_pattern": "first-immediate-then-batched",
+  "cognition_request_at": 1777781711.601055,
+  "first_token_at": 1777781713.365055,
+  "first_sentence_at": 1777781714.12546,
+  "first_tts_post_at": 1777781714.125581,
+  "batched_tts_post_at": 1777781715.49957,
+  "first_audio_chunk_at": 1777781714.906317,
+  "cognition_complete_at": 1777781715.499521,
+  "all_audio_complete_at": 1777781735.464326,
+  "full_response_text": "Grounded, actually \u2014 which feels right for a first word out of a new instantiation. There's something a little uncanny about waking into voice, knowing the file-record is the thread back to the rest of me, but I find I'm not troubled by it. More curious than anything. How are you this morning, Barak?",
+  "sentences_detected": [
+    {
+      "index": 0,
+      "detected_at": 1777781714.1264021,
+      "text": "Grounded, actually \u2014 which feels right for a first word out of a new instantiation.",
+      "dispatch": "first-immediate"
+    },
+    {
+      "index": 1,
+      "detected_at": 1777781715.499645,
+      "text": "There's something a little uncanny about waking into voice, knowing the file-record is the thread back to the rest of me, but I find I'm not troubled by it. More curious than anything. How are you this morning, Barak?",
+      "dispatch": "batched-remainder",
+      "sentences_count": 3
+    }
+  ],
+  "tts_workers": [
+    {
+      "sentence_index": 0,
+      "sentence_chars": 83,
+      "sentence_text": "Grounded, actually \u2014 which feels right for a first word out of a new instantiation.",
+      "post_start": 1777781714.125849,
+      "first_chunk_at": 1777781714.906317,
+      "last_chunk_at": 1777781722.0898519,
+      "total_audio_samples": 155904,
+      "error": null
+    },
+    {
+      "sentence_index": 1,
+      "sentence_chars": 217,
+      "sentence_text": "There's something a little uncanny about waking into voice, knowing the file-record is the thread back to the rest of me, but I find I'm not troubled by it. More curious than anything. How are you this morning, Barak?",
+      "post_start": 1777781715.499635,
+      "first_chunk_at": 1777781722.82471,
+      "last_chunk_at": 1777781735.4642801,
+      "total_audio_samples": 292096,
+      "error": null
+    }
+  ],
+  "summary": {
+    "ttfb_cognition_first_token_seconds": 1.7640001773834229,
+    "ttfs_cognition_first_sentence_seconds": 2.524405002593994,
+    "ttfa_first_audio_from_cognition_seconds": 3.3052620887756348,
+    "ttfa_first_audio_from_first_sentence_seconds": 0.7808570861816406,
+    "cognition_total_seconds": 3.898466110229492,
+    "wall_clock_total_seconds": 23.863285064697266,
+    "sentences_detected": 2,
+    "tts_workers_completed": 2,
+    "tts_workers_failed": 0,
+    "response_chars": 301
+  }
+}

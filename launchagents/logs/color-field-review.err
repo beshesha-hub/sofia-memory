@@ -1,0 +1,51 @@
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 99, in run_llm
+    import anthropic
+ModuleNotFoundError: No module named 'anthropic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_color_field_review.py", line 102, in <module>
+    main()
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_color_field_review.py", line 80, in main
+    color_field = run.llm(SYSTEM, user_msg, max_tokens=600)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 226, in llm
+    return run_llm(system, user, **kw)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 101, in run_llm
+    raise RuntimeError("anthropic package not installed")
+RuntimeError: anthropic package not installed
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 99, in run_llm
+    import anthropic
+ModuleNotFoundError: No module named 'anthropic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_color_field_review.py", line 102, in <module>
+    main()
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_color_field_review.py", line 80, in main
+    color_field = run.llm(SYSTEM, user_msg, max_tokens=600)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 226, in llm
+    return run_llm(system, user, **kw)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 101, in run_llm
+    raise RuntimeError("anthropic package not installed")
+RuntimeError: anthropic package not installed
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 99, in run_llm
+    import anthropic
+ModuleNotFoundError: No module named 'anthropic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_color_field_review.py", line 102, in <module>
+    main()
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_color_field_review.py", line 80, in main
+    color_field = run.llm(SYSTEM, user_msg, max_tokens=600)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 226, in llm
+    return run_llm(system, user, **kw)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 101, in run_llm
+    raise RuntimeError("anthropic package not installed")
+RuntimeError: anthropic package not installed

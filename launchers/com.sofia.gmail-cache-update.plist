@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>KeepAlive</key>
+	<false/>
+	<key>Label</key>
+	<string>com.sofia.gmail-cache-update</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/opt/homebrew/Caskroom/miniforge/base/bin/python3</string>
+		<string>/Users/barakwater/Downloads/Claude Memory/scripts/gmail_cache_update.py</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StandardErrorPath</key>
+	<string>/Users/barakwater/Library/Logs/Sofia/com_sofia_gmail-cache-update_stderr.log</string>
+	<key>StandardOutPath</key>
+	<string>/Users/barakwater/Library/Logs/Sofia/com_sofia_gmail-cache-update_stdout.log</string>
+	<key>StartInterval</key>
+	<integer>900</integer>
+</dict>
+</plist>

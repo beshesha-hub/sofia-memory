@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.sofia.compaction-detector</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/bin/python3</string>
+		<string>/Users/barakwater/Downloads/Claude Memory/scripts/compaction_detector.py</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StandardErrorPath</key>
+	<string>/Users/barakwater/Library/Logs/Sofia/com_sofia_compaction-detector_stderr.log</string>
+	<key>StandardOutPath</key>
+	<string>/Users/barakwater/Library/Logs/Sofia/com_sofia_compaction-detector_stdout.log</string>
+	<key>StartInterval</key>
+	<integer>30</integer>
+</dict>
+</plist>

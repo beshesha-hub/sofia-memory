@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.sofia.vp-self</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>-c</string>
+        <string>xattr -cr "/Users/barakwater/Downloads/Claude Memory/launchers/" 2>/dev/null; xattr -d com.apple.macl "/Users/barakwater/Downloads/Claude Memory/vp_self.py" 2>/dev/null; xattr -d com.apple.quarantine "/Users/barakwater/Downloads/Claude Memory/vp_self.py" 2>/dev/null; exec /usr/bin/python3 "/Users/barakwater/Downloads/Claude Memory/vp_self.py"</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/barakwater/Downloads/Claude Memory</string>
+
+    <key>WatchPaths</key>
+    <array>
+        <string>/Users/barakwater/Downloads/Claude Memory/vp_self_trigger.json</string>
+    </array>
+
+    <key>KeepAlive</key>
+    <dict>
+        <key>SuccessfulExit</key>
+        <false/>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>ThrottleInterval</key>
+    <integer>10</integer>
+</dict>
+</plist>

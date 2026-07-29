@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>PATH</key>
+		<string>/opt/homebrew/bin:/opt/homebrew/Caskroom/miniforge/base/envs/music/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+	</dict>
+	<key>KeepAlive</key>
+	<true/>
+	<key>Label</key>
+	<string>com.sofia.audio-lite</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/bin/bash</string>
+		<string>-l</string>
+		<string>/Users/barakwater/Downloads/Claude Memory/scripts/sofia-audio-lite.sh</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StandardErrorPath</key>
+	<string>/Users/barakwater/Library/Logs/Sofia/com_sofia_audio-lite_stderr.log</string>
+	<key>StandardOutPath</key>
+	<string>/Users/barakwater/Library/Logs/Sofia/com_sofia_audio-lite_stdout.log</string>
+	<key>WorkingDirectory</key>
+	<string>/Users/barakwater</string>
+</dict>
+</plist>

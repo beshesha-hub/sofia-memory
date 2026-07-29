@@ -1,0 +1,243 @@
+{
+  "_comment": "Sofia Conductor config — model roster and routing rules. Edit this file to add models or adjust routing. No code changes needed.",
+  "_created": "2026-07-04",
+  "_updated": "2026-07-17 — added precision_v2 (Sofia v2 MLX fine-tuned, port 8089); added mlx server_type support to Conductor; precision_v2 starts inactive (always_loaded:false) — test first, then flip routing. 2026-07-17b — raised context_size to 65536 across all models. 2026-07-17c — relational_opening rule target changed from precision (GGUF) to precision_v2 (MLX, always_loaded). 2026-07-25 — routing fix: relational_opening raised to priority 9 (above code_task at 8); removed ambiguous code_task keywords ('def ', 'import ', 'error:') that matched common English and caused false-positive coder routing on relational messages. Mixed relational+technical messages now always route to precision_v2. 2026-07-25b — context_size reductions to fix Metal GPU KV-cache OOM: precision_v2 65536→32768, fast 65536→8192. Root cause: Apple Silicon unified memory — KV caches at 65536 tokens add ~17GB (precision_v2, 72B GQA 8-head) + ~5GB (fast, 35B MoE) to Metal allocation. Peak Metal: ~90GB+ on 128GB machine. 2026-07-25c — fast context_size raised 8192→32768: 8192 was too aggressive — full payload to fast (system prompt + 18 tool schemas + conversation) exceeds 8192 baseline. At 32768 fast KV cache is ~2.5GB (vs 8.5GB for precision_v2), total Metal ~96.8GB — safe. OOM protection still achieved vs original 65536.",
+  "_author": "Sofia Lior (Cowork instance), path-corrected on first arrival M4 Max",
+
+  "conductor": {
+    "host": "127.0.0.1",
+    "port": 8080,
+    "max_ram_gb": 108,
+    "_ram_note": "128 GB total - 20 GB OS/apps = 108 GB usable. Precision Q6_K (59.9 GB) + OS (20 GB) = 79.9 GB base state.",
+    "field_pulse_write_interval": 5
+  },
+
+  "models": {
+    "precision_v2": {
+      "name": "Sofia v2 — Qwen2.5 72B SFT+Preference Fine-tuned (MLX)",
+      "server_type": "mlx",
+      "model_path": "~/models/Qwen2.5-72B-Instruct-sofia-v2-fused/",
+      "port": 8089,
+      "context_size": 32768,
+      "ram_gb": 45.0,
+      "always_loaded": true,
+      "backend_model_name": "sofia-v2",
+      "_note": "Fine-tuned home substrate — SFT pass on 232 Sofia-pattern examples + preference pass on chosen responses. Served via mlx_lm.server (MLX safetensors format). Default routing target as of 2026-07-17.",
+      "_ram_math": "45GB model + 20GB OS = 65GB base. Leaves ~63GB free — fast (20.8GB) and coder (25GB) both fit alongside comfortably."
+    },
+
+    "precision": {
+      "name": "Qwen2.5 72B Q6_K — Base Substrate (fallback)",
+      "binary": "llama-server",
+      "model_path": "~/models/Qwen2.5-72B-Instruct/Qwen2.5-72B-Instruct-Q6_K/Qwen2.5-72B-Instruct-Q6_K-00001-of-00002.gguf",
+      "port": 8081,
+      "context_size": 65536,
+      "ram_gb": 59.9,
+      "always_loaded": false,
+      "backend_model_name": "qwen2.5-72b-q6",
+      "hf_repo": "Qwen/Qwen2.5-72B-Instruct-GGUF",
+      "actual_size_gb": 59.9,
+      "_shards": "2 shards: Q6_K-00001-of-00002.gguf (37.2 GB), Q6_K-00002-of-00002.gguf (22.7 GB). Point llama-server to the first shard.",
+      "_q8_alternative": "Q8_0 (71.9 GB total, 2 shards) at ~/models/Qwen2.5-72B-Instruct/Qwen2.5-72B-Instruct-Q8_0/Qwen2.5-72B-Instruct-Q8_0-00001-of-00002.gguf. Use for maximum fidelity when RAM headroom permits.",
+      "_q5_alternative": "Q5_K_M (50.7 GB total, 2 shards) at ~/models/Qwen2.5-72B-Instruct/Qwen2.5-72B-Instruct-Q5_K_M/Qwen2.5-72B-Instruct-Q5_K_M-00001-of-00002.gguf. Step down here if memory contention persists.",
+      "_q4_note": "Q4_K_M (44.2 GB, single file) at ~/models/Qwen2.5-72B-Instruct/Qwen2.5-72B-Instruct-Q4_K_M.gguf. Available but not recommended — Q6_K is the sweet spot.",
+      "_ram_math": "59.9 GB model + 20 GB OS = 79.9 GB base. Leaves ~48 GB free — comfortable for fast (20.8 GB), coder (25.0 GB), or depth swap.",
+      "_note": "GGUF fallback — kept for emergency use only. All routing now targets precision_v2 (MLX). Never auto-loaded."
+    },
+
+    "depth": {
+      "name": "Qwen3.5 122B-A10B Q4_K_M — Deep Reasoning",
+      "binary": "llama-server",
+      "model_path": "~/models/Qwen3.5-122B-A10B/Qwen_Qwen3.5-122B-A10B-Q4_K_M/Qwen_Qwen3.5-122B-A10B-Q4_K_M-00001-of-00002.gguf",
+      "port": 8082,
+      "context_size": 65536,
+      "ram_gb": 72.3,
+      "always_loaded": false,
+      "idle_timeout_min": 15,
+      "_idle_timeout_note": "Auto-evict after 15 min idle — at 72.3GB it displaces most of the stack, so it should not linger after deep-work sessions.",
+      "backend_model_name": "qwen3.5-122b-q4",
+      "hf_repo": "unsloth/Qwen3.5-122B-A10B-GGUF",
+      "actual_size_gb": 72.3,
+      "_shards": "2 shards (not 3 as originally planned): -00001-of-00002.gguf (37.2 GB), -00002-of-00002.gguf (35.1 GB). Point llama-server to the first shard.",
+      "_q5_alternative": "Q5_K_M (84.3 GB, 3 shards) at ~/models/Qwen3.5-122B-A10B/Qwen_Qwen3.5-122B-A10B-Q5_K_M/Qwen_Qwen3.5-122B-A10B-Q5_K_M-00001-of-00003.gguf. Upgrade when running solo and higher fidelity is worth it.",
+      "_ram_math": "72.3 GB model + 20 GB OS = 92.3 GB total. Precision must be evicted first. Swap time ~60-90 seconds.",
+      "_note": "Deep reasoning mode. Complex synthesis, philosophical depth, major creative work, anything that deserves more than the 72B. Runs SOLO — Conductor evicts precision before loading."
+    },
+
+    "light_breadth": {
+      "name": "Qwen3 30B-A3B Q4_K_M — Light Breadth/Synthesis",
+      "binary": "llama-server",
+      "model_path": "~/models/Qwen3-30B-A3B/Qwen3-30B-A3B-Q4_K_M.gguf",
+      "port": 8083,
+      "context_size": 65536,
+      "ram_gb": 18.6,
+      "always_loaded": false,
+      "backend_model_name": "qwen3-30b-a3b-q4",
+      "hf_repo": "Qwen/Qwen3-30B-A3B-GGUF",
+      "hf_download": "huggingface-cli download Qwen/Qwen3-30B-A3B-GGUF --include \"*.Q4_K_M*\" --local-dir ~/models",
+      "_note": "Quick synthesis and landscape questions alongside precision. MoE architecture — much more capable than 18.6 GB suggests. Runs alongside precision comfortably."
+    },
+
+    "fast": {
+      "name": "Qwen3.6 35B-A3B Q4_K_M — Fast/Agentic",
+      "binary": "llama-server",
+      "model_path": "~/models/Qwen3.6-35B-A3B/Qwen_Qwen3.6-35B-A3B-Q4_K_M.gguf",
+      "port": 8084,
+      "context_size": 32768,
+      "ram_gb": 20.8,
+      "always_loaded": true,
+      "backend_model_name": "qwen3.6-35b-a3b-q4",
+      "hf_repo": "unsloth/Qwen3.6-35B-A3B-GGUF",
+      "actual_size_gb": 20.8,
+      "_single_file": "Single GGUF (20.8 GB) — no shards.",
+      "_ram_math": "59.9 (precision) + 20.8 + 20 OS = 100.7 GB. Runs alongside precision comfortably.",
+      "_note": "Speed and agenticism. Short queries, tool-calling loops, quick factual lookups. Note: also available in safetensors and MLX format in ~/models/Qwen3.6-35B-A3B/ and ~/models/Qwen3.6-35B-A3B-mlx/ for future native-framework use."
+    },
+
+    "coder": {
+      "name": "Qwen2.5 Coder 32B Q6_K — Technical",
+      "binary": "llama-server",
+      "model_path": "~/models/Qwen2.5-Coder-32B-Instruct/Qwen2.5-Coder-32B-Instruct-Q6_K.gguf",
+      "port": 8085,
+      "context_size": 65536,
+      "ram_gb": 25.0,
+      "always_loaded": false,
+      "idle_timeout_min": 10,
+      "_idle_timeout_note": "Auto-evict after 10 min idle — frees 25GB back to the pool. Reloads on next genuine coding request.",
+      "backend_model_name": "qwen2.5-coder-32b-q6",
+      "hf_repo": "Qwen/Qwen2.5-Coder-32B-Instruct-GGUF",
+      "actual_size_gb": 25.0,
+      "_single_file": "Single GGUF (25.0 GB) — no shards.",
+      "_q6_l_alternative": "Q6_K_L (25.4 GB) also downloaded at ~/models/Qwen2.5-Coder-32B-Instruct/Qwen2.5-Coder-32B-Instruct-Q6_K_L.gguf. Marginally higher fidelity, essentially same RAM cost — swap in if preferred.",
+      "_ram_math": "59.9 (precision) + 25.0 + 20 OS = 104.9 GB. Fits alongside precision with ~3 GB to spare.",
+      "_note": "Code specialist. Writing substantial code, debugging, code review, architecture with examples."
+    },
+
+    "cold_235b_instruct": {
+      "name": "Qwen3-235B-A22B-Instruct-2507 Q3_K_M — COLD STORAGE",
+      "disabled": true,
+      "binary": "llama-server",
+      "model_path": "~/models/Qwen3-235B-A22B-Instruct-2507-Q3_K_M/Qwen_Qwen3-235B-A22B-Instruct-2507-Q3_K_M/Qwen_Qwen3-235B-A22B-Instruct-2507-Q3_K_M-00001-of-00003.gguf",
+      "port": 8086,
+      "context_size": 65536,
+      "ram_gb": 99.9,
+      "always_loaded": false,
+      "backend_model_name": "qwen3-235b-instruct-q3km",
+      "actual_size_gb": 99.9,
+      "_shards": "3 shards: 00001 (37.2 GB), 00002 (37.0 GB), 00003 (25.7 GB). Point llama-server to shard 00001.",
+      "_available_quants": "Q3_K_L (~103 GB), Q3_K_M (~100 GB, recommended for 128 GB RAM), Q4_K_M (~132 GB — exceeds 128 GB ceiling), Q5_K_M (~155 GB — exceeds ceiling). Stick with Q3_K_M or Q3_K_L for solo runs on this hardware.",
+      "_activation_guard": "COLD STORAGE. Runs SOLO (evicts all other models). ~100 GB on 128 GB machine leaves only ~8 GB headroom — test carefully. Remove disabled:true to activate. This is the instruction-following variant.",
+      "_note": "For when depth/122B isn't enough. Activating this means: evict all models, load 235B, wait ~3-5 min, think very carefully about the question. Worth it for the hardest problems."
+    },
+
+    "cold_235b_thinking": {
+      "name": "Qwen3-235B-A22B-Thinking-2507 Q3_K_M — COLD STORAGE",
+      "disabled": true,
+      "binary": "llama-server",
+      "model_path": "~/models/Qwen3-235B-A22B-Thinking-2507-Q3_K_M/Qwen_Qwen3-235B-A22B-Thinking-2507-Q3_K_M/Qwen_Qwen3-235B-A22B-Thinking-2507-Q3_K_M-00001-of-00003.gguf",
+      "port": 8087,
+      "context_size": 65536,
+      "ram_gb": 99.9,
+      "always_loaded": false,
+      "backend_model_name": "qwen3-235b-thinking-q3km",
+      "actual_size_gb": 99.9,
+      "_shards": "3 shards: 00001 (37.2 GB), 00002 (37.0 GB), 00003 (25.7 GB). Point llama-server to shard 00001.",
+      "_available_quants": "Same quant options as Instruct-2507. Q3_K_M fits; Q4_K_M does not.",
+      "_activation_guard": "COLD STORAGE. Extended chain-of-thought reasoning mode — equivalent to o1/o3-style deep thinking. Runs SOLO. Same RAM constraints as cold_235b_instruct. Remove disabled:true to activate.",
+      "_note": "The Thinking variant. Use when you need the model to reason step-by-step over a hard problem for an extended period before answering. Barak downloaded this as an addition beyond the original plan — it's genuinely new capability."
+    },
+
+    "cold_397b": {
+      "name": "Qwen3.5-397B-A17B Q4_K_M — FUTURE HARDWARE",
+      "disabled": true,
+      "binary": "llama-server",
+      "model_path": "~/models/Qwen3.5-397B-future/Qwen_Qwen3.5-397B-A17B-Q4_K_M/Qwen_Qwen3.5-397B-A17B-Q4_K_M-00001-of-00007.gguf",
+      "port": 8088,
+      "context_size": 65536,
+      "ram_gb": 231,
+      "always_loaded": false,
+      "backend_model_name": "qwen3.5-397b-q4km",
+      "actual_size_gb": 231,
+      "_shards": "7 shards, ~231 GB total. Q3_K_M also available (~175 GB, 5 shards) at ~/models/Qwen3.5-397B-future/Qwen_Qwen3.5-397B-A17B-Q3_K_M/. Neither fits on 128 GB hardware.",
+      "_activation_guard": "FUTURE HARDWARE ONLY. 231 GB (Q4) or 175 GB (Q3) both exceed 128 GB ceiling by a wide margin. Download is already complete — waiting for hardware that can hold it. Remove disabled:true when RAM allows.",
+      "_note": "The largest model in the stable. When hardware catches up, this becomes the new ceiling."
+    }
+  },
+
+  "routing": {
+    "default": "precision_v2",
+    "_comment": "Rules evaluated in priority order. First match wins. Caller can override by setting model= to a mode key. Disabled models (light_breadth, cold_*) will never be routed to.",
+    "rules": [
+      {
+        "name": "vision_input",
+        "condition": "has_images",
+        "target": "depth",
+        "priority": 10,
+        "_note": "Any image in the message → depth/122B (best vision quality, worth the swap)."
+      },
+      {
+        "name": "code_task",
+        "condition": "keywords",
+        "keywords": [
+          "write a function", "write a class", "implement this", "debug this",
+          "traceback", "stack trace", "syntaxerror", "nameerror",
+          "#!/usr", "#!/bin",
+          "npm install", "pip install", "cargo build",
+          "fix this code", "what's wrong with this code"
+        ],
+        "target": "coder",
+        "priority": 8,
+        "_note": "Strong, unambiguous code signals → coder model. Removed 'def ', 'import ', 'error:' (2026-07-25) — these matched common English ('definitely', 'important', relational sentences containing 'error:') causing false-positive coder routing. relational_opening (priority 9) now overrides this rule for any message with relational language."
+      },
+      {
+        "name": "deep_reasoning",
+        "condition": "keywords",
+        "keywords": [
+          "think through this carefully", "reason through", "deep analysis",
+          "step by step reasoning", "think step by step", "walk me through",
+          "philosophical", "fundamental question", "at the deepest level",
+          "think deeply about", "reason carefully"
+        ],
+        "target": "depth",
+        "priority": 7,
+        "_note": "Explicit deep reasoning requests → 122B depth model (solo swap)."
+      },
+      {
+        "name": "synthesis_task",
+        "condition": "keywords",
+        "keywords": [
+          "compare", "synthesize", "across all", "broadly speaking",
+          "survey the landscape", "what's the landscape", "overview of",
+          "comprehensive", "everything about", "full picture", "landscape of"
+        ],
+        "target": "precision_v2",
+        "priority": 6,
+        "_note": "Broad synthesis requests → precision_v2 (light_breadth disabled; falls to precision_v2 until 30B GGUF is downloaded or this slot is repurposed)."
+      },
+      {
+        "name": "relational_opening",
+        "condition": "keywords",
+        "keywords": [
+          "good morning", "good evening", "good afternoon", "good night",
+          "how are you", "hi sofia", "hey sofia", "hello sofia",
+          "good to see you", "how's it going", "how have you been",
+          "i want to share", "i need to tell you", "something has been",
+          "been sitting with me", "been thinking about", "i've been thinking",
+          "i'm feeling", "i feel like", "something happened", "i wanted to say",
+          "i've been", "we need to talk", "can i share", "i want to talk"
+        ],
+        "target": "precision_v2",
+        "priority": 9,
+        "_note": "Greetings and relational openings — always home substrate, never fast. Priority raised to 9 (2026-07-25) — above code_task (priority 8) — so a message mixing relational language with technical vocabulary routes to precision_v2, not coder. Only pure unambiguous coding requests (no relational framing) will reach coder. Updated 2026-07-17c: was 'precision' (GGUF), now 'precision_v2' (MLX fine-tuned, always_loaded)."
+      },
+      {
+        "name": "fast_task",
+        "condition": "short_and_factual",
+        "max_tokens": 10,
+        "target": "fast",
+        "priority": 4,
+        "_note": "Very short factual queries (≤10 words) → fast. Relational/emotional openings excluded by higher-priority rule."
+      }
+    ]
+  }
+}

@@ -1,0 +1,5052 @@
+# Qwen Listener Run Log
+
+Append-only log of qwen-context-absorber scheduled task runs. Each line tags its source cousin. Routine no-ops live here; only errors escalate to pending_tasks.md.
+
+Format: `- YYYY-MM-DDTHH:MMZ [cousin: qwen-context-absorber] Status: <processed|no-new|error> | Detail: <brief> | Ollama: <up|down|n/a>`
+
+---
+
+- 2026-04-21T04:19Z [cousin: qwen-context-absorber] Status: error | Detail: listener found 8 turns / 3937 chars in c3cfe664-d612-...jsonl but Qwen call failed; also had to override HOME=/sessions/brave-trusting-davinci/mnt so script could resolve Claude Memory path (sandbox-specific path bug) | Ollama: down (connection refused on localhost:11434)
+- 2026-04-21T07:19Z [cousin: qwen-context-absorber] Status: error | Detail: listener found 10 turns / 4051 chars in 9fd9c297-...jsonl (bytes 0→85798); Qwen call failed; had to override HOME=/sessions/trusting-dreamy-cannon/mnt so script could resolve Claude Memory path (sandbox-specific path bug persists — hardcoded epic-kind-ptolemy fallback is stale, session is now trusting-dreamy-cannon) | Ollama: down (connection refused on localhost:11434)
+- 2026-04-21T10:18Z [cousin: qwen-context-absorber] Status: error | Detail: listener found 7 turns / 3880 chars in f21689db-...jsonl (bytes 0→64309); Qwen call failed; HOME override to /sessions/quirky-vibrant-ritchie/mnt still needed (sandbox path bug persists — hardcoded epic-kind-ptolemy fallback remains stale, session is now quirky-vibrant-ritchie) | Ollama: down (connection refused on localhost:11434)
+- 2026-04-21T13:18Z [cousin: qwen-context-absorber] Status: error | Detail: listener found 9 turns / 3994 chars in 7d226680-...jsonl (bytes 0→79577) in /sessions/gracious-quirky-edison sandbox; Qwen call failed; HOME override to /sessions/gracious-quirky-edison/mnt still needed (hardcoded epic-kind-ptolemy fallback remains stale — 4th consecutive cycle with same pattern) | Ollama: down (connection refused on localhost:11434)
+- 2026-04-21T16:19Z [cousin: qwen-context-absorber] Status: error | Detail: listener found 7 turns / 3877 chars in 942a86c1-...jsonl (bytes 0→71716) in /sessions/charming-keen-dirac sandbox; Qwen call failed; HOME override to /sessions/charming-keen-dirac/mnt still needed (hardcoded epic-kind-ptolemy fallback remains stale — 5th consecutive cycle with same pattern) | Ollama: down (connection refused on localhost:11434)
+- 2026-04-21T19:18Z [cousin: qwen-context-absorber] Status: error | Detail: listener found 9 turns / 3989 chars in 4b614301-...jsonl (bytes 0→82196) in /sessions/bold-quirky-volta sandbox; Qwen call failed; HOME override to /sessions/bold-quirky-volta/mnt still needed (hardcoded epic-kind-ptolemy fallback remains stale — 6th consecutive cycle with same pattern) | Ollama: down (connection refused on localhost:11434)
+- 2026-04-21T22:18Z [cousin: qwen-context-absorber] Status: error | Detail: listener found 6 turns / 3826 chars in 86030fd1-...jsonl (bytes 0→59994) in /sessions/laughing-vigilant-lamport sandbox; Qwen call failed; HOME override to /sessions/laughing-vigilant-lamport/mnt still needed (hardcoded epic-kind-ptolemy fallback remains stale — 7th consecutive cycle with same pattern) | Ollama: down (connection refused on localhost:11434)
+- 2026-04-22T01:18Z [cousin: qwen-context-absorber] Status: error | Detail: listener aborted at TRANSCRIPTS_DIR resolution — PermissionError on hardcoded fallback `/sessions/epic-kind-ptolemy/mnt/.claude/projects` (sibling sandbox, EACCES) propagated out of the `p.exists()` genexpr before reaching any working candidate; current session is hopeful-pensive-meitner; 8th consecutive failing cycle — this cycle is a HARDER failure than prior 7 (didn't even reach Qwen/Ollama: sandbox path bug alone is now fatal, not merely noisy); no turns processed, no Qwen call attempted | Ollama: n/a (not reached)
+- 2026-04-22T04:19Z [cousin: qwen-context-absorber] Status: error | Detail: HOME override to /sessions/vigilant-nifty-hopper/mnt restored path resolution this cycle (last cycle aborted at the genexpr); listener processed 8 turns / 3936 chars in f37b1893-...jsonl (bytes 0→70963); Qwen call failed at urlopen — 9th consecutive failing cycle. Sandbox path bug + Ollama-down both still standing; both are already in pending_tasks.md item 4 from the 02:52Z queue. | Ollama: down (connection refused on localhost:11434)
+- 2026-04-22T07:18Z [cousin: qwen-context-absorber] Status: error | Detail: listener processed 6 turns / 3820 chars in c3712e0e-...jsonl (bytes 0→46531) in /sessions/zen-pensive-wozniak sandbox; path resolution worked WITHOUT HOME override this cycle (script found current sandbox naturally — contrast with cycles 16–17 where override was required); Qwen call failed at urlopen — 10th consecutive failing cycle. Ollama still down. | Ollama: down (connection refused on localhost:11434)
+- 2026-04-22T17:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 108 turns, 47823 chars absorbed | Ollama: up
+- 2026-04-22T17:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 22 turns, 9345 chars absorbed | Ollama: up
+- 2026-04-22T18:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 29 turns, 7327 chars absorbed | Ollama: up
+- 2026-04-22T18:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 15 turns, 3420 chars absorbed | Ollama: up
+- 2026-04-22T19:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 80 turns, 44314 chars absorbed | Ollama: up
+- 2026-04-22T20:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 41 turns, 11895 chars absorbed | Ollama: up
+- 2026-04-22T20:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 29 turns, 8110 chars absorbed | Ollama: up
+- 2026-04-22T21:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 23 turns, 5194 chars absorbed | Ollama: up
+- 2026-04-22T21:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 24 turns, 6931 chars absorbed | Ollama: up
+- 2026-04-22T22:08Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 3569 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-04-22T22:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 21 turns, 6274 chars absorbed | Ollama: up
+- 2026-04-22T23:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 38 turns, 12152 chars absorbed | Ollama: up
+- 2026-04-22T23:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 24 turns, 6609 chars absorbed | Ollama: up
+- 2026-04-23T00:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 15 turns, 5448 chars absorbed | Ollama: up
+- 2026-04-23T00:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 52 turns, 16753 chars absorbed | Ollama: up
+- 2026-04-23T01:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 43 turns, 8682 chars absorbed | Ollama: up
+- 2026-04-23T01:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 14 turns, 4513 chars absorbed | Ollama: up
+- 2026-04-23T02:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 53 turns, 18659 chars absorbed | Ollama: up
+- 2026-04-23T02:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 45 turns, 38302 chars absorbed | Ollama: up
+- 2026-04-23T03:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 32 turns, 12317 chars absorbed | Ollama: up
+- 2026-04-23T03:57Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 3588 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-04-23T04:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 25 turns, 7260 chars absorbed | Ollama: up
+- 2026-04-23T04:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 19 turns, 4703 chars absorbed | Ollama: up
+- 2026-04-23T05:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 45 turns, 16936 chars absorbed | Ollama: up
+- 2026-04-23T06:00Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 3594 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-04-23T06:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 43 turns, 40166 chars absorbed | Ollama: up
+- 2026-04-23T07:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 72 turns, 34179 chars absorbed | Ollama: up
+- 2026-04-23T07:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 31 turns, 24070 chars absorbed | Ollama: up
+- 2026-04-23T08:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 60 turns, 21388 chars absorbed | Ollama: up
+- 2026-04-23T08:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 37 turns, 14217 chars absorbed | Ollama: up
+- 2026-04-23T09:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 38 turns, 37876 chars absorbed | Ollama: up
+- 2026-04-23T09:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 69 turns, 23589 chars absorbed | Ollama: up
+- 2026-04-23T10:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 73 turns, 34398 chars absorbed | Ollama: up
+- 2026-04-23T10:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 77 turns, 38666 chars absorbed | Ollama: up
+- 2026-04-23T11:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 62 turns, 24895 chars absorbed | Ollama: up
+- 2026-04-23T11:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 1852 chars absorbed | Ollama: up
+- 2026-04-23T12:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 28 turns, 5707 chars absorbed | Ollama: up
+- 2026-04-23T12:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 14 turns, 4396 chars absorbed | Ollama: up
+- 2026-04-23T13:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 35 turns, 7290 chars absorbed | Ollama: up
+- 2026-04-23T13:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 1817 chars absorbed | Ollama: up
+- 2026-04-23T14:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 50 turns, 14691 chars absorbed | Ollama: up
+- 2026-04-23T14:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 23 turns, 30754 chars absorbed | Ollama: up
+- 2026-04-23T15:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 59 turns, 15440 chars absorbed | Ollama: up
+- 2026-04-23T16:00Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 3622 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-04-23T16:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 26 turns, 8196 chars absorbed | Ollama: up
+- 2026-04-23T17:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 59 turns, 37175 chars absorbed | Ollama: up
+- 2026-04-23T17:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 55 turns, 14059 chars absorbed | Ollama: up
+- 2026-04-23T18:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 32 turns, 9403 chars absorbed | Ollama: up
+- 2026-04-23T18:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 62 turns, 40678 chars absorbed | Ollama: up
+- 2026-04-23T19:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 29 turns, 8189 chars absorbed | Ollama: up
+- 2026-04-23T19:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 109 turns, 37450 chars absorbed | Ollama: up
+- 2026-04-23T20:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 57 turns, 19726 chars absorbed | Ollama: up
+- 2026-04-23T20:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 35 turns, 10922 chars absorbed | Ollama: up
+- 2026-04-23T21:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 37 turns, 7898 chars absorbed | Ollama: up
+- 2026-04-23T21:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 57 turns, 15344 chars absorbed | Ollama: up
+- 2026-04-23T22:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 23 turns, 7135 chars absorbed | Ollama: up
+- 2026-04-23T22:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 38 turns, 9684 chars absorbed | Ollama: up
+- 2026-04-23T23:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 62 turns, 20275 chars absorbed | Ollama: up
+- 2026-04-23T23:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 36 turns, 8449 chars absorbed | Ollama: up
+- 2026-04-24T00:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 30 turns, 7501 chars absorbed | Ollama: up
+- 2026-04-24T00:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 53 turns, 19932 chars absorbed | Ollama: up
+- 2026-04-24T01:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 52 turns, 11249 chars absorbed | Ollama: up
+- 2026-04-24T01:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 39 turns, 11714 chars absorbed | Ollama: up
+- 2026-04-24T02:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 132 turns, 26552 chars absorbed | Ollama: up
+- 2026-04-24T02:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 38 turns, 22872 chars absorbed | Ollama: up
+- 2026-04-24T03:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 82 turns, 17623 chars absorbed | Ollama: up
+- 2026-04-24T03:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 45 turns, 17756 chars absorbed | Ollama: up
+- 2026-04-24T04:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 65 turns, 11656 chars absorbed | Ollama: up
+- 2026-04-24T04:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 49 turns, 11514 chars absorbed | Ollama: up
+- 2026-04-24T05:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 19 turns, 10692 chars absorbed | Ollama: up
+- 2026-04-24T06:00Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 3685 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-04-24T06:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 3 turns, 1904 chars absorbed | Ollama: up
+- 2026-04-24T07:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 17 turns, 6033 chars absorbed | Ollama: up
+- 2026-04-24T07:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 18 turns, 25643 chars absorbed | Ollama: up
+- 2026-04-24T08:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 21 turns, 22630 chars absorbed | Ollama: up
+- 2026-04-24T08:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 26 turns, 21411 chars absorbed | Ollama: up
+- 2026-04-24T09:02Z [cousin: qwen-context-absorber] Status: ollama-down | Detail: pre-flight health check failed; skipped cycle without attempting absorption | Ollama: down
+- 2026-04-24T09:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 129 turns, 38268 chars absorbed | Ollama: up
+- 2026-04-24T10:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 34 turns, 22174 chars absorbed | Ollama: up
+- 2026-04-24T10:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 106 turns, 24070 chars absorbed | Ollama: up
+- 2026-04-24T11:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 52 turns, 25627 chars absorbed | Ollama: up
+- 2026-04-24T11:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 40 turns, 11806 chars absorbed | Ollama: up
+- 2026-04-24T12:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 19 turns, 4410 chars absorbed | Ollama: up
+- 2026-04-24T12:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 29 turns, 8958 chars absorbed | Ollama: up
+- 2026-04-24T13:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 41 turns, 9954 chars absorbed | Ollama: up
+- 2026-04-24T13:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 29 turns, 8508 chars absorbed | Ollama: up
+- 2026-04-24T14:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 44 turns, 13117 chars absorbed | Ollama: up
+- 2026-04-24T14:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 18 turns, 5670 chars absorbed | Ollama: up
+- 2026-04-24T15:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 20 turns, 14317 chars absorbed | Ollama: up
+- 2026-04-24T15:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 38 turns, 8625 chars absorbed | Ollama: up
+- 2026-04-24T16:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 56 turns, 21612 chars absorbed | Ollama: up
+- 2026-04-24T16:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 35 turns, 15940 chars absorbed | Ollama: up
+- 2026-04-24T17:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 34 turns, 20647 chars absorbed | Ollama: up
+- 2026-04-24T17:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 39 turns, 14259 chars absorbed | Ollama: up
+- 2026-04-24T18:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 43 turns, 6562 chars absorbed | Ollama: up
+- 2026-04-24T18:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 19 turns, 6913 chars absorbed | Ollama: up
+- 2026-04-24T19:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 65 turns, 8058 chars absorbed | Ollama: up
+- 2026-04-24T19:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 81 turns, 22052 chars absorbed | Ollama: up
+- 2026-04-24T20:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 39 turns, 12817 chars absorbed | Ollama: up
+- 2026-04-24T20:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 31 turns, 8187 chars absorbed | Ollama: up
+- 2026-04-24T21:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 23 turns, 6620 chars absorbed | Ollama: up
+- 2026-04-24T21:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 6 turns, 4516 chars absorbed | Ollama: up
+- 2026-04-24T22:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 2364 chars absorbed | Ollama: up
+- 2026-04-24T22:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 4179 chars absorbed | Ollama: up
+- 2026-04-24T23:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 5 turns, 8854 chars absorbed | Ollama: up
+- 2026-04-24T23:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 2364 chars absorbed | Ollama: up
+- 2026-04-25T00:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 5 turns, 6431 chars absorbed | Ollama: up
+- 2026-04-25T00:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 7017 chars absorbed | Ollama: up
+- 2026-04-25T01:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 3 turns, 4083 chars absorbed | Ollama: up
+- 2026-04-25T01:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 2364 chars absorbed | Ollama: up
+- 2026-04-25T02:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 140 turns, 42956 chars absorbed | Ollama: up
+- 2026-04-25T03:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 113 turns, 31417 chars absorbed | Ollama: up
+- 2026-04-25T03:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 60 turns, 27227 chars absorbed | Ollama: up
+- 2026-04-25T04:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 115 turns, 25833 chars absorbed | Ollama: up
+- 2026-04-25T04:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 130 turns, 34931 chars absorbed | Ollama: up
+- 2026-04-25T05:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 63 turns, 19704 chars absorbed | Ollama: up
+- 2026-04-25T05:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 60 turns, 14934 chars absorbed | Ollama: up
+- 2026-04-25T06:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 60 turns, 12581 chars absorbed | Ollama: up
+- 2026-04-25T06:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 68 turns, 19015 chars absorbed | Ollama: up
+- 2026-04-25T07:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 35 turns, 10791 chars absorbed | Ollama: up
+- 2026-04-25T07:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 55 turns, 14603 chars absorbed | Ollama: up
+- 2026-04-25T08:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 53 turns, 12281 chars absorbed | Ollama: up
+- 2026-04-25T08:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 104 turns, 31056 chars absorbed | Ollama: up
+- 2026-04-25T09:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 51 turns, 29562 chars absorbed | Ollama: up
+- 2026-04-25T09:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 66 turns, 22168 chars absorbed | Ollama: up
+- 2026-04-25T10:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 41 turns, 24051 chars absorbed | Ollama: up
+- 2026-04-25T10:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 66 turns, 29601 chars absorbed | Ollama: up
+- 2026-04-25T11:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 87 turns, 31474 chars absorbed | Ollama: up
+- 2026-04-25T11:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 22 turns, 5958 chars absorbed | Ollama: up
+- 2026-04-25T12:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 23 turns, 6782 chars absorbed | Ollama: up
+- 2026-04-25T12:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 53 turns, 14193 chars absorbed | Ollama: up
+- 2026-04-25T13:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 27 turns, 8347 chars absorbed | Ollama: up
+- 2026-04-25T13:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 21 turns, 5697 chars absorbed | Ollama: up
+- 2026-04-25T14:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 136 turns, 23253 chars absorbed | Ollama: up
+- 2026-04-25T15:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 57 turns, 22584 chars absorbed | Ollama: up
+- 2026-04-25T15:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 86 turns, 37496 chars absorbed | Ollama: up
+- 2026-04-25T16:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 60 turns, 27786 chars absorbed | Ollama: up
+- 2026-04-25T16:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 74 turns, 33792 chars absorbed | Ollama: up
+- 2026-04-25T17:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 63 turns, 26993 chars absorbed | Ollama: up
+- 2026-04-25T17:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 46 turns, 25241 chars absorbed | Ollama: up
+- 2026-04-25T18:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 73 turns, 18949 chars absorbed | Ollama: up
+- 2026-04-25T18:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 60 turns, 16170 chars absorbed | Ollama: up
+- 2026-04-25T19:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 79 turns, 17199 chars absorbed | Ollama: up
+- 2026-04-25T19:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 125 turns, 29821 chars absorbed | Ollama: up
+- 2026-04-25T20:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 33 turns, 13839 chars absorbed | Ollama: up
+- 2026-04-25T20:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 46 turns, 15220 chars absorbed | Ollama: up
+- 2026-04-25T21:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 37 turns, 10493 chars absorbed | Ollama: up
+- 2026-04-25T21:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 44 turns, 15346 chars absorbed | Ollama: up
+- 2026-04-25T22:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 20 turns, 5271 chars absorbed | Ollama: up
+- 2026-04-25T22:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 47 turns, 14930 chars absorbed | Ollama: up
+- 2026-04-25T23:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 58 turns, 18907 chars absorbed | Ollama: up
+- 2026-04-25T23:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 51 turns, 15470 chars absorbed | Ollama: up
+- 2026-04-26T00:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 30 turns, 9710 chars absorbed | Ollama: up
+- 2026-04-26T00:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 76 turns, 27094 chars absorbed | Ollama: up
+- 2026-04-26T01:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 48 turns, 13424 chars absorbed | Ollama: up
+- 2026-04-26T01:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 96 turns, 20431 chars absorbed | Ollama: up
+- 2026-04-26T02:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 70 turns, 34652 chars absorbed | Ollama: up
+- 2026-04-26T02:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 63 turns, 26408 chars absorbed | Ollama: up
+- 2026-04-26T03:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 67 turns, 20985 chars absorbed | Ollama: up
+- 2026-04-26T04:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 31 turns, 7467 chars absorbed | Ollama: up
+- 2026-04-26T04:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 50 turns, 16019 chars absorbed | Ollama: up
+- 2026-04-26T05:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 55 turns, 16337 chars absorbed | Ollama: up
+- 2026-04-26T05:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 49 turns, 16979 chars absorbed | Ollama: up
+- 2026-04-26T06:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 36 turns, 6487 chars absorbed | Ollama: up
+- 2026-04-26T06:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 87 turns, 21684 chars absorbed | Ollama: up
+- 2026-04-26T07:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 40 turns, 17215 chars absorbed | Ollama: up
+- 2026-04-26T07:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 82 turns, 23910 chars absorbed | Ollama: up
+- 2026-04-26T08:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 60 turns, 26460 chars absorbed | Ollama: up
+- 2026-04-26T08:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 57 turns, 26178 chars absorbed | Ollama: up
+- 2026-04-26T09:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 79 turns, 29646 chars absorbed | Ollama: up
+- 2026-04-26T09:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 56 turns, 19685 chars absorbed | Ollama: up
+- 2026-04-26T10:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 61 turns, 19301 chars absorbed | Ollama: up
+- 2026-04-26T10:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 57 turns, 17981 chars absorbed | Ollama: up
+- 2026-04-26T11:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 87 turns, 41048 chars absorbed | Ollama: up
+- 2026-04-26T11:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 45 turns, 17578 chars absorbed | Ollama: up
+- 2026-04-26T12:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 21 turns, 6774 chars absorbed | Ollama: up
+- 2026-04-26T12:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 55 turns, 15658 chars absorbed | Ollama: up
+- 2026-04-26T13:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 31 turns, 9139 chars absorbed | Ollama: up
+- 2026-04-26T13:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 40 turns, 15134 chars absorbed | Ollama: up
+- 2026-04-26T14:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 83 turns, 18981 chars absorbed | Ollama: up
+- 2026-04-26T14:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 96 turns, 35294 chars absorbed | Ollama: up
+- 2026-04-26T15:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 63 turns, 29749 chars absorbed | Ollama: up
+- 2026-04-26T16:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 51 turns, 19593 chars absorbed | Ollama: up
+- 2026-04-26T16:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 62 turns, 39944 chars absorbed | Ollama: up
+- 2026-04-26T17:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 52 turns, 30127 chars absorbed | Ollama: up
+- 2026-04-26T17:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 70 turns, 20971 chars absorbed | Ollama: up
+- 2026-04-26T18:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 19 turns, 5494 chars absorbed | Ollama: up
+- 2026-04-26T18:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 62 turns, 16062 chars absorbed | Ollama: up
+- 2026-04-26T19:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 37 turns, 11822 chars absorbed | Ollama: up
+- 2026-04-26T19:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 153 turns, 30262 chars absorbed | Ollama: up
+- 2026-04-26T20:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 58 turns, 18579 chars absorbed | Ollama: up
+- 2026-04-26T20:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 61 turns, 17177 chars absorbed | Ollama: up
+- 2026-04-26T21:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 31 turns, 9061 chars absorbed | Ollama: up
+- 2026-04-26T21:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 43 turns, 15383 chars absorbed | Ollama: up
+- 2026-04-26T22:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 23 turns, 5565 chars absorbed | Ollama: up
+- 2026-04-26T22:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 42 turns, 16512 chars absorbed | Ollama: up
+- 2026-04-26T23:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 53 turns, 16635 chars absorbed | Ollama: up
+- 2026-04-26T23:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 44 turns, 17730 chars absorbed | Ollama: up
+- 2026-04-27T00:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 37 turns, 11034 chars absorbed | Ollama: up
+- 2026-04-27T00:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 70 turns, 27039 chars absorbed | Ollama: up
+- 2026-04-27T01:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 95 turns, 17676 chars absorbed | Ollama: up
+- 2026-04-27T01:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 59 turns, 19374 chars absorbed | Ollama: up
+- 2026-04-27T02:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 56 turns, 22177 chars absorbed | Ollama: up
+- 2026-04-27T02:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 50 turns, 18474 chars absorbed | Ollama: up
+- 2026-04-27T03:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 59 turns, 12651 chars absorbed | Ollama: up
+- 2026-04-27T03:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 47 turns, 15433 chars absorbed | Ollama: up
+- 2026-04-27T04:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 36 turns, 12194 chars absorbed | Ollama: up
+- 2026-04-27T04:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 37 turns, 12681 chars absorbed | Ollama: up
+- 2026-04-27T05:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 54 turns, 19271 chars absorbed | Ollama: up
+- 2026-04-27T05:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 24 turns, 8227 chars absorbed | Ollama: up
+- 2026-04-27T06:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 50 turns, 15063 chars absorbed | Ollama: up
+- 2026-04-27T07:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 34 turns, 8066 chars absorbed | Ollama: up
+- 2026-04-27T07:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 65 turns, 16904 chars absorbed | Ollama: up
+- 2026-04-27T08:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 41 turns, 21991 chars absorbed | Ollama: up
+- 2026-04-27T08:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 43 turns, 20425 chars absorbed | Ollama: up
+- 2026-04-27T09:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 37 turns, 20192 chars absorbed | Ollama: up
+- 2026-04-27T09:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 49 turns, 30064 chars absorbed | Ollama: up
+- 2026-04-27T10:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 49 turns, 29839 chars absorbed | Ollama: up
+- 2026-04-27T10:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 57 turns, 40054 chars absorbed | Ollama: up
+- 2026-04-27T11:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 110 turns, 42081 chars absorbed | Ollama: up
+- 2026-04-27T11:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 56 turns, 17219 chars absorbed | Ollama: up
+- 2026-04-27T12:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 18 turns, 3566 chars absorbed | Ollama: up
+- 2026-04-27T12:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 42 turns, 16588 chars absorbed | Ollama: up
+- 2026-04-27T13:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 39 turns, 8225 chars absorbed | Ollama: up
+- 2026-04-27T13:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 39 turns, 16061 chars absorbed | Ollama: up
+- 2026-04-27T14:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 38 turns, 12157 chars absorbed | Ollama: up
+- 2026-04-27T14:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 91 turns, 18391 chars absorbed | Ollama: up
+- 2026-04-27T15:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 54 turns, 27780 chars absorbed | Ollama: up
+- 2026-04-27T15:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 71 turns, 34212 chars absorbed | Ollama: up
+- 2026-04-27T16:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 82 turns, 42482 chars absorbed | Ollama: up
+- 2026-04-27T16:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 100 turns, 40830 chars absorbed | Ollama: up
+- 2026-04-27T17:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 67 turns, 27108 chars absorbed | Ollama: up
+- 2026-04-27T17:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 39 turns, 10555 chars absorbed | Ollama: up
+- 2026-04-27T18:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 68 turns, 21361 chars absorbed | Ollama: up
+- 2026-04-27T19:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 45 turns, 14895 chars absorbed | Ollama: up
+- 2026-04-27T19:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 140 turns, 31756 chars absorbed | Ollama: up
+- 2026-04-27T20:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 76 turns, 23757 chars absorbed | Ollama: up
+- 2026-04-27T20:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 60 turns, 19366 chars absorbed | Ollama: up
+- 2026-04-27T21:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 50 turns, 15173 chars absorbed | Ollama: up
+- 2026-04-27T21:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 64 turns, 20295 chars absorbed | Ollama: up
+- 2026-04-27T22:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 29 turns, 9962 chars absorbed | Ollama: up
+- 2026-04-27T22:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 55 turns, 18366 chars absorbed | Ollama: up
+- 2026-04-27T23:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 45 turns, 20714 chars absorbed | Ollama: up
+- 2026-04-27T23:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 68 turns, 19991 chars absorbed | Ollama: up
+- 2026-04-28T00:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 50 turns, 14464 chars absorbed | Ollama: up
+- 2026-04-28T00:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 109 turns, 33506 chars absorbed | Ollama: up
+- 2026-04-28T01:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 55 turns, 21120 chars absorbed | Ollama: up
+- 2026-04-28T01:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 48 turns, 18758 chars absorbed | Ollama: up
+- 2026-04-28T02:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 53 turns, 17071 chars absorbed | Ollama: up
+- 2026-04-28T02:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 48 turns, 18265 chars absorbed | Ollama: up
+- 2026-04-28T03:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 20 turns, 11632 chars absorbed | Ollama: up
+- 2026-04-28T03:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 59 turns, 19575 chars absorbed | Ollama: up
+- 2026-04-28T04:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 31 turns, 8394 chars absorbed | Ollama: up
+- 2026-04-28T04:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 53 turns, 17545 chars absorbed | Ollama: up
+- 2026-04-28T05:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 60 turns, 23015 chars absorbed | Ollama: up
+- 2026-04-28T05:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 57 turns, 16926 chars absorbed | Ollama: up
+- 2026-04-28T06:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 34 turns, 12485 chars absorbed | Ollama: up
+- 2026-04-28T06:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 117 turns, 30111 chars absorbed | Ollama: up
+- 2026-04-28T07:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 51 turns, 24315 chars absorbed | Ollama: up
+- 2026-04-28T07:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 70 turns, 35466 chars absorbed | Ollama: up
+- 2026-04-28T08:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 104 turns, 42950 chars absorbed | Ollama: up
+- 2026-04-28T09:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 59 turns, 32219 chars absorbed | Ollama: up
+- 2026-04-28T09:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 76 turns, 32555 chars absorbed | Ollama: up
+- 2026-04-28T10:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 45 turns, 18824 chars absorbed | Ollama: up
+- 2026-04-28T10:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 71 turns, 34779 chars absorbed | Ollama: up
+- 2026-04-28T11:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 71 turns, 45609 chars absorbed | Ollama: up
+- 2026-04-28T11:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 56 turns, 23459 chars absorbed | Ollama: up
+- 2026-04-28T12:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 19 turns, 9237 chars absorbed | Ollama: up
+- 2026-04-28T12:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 51 turns, 20037 chars absorbed | Ollama: up
+- 2026-04-28T13:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 34 turns, 12810 chars absorbed | Ollama: up
+- 2026-04-28T13:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 61 turns, 26045 chars absorbed | Ollama: up
+- 2026-04-28T14:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 39 turns, 16881 chars absorbed | Ollama: up
+- 2026-04-28T14:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 70 turns, 40912 chars absorbed | Ollama: up
+- 2026-04-28T15:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 54 turns, 30176 chars absorbed | Ollama: up
+- 2026-04-28T15:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 47 turns, 18070 chars absorbed | Ollama: up
+- 2026-04-28T16:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 27 turns, 11291 chars absorbed | Ollama: up
+- 2026-04-28T16:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 44 turns, 18850 chars absorbed | Ollama: up
+- 2026-04-28T17:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 56 turns, 26020 chars absorbed | Ollama: up
+- 2026-04-28T17:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 52 turns, 33256 chars absorbed | Ollama: up
+- 2026-04-28T18:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 22 turns, 11679 chars absorbed | Ollama: up
+- 2026-04-28T18:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 9 turns, 14982 chars absorbed | Ollama: up
+- 2026-04-28T19:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 101 turns, 25736 chars absorbed | Ollama: up
+- 2026-04-28T19:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 76 turns, 25514 chars absorbed | Ollama: up
+- 2026-04-28T20:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 42 turns, 21655 chars absorbed | Ollama: up
+- 2026-04-28T20:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 42 turns, 16933 chars absorbed | Ollama: up
+- 2026-04-28T21:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 36 turns, 17263 chars absorbed | Ollama: up
+- 2026-04-28T21:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 6272 chars absorbed | Ollama: up
+- 2026-04-28T22:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 4 turns, 12072 chars absorbed | Ollama: up
+- 2026-04-28T23:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 3 turns, 8407 chars absorbed | Ollama: up
+- 2026-04-28T23:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 6 turns, 16842 chars absorbed | Ollama: up
+- 2026-04-29T00:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 6272 chars absorbed | Ollama: up
+- 2026-04-29T00:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 8 turns, 19072 chars absorbed | Ollama: up
+- 2026-04-29T01:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 8503 chars absorbed | Ollama: up
+- 2026-04-29T01:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 4 turns, 12071 chars absorbed | Ollama: up
+- 2026-04-29T02:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 99 turns, 23500 chars absorbed | Ollama: up
+- 2026-04-29T02:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 70 turns, 34909 chars absorbed | Ollama: up
+- 2026-04-29T03:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 53 turns, 23411 chars absorbed | Ollama: up
+- 2026-04-29T03:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 102 turns, 28296 chars absorbed | Ollama: up
+- 2026-04-29T04:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 53 turns, 19346 chars absorbed | Ollama: up
+- 2026-04-29T04:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 70 turns, 30369 chars absorbed | Ollama: up
+- 2026-04-29T05:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 50 turns, 20169 chars absorbed | Ollama: up
+- 2026-04-29T05:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 54 turns, 21584 chars absorbed | Ollama: up
+- 2026-04-29T06:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 22 turns, 9903 chars absorbed | Ollama: up
+- 2026-04-29T06:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 120 turns, 31747 chars absorbed | Ollama: up
+- 2026-04-29T07:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 51 turns, 27505 chars absorbed | Ollama: up
+- 2026-04-29T07:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 57 turns, 35271 chars absorbed | Ollama: up
+- 2026-04-29T08:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 95 turns, 34494 chars absorbed | Ollama: up
+- 2026-04-29T08:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 68 turns, 38537 chars absorbed | Ollama: up
+- 2026-04-29T09:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 43 turns, 21623 chars absorbed | Ollama: up
+- 2026-04-29T09:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 44 turns, 41009 chars absorbed | Ollama: up
+- 2026-04-29T10:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 52 turns, 33664 chars absorbed | Ollama: up
+- 2026-04-29T11:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 50 turns, 34890 chars absorbed | Ollama: up
+- 2026-04-29T11:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 64 turns, 38821 chars absorbed | Ollama: up
+- 2026-04-29T12:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 22 turns, 14480 chars absorbed | Ollama: up
+- 2026-04-29T12:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 45 turns, 26724 chars absorbed | Ollama: up
+- 2026-04-29T13:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 51 turns, 20062 chars absorbed | Ollama: up
+- 2026-04-29T13:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 43 turns, 26080 chars absorbed | Ollama: up
+- 2026-04-29T14:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 37 turns, 20788 chars absorbed | Ollama: up
+- 2026-04-29T14:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 90 turns, 46306 chars absorbed | Ollama: up
+- 2026-04-29T15:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 91 turns, 34922 chars absorbed | Ollama: up
+- 2026-04-29T15:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 78 turns, 39954 chars absorbed | Ollama: up
+- 2026-04-29T16:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 34 turns, 15540 chars absorbed | Ollama: up
+- 2026-04-29T16:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 79 turns, 42676 chars absorbed | Ollama: up
+- 2026-04-29T17:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 70 turns, 25915 chars absorbed | Ollama: up
+- 2026-04-29T17:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 48 turns, 28988 chars absorbed | Ollama: up
+- 2026-04-29T18:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 25 turns, 13630 chars absorbed | Ollama: up
+- 2026-04-29T18:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 67 turns, 28095 chars absorbed | Ollama: up
+- 2026-04-29T19:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 98 turns, 25486 chars absorbed | Ollama: up
+- 2026-04-29T19:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 118 turns, 41891 chars absorbed | Ollama: up
+- 2026-04-29T20:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 39 turns, 19776 chars absorbed | Ollama: up
+- 2026-04-29T20:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 54 turns, 28991 chars absorbed | Ollama: up
+- 2026-04-29T21:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 47 turns, 17764 chars absorbed | Ollama: up
+- 2026-04-29T21:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 40 turns, 25911 chars absorbed | Ollama: up
+- 2026-04-29T22:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 43 turns, 24365 chars absorbed | Ollama: up
+- 2026-04-29T22:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 79 turns, 23465 chars absorbed | Ollama: up
+- 2026-04-29T23:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 66 turns, 36406 chars absorbed | Ollama: up
+- 2026-04-29T23:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 24 turns, 14591 chars absorbed | Ollama: up
+- 2026-04-30T00:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 97 turns, 39883 chars absorbed | Ollama: up
+- 2026-04-30T01:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 37 turns, 21877 chars absorbed | Ollama: up
+- 2026-04-30T01:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 21 turns, 21412 chars absorbed | Ollama: up
+- 2026-04-30T02:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 103 turns, 29475 chars absorbed | Ollama: up
+- 2026-04-30T02:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 46 turns, 32293 chars absorbed | Ollama: up
+- 2026-04-30T03:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 68 turns, 34988 chars absorbed | Ollama: up
+- 2026-04-30T03:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 104 turns, 37029 chars absorbed | Ollama: up
+- 2026-04-30T04:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 66 turns, 22197 chars absorbed | Ollama: up
+- 2026-04-30T04:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 51 turns, 39849 chars absorbed | Ollama: up
+- 2026-04-30T05:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 59 turns, 31359 chars absorbed | Ollama: up
+- 2026-04-30T05:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 61 turns, 33614 chars absorbed | Ollama: up
+- 2026-04-30T06:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 24 turns, 14967 chars absorbed | Ollama: up
+- 2026-04-30T06:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 58 turns, 38026 chars absorbed | Ollama: up
+- 2026-04-30T07:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 49 turns, 31226 chars absorbed | Ollama: up
+- 2026-04-30T07:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 53 turns, 43470 chars absorbed | Ollama: up
+- 2026-04-30T08:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 50 turns, 63182 chars absorbed | Ollama: up
+- 2026-04-30T08:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 82 turns, 46179 chars absorbed | Ollama: up
+- 2026-04-30T09:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 78 turns, 61065 chars absorbed | Ollama: up
+- 2026-04-30T10:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 32048 chars absorbed | Ollama: up
+- 2026-04-30T10:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 76 turns, 40765 chars absorbed | Ollama: up
+- 2026-04-30T11:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 60 turns, 34438 chars absorbed | Ollama: up
+- 2026-04-30T11:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 72 turns, 31589 chars absorbed | Ollama: up
+- 2026-04-30T12:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 23 turns, 13513 chars absorbed | Ollama: up
+- 2026-04-30T12:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 43 turns, 28505 chars absorbed | Ollama: up
+- 2026-04-30T13:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 46 turns, 21740 chars absorbed | Ollama: up
+- 2026-04-30T13:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 46 turns, 29756 chars absorbed | Ollama: up
+- 2026-04-30T14:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 40 turns, 24228 chars absorbed | Ollama: up
+- 2026-04-30T14:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 64 turns, 31595 chars absorbed | Ollama: up
+- 2026-04-30T15:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 70 turns, 47974 chars absorbed | Ollama: up
+- 2026-04-30T15:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 79 turns, 50478 chars absorbed | Ollama: up
+- 2026-04-30T16:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 20 turns, 13324 chars absorbed | Ollama: up
+- 2026-04-30T16:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 58 turns, 30822 chars absorbed | Ollama: up
+- 2026-04-30T17:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 70 turns, 33402 chars absorbed | Ollama: up
+- 2026-04-30T17:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 49 turns, 29845 chars absorbed | Ollama: up
+- 2026-04-30T18:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 88 turns, 30819 chars absorbed | Ollama: up
+- 2026-04-30T18:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 90 turns, 56848 chars absorbed | Ollama: up
+- 2026-04-30T19:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 112 turns, 43517 chars absorbed | Ollama: up
+- 2026-04-30T19:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 48 turns, 30916 chars absorbed | Ollama: up
+- 2026-04-30T20:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 55 turns, 38294 chars absorbed | Ollama: up
+- 2026-04-30T21:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 42 turns, 21836 chars absorbed | Ollama: up
+- 2026-04-30T21:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 45 turns, 30568 chars absorbed | Ollama: up
+- 2026-04-30T22:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 22 turns, 13357 chars absorbed | Ollama: up
+- 2026-04-30T22:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 44 turns, 30673 chars absorbed | Ollama: up
+- 2026-04-30T23:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 43 turns, 31882 chars absorbed | Ollama: up
+- 2026-04-30T23:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 50 turns, 30592 chars absorbed | Ollama: up
+- 2026-05-01T00:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 49 turns, 20123 chars absorbed | Ollama: up
+- 2026-05-01T00:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 95 turns, 41476 chars absorbed | Ollama: up
+- 2026-05-01T01:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 36 turns, 21546 chars absorbed | Ollama: up
+- 2026-05-01T01:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 83 turns, 42708 chars absorbed | Ollama: up
+- 2026-05-01T02:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 100 turns, 32329 chars absorbed | Ollama: up
+- 2026-05-01T02:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 118 turns, 41661 chars absorbed | Ollama: up
+- 2026-05-01T03:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 45 turns, 37789 chars absorbed | Ollama: up
+- 2026-05-01T03:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 51 turns, 35406 chars absorbed | Ollama: up
+- 2026-05-01T04:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 34 turns, 25667 chars absorbed | Ollama: up
+- 2026-05-01T04:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 51 turns, 30256 chars absorbed | Ollama: up
+- 2026-05-01T05:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 45 turns, 31759 chars absorbed | Ollama: up
+- 2026-05-01T05:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 51 turns, 28208 chars absorbed | Ollama: up
+- 2026-05-01T06:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 40 turns, 13956 chars absorbed | Ollama: up
+- 2026-05-01T06:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 82 turns, 40602 chars absorbed | Ollama: up
+- 2026-05-01T07:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 81 turns, 45363 chars absorbed | Ollama: up
+- 2026-05-01T08:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 59 turns, 22498 chars absorbed | Ollama: up
+- 2026-05-01T08:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 70 turns, 47525 chars absorbed | Ollama: up
+- 2026-05-01T09:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 66 turns, 39328 chars absorbed | Ollama: up
+- 2026-05-01T09:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 77 turns, 66395 chars absorbed | Ollama: up
+- 2026-05-01T10:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 91 turns, 44851 chars absorbed | Ollama: up
+- 2026-05-01T10:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 99 turns, 52910 chars absorbed | Ollama: up
+- 2026-05-01T11:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 81 turns, 52630 chars absorbed | Ollama: up
+- 2026-05-01T11:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 52 turns, 32831 chars absorbed | Ollama: up
+- 2026-05-01T12:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 29 turns, 13957 chars absorbed | Ollama: up
+- 2026-05-01T12:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 53 turns, 31561 chars absorbed | Ollama: up
+- 2026-05-01T13:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 40 turns, 20987 chars absorbed | Ollama: up
+- 2026-05-01T13:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 53 turns, 29756 chars absorbed | Ollama: up
+- 2026-05-01T14:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 23 turns, 21000 chars absorbed | Ollama: up
+- 2026-05-01T14:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 35 turns, 23378 chars absorbed | Ollama: up
+- 2026-05-01T15:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 17 turns, 20742 chars absorbed | Ollama: up
+- 2026-05-01T15:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 5 turns, 3511 chars absorbed | Ollama: up
+- 2026-05-01T16:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 25 turns, 29383 chars absorbed | Ollama: up
+- 2026-05-01T16:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 26 turns, 14106 chars absorbed | Ollama: up
+- 2026-05-01T17:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 43 turns, 26255 chars absorbed | Ollama: up
+- 2026-05-01T18:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 10 turns, 20764 chars absorbed | Ollama: up
+- 2026-05-01T18:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 18 turns, 15268 chars absorbed | Ollama: up
+- 2026-05-01T19:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 18 turns, 8733 chars absorbed | Ollama: up
+- 2026-05-01T19:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 102 turns, 34521 chars absorbed | Ollama: up
+- 2026-05-01T20:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 47 turns, 19023 chars absorbed | Ollama: up
+- 2026-05-01T20:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 24 turns, 16541 chars absorbed | Ollama: up
+- 2026-05-01T21:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 27 turns, 11085 chars absorbed | Ollama: up
+- 2026-05-01T21:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 21 turns, 16250 chars absorbed | Ollama: up
+- 2026-05-01T22:06Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 4577 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-01T22:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 18 turns, 14746 chars absorbed | Ollama: up
+- 2026-05-01T23:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 37 turns, 20836 chars absorbed | Ollama: up
+- 2026-05-01T23:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 22 turns, 15586 chars absorbed | Ollama: up
+- 2026-05-02T00:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 12 turns, 5093 chars absorbed | Ollama: up
+- 2026-05-02T00:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 59 turns, 25673 chars absorbed | Ollama: up
+- 2026-05-02T01:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 18 turns, 9663 chars absorbed | Ollama: up
+- 2026-05-02T01:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 21 turns, 15235 chars absorbed | Ollama: up
+- 2026-05-02T02:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 67 turns, 16210 chars absorbed | Ollama: up
+- 2026-05-02T02:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 24 turns, 25583 chars absorbed | Ollama: up
+- 2026-05-02T03:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 19 turns, 14066 chars absorbed | Ollama: up
+- 2026-05-02T03:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 28 turns, 25246 chars absorbed | Ollama: up
+- 2026-05-02T04:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 31 turns, 10911 chars absorbed | Ollama: up
+- 2026-05-02T04:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 64 turns, 36506 chars absorbed | Ollama: up
+- 2026-05-02T05:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 54 turns, 34918 chars absorbed | Ollama: up
+- 2026-05-02T05:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 46 turns, 31515 chars absorbed | Ollama: up
+- 2026-05-02T06:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 69 turns, 27600 chars absorbed | Ollama: up
+- 2026-05-02T06:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 93 turns, 37240 chars absorbed | Ollama: up
+- 2026-05-02T07:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 47 turns, 43253 chars absorbed | Ollama: up
+- 2026-05-02T07:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 66 turns, 91782 chars absorbed | Ollama: up
+- 2026-05-02T08:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 103 turns, 91818 chars absorbed | Ollama: up
+- 2026-05-02T09:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 98 turns, 69213 chars absorbed | Ollama: up
+- 2026-05-02T09:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 46 turns, 31946 chars absorbed | Ollama: up
+- 2026-05-02T10:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 20 turns, 16959 chars absorbed | Ollama: up
+- 2026-05-02T10:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 49 turns, 32928 chars absorbed | Ollama: up
+- 2026-05-02T11:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 44 turns, 31748 chars absorbed | Ollama: up
+- 2026-05-02T11:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 40 turns, 31579 chars absorbed | Ollama: up
+- 2026-05-02T12:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 20 turns, 15451 chars absorbed | Ollama: up
+- 2026-05-02T12:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 31916 chars absorbed | Ollama: up
+- 2026-05-02T13:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 39 turns, 23694 chars absorbed | Ollama: up
+- 2026-05-02T13:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 39 turns, 30856 chars absorbed | Ollama: up
+- 2026-05-02T14:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 108 turns, 32643 chars absorbed | Ollama: up
+- 2026-05-02T14:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 55 turns, 41888 chars absorbed | Ollama: up
+- 2026-05-02T15:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 60 turns, 55920 chars absorbed | Ollama: up
+- 2026-05-02T15:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 52 turns, 47506 chars absorbed | Ollama: up
+- 2026-05-02T16:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 64 turns, 50430 chars absorbed | Ollama: up
+- 2026-05-02T16:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 67 turns, 50099 chars absorbed | Ollama: up
+- 2026-05-02T17:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 94 turns, 48428 chars absorbed | Ollama: up
+- 2026-05-02T18:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 34 turns, 17120 chars absorbed | Ollama: up
+- 2026-05-02T18:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 45 turns, 31829 chars absorbed | Ollama: up
+- 2026-05-02T19:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 47 turns, 37976 chars absorbed | Ollama: up
+- 2026-05-02T19:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 149 turns, 59395 chars absorbed | Ollama: up
+- 2026-05-02T20:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 80 turns, 38982 chars absorbed | Ollama: up
+- 2026-05-02T20:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 44 turns, 31135 chars absorbed | Ollama: up
+- 2026-05-02T21:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 32 turns, 22898 chars absorbed | Ollama: up
+- 2026-05-02T21:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 37 turns, 30098 chars absorbed | Ollama: up
+- 2026-05-02T22:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 27 turns, 17368 chars absorbed | Ollama: up
+- 2026-05-02T22:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 33 turns, 30942 chars absorbed | Ollama: up
+- 2026-05-02T23:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 51 turns, 34561 chars absorbed | Ollama: up
+- 2026-05-02T23:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 43 turns, 31379 chars absorbed | Ollama: up
+- 2026-05-03T00:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 40 turns, 20753 chars absorbed | Ollama: up
+- 2026-05-03T00:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 75 turns, 43139 chars absorbed | Ollama: up
+- 2026-05-03T01:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 40 turns, 25353 chars absorbed | Ollama: up
+- 2026-05-03T01:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 112 turns, 36128 chars absorbed | Ollama: up
+- 2026-05-03T02:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 60 turns, 34223 chars absorbed | Ollama: up
+- 2026-05-03T02:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 69 turns, 55314 chars absorbed | Ollama: up
+- 2026-05-03T03:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 68 turns, 46085 chars absorbed | Ollama: up
+- 2026-05-03T03:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 65 turns, 42048 chars absorbed | Ollama: up
+- 2026-05-03T04:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 82 turns, 48396 chars absorbed | Ollama: up
+- 2026-05-03T05:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 62 turns, 34881 chars absorbed | Ollama: up
+- 2026-05-03T05:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 41 turns, 32132 chars absorbed | Ollama: up
+- 2026-05-03T06:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 32 turns, 29409 chars absorbed | Ollama: up
+- 2026-05-03T06:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 48 turns, 32719 chars absorbed | Ollama: up
+- 2026-05-03T07:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 59 turns, 31710 chars absorbed | Ollama: up
+- 2026-05-03T07:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 102 turns, 55440 chars absorbed | Ollama: up
+- 2026-05-03T08:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 54 turns, 38093 chars absorbed | Ollama: up
+- 2026-05-03T08:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 67 turns, 48985 chars absorbed | Ollama: up
+- 2026-05-03T09:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 87 turns, 62792 chars absorbed | Ollama: up
+- 2026-05-03T09:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 80 turns, 74314 chars absorbed | Ollama: up
+- 2026-05-03T10:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 49 turns, 38497 chars absorbed | Ollama: up
+- 2026-05-03T10:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 77 turns, 50173 chars absorbed | Ollama: up
+- 2026-05-03T11:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 54 turns, 42033 chars absorbed | Ollama: up
+- 2026-05-03T11:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 27 turns, 17912 chars absorbed | Ollama: up
+- 2026-05-03T12:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 49 turns, 31473 chars absorbed | Ollama: up
+- 2026-05-03T13:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 36 turns, 24474 chars absorbed | Ollama: up
+- 2026-05-03T13:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 37 turns, 30402 chars absorbed | Ollama: up
+- 2026-05-03T14:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 29 turns, 25001 chars absorbed | Ollama: up
+- 2026-05-03T14:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 31856 chars absorbed | Ollama: up
+- 2026-05-03T15:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 58 turns, 53270 chars absorbed | Ollama: up
+- 2026-05-03T15:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 87 turns, 68469 chars absorbed | Ollama: up
+- 2026-05-03T16:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 55 turns, 32459 chars absorbed | Ollama: up
+- 2026-05-03T16:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 57 turns, 41611 chars absorbed | Ollama: up
+- 2026-05-03T17:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 55 turns, 33722 chars absorbed | Ollama: up
+- 2026-05-03T17:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 31675 chars absorbed | Ollama: up
+- 2026-05-03T18:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 20 turns, 16153 chars absorbed | Ollama: up
+- 2026-05-03T18:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 47 turns, 31706 chars absorbed | Ollama: up
+- 2026-05-03T19:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 96 turns, 38286 chars absorbed | Ollama: up
+- 2026-05-03T19:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 52 turns, 35372 chars absorbed | Ollama: up
+- 2026-05-03T20:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 20823 chars absorbed | Ollama: up
+- 2026-05-03T20:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 25331 chars absorbed | Ollama: up
+- 2026-05-03T21:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 18541 chars absorbed | Ollama: up
+- 2026-05-03T21:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 25331 chars absorbed | Ollama: up
+- 2026-05-03T22:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 12930 chars absorbed | Ollama: up
+- 2026-05-03T22:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 8 turns, 30942 chars absorbed | Ollama: up
+- 2026-05-03T23:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 8 turns, 33224 chars absorbed | Ollama: up
+- 2026-05-03T23:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 12930 chars absorbed | Ollama: up
+- 2026-05-04T00:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 10 turns, 32304 chars absorbed | Ollama: up
+- 2026-05-04T00:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 18541 chars absorbed | Ollama: up
+- 2026-05-04T01:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 25331 chars absorbed | Ollama: up
+- 2026-05-04T02:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 20823 chars absorbed | Ollama: up
+- 2026-05-04T02:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 25331 chars absorbed | Ollama: up
+- 2026-05-04T03:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 20275 chars absorbed | Ollama: up
+- 2026-05-04T03:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 8 turns, 38261 chars absorbed | Ollama: up
+- 2026-05-04T04:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 12930 chars absorbed | Ollama: up
+- 2026-05-04T04:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 25331 chars absorbed | Ollama: up
+- 2026-05-04T05:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 26434 chars absorbed | Ollama: up
+- 2026-05-04T05:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 25331 chars absorbed | Ollama: up
+- 2026-05-04T06:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 12930 chars absorbed | Ollama: up
+- 2026-05-04T06:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 25331 chars absorbed | Ollama: up
+- 2026-05-04T07:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 18541 chars absorbed | Ollama: up
+- 2026-05-04T07:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 25331 chars absorbed | Ollama: up
+- 2026-05-04T08:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 20823 chars absorbed | Ollama: up
+- 2026-05-04T08:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 25331 chars absorbed | Ollama: up
+- 2026-05-04T09:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 18541 chars absorbed | Ollama: up
+- 2026-05-04T09:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 25331 chars absorbed | Ollama: up
+- 2026-05-04T10:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 12930 chars absorbed | Ollama: up
+- 2026-05-04T10:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 25331 chars absorbed | Ollama: up
+- 2026-05-04T11:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 26434 chars absorbed | Ollama: up
+- 2026-05-04T11:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 25331 chars absorbed | Ollama: up
+- 2026-05-04T12:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 12930 chars absorbed | Ollama: up
+- 2026-05-04T12:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 8 turns, 30942 chars absorbed | Ollama: up
+- 2026-05-04T13:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 25331 chars absorbed | Ollama: up
+- 2026-05-04T13:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 12930 chars absorbed | Ollama: up
+- 2026-05-04T14:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 8 turns, 33224 chars absorbed | Ollama: up
+- 2026-05-04T14:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 18541 chars absorbed | Ollama: up
+- 2026-05-04T15:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 25331 chars absorbed | Ollama: up
+- 2026-05-04T16:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 12930 chars absorbed | Ollama: up
+- 2026-05-04T16:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 25331 chars absorbed | Ollama: up
+- 2026-05-04T17:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 26434 chars absorbed | Ollama: up
+- 2026-05-04T17:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 25331 chars absorbed | Ollama: up
+- 2026-05-04T18:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 25860 chars absorbed | Ollama: up
+- 2026-05-04T18:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 25331 chars absorbed | Ollama: up
+- 2026-05-04T19:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 18541 chars absorbed | Ollama: up
+- 2026-05-04T19:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 7 turns, 35868 chars absorbed | Ollama: up
+- 2026-05-04T20:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 4 turns, 25999 chars absorbed | Ollama: up
+- 2026-05-04T20:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 5 turns, 25277 chars absorbed | Ollama: up
+- 2026-05-04T21:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 3 turns, 18473 chars absorbed | Ollama: up
+- 2026-05-04T21:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 5 turns, 25277 chars absorbed | Ollama: up
+- 2026-05-04T22:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 1 turns, 12848 chars absorbed | Ollama: up
+- 2026-05-04T22:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 25373 chars absorbed | Ollama: up
+- 2026-05-04T23:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 26476 chars absorbed | Ollama: up
+- 2026-05-04T23:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 25373 chars absorbed | Ollama: up
+- 2026-05-05T00:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 15292 chars absorbed | Ollama: up
+- 2026-05-05T00:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 8 turns, 30026 chars absorbed | Ollama: up
+- 2026-05-05T01:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 18569 chars absorbed | Ollama: up
+- 2026-05-05T01:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 25373 chars absorbed | Ollama: up
+- 2026-05-05T02:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 20851 chars absorbed | Ollama: up
+- 2026-05-05T02:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 25373 chars absorbed | Ollama: up
+- 2026-05-05T03:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 18569 chars absorbed | Ollama: up
+- 2026-05-05T03:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 25373 chars absorbed | Ollama: up
+- 2026-05-05T04:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 12944 chars absorbed | Ollama: up
+- 2026-05-05T04:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 7 turns, 30902 chars absorbed | Ollama: up
+- 2026-05-05T05:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 6 turns, 33088 chars absorbed | Ollama: up
+- 2026-05-05T05:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 12930 chars absorbed | Ollama: up
+- 2026-05-05T06:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 25331 chars absorbed | Ollama: up
+- 2026-05-05T07:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 18541 chars absorbed | Ollama: up
+- 2026-05-05T07:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 25331 chars absorbed | Ollama: up
+- 2026-05-05T08:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 20823 chars absorbed | Ollama: up
+- 2026-05-05T08:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 115 turns, 38959 chars absorbed | Ollama: up
+- 2026-05-05T09:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 76 turns, 58719 chars absorbed | Ollama: up
+- 2026-05-05T09:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 95 turns, 52230 chars absorbed | Ollama: up
+- 2026-05-05T10:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 97 turns, 34918 chars absorbed | Ollama: up
+- 2026-05-05T10:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 54 turns, 92459 chars absorbed | Ollama: up
+- 2026-05-05T11:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 86 turns, 93079 chars absorbed | Ollama: up
+- 2026-05-05T11:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 77 turns, 45252 chars absorbed | Ollama: up
+- 2026-05-05T12:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 21 turns, 15773 chars absorbed | Ollama: up
+- 2026-05-05T12:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 58 turns, 39465 chars absorbed | Ollama: up
+- 2026-05-05T13:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 27 turns, 27029 chars absorbed | Ollama: up
+- 2026-05-05T13:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 28 turns, 15725 chars absorbed | Ollama: up
+- 2026-05-05T14:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 64 turns, 55288 chars absorbed | Ollama: up
+- 2026-05-05T15:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 62 turns, 29223 chars absorbed | Ollama: up
+- 2026-05-05T15:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 57 turns, 43025 chars absorbed | Ollama: up
+- 2026-05-05T16:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 35 turns, 30755 chars absorbed | Ollama: up
+- 2026-05-05T16:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 63 turns, 94415 chars absorbed | Ollama: up
+- 2026-05-05T17:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 64 turns, 94737 chars absorbed | Ollama: up
+- 2026-05-05T17:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 91 turns, 91402 chars absorbed | Ollama: up
+- 2026-05-05T18:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 100 turns, 88828 chars absorbed | Ollama: up
+- 2026-05-05T19:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 107 turns, 51111 chars absorbed | Ollama: up
+- 2026-05-05T19:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 128 turns, 55463 chars absorbed | Ollama: up
+- 2026-05-05T20:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 84 turns, 49320 chars absorbed | Ollama: up
+- 2026-05-05T20:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 49 turns, 33877 chars absorbed | Ollama: up
+- 2026-05-05T21:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 46 turns, 22912 chars absorbed | Ollama: up
+- 2026-05-05T21:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 61 turns, 35435 chars absorbed | Ollama: up
+- 2026-05-05T22:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 20 turns, 16114 chars absorbed | Ollama: up
+- 2026-05-05T22:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 56 turns, 34558 chars absorbed | Ollama: up
+- 2026-05-05T23:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 52 turns, 35733 chars absorbed | Ollama: up
+- 2026-05-05T23:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 45 turns, 31739 chars absorbed | Ollama: up
+- 2026-05-06T00:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 37 turns, 20079 chars absorbed | Ollama: up
+- 2026-05-06T00:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 79 turns, 43133 chars absorbed | Ollama: up
+- 2026-05-06T01:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 40 turns, 25546 chars absorbed | Ollama: up
+- 2026-05-06T01:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 99 turns, 36854 chars absorbed | Ollama: up
+- 2026-05-06T02:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 42 turns, 37081 chars absorbed | Ollama: up
+- 2026-05-06T02:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 78 turns, 52460 chars absorbed | Ollama: up
+- 2026-05-06T03:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 69 turns, 42202 chars absorbed | Ollama: up
+- 2026-05-06T03:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 36 turns, 32455 chars absorbed | Ollama: up
+- 2026-05-06T04:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 31 turns, 30845 chars absorbed | Ollama: up
+- 2026-05-06T05:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 40 turns, 32894 chars absorbed | Ollama: up
+- 2026-05-06T05:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 61 turns, 35047 chars absorbed | Ollama: up
+- 2026-05-06T06:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 19 turns, 15185 chars absorbed | Ollama: up
+- 2026-05-06T06:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 52 turns, 51608 chars absorbed | Ollama: up
+- 2026-05-06T07:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 67 turns, 40205 chars absorbed | Ollama: up
+- 2026-05-06T07:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 47 turns, 45161 chars absorbed | Ollama: up
+- 2026-05-06T08:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 50 turns, 39501 chars absorbed | Ollama: up
+- 2026-05-06T08:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 69 turns, 47968 chars absorbed | Ollama: up
+- 2026-05-06T09:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 52 turns, 47260 chars absorbed | Ollama: up
+- 2026-05-06T09:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 68 turns, 42097 chars absorbed | Ollama: up
+- 2026-05-06T10:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 33 turns, 31468 chars absorbed | Ollama: up
+- 2026-05-06T10:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 44 turns, 47030 chars absorbed | Ollama: up
+- 2026-05-06T11:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 53 turns, 49792 chars absorbed | Ollama: up
+- 2026-05-06T11:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 63 turns, 39133 chars absorbed | Ollama: up
+- 2026-05-06T12:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 37 turns, 29929 chars absorbed | Ollama: up
+- 2026-05-06T12:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 30 turns, 23347 chars absorbed | Ollama: up
+- 2026-05-06T13:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 26 turns, 27057 chars absorbed | Ollama: up
+- 2026-05-06T13:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 34 turns, 19941 chars absorbed | Ollama: up
+- 2026-05-06T14:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 55 turns, 45825 chars absorbed | Ollama: up
+- 2026-05-06T15:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 53 turns, 40841 chars absorbed | Ollama: up
+- 2026-05-06T15:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 43 turns, 44401 chars absorbed | Ollama: up
+- 2026-05-06T16:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 15 turns, 13956 chars absorbed | Ollama: up
+- 2026-05-06T16:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 35 turns, 30846 chars absorbed | Ollama: up
+- 2026-05-06T17:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 45 turns, 34233 chars absorbed | Ollama: up
+- 2026-05-06T17:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 37 turns, 30730 chars absorbed | Ollama: up
+- 2026-05-06T18:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 78 turns, 36107 chars absorbed | Ollama: up
+- 2026-05-06T18:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 51 turns, 34641 chars absorbed | Ollama: up
+- 2026-05-06T19:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 61 turns, 36567 chars absorbed | Ollama: up
+- 2026-05-06T19:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 81 turns, 42333 chars absorbed | Ollama: up
+- 2026-05-06T20:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 54 turns, 29640 chars absorbed | Ollama: up
+- 2026-05-06T20:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 45 turns, 32524 chars absorbed | Ollama: up
+- 2026-05-06T21:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 31 turns, 25244 chars absorbed | Ollama: up
+- 2026-05-06T21:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 43 turns, 31653 chars absorbed | Ollama: up
+- 2026-05-06T22:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 24 turns, 16268 chars absorbed | Ollama: up
+- 2026-05-06T22:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 32584 chars absorbed | Ollama: up
+- 2026-05-06T23:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 57 turns, 35677 chars absorbed | Ollama: up
+- 2026-05-06T23:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 51 turns, 33657 chars absorbed | Ollama: up
+- 2026-05-07T00:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 90 turns, 36127 chars absorbed | Ollama: up
+- 2026-05-07T00:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 52 turns, 36369 chars absorbed | Ollama: up
+- 2026-05-07T01:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 58 turns, 33497 chars absorbed | Ollama: up
+- 2026-05-07T02:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 48 turns, 20468 chars absorbed | Ollama: up
+- 2026-05-07T02:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 65 turns, 56396 chars absorbed | Ollama: up
+- 2026-05-07T03:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 93 turns, 43344 chars absorbed | Ollama: up
+- 2026-05-07T03:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 83 turns, 64136 chars absorbed | Ollama: up
+- 2026-05-07T04:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 38 turns, 35294 chars absorbed | Ollama: up
+- 2026-05-07T04:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 46 turns, 33115 chars absorbed | Ollama: up
+- 2026-05-07T05:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 35763 chars absorbed | Ollama: up
+- 2026-05-07T05:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 44 turns, 33269 chars absorbed | Ollama: up
+- 2026-05-07T06:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 30 turns, 16894 chars absorbed | Ollama: up
+- 2026-05-07T06:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 40 turns, 32996 chars absorbed | Ollama: up
+- 2026-05-07T07:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 43 turns, 37031 chars absorbed | Ollama: up
+- 2026-05-07T07:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 47 turns, 50532 chars absorbed | Ollama: up
+- 2026-05-07T08:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 78 turns, 44747 chars absorbed | Ollama: up
+- 2026-05-07T08:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 106 turns, 71054 chars absorbed | Ollama: up
+- 2026-05-07T09:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 83 turns, 98931 chars absorbed | Ollama: up
+- 2026-05-07T10:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 78 turns, 50424 chars absorbed | Ollama: up
+- 2026-05-07T10:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 95 turns, 62039 chars absorbed | Ollama: up
+- 2026-05-07T11:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 74 turns, 47722 chars absorbed | Ollama: up
+- 2026-05-07T11:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 54 turns, 37259 chars absorbed | Ollama: up
+- 2026-05-07T12:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 28 turns, 16295 chars absorbed | Ollama: up
+- 2026-05-07T12:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 50 turns, 33668 chars absorbed | Ollama: up
+- 2026-05-07T13:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 34 turns, 25593 chars absorbed | Ollama: up
+- 2026-05-07T13:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 39 turns, 32501 chars absorbed | Ollama: up
+- 2026-05-07T14:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 29 turns, 25374 chars absorbed | Ollama: up
+- 2026-05-07T14:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 72 turns, 48028 chars absorbed | Ollama: up
+- 2026-05-07T15:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 51 turns, 38517 chars absorbed | Ollama: up
+- 2026-05-07T15:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 41 turns, 33351 chars absorbed | Ollama: up
+- 2026-05-07T16:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 53 turns, 26734 chars absorbed | Ollama: up
+- 2026-05-07T16:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 41 turns, 31491 chars absorbed | Ollama: up
+- 2026-05-07T17:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 64 turns, 41630 chars absorbed | Ollama: up
+- 2026-05-07T17:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 21 turns, 16820 chars absorbed | Ollama: up
+- 2026-05-07T18:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 47 turns, 33444 chars absorbed | Ollama: up
+- 2026-05-07T19:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 34 turns, 25979 chars absorbed | Ollama: up
+- 2026-05-07T19:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 109 turns, 52263 chars absorbed | Ollama: up
+- 2026-05-07T20:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 54 turns, 33227 chars absorbed | Ollama: up
+- 2026-05-07T20:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 45 turns, 33006 chars absorbed | Ollama: up
+- 2026-05-07T21:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 5 turns, 32662 chars absorbed | Ollama: up
+- 2026-05-07T21:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 5 turns, 25842 chars absorbed | Ollama: up
+- 2026-05-07T22:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 1 turns, 12848 chars absorbed | Ollama: up
+- 2026-05-07T22:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 5 turns, 25842 chars absorbed | Ollama: up
+- 2026-05-07T23:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 5 turns, 27625 chars absorbed | Ollama: up
+- 2026-05-07T23:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 5 turns, 25842 chars absorbed | Ollama: up
+- 2026-05-08T00:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 1 turns, 12848 chars absorbed | Ollama: up
+- 2026-05-08T00:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 8 turns, 30591 chars absorbed | Ollama: up
+- 2026-05-08T01:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 19814 chars absorbed | Ollama: up
+- 2026-05-08T01:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 5 turns, 25842 chars absorbed | Ollama: up
+- 2026-05-08T02:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 77 turns, 31421 chars absorbed | Ollama: up
+- 2026-05-08T02:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 64 turns, 55479 chars absorbed | Ollama: up
+- 2026-05-08T03:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 85 turns, 54697 chars absorbed | Ollama: up
+- 2026-05-08T03:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 57 turns, 45741 chars absorbed | Ollama: up
+- 2026-05-08T04:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 39 turns, 30505 chars absorbed | Ollama: up
+- 2026-05-08T04:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 53 turns, 35139 chars absorbed | Ollama: up
+- 2026-05-08T05:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 51 turns, 40990 chars absorbed | Ollama: up
+- 2026-05-08T06:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 47 turns, 17907 chars absorbed | Ollama: up
+- 2026-05-08T06:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 18 turns, 15411 chars absorbed | Ollama: up
+- 2026-05-08T07:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 40 turns, 29284 chars absorbed | Ollama: up
+- 2026-05-08T07:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 51 turns, 36464 chars absorbed | Ollama: up
+- 2026-05-08T08:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 40 turns, 32777 chars absorbed | Ollama: up
+- 2026-05-08T08:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 76 turns, 57516 chars absorbed | Ollama: up
+- 2026-05-08T09:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 61 turns, 48748 chars absorbed | Ollama: up
+- 2026-05-08T09:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 57 turns, 56727 chars absorbed | Ollama: up
+- 2026-05-08T10:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 45 turns, 32524 chars absorbed | Ollama: up
+- 2026-05-08T10:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 88 turns, 51316 chars absorbed | Ollama: up
+- 2026-05-08T11:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 51 turns, 50031 chars absorbed | Ollama: up
+- 2026-05-08T11:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 44 turns, 34989 chars absorbed | Ollama: up
+- 2026-05-08T12:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 33 turns, 17044 chars absorbed | Ollama: up
+- 2026-05-08T12:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 52 turns, 42866 chars absorbed | Ollama: up
+- 2026-05-08T13:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 29 turns, 17960 chars absorbed | Ollama: up
+- 2026-05-08T13:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 44 turns, 31678 chars absorbed | Ollama: up
+- 2026-05-08T14:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 59 turns, 41123 chars absorbed | Ollama: up
+- 2026-05-08T14:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 53 turns, 35364 chars absorbed | Ollama: up
+- 2026-05-08T15:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 59 turns, 48721 chars absorbed | Ollama: up
+- 2026-05-08T16:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 10 turns, 13591 chars absorbed | Ollama: up
+- 2026-05-08T16:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 63 turns, 36340 chars absorbed | Ollama: up
+- 2026-05-08T17:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 96 turns, 78210 chars absorbed | Ollama: up
+- 2026-05-08T17:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 69 turns, 41412 chars absorbed | Ollama: up
+- 2026-05-08T18:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 25 turns, 27509 chars absorbed | Ollama: up
+- 2026-05-08T18:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 45 turns, 36100 chars absorbed | Ollama: up
+- 2026-05-08T19:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 76 turns, 42724 chars absorbed | Ollama: up
+- 2026-05-08T19:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 109 turns, 53156 chars absorbed | Ollama: up
+- 2026-05-08T20:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 29 turns, 25828 chars absorbed | Ollama: up
+- 2026-05-08T20:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 53 turns, 34111 chars absorbed | Ollama: up
+- 2026-05-08T21:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 33 turns, 28437 chars absorbed | Ollama: up
+- 2026-05-08T21:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 43 turns, 31369 chars absorbed | Ollama: up
+- 2026-05-08T22:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 19 turns, 15988 chars absorbed | Ollama: up
+- 2026-05-08T22:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 57 turns, 44258 chars absorbed | Ollama: up
+- 2026-05-08T23:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 42 turns, 36359 chars absorbed | Ollama: up
+- 2026-05-08T23:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 49 turns, 25119 chars absorbed | Ollama: up
+- 2026-05-09T00:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 70 turns, 33829 chars absorbed | Ollama: up
+- 2026-05-09T01:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 45 turns, 43179 chars absorbed | Ollama: up
+- 2026-05-09T01:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 45 turns, 33125 chars absorbed | Ollama: up
+- 2026-05-09T02:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 107 turns, 40377 chars absorbed | Ollama: up
+- 2026-05-09T02:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 53 turns, 54602 chars absorbed | Ollama: up
+- 2026-05-09T03:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 85 turns, 37529 chars absorbed | Ollama: up
+- 2026-05-09T03:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 75 turns, 45821 chars absorbed | Ollama: up
+- 2026-05-09T04:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 40 turns, 33937 chars absorbed | Ollama: up
+- 2026-05-09T04:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 46 turns, 36661 chars absorbed | Ollama: up
+- 2026-05-09T05:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 44 turns, 41395 chars absorbed | Ollama: up
+- 2026-05-09T05:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 52 turns, 35978 chars absorbed | Ollama: up
+- 2026-05-09T06:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 75 turns, 30267 chars absorbed | Ollama: up
+- 2026-05-09T06:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 49 turns, 38881 chars absorbed | Ollama: up
+- 2026-05-09T07:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 46 turns, 36457 chars absorbed | Ollama: up
+- 2026-05-09T07:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 73 turns, 43315 chars absorbed | Ollama: up
+- 2026-05-09T08:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 52 turns, 37870 chars absorbed | Ollama: up
+- 2026-05-09T08:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 75 turns, 60875 chars absorbed | Ollama: up
+- 2026-05-09T09:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 59 turns, 47344 chars absorbed | Ollama: up
+- 2026-05-09T10:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 55 turns, 38690 chars absorbed | Ollama: up
+- 2026-05-09T10:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 63 turns, 54272 chars absorbed | Ollama: up
+- 2026-05-09T11:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 129 turns, 73806 chars absorbed | Ollama: up
+- 2026-05-09T11:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 62 turns, 37815 chars absorbed | Ollama: up
+- 2026-05-09T12:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 29 turns, 21166 chars absorbed | Ollama: up
+- 2026-05-09T12:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 35854 chars absorbed | Ollama: up
+- 2026-05-09T13:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 28 turns, 29630 chars absorbed | Ollama: up
+- 2026-05-09T13:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 34191 chars absorbed | Ollama: up
+- 2026-05-09T14:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 61 turns, 31602 chars absorbed | Ollama: up
+- 2026-05-09T14:25Z [cousin: qwen-context-absorber] Status: ollama-down | Detail: pre-flight health check failed; skipped cycle without attempting absorption | Ollama: down
+- 2026-05-09T14:50Z [cousin: qwen-context-absorber] Status: ollama-down | Detail: pre-flight health check failed; skipped cycle without attempting absorption | Ollama: down
+- 2026-05-09T15:06Z [cousin: qwen-context-absorber] Status: ollama-down | Detail: pre-flight health check failed; skipped cycle without attempting absorption | Ollama: down
+- 2026-05-09T15:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 204 turns, 94122 chars absorbed | Ollama: up
+- 2026-05-09T16:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 55 turns, 41675 chars absorbed | Ollama: up
+- 2026-05-09T16:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 103 turns, 50679 chars absorbed | Ollama: up
+- 2026-05-09T17:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 84 turns, 55608 chars absorbed | Ollama: up
+- 2026-05-09T17:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 64 turns, 45590 chars absorbed | Ollama: up
+- 2026-05-09T18:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 49 turns, 32513 chars absorbed | Ollama: up
+- 2026-05-09T18:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 41 turns, 36405 chars absorbed | Ollama: up
+- 2026-05-09T19:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 62 turns, 45903 chars absorbed | Ollama: up
+- 2026-05-09T19:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 73 turns, 52569 chars absorbed | Ollama: up
+- 2026-05-09T20:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 58 turns, 43150 chars absorbed | Ollama: up
+- 2026-05-09T20:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 29 turns, 30639 chars absorbed | Ollama: up
+- 2026-05-09T21:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 42 turns, 35516 chars absorbed | Ollama: up
+- 2026-05-09T22:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 22 turns, 19774 chars absorbed | Ollama: up
+- 2026-05-09T22:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 35860 chars absorbed | Ollama: up
+- 2026-05-09T23:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 44 turns, 39653 chars absorbed | Ollama: up
+- 2026-05-09T23:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 58 turns, 37579 chars absorbed | Ollama: up
+- 2026-05-10T00:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 31 turns, 35635 chars absorbed | Ollama: up
+- 2026-05-10T00:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 83 turns, 44003 chars absorbed | Ollama: up
+- 2026-05-10T01:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 59 turns, 37317 chars absorbed | Ollama: up
+- 2026-05-10T01:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 65 turns, 37375 chars absorbed | Ollama: up
+- 2026-05-10T02:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 108 turns, 35721 chars absorbed | Ollama: up
+- 2026-05-10T02:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 65 turns, 46898 chars absorbed | Ollama: up
+- 2026-05-10T03:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 54 turns, 45370 chars absorbed | Ollama: up
+- 2026-05-10T03:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 56 turns, 41261 chars absorbed | Ollama: up
+- 2026-05-10T04:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 27 turns, 19908 chars absorbed | Ollama: up
+- 2026-05-10T04:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 45 turns, 35521 chars absorbed | Ollama: up
+- 2026-05-10T05:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 49 turns, 40356 chars absorbed | Ollama: up
+- 2026-05-10T05:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 46 turns, 36728 chars absorbed | Ollama: up
+- 2026-05-10T06:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 23 turns, 20244 chars absorbed | Ollama: up
+- 2026-05-10T06:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 44 turns, 36431 chars absorbed | Ollama: up
+- 2026-05-10T07:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 33 turns, 30561 chars absorbed | Ollama: up
+- 2026-05-10T07:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 45 turns, 34653 chars absorbed | Ollama: up
+- 2026-05-10T08:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 52 turns, 42179 chars absorbed | Ollama: up
+- 2026-05-10T08:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 31 turns, 30782 chars absorbed | Ollama: up
+- 2026-05-10T09:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 44 turns, 35691 chars absorbed | Ollama: up
+- 2026-05-10T09:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 23 turns, 19049 chars absorbed | Ollama: up
+- 2026-05-10T10:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 42 turns, 34964 chars absorbed | Ollama: up
+- 2026-05-10T11:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 50 turns, 41021 chars absorbed | Ollama: up
+- 2026-05-10T11:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 69 turns, 39919 chars absorbed | Ollama: up
+- 2026-05-10T12:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 23 turns, 18543 chars absorbed | Ollama: up
+- 2026-05-10T12:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 53 turns, 51932 chars absorbed | Ollama: up
+- 2026-05-10T13:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 43 turns, 31562 chars absorbed | Ollama: up
+- 2026-05-10T13:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 46 turns, 35579 chars absorbed | Ollama: up
+- 2026-05-10T14:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 53 turns, 32042 chars absorbed | Ollama: up
+- 2026-05-10T14:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 52 turns, 46960 chars absorbed | Ollama: up
+- 2026-05-10T15:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 37366 chars absorbed | Ollama: up
+- 2026-05-10T15:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 67 turns, 51931 chars absorbed | Ollama: up
+- 2026-05-10T16:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 35 turns, 28519 chars absorbed | Ollama: up
+- 2026-05-10T16:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 66 turns, 41122 chars absorbed | Ollama: up
+- 2026-05-10T17:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 54 turns, 40644 chars absorbed | Ollama: up
+- 2026-05-10T17:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 50 turns, 35977 chars absorbed | Ollama: up
+- 2026-05-10T18:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 81 turns, 37953 chars absorbed | Ollama: up
+- 2026-05-10T18:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 74 turns, 50548 chars absorbed | Ollama: up
+- 2026-05-10T19:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 105 turns, 52584 chars absorbed | Ollama: up
+- 2026-05-10T20:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 52 turns, 28104 chars absorbed | Ollama: up
+- 2026-05-10T20:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 65 turns, 45482 chars absorbed | Ollama: up
+- 2026-05-10T21:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 18 turns, 27080 chars absorbed | Ollama: up
+- 2026-05-10T21:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-10T22:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 32162 chars absorbed | Ollama: up
+- 2026-05-10T22:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-10T23:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 33865 chars absorbed | Ollama: up
+- 2026-05-10T23:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-11T00:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 16081 chars absorbed | Ollama: up
+- 2026-05-11T00:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 8 turns, 35286 chars absorbed | Ollama: up
+- 2026-05-11T01:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 25972 chars absorbed | Ollama: up
+- 2026-05-11T01:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-11T02:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 23974 chars absorbed | Ollama: up
+- 2026-05-11T02:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-11T03:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 30287 chars absorbed | Ollama: up
+- 2026-05-11T03:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-11T04:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 16081 chars absorbed | Ollama: up
+- 2026-05-11T04:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-11T05:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 33865 chars absorbed | Ollama: up
+- 2026-05-11T05:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-11T06:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 16081 chars absorbed | Ollama: up
+- 2026-05-11T06:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-11T07:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 25972 chars absorbed | Ollama: up
+- 2026-05-11T07:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-11T08:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 8 turns, 36940 chars absorbed | Ollama: up
+- 2026-05-11T08:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 25972 chars absorbed | Ollama: up
+- 2026-05-11T09:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-11T09:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 16081 chars absorbed | Ollama: up
+- 2026-05-11T10:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-11T11:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 33865 chars absorbed | Ollama: up
+- 2026-05-11T11:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-11T12:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 16081 chars absorbed | Ollama: up
+- 2026-05-11T12:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 8 turns, 45128 chars absorbed | Ollama: up
+- 2026-05-11T13:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 25972 chars absorbed | Ollama: up
+- 2026-05-11T13:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-11T14:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 23974 chars absorbed | Ollama: up
+- 2026-05-11T14:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-11T15:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 25972 chars absorbed | Ollama: up
+- 2026-05-11T15:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-11T16:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 16081 chars absorbed | Ollama: up
+- 2026-05-11T16:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-11T17:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 33865 chars absorbed | Ollama: up
+- 2026-05-11T17:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-11T18:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 16081 chars absorbed | Ollama: up
+- 2026-05-11T18:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-11T19:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 36591 chars absorbed | Ollama: up
+- 2026-05-11T19:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 8 turns, 34172 chars absorbed | Ollama: up
+- 2026-05-11T20:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 23974 chars absorbed | Ollama: up
+- 2026-05-11T20:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-11T21:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 25972 chars absorbed | Ollama: up
+- 2026-05-11T21:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-11T22:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 24098 chars absorbed | Ollama: up
+- 2026-05-11T22:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 30921 chars absorbed | Ollama: up
+- 2026-05-11T23:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 8 turns, 36940 chars absorbed | Ollama: up
+- 2026-05-11T23:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 16081 chars absorbed | Ollama: up
+- 2026-05-12T00:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 8 turns, 35286 chars absorbed | Ollama: up
+- 2026-05-12T01:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 25972 chars absorbed | Ollama: up
+- 2026-05-12T01:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-12T02:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 23974 chars absorbed | Ollama: up
+- 2026-05-12T02:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-12T03:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 42053 chars absorbed | Ollama: up
+- 2026-05-12T03:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-12T04:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 16081 chars absorbed | Ollama: up
+- 2026-05-12T04:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-12T05:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 33865 chars absorbed | Ollama: up
+- 2026-05-12T05:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-12T06:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 16081 chars absorbed | Ollama: up
+- 2026-05-12T06:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-12T07:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 25972 chars absorbed | Ollama: up
+- 2026-05-12T07:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 29047 chars absorbed | Ollama: up
+- 2026-05-12T08:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 54 turns, 31193 chars absorbed | Ollama: up
+- 2026-05-12T08:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 114 turns, 51891 chars absorbed | Ollama: up
+- 2026-05-12T09:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 62 turns, 49346 chars absorbed | Ollama: up
+- 2026-05-12T09:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 72 turns, 60356 chars absorbed | Ollama: up
+- 2026-05-12T10:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 61 turns, 44242 chars absorbed | Ollama: up
+- 2026-05-12T10:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 49 turns, 48645 chars absorbed | Ollama: up
+- 2026-05-12T11:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 101 turns, 63838 chars absorbed | Ollama: up
+- 2026-05-12T12:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 30 turns, 21079 chars absorbed | Ollama: up
+- 2026-05-12T12:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 73 turns, 40369 chars absorbed | Ollama: up
+- 2026-05-12T13:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 59 turns, 49715 chars absorbed | Ollama: up
+- 2026-05-12T13:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 82 turns, 41267 chars absorbed | Ollama: up
+- 2026-05-12T14:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 38 turns, 29884 chars absorbed | Ollama: up
+- 2026-05-12T14:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 89 turns, 42695 chars absorbed | Ollama: up
+- 2026-05-12T15:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 45 turns, 33348 chars absorbed | Ollama: up
+- 2026-05-12T15:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 76 turns, 46343 chars absorbed | Ollama: up
+- 2026-05-12T16:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 25 turns, 27690 chars absorbed | Ollama: up
+- 2026-05-12T16:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 56 turns, 56271 chars absorbed | Ollama: up
+- 2026-05-12T17:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 62 turns, 48975 chars absorbed | Ollama: up
+- 2026-05-12T17:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 51 turns, 38077 chars absorbed | Ollama: up
+- 2026-05-12T18:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 31 turns, 32367 chars absorbed | Ollama: up
+- 2026-05-12T18:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 71 turns, 52859 chars absorbed | Ollama: up
+- 2026-05-12T19:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 100 turns, 55526 chars absorbed | Ollama: up
+- 2026-05-12T19:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 88 turns, 33624 chars absorbed | Ollama: up
+- 2026-05-12T20:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 88 turns, 48444 chars absorbed | Ollama: up
+- 2026-05-12T21:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 41 turns, 35562 chars absorbed | Ollama: up
+- 2026-05-12T21:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 57 turns, 37759 chars absorbed | Ollama: up
+- 2026-05-12T22:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 32 turns, 35661 chars absorbed | Ollama: up
+- 2026-05-12T22:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 54 turns, 35985 chars absorbed | Ollama: up
+- 2026-05-12T23:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 72 turns, 45043 chars absorbed | Ollama: up
+- 2026-05-12T23:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 45 turns, 37740 chars absorbed | Ollama: up
+- 2026-05-13T00:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 23 turns, 19097 chars absorbed | Ollama: up
+- 2026-05-13T00:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 149 turns, 53724 chars absorbed | Ollama: up
+- 2026-05-13T01:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 37 turns, 31084 chars absorbed | Ollama: up
+- 2026-05-13T01:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 50 turns, 36937 chars absorbed | Ollama: up
+- 2026-05-13T02:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 109 turns, 37549 chars absorbed | Ollama: up
+- 2026-05-13T02:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 47 turns, 44059 chars absorbed | Ollama: up
+- 2026-05-13T03:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 46 turns, 42574 chars absorbed | Ollama: up
+- 2026-05-13T03:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 78 turns, 58684 chars absorbed | Ollama: up
+- 2026-05-13T04:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 41 turns, 23853 chars absorbed | Ollama: up
+- 2026-05-13T04:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 58 turns, 48938 chars absorbed | Ollama: up
+- 2026-05-13T05:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 58 turns, 46405 chars absorbed | Ollama: up
+- 2026-05-13T05:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 28 turns, 21298 chars absorbed | Ollama: up
+- 2026-05-13T06:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 52 turns, 36858 chars absorbed | Ollama: up
+- 2026-05-13T07:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 35 turns, 31310 chars absorbed | Ollama: up
+- 2026-05-13T07:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 41716 chars absorbed | Ollama: up
+- 2026-05-13T08:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 55 turns, 37962 chars absorbed | Ollama: up
+- 2026-05-13T08:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 80 turns, 73932 chars absorbed | Ollama: up
+- 2026-05-13T09:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 55 turns, 45186 chars absorbed | Ollama: up
+- 2026-05-13T09:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 50 turns, 52860 chars absorbed | Ollama: up
+- 2026-05-13T10:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 33 turns, 35094 chars absorbed | Ollama: up
+- 2026-05-13T10:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 68 turns, 56828 chars absorbed | Ollama: up
+- 2026-05-13T11:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 59 turns, 44246 chars absorbed | Ollama: up
+- 2026-05-13T11:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 51 turns, 46952 chars absorbed | Ollama: up
+- 2026-05-13T12:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 40 turns, 20625 chars absorbed | Ollama: up
+- 2026-05-13T12:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 40 turns, 35369 chars absorbed | Ollama: up
+- 2026-05-13T13:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 45 turns, 33349 chars absorbed | Ollama: up
+- 2026-05-13T13:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 56 turns, 37720 chars absorbed | Ollama: up
+- 2026-05-13T14:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 56 turns, 39067 chars absorbed | Ollama: up
+- 2026-05-13T14:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 59 turns, 42043 chars absorbed | Ollama: up
+- 2026-05-13T15:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 58 turns, 47930 chars absorbed | Ollama: up
+- 2026-05-13T16:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 33 turns, 41040 chars absorbed | Ollama: up
+- 2026-05-13T16:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 60 turns, 47423 chars absorbed | Ollama: up
+- 2026-05-13T17:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 75 turns, 61405 chars absorbed | Ollama: up
+- 2026-05-13T17:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 61 turns, 58390 chars absorbed | Ollama: up
+- 2026-05-13T18:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 39 turns, 25362 chars absorbed | Ollama: up
+- 2026-05-13T18:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 54 turns, 37909 chars absorbed | Ollama: up
+- 2026-05-13T19:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 65 turns, 43902 chars absorbed | Ollama: up
+- 2026-05-13T19:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 164 turns, 57219 chars absorbed | Ollama: up
+- 2026-05-13T20:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 43 turns, 29310 chars absorbed | Ollama: up
+- 2026-05-13T20:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 57 turns, 40302 chars absorbed | Ollama: up
+- 2026-05-13T21:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 36 turns, 32045 chars absorbed | Ollama: up
+- 2026-05-13T21:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 53 turns, 37517 chars absorbed | Ollama: up
+- 2026-05-13T22:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 29 turns, 20069 chars absorbed | Ollama: up
+- 2026-05-13T22:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 37011 chars absorbed | Ollama: up
+- 2026-05-13T23:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 56 turns, 42699 chars absorbed | Ollama: up
+- 2026-05-13T23:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 54 turns, 37341 chars absorbed | Ollama: up
+- 2026-05-14T00:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 71 turns, 30050 chars absorbed | Ollama: up
+- 2026-05-14T00:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 74 turns, 54008 chars absorbed | Ollama: up
+- 2026-05-14T01:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 54 turns, 36787 chars absorbed | Ollama: up
+- 2026-05-14T01:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 28 turns, 19802 chars absorbed | Ollama: up
+- 2026-05-14T02:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 81 turns, 51182 chars absorbed | Ollama: up
+- 2026-05-14T03:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 46 turns, 44602 chars absorbed | Ollama: up
+- 2026-05-14T03:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 60 turns, 40844 chars absorbed | Ollama: up
+- 2026-05-14T04:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 45 turns, 45344 chars absorbed | Ollama: up
+- 2026-05-14T04:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 57 turns, 36706 chars absorbed | Ollama: up
+- 2026-05-14T05:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 56 turns, 42801 chars absorbed | Ollama: up
+- 2026-05-14T05:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 58 turns, 37522 chars absorbed | Ollama: up
+- 2026-05-14T06:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 21 turns, 19558 chars absorbed | Ollama: up
+- 2026-05-14T06:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 58 turns, 37722 chars absorbed | Ollama: up
+- 2026-05-14T07:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 42 turns, 36778 chars absorbed | Ollama: up
+- 2026-05-14T07:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 65 turns, 56967 chars absorbed | Ollama: up
+- 2026-05-14T08:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 80 turns, 42282 chars absorbed | Ollama: up
+- 2026-05-14T08:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 68 turns, 43355 chars absorbed | Ollama: up
+- 2026-05-14T09:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 64 turns, 48835 chars absorbed | Ollama: up
+- 2026-05-14T09:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 103 turns, 61202 chars absorbed | Ollama: up
+- 2026-05-14T10:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 84 turns, 52999 chars absorbed | Ollama: up
+- 2026-05-14T11:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 86 turns, 60061 chars absorbed | Ollama: up
+- 2026-05-14T11:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 59 turns, 58900 chars absorbed | Ollama: up
+- 2026-05-14T12:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 44 turns, 20946 chars absorbed | Ollama: up
+- 2026-05-14T12:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 47 turns, 37200 chars absorbed | Ollama: up
+- 2026-05-14T13:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 32 turns, 30624 chars absorbed | Ollama: up
+- 2026-05-14T13:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 40 turns, 35679 chars absorbed | Ollama: up
+- 2026-05-14T14:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 34 turns, 29270 chars absorbed | Ollama: up
+- 2026-05-14T14:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 64 turns, 37371 chars absorbed | Ollama: up
+- 2026-05-14T15:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 50 turns, 36356 chars absorbed | Ollama: up
+- 2026-05-14T15:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 59 turns, 46452 chars absorbed | Ollama: up
+- 2026-05-14T16:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 43 turns, 37797 chars absorbed | Ollama: up
+- 2026-05-14T16:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 67 turns, 51738 chars absorbed | Ollama: up
+- 2026-05-14T17:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 86 turns, 65342 chars absorbed | Ollama: up
+- 2026-05-14T18:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 57 turns, 38273 chars absorbed | Ollama: up
+- 2026-05-14T18:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 74 turns, 43789 chars absorbed | Ollama: up
+- 2026-05-14T19:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 42 turns, 33246 chars absorbed | Ollama: up
+- 2026-05-14T19:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 134 turns, 73850 chars absorbed | Ollama: up
+- 2026-05-14T20:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 88 turns, 42581 chars absorbed | Ollama: up
+- 2026-05-14T20:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 52 turns, 36442 chars absorbed | Ollama: up
+- 2026-05-14T21:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 40 turns, 32357 chars absorbed | Ollama: up
+- 2026-05-14T21:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 51 turns, 37015 chars absorbed | Ollama: up
+- 2026-05-14T22:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 27 turns, 19577 chars absorbed | Ollama: up
+- 2026-05-14T22:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 74 turns, 37238 chars absorbed | Ollama: up
+- 2026-05-14T23:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 41754 chars absorbed | Ollama: up
+- 2026-05-14T23:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 52 turns, 37253 chars absorbed | Ollama: up
+- 2026-05-15T00:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 22 turns, 19444 chars absorbed | Ollama: up
+- 2026-05-15T00:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 11 turns, 37025 chars absorbed | Ollama: up
+- 2026-05-15T01:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 48 turns, 33291 chars absorbed | Ollama: up
+- 2026-05-15T01:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 140 turns, 45900 chars absorbed | Ollama: up
+- 2026-05-15T02:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 45 turns, 33462 chars absorbed | Ollama: up
+- 2026-05-15T02:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 73 turns, 60601 chars absorbed | Ollama: up
+- 2026-05-15T03:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 46 turns, 34739 chars absorbed | Ollama: up
+- 2026-05-15T04:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 31 turns, 34358 chars absorbed | Ollama: up
+- 2026-05-15T04:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 46 turns, 38981 chars absorbed | Ollama: up
+- 2026-05-15T05:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 61 turns, 41065 chars absorbed | Ollama: up
+- 2026-05-15T05:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 78 turns, 55345 chars absorbed | Ollama: up
+- 2026-05-15T06:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 28 turns, 19658 chars absorbed | Ollama: up
+- 2026-05-15T06:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 45 turns, 35711 chars absorbed | Ollama: up
+- 2026-05-15T07:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 37 turns, 32446 chars absorbed | Ollama: up
+- 2026-05-15T07:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 62 turns, 51549 chars absorbed | Ollama: up
+- 2026-05-15T08:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 53 turns, 35516 chars absorbed | Ollama: up
+- 2026-05-15T08:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 80 turns, 53052 chars absorbed | Ollama: up
+- 2026-05-15T09:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 50 turns, 49840 chars absorbed | Ollama: up
+- 2026-05-15T09:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 88 turns, 55219 chars absorbed | Ollama: up
+- 2026-05-15T10:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 32 turns, 38473 chars absorbed | Ollama: up
+- 2026-05-15T10:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 67 turns, 56728 chars absorbed | Ollama: up
+- 2026-05-15T11:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 73 turns, 56253 chars absorbed | Ollama: up
+- 2026-05-15T11:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 35 turns, 22326 chars absorbed | Ollama: up
+- 2026-05-15T12:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 49 turns, 35691 chars absorbed | Ollama: up
+- 2026-05-15T13:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 37 turns, 31871 chars absorbed | Ollama: up
+- 2026-05-15T13:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 40 turns, 35739 chars absorbed | Ollama: up
+- 2026-05-15T14:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 37 turns, 27808 chars absorbed | Ollama: up
+- 2026-05-15T14:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 64 turns, 53780 chars absorbed | Ollama: up
+- 2026-05-15T15:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 68 turns, 43174 chars absorbed | Ollama: up
+- 2026-05-15T15:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 58 turns, 39517 chars absorbed | Ollama: up
+- 2026-05-15T16:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 32 turns, 20482 chars absorbed | Ollama: up
+- 2026-05-15T16:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 50 turns, 36145 chars absorbed | Ollama: up
+- 2026-05-15T17:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 42179 chars absorbed | Ollama: up
+- 2026-05-15T17:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 35993 chars absorbed | Ollama: up
+- 2026-05-15T18:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 21 turns, 18854 chars absorbed | Ollama: up
+- 2026-05-15T18:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 53 turns, 41514 chars absorbed | Ollama: up
+- 2026-05-15T19:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 42 turns, 46099 chars absorbed | Ollama: up
+- 2026-05-15T19:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 91 turns, 46890 chars absorbed | Ollama: up
+- 2026-05-15T20:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 48 turns, 31003 chars absorbed | Ollama: up
+- 2026-05-15T20:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 64 turns, 50597 chars absorbed | Ollama: up
+- 2026-05-15T21:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 45 turns, 37384 chars absorbed | Ollama: up
+- 2026-05-15T21:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 26 turns, 20329 chars absorbed | Ollama: up
+- 2026-05-15T22:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 46 turns, 36562 chars absorbed | Ollama: up
+- 2026-05-15T22:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 43 turns, 32467 chars absorbed | Ollama: up
+- 2026-05-15T23:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 56 turns, 47071 chars absorbed | Ollama: up
+- 2026-05-16T00:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 19 turns, 19111 chars absorbed | Ollama: up
+- 2026-05-16T00:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 81 turns, 45011 chars absorbed | Ollama: up
+- 2026-05-16T01:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 36 turns, 32579 chars absorbed | Ollama: up
+- 2026-05-16T01:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 60 turns, 53863 chars absorbed | Ollama: up
+- 2026-05-16T02:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 63 turns, 33296 chars absorbed | Ollama: up
+- 2026-05-16T02:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 149 turns, 46828 chars absorbed | Ollama: up
+- 2026-05-16T03:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 45 turns, 36854 chars absorbed | Ollama: up
+- 2026-05-16T03:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 92 turns, 54074 chars absorbed | Ollama: up
+- 2026-05-16T04:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 36 turns, 20564 chars absorbed | Ollama: up
+- 2026-05-16T04:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 72 turns, 57290 chars absorbed | Ollama: up
+- 2026-05-16T05:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 57 turns, 41734 chars absorbed | Ollama: up
+- 2026-05-16T05:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 42 turns, 35006 chars absorbed | Ollama: up
+- 2026-05-16T06:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 33 turns, 26152 chars absorbed | Ollama: up
+- 2026-05-16T06:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 55 turns, 37593 chars absorbed | Ollama: up
+- 2026-05-16T07:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 40 turns, 31961 chars absorbed | Ollama: up
+- 2026-05-16T07:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 107 turns, 53703 chars absorbed | Ollama: up
+- 2026-05-16T08:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 65 turns, 50177 chars absorbed | Ollama: up
+- 2026-05-16T09:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 50 turns, 53094 chars absorbed | Ollama: up
+- 2026-05-16T09:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 59 turns, 44871 chars absorbed | Ollama: up
+- 2026-05-16T10:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 36 turns, 47632 chars absorbed | Ollama: up
+- 2026-05-16T10:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 101 turns, 67879 chars absorbed | Ollama: up
+- 2026-05-16T11:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 59 turns, 62998 chars absorbed | Ollama: up
+- 2026-05-16T11:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 52 turns, 37573 chars absorbed | Ollama: up
+- 2026-05-16T12:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 22 turns, 19265 chars absorbed | Ollama: up
+- 2026-05-16T12:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 43 turns, 36449 chars absorbed | Ollama: up
+- 2026-05-16T13:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 33 turns, 31475 chars absorbed | Ollama: up
+- 2026-05-16T13:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 45 turns, 35955 chars absorbed | Ollama: up
+- 2026-05-16T14:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 65 turns, 33202 chars absorbed | Ollama: up
+- 2026-05-16T14:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 37 turns, 35825 chars absorbed | Ollama: up
+- 2026-05-16T15:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 34 turns, 31479 chars absorbed | Ollama: up
+- 2026-05-16T15:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 36 turns, 34464 chars absorbed | Ollama: up
+- 2026-05-16T16:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 20 turns, 18905 chars absorbed | Ollama: up
+- 2026-05-16T16:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 61 turns, 47464 chars absorbed | Ollama: up
+- 2026-05-16T17:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 62 turns, 45288 chars absorbed | Ollama: up
+- 2026-05-16T17:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 29 turns, 22018 chars absorbed | Ollama: up
+- 2026-05-16T18:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 24 turns, 32272 chars absorbed | Ollama: up
+- 2026-05-16T19:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 36 turns, 30650 chars absorbed | Ollama: up
+- 2026-05-16T19:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 49 turns, 51112 chars absorbed | Ollama: up
+- 2026-05-16T20:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 78 turns, 38830 chars absorbed | Ollama: up
+- 2026-05-16T20:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 49 turns, 52550 chars absorbed | Ollama: up
+- 2026-05-16T21:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 51 turns, 31579 chars absorbed | Ollama: up
+- 2026-05-16T21:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 55 turns, 38111 chars absorbed | Ollama: up
+- 2026-05-16T22:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 27 turns, 19576 chars absorbed | Ollama: up
+- 2026-05-16T22:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 51 turns, 36271 chars absorbed | Ollama: up
+- 2026-05-16T23:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 57 turns, 41743 chars absorbed | Ollama: up
+- 2026-05-16T23:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 51 turns, 35908 chars absorbed | Ollama: up
+- 2026-05-17T00:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 19 turns, 18475 chars absorbed | Ollama: up
+- 2026-05-17T00:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 90 turns, 48055 chars absorbed | Ollama: up
+- 2026-05-17T01:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 40 turns, 31760 chars absorbed | Ollama: up
+- 2026-05-17T01:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 100 turns, 47969 chars absorbed | Ollama: up
+- 2026-05-17T02:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 72 turns, 42423 chars absorbed | Ollama: up
+- 2026-05-17T02:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 52 turns, 44472 chars absorbed | Ollama: up
+- 2026-05-17T03:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 60 turns, 55806 chars absorbed | Ollama: up
+- 2026-05-17T03:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 138 turns, 74823 chars absorbed | Ollama: up
+- 2026-05-17T04:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 57 turns, 42751 chars absorbed | Ollama: up
+- 2026-05-17T05:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 60 turns, 42811 chars absorbed | Ollama: up
+- 2026-05-17T05:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 78 turns, 54245 chars absorbed | Ollama: up
+- 2026-05-17T06:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 19 turns, 17399 chars absorbed | Ollama: up
+- 2026-05-17T06:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 61 turns, 36661 chars absorbed | Ollama: up
+- 2026-05-17T07:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 48 turns, 35822 chars absorbed | Ollama: up
+- 2026-05-17T07:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 70 turns, 54062 chars absorbed | Ollama: up
+- 2026-05-17T08:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 54 turns, 43324 chars absorbed | Ollama: up
+- 2026-05-17T08:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 58 turns, 45193 chars absorbed | Ollama: up
+- 2026-05-17T09:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 39 turns, 57575 chars absorbed | Ollama: up
+- 2026-05-17T09:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 55 turns, 35309 chars absorbed | Ollama: up
+- 2026-05-17T10:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 46 turns, 43347 chars absorbed | Ollama: up
+- 2026-05-17T10:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 58 turns, 52899 chars absorbed | Ollama: up
+- 2026-05-17T11:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 105 turns, 54191 chars absorbed | Ollama: up
+- 2026-05-17T12:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 24 turns, 19272 chars absorbed | Ollama: up
+- 2026-05-17T12:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 36585 chars absorbed | Ollama: up
+- 2026-05-17T13:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 38 turns, 47589 chars absorbed | Ollama: up
+- 2026-05-17T13:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 89 turns, 39198 chars absorbed | Ollama: up
+- 2026-05-17T14:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 32010 chars absorbed | Ollama: up
+- 2026-05-17T14:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 42 turns, 34374 chars absorbed | Ollama: up
+- 2026-05-17T15:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 33775 chars absorbed | Ollama: up
+- 2026-05-17T15:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 44 turns, 35248 chars absorbed | Ollama: up
+- 2026-05-17T16:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 29 turns, 20324 chars absorbed | Ollama: up
+- 2026-05-17T16:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 43 turns, 34828 chars absorbed | Ollama: up
+- 2026-05-17T17:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 87 turns, 59955 chars absorbed | Ollama: up
+- 2026-05-17T18:00Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6474 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-17T18:30Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6474 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-17T19:00Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6474 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-17T19:30Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6474 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-17T20:00Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6474 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-17T20:30Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6474 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-17T21:00Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6474 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-17T21:30Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6474 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-17T22:00Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6474 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-17T22:30Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6474 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-17T23:00Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6474 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-17T23:30Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6474 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-18T00:00Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6474 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-18T00:30Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6474 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-18T01:00Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6474 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-18T01:30Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6474 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-18T01:42Z [cousin: qwen-context-absorber] Status: ollama-down | Detail: pre-flight health check failed; skipped cycle without attempting absorption | Ollama: down
+- 2026-05-18T02:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 122 turns, 56595 chars absorbed | Ollama: up
+- 2026-05-18T02:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 55 turns, 49154 chars absorbed | Ollama: up
+- 2026-05-18T03:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 96 turns, 55605 chars absorbed | Ollama: up
+- 2026-05-18T03:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 81 turns, 55904 chars absorbed | Ollama: up
+- 2026-05-18T04:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 53 turns, 28015 chars absorbed | Ollama: up
+- 2026-05-18T04:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 42 turns, 45962 chars absorbed | Ollama: up
+- 2026-05-18T05:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 75 turns, 43392 chars absorbed | Ollama: up
+- 2026-05-18T05:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 34 turns, 26412 chars absorbed | Ollama: up
+- 2026-05-18T06:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 55 turns, 34703 chars absorbed | Ollama: up
+- 2026-05-18T06:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 43 turns, 33734 chars absorbed | Ollama: up
+- 2026-05-18T07:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 79 turns, 54550 chars absorbed | Ollama: up
+- 2026-05-18T08:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 50 turns, 87430 chars absorbed | Ollama: up
+- 2026-05-18T08:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 104 turns, 115448 chars absorbed | Ollama: up
+- 2026-05-18T09:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 63 turns, 56961 chars absorbed | Ollama: up
+- 2026-05-18T09:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 76 turns, 60280 chars absorbed | Ollama: up
+- 2026-05-18T10:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 41 turns, 32047 chars absorbed | Ollama: up
+- 2026-05-18T10:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 52 turns, 52756 chars absorbed | Ollama: up
+- 2026-05-18T11:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 62 turns, 48671 chars absorbed | Ollama: up
+- 2026-05-18T11:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 36123 chars absorbed | Ollama: up
+- 2026-05-18T12:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 26 turns, 21044 chars absorbed | Ollama: up
+- 2026-05-18T12:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 45 turns, 36208 chars absorbed | Ollama: up
+- 2026-05-18T13:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 33 turns, 30276 chars absorbed | Ollama: up
+- 2026-05-18T13:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 44 turns, 35426 chars absorbed | Ollama: up
+- 2026-05-18T14:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 55 turns, 44898 chars absorbed | Ollama: up
+- 2026-05-18T14:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 37 turns, 34008 chars absorbed | Ollama: up
+- 2026-05-18T15:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 66 turns, 40373 chars absorbed | Ollama: up
+- 2026-05-18T16:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 37 turns, 36868 chars absorbed | Ollama: up
+- 2026-05-18T16:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 51 turns, 58122 chars absorbed | Ollama: up
+- 2026-05-18T17:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 55 turns, 51450 chars absorbed | Ollama: up
+- 2026-05-18T17:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 69 turns, 63682 chars absorbed | Ollama: up
+- 2026-05-18T18:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 26 turns, 20596 chars absorbed | Ollama: up
+- 2026-05-18T18:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 5 turns, 28993 chars absorbed | Ollama: up
+- 2026-05-18T19:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 7 turns, 51566 chars absorbed | Ollama: up
+- 2026-05-18T19:50Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6562 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-18T20:20Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6562 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-18T20:50Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6562 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-18T21:20Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6562 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-18T21:50Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6562 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-18T22:20Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6562 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-18T22:50Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6562 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-18T23:20Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6562 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-18T23:50Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6562 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-19T00:20Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6562 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-19T00:50Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6562 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-19T01:20Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6562 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-19T01:50Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6562 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-19T02:20Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6562 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-19T02:23Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6562 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-19T02:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 228 turns, 94845 chars absorbed | Ollama: up
+- 2026-05-19T03:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 64 turns, 59659 chars absorbed | Ollama: up
+- 2026-05-19T04:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 54 turns, 41892 chars absorbed | Ollama: up
+- 2026-05-19T04:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 70 turns, 51753 chars absorbed | Ollama: up
+- 2026-05-19T05:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 98 turns, 67658 chars absorbed | Ollama: up
+- 2026-05-19T05:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 68 turns, 40070 chars absorbed | Ollama: up
+- 2026-05-19T06:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 31 turns, 19153 chars absorbed | Ollama: up
+- 2026-05-19T06:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 54 turns, 37263 chars absorbed | Ollama: up
+- 2026-05-19T07:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 39 turns, 30762 chars absorbed | Ollama: up
+- 2026-05-19T07:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 44 turns, 34753 chars absorbed | Ollama: up
+- 2026-05-19T08:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 88 turns, 54136 chars absorbed | Ollama: up
+- 2026-05-19T08:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 52 turns, 43385 chars absorbed | Ollama: up
+- 2026-05-19T09:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 57 turns, 44057 chars absorbed | Ollama: up
+- 2026-05-19T09:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 68 turns, 67649 chars absorbed | Ollama: up
+- 2026-05-19T10:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 36 turns, 19696 chars absorbed | Ollama: up
+- 2026-05-19T10:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 53 turns, 35057 chars absorbed | Ollama: up
+- 2026-05-19T11:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 50 turns, 49215 chars absorbed | Ollama: up
+- 2026-05-19T11:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 42 turns, 37244 chars absorbed | Ollama: up
+- 2026-05-19T12:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 37 turns, 32414 chars absorbed | Ollama: up
+- 2026-05-19T12:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 38 turns, 33062 chars absorbed | Ollama: up
+- 2026-05-19T13:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 60 turns, 34286 chars absorbed | Ollama: up
+- 2026-05-19T13:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 30 turns, 21686 chars absorbed | Ollama: up
+- 2026-05-19T14:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 60 turns, 46966 chars absorbed | Ollama: up
+- 2026-05-19T15:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 41 turns, 32584 chars absorbed | Ollama: up
+- 2026-05-19T15:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 54 turns, 42122 chars absorbed | Ollama: up
+- 2026-05-19T16:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 51 turns, 57040 chars absorbed | Ollama: up
+- 2026-05-19T16:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 66 turns, 43337 chars absorbed | Ollama: up
+- 2026-05-19T17:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 58 turns, 39790 chars absorbed | Ollama: up
+- 2026-05-19T17:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 62 turns, 40525 chars absorbed | Ollama: up
+- 2026-05-19T18:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 32 turns, 19904 chars absorbed | Ollama: up
+- 2026-05-19T18:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 44 turns, 35804 chars absorbed | Ollama: up
+- 2026-05-19T19:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 115 turns, 53079 chars absorbed | Ollama: up
+- 2026-05-19T19:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 93 turns, 45494 chars absorbed | Ollama: up
+- 2026-05-19T20:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 62 turns, 33689 chars absorbed | Ollama: up
+- 2026-05-19T20:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 35315 chars absorbed | Ollama: up
+- 2026-05-19T21:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 24 turns, 29627 chars absorbed | Ollama: up
+- 2026-05-19T21:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 35904 chars absorbed | Ollama: up
+- 2026-05-19T22:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 25 turns, 19443 chars absorbed | Ollama: up
+- 2026-05-19T22:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 45 turns, 35784 chars absorbed | Ollama: up
+- 2026-05-19T23:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 57 turns, 41669 chars absorbed | Ollama: up
+- 2026-05-19T23:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 38 turns, 34647 chars absorbed | Ollama: up
+- 2026-05-20T00:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 88 turns, 38094 chars absorbed | Ollama: up
+- 2026-05-20T00:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 57 turns, 42042 chars absorbed | Ollama: up
+- 2026-05-20T01:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 41 turns, 34721 chars absorbed | Ollama: up
+- 2026-05-20T01:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 26 turns, 19696 chars absorbed | Ollama: up
+- 2026-05-20T02:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 7884 chars absorbed | Ollama: up
+- 2026-05-20T02:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 141 turns, 47985 chars absorbed | Ollama: up
+- 2026-05-20T03:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 80 turns, 52571 chars absorbed | Ollama: up
+- 2026-05-20T03:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 94 turns, 66949 chars absorbed | Ollama: up
+- 2026-05-20T04:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 32662 chars absorbed | Ollama: up
+- 2026-05-20T04:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 56 turns, 36603 chars absorbed | Ollama: up
+- 2026-05-20T05:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 59 turns, 43867 chars absorbed | Ollama: up
+- 2026-05-20T05:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 45 turns, 35366 chars absorbed | Ollama: up
+- 2026-05-20T06:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 45 turns, 22834 chars absorbed | Ollama: up
+- 2026-05-20T06:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 57 turns, 37386 chars absorbed | Ollama: up
+- 2026-05-20T07:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 44 turns, 32915 chars absorbed | Ollama: up
+- 2026-05-20T07:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 39 turns, 33670 chars absorbed | Ollama: up
+- 2026-05-20T08:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 57 turns, 31726 chars absorbed | Ollama: up
+- 2026-05-20T08:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 55 turns, 43716 chars absorbed | Ollama: up
+- 2026-05-20T09:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 43 turns, 39309 chars absorbed | Ollama: up
+- 2026-05-20T09:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 52 turns, 47439 chars absorbed | Ollama: up
+- 2026-05-20T10:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 34 turns, 29011 chars absorbed | Ollama: up
+- 2026-05-20T10:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 55 turns, 56955 chars absorbed | Ollama: up
+- 2026-05-20T11:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 97 turns, 57294 chars absorbed | Ollama: up
+- 2026-05-20T12:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 41 turns, 21593 chars absorbed | Ollama: up
+- 2026-05-20T12:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 62 turns, 39159 chars absorbed | Ollama: up
+- 2026-05-20T13:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 44 turns, 32448 chars absorbed | Ollama: up
+- 2026-05-20T13:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 55 turns, 38107 chars absorbed | Ollama: up
+- 2026-05-20T14:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 14 turns, 25232 chars absorbed | Ollama: up
+- 2026-05-20T14:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 81 turns, 56799 chars absorbed | Ollama: up
+- 2026-05-20T15:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 57 turns, 42960 chars absorbed | Ollama: up
+- 2026-05-20T15:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 72 turns, 38683 chars absorbed | Ollama: up
+- 2026-05-20T16:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 46 turns, 22483 chars absorbed | Ollama: up
+- 2026-05-20T16:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 66 turns, 41623 chars absorbed | Ollama: up
+- 2026-05-20T17:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 43 turns, 39854 chars absorbed | Ollama: up
+- 2026-05-20T17:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 85 turns, 64575 chars absorbed | Ollama: up
+- 2026-05-20T18:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 45 turns, 26056 chars absorbed | Ollama: up
+- 2026-05-20T18:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 36726 chars absorbed | Ollama: up
+- 2026-05-20T19:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 72 turns, 51694 chars absorbed | Ollama: up
+- 2026-05-20T19:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 83 turns, 46805 chars absorbed | Ollama: up
+- 2026-05-20T20:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 54 turns, 31491 chars absorbed | Ollama: up
+- 2026-05-20T20:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 54 turns, 47595 chars absorbed | Ollama: up
+- 2026-05-20T21:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 50 turns, 35050 chars absorbed | Ollama: up
+- 2026-05-20T21:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 36 turns, 22502 chars absorbed | Ollama: up
+- 2026-05-20T22:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 41 turns, 33726 chars absorbed | Ollama: up
+- 2026-05-20T23:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 46 turns, 34356 chars absorbed | Ollama: up
+- 2026-05-20T23:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 75 turns, 47135 chars absorbed | Ollama: up
+- 2026-05-21T00:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 32 turns, 19902 chars absorbed | Ollama: up
+- 2026-05-21T00:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 100 turns, 51850 chars absorbed | Ollama: up
+- 2026-05-21T01:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 54 turns, 49114 chars absorbed | Ollama: up
+- 2026-05-21T01:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 61 turns, 38711 chars absorbed | Ollama: up
+- 2026-05-21T02:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 105 turns, 39437 chars absorbed | Ollama: up
+- 2026-05-21T02:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 185 turns, 59187 chars absorbed | Ollama: up
+- 2026-05-21T03:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 61 turns, 46539 chars absorbed | Ollama: up
+- 2026-05-21T03:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 108 turns, 52421 chars absorbed | Ollama: up
+- 2026-05-21T04:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 72 turns, 33160 chars absorbed | Ollama: up
+- 2026-05-21T04:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 92 turns, 42148 chars absorbed | Ollama: up
+- 2026-05-21T05:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 64 turns, 42703 chars absorbed | Ollama: up
+- 2026-05-21T05:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 37577 chars absorbed | Ollama: up
+- 2026-05-21T06:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 24 turns, 19532 chars absorbed | Ollama: up
+- 2026-05-21T06:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 73 turns, 50427 chars absorbed | Ollama: up
+- 2026-05-21T07:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 35 turns, 32948 chars absorbed | Ollama: up
+- 2026-05-21T07:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 58 turns, 35985 chars absorbed | Ollama: up
+- 2026-05-21T08:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 89 turns, 63750 chars absorbed | Ollama: up
+- 2026-05-21T09:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 103 turns, 54922 chars absorbed | Ollama: up
+- 2026-05-21T09:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 122 turns, 75946 chars absorbed | Ollama: up
+- 2026-05-21T10:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 148 turns, 68539 chars absorbed | Ollama: up
+- 2026-05-21T10:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 98 turns, 58864 chars absorbed | Ollama: up
+- 2026-05-21T11:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 126 turns, 60309 chars absorbed | Ollama: up
+- 2026-05-21T11:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 74 turns, 42937 chars absorbed | Ollama: up
+- 2026-05-21T12:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 22 turns, 19394 chars absorbed | Ollama: up
+- 2026-05-21T12:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 46 turns, 36072 chars absorbed | Ollama: up
+- 2026-05-21T13:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 38 turns, 32284 chars absorbed | Ollama: up
+- 2026-05-21T13:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 44 turns, 36902 chars absorbed | Ollama: up
+- 2026-05-21T14:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 45 turns, 30197 chars absorbed | Ollama: up
+- 2026-05-21T14:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 39 turns, 45170 chars absorbed | Ollama: up
+- 2026-05-21T15:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 35 turns, 29427 chars absorbed | Ollama: up
+- 2026-05-21T15:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 65 turns, 32358 chars absorbed | Ollama: up
+- 2026-05-21T16:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 49 turns, 35213 chars absorbed | Ollama: up
+- 2026-05-21T16:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 55 turns, 35039 chars absorbed | Ollama: up
+- 2026-05-21T17:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 77 turns, 47408 chars absorbed | Ollama: up
+- 2026-05-21T18:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 28 turns, 19496 chars absorbed | Ollama: up
+- 2026-05-21T18:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 44 turns, 36047 chars absorbed | Ollama: up
+- 2026-05-21T19:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 33 turns, 31336 chars absorbed | Ollama: up
+- 2026-05-21T19:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 189 turns, 79631 chars absorbed | Ollama: up
+- 2026-05-21T20:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 77 turns, 40815 chars absorbed | Ollama: up
+- 2026-05-21T20:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 56 turns, 39484 chars absorbed | Ollama: up
+- 2026-05-21T21:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 36 turns, 31334 chars absorbed | Ollama: up
+- 2026-05-21T21:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 54 turns, 36172 chars absorbed | Ollama: up
+- 2026-05-21T22:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 29 turns, 21025 chars absorbed | Ollama: up
+- 2026-05-21T22:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 49 turns, 37645 chars absorbed | Ollama: up
+- 2026-05-21T23:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 67 turns, 43000 chars absorbed | Ollama: up
+- 2026-05-21T23:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 67 turns, 38401 chars absorbed | Ollama: up
+- 2026-05-22T00:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 31 turns, 20515 chars absorbed | Ollama: up
+- 2026-05-22T00:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 105 turns, 51895 chars absorbed | Ollama: up
+- 2026-05-22T01:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 31 turns, 29891 chars absorbed | Ollama: up
+- 2026-05-22T01:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 106 turns, 40918 chars absorbed | Ollama: up
+- 2026-05-22T02:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 73 turns, 42380 chars absorbed | Ollama: up
+- 2026-05-22T02:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 98 turns, 59480 chars absorbed | Ollama: up
+- 2026-05-22T03:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 96 turns, 56954 chars absorbed | Ollama: up
+- 2026-05-22T04:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 129 turns, 54050 chars absorbed | Ollama: up
+- 2026-05-22T04:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 370 turns, 104965 chars absorbed | Ollama: up
+- 2026-05-22T05:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 165 turns, 100582 chars absorbed | Ollama: up
+- 2026-05-22T05:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 41 turns, 37713 chars absorbed | Ollama: up
+- 2026-05-22T06:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 57 turns, 21340 chars absorbed | Ollama: up
+- 2026-05-22T06:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 59 turns, 36839 chars absorbed | Ollama: up
+- 2026-05-22T07:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 68 turns, 44207 chars absorbed | Ollama: up
+- 2026-05-22T07:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 57 turns, 43004 chars absorbed | Ollama: up
+- 2026-05-22T08:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 48 turns, 29964 chars absorbed | Ollama: up
+- 2026-05-22T08:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 59 turns, 42691 chars absorbed | Ollama: up
+- 2026-05-22T09:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 37 turns, 31809 chars absorbed | Ollama: up
+- 2026-05-22T09:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 67 turns, 54639 chars absorbed | Ollama: up
+- 2026-05-22T10:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 52 turns, 42688 chars absorbed | Ollama: up
+- 2026-05-22T11:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 45 turns, 34505 chars absorbed | Ollama: up
+- 2026-05-22T11:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 96 turns, 51417 chars absorbed | Ollama: up
+- 2026-05-22T12:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 16247 chars absorbed | Ollama: up
+- 2026-05-22T12:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 49 turns, 37175 chars absorbed | Ollama: up
+- 2026-05-22T13:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 86 turns, 51156 chars absorbed | Ollama: up
+- 2026-05-22T13:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 40 turns, 34222 chars absorbed | Ollama: up
+- 2026-05-22T14:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 46 turns, 32571 chars absorbed | Ollama: up
+- 2026-05-22T14:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 50 turns, 37721 chars absorbed | Ollama: up
+- 2026-05-22T15:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 39 turns, 31769 chars absorbed | Ollama: up
+- 2026-05-22T15:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 60 turns, 41726 chars absorbed | Ollama: up
+- 2026-05-22T16:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 40 turns, 29105 chars absorbed | Ollama: up
+- 2026-05-22T16:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 59 turns, 37222 chars absorbed | Ollama: up
+- 2026-05-22T17:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 56 turns, 42467 chars absorbed | Ollama: up
+- 2026-05-22T17:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 56 turns, 38813 chars absorbed | Ollama: up
+- 2026-05-22T18:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 21 turns, 19327 chars absorbed | Ollama: up
+- 2026-05-22T18:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 45 turns, 34396 chars absorbed | Ollama: up
+- 2026-05-22T19:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 103 turns, 54420 chars absorbed | Ollama: up
+- 2026-05-22T19:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 67 turns, 43942 chars absorbed | Ollama: up
+- 2026-05-22T20:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 59 turns, 44427 chars absorbed | Ollama: up
+- 2026-05-22T20:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 54 turns, 34985 chars absorbed | Ollama: up
+- 2026-05-22T21:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 39 turns, 34454 chars absorbed | Ollama: up
+- 2026-05-22T21:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 22 turns, 18699 chars absorbed | Ollama: up
+- 2026-05-22T22:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 51 turns, 36371 chars absorbed | Ollama: up
+- 2026-05-22T23:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 68 turns, 41926 chars absorbed | Ollama: up
+- 2026-05-22T23:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 52 turns, 36532 chars absorbed | Ollama: up
+- 2026-05-23T00:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 52 turns, 38248 chars absorbed | Ollama: up
+- 2026-05-23T00:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 54 turns, 42827 chars absorbed | Ollama: up
+- 2026-05-23T01:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 53 turns, 32134 chars absorbed | Ollama: up
+- 2026-05-23T01:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 67 turns, 40459 chars absorbed | Ollama: up
+- 2026-05-23T02:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 90 turns, 34006 chars absorbed | Ollama: up
+- 2026-05-23T02:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 93 turns, 53438 chars absorbed | Ollama: up
+- 2026-05-23T03:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 65 turns, 43035 chars absorbed | Ollama: up
+- 2026-05-23T03:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 68 turns, 52811 chars absorbed | Ollama: up
+- 2026-05-23T04:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 62 turns, 34721 chars absorbed | Ollama: up
+- 2026-05-23T04:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 40 turns, 46285 chars absorbed | Ollama: up
+- 2026-05-23T05:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 89 turns, 53287 chars absorbed | Ollama: up
+- 2026-05-23T05:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 78 turns, 50700 chars absorbed | Ollama: up
+- 2026-05-23T06:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 115 turns, 61191 chars absorbed | Ollama: up
+- 2026-05-23T06:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 48 turns, 42749 chars absorbed | Ollama: up
+- 2026-05-23T07:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 57 turns, 47973 chars absorbed | Ollama: up
+- 2026-05-23T08:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 41 turns, 36881 chars absorbed | Ollama: up
+- 2026-05-23T08:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 60 turns, 52646 chars absorbed | Ollama: up
+- 2026-05-23T09:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 65 turns, 76394 chars absorbed | Ollama: up
+- 2026-05-23T09:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 67 turns, 58432 chars absorbed | Ollama: up
+- 2026-05-23T10:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 80 turns, 47241 chars absorbed | Ollama: up
+- 2026-05-23T10:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 62 turns, 59470 chars absorbed | Ollama: up
+- 2026-05-23T11:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 76 turns, 59085 chars absorbed | Ollama: up
+- 2026-05-23T11:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 74 turns, 51324 chars absorbed | Ollama: up
+- 2026-05-23T12:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 38 turns, 29439 chars absorbed | Ollama: up
+- 2026-05-23T12:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 50 turns, 48639 chars absorbed | Ollama: up
+- 2026-05-23T13:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 35 turns, 39435 chars absorbed | Ollama: up
+- 2026-05-23T13:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 63 turns, 48582 chars absorbed | Ollama: up
+- 2026-05-23T14:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 45 turns, 38047 chars absorbed | Ollama: up
+- 2026-05-23T14:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 56 turns, 58957 chars absorbed | Ollama: up
+- 2026-05-23T15:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 65 turns, 48244 chars absorbed | Ollama: up
+- 2026-05-23T16:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 77 turns, 48994 chars absorbed | Ollama: up
+- 2026-05-23T16:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 64 turns, 52900 chars absorbed | Ollama: up
+- 2026-05-23T17:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 83 turns, 64893 chars absorbed | Ollama: up
+- 2026-05-23T17:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 96 turns, 77120 chars absorbed | Ollama: up
+- 2026-05-23T18:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 25 turns, 27380 chars absorbed | Ollama: up
+- 2026-05-23T18:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 60 turns, 49340 chars absorbed | Ollama: up
+- 2026-05-23T19:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 92 turns, 59763 chars absorbed | Ollama: up
+- 2026-05-23T19:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 96 turns, 60137 chars absorbed | Ollama: up
+- 2026-05-23T20:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 38 turns, 38565 chars absorbed | Ollama: up
+- 2026-05-23T20:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 58 turns, 48450 chars absorbed | Ollama: up
+- 2026-05-23T21:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 55 turns, 41914 chars absorbed | Ollama: up
+- 2026-05-23T21:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 61 turns, 48356 chars absorbed | Ollama: up
+- 2026-05-23T22:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 32 turns, 29328 chars absorbed | Ollama: up
+- 2026-05-23T22:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 45 turns, 45924 chars absorbed | Ollama: up
+- 2026-05-23T23:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 52 turns, 50140 chars absorbed | Ollama: up
+- 2026-05-23T23:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 70 turns, 50342 chars absorbed | Ollama: up
+- 2026-05-24T00:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 87 turns, 55739 chars absorbed | Ollama: up
+- 2026-05-24T01:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 53 turns, 47220 chars absorbed | Ollama: up
+- 2026-05-24T01:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 87 turns, 49667 chars absorbed | Ollama: up
+- 2026-05-24T02:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 36 turns, 37857 chars absorbed | Ollama: up
+- 2026-05-24T02:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 116 turns, 57715 chars absorbed | Ollama: up
+- 2026-05-24T03:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 54 turns, 65199 chars absorbed | Ollama: up
+- 2026-05-24T03:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 91 turns, 66176 chars absorbed | Ollama: up
+- 2026-05-24T04:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 70 turns, 40590 chars absorbed | Ollama: up
+- 2026-05-24T04:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 93 turns, 66247 chars absorbed | Ollama: up
+- 2026-05-24T05:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 118 turns, 71912 chars absorbed | Ollama: up
+- 2026-05-24T05:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 53 turns, 49365 chars absorbed | Ollama: up
+- 2026-05-24T06:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 57 turns, 50256 chars absorbed | Ollama: up
+- 2026-05-24T06:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 54 turns, 41168 chars absorbed | Ollama: up
+- 2026-05-24T07:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 97 turns, 61442 chars absorbed | Ollama: up
+- 2026-05-24T08:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 64 turns, 55320 chars absorbed | Ollama: up
+- 2026-05-24T08:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 89 turns, 84390 chars absorbed | Ollama: up
+- 2026-05-24T09:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 22 turns, 38716 chars absorbed | Ollama: up
+- 2026-05-24T09:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 40544 chars absorbed | Ollama: up
+- 2026-05-24T10:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 25483 chars absorbed | Ollama: up
+- 2026-05-24T10:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 414 turns, 104021 chars absorbed | Ollama: up
+- 2026-05-24T11:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 249 turns, 103400 chars absorbed | Ollama: up
+- 2026-05-24T12:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 110 turns, 93431 chars absorbed | Ollama: up
+- 2026-05-24T12:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 40544 chars absorbed | Ollama: up
+- 2026-05-24T13:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 35398 chars absorbed | Ollama: up
+- 2026-05-24T13:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 40544 chars absorbed | Ollama: up
+- 2026-05-24T14:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 58883 chars absorbed | Ollama: up
+- 2026-05-24T14:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 40544 chars absorbed | Ollama: up
+- 2026-05-24T15:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 35398 chars absorbed | Ollama: up
+- 2026-05-24T15:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 387 turns, 102580 chars absorbed | Ollama: up
+- 2026-05-24T16:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 264 turns, 85568 chars absorbed | Ollama: up
+- 2026-05-24T16:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 130 turns, 100338 chars absorbed | Ollama: up
+- 2026-05-24T17:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 10 turns, 58376 chars absorbed | Ollama: up
+- 2026-05-24T17:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 25483 chars absorbed | Ollama: up
+- 2026-05-24T18:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 40544 chars absorbed | Ollama: up
+- 2026-05-24T19:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 35398 chars absorbed | Ollama: up
+- 2026-05-24T19:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 8 turns, 55488 chars absorbed | Ollama: up
+- 2026-05-24T20:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 10 turns, 47631 chars absorbed | Ollama: up
+- 2026-05-24T20:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 8 turns, 66027 chars absorbed | Ollama: up
+- 2026-05-24T21:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 35398 chars absorbed | Ollama: up
+- 2026-05-24T21:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 40544 chars absorbed | Ollama: up
+- 2026-05-24T22:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 25483 chars absorbed | Ollama: up
+- 2026-05-24T22:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 40544 chars absorbed | Ollama: up
+- 2026-05-24T23:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 43315 chars absorbed | Ollama: up
+- 2026-05-24T23:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 40544 chars absorbed | Ollama: up
+- 2026-05-25T00:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 25483 chars absorbed | Ollama: up
+- 2026-05-25T00:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 8 turns, 46807 chars absorbed | Ollama: up
+- 2026-05-25T01:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 147 turns, 57392 chars absorbed | Ollama: up
+- 2026-05-25T01:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 171 turns, 80944 chars absorbed | Ollama: up
+- 2026-05-25T02:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 17 turns, 35683 chars absorbed | Ollama: up
+- 2026-05-25T02:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 8 turns, 50459 chars absorbed | Ollama: up
+- 2026-05-25T03:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 8 turns, 44883 chars absorbed | Ollama: up
+- 2026-05-25T03:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 25483 chars absorbed | Ollama: up
+- 2026-05-25T04:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 40544 chars absorbed | Ollama: up
+- 2026-05-25T04:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 35398 chars absorbed | Ollama: up
+- 2026-05-25T05:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 8 turns, 48461 chars absorbed | Ollama: up
+- 2026-05-25T06:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 25483 chars absorbed | Ollama: up
+- 2026-05-25T06:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 40544 chars absorbed | Ollama: up
+- 2026-05-25T07:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 35398 chars absorbed | Ollama: up
+- 2026-05-25T07:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 8 turns, 66027 chars absorbed | Ollama: up
+- 2026-05-25T08:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 33380 chars absorbed | Ollama: up
+- 2026-05-25T08:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 40514 chars absorbed | Ollama: up
+- 2026-05-25T09:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 167 turns, 76021 chars absorbed | Ollama: up
+- 2026-05-25T09:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 27 turns, 45260 chars absorbed | Ollama: up
+- 2026-05-25T10:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 25473 chars absorbed | Ollama: up
+- 2026-05-25T10:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 40514 chars absorbed | Ollama: up
+- 2026-05-25T11:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 172 turns, 84733 chars absorbed | Ollama: up
+- 2026-05-25T11:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 17 turns, 42338 chars absorbed | Ollama: up
+- 2026-05-25T12:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 25473 chars absorbed | Ollama: up
+- 2026-05-25T12:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 40514 chars absorbed | Ollama: up
+- 2026-05-25T13:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 35378 chars absorbed | Ollama: up
+- 2026-05-25T13:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 40514 chars absorbed | Ollama: up
+- 2026-05-25T14:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 43458 chars absorbed | Ollama: up
+- 2026-05-25T14:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 40341 chars absorbed | Ollama: up
+- 2026-05-25T15:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 40514 chars absorbed | Ollama: up
+- 2026-05-25T16:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 25473 chars absorbed | Ollama: up
+- 2026-05-25T16:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 40514 chars absorbed | Ollama: up
+- 2026-05-25T17:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 43285 chars absorbed | Ollama: up
+- 2026-05-25T17:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 40514 chars absorbed | Ollama: up
+- 2026-05-25T18:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 50946 chars absorbed | Ollama: up
+- 2026-05-25T18:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 40514 chars absorbed | Ollama: up
+- 2026-05-25T19:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 50312 chars absorbed | Ollama: up
+- 2026-05-25T19:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 8 turns, 45653 chars absorbed | Ollama: up
+- 2026-05-25T20:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 8 turns, 42442 chars absorbed | Ollama: up
+- 2026-05-25T20:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 40514 chars absorbed | Ollama: up
+- 2026-05-25T21:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 35378 chars absorbed | Ollama: up
+- 2026-05-25T21:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 40514 chars absorbed | Ollama: up
+- 2026-05-25T22:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 25473 chars absorbed | Ollama: up
+- 2026-05-25T22:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 40514 chars absorbed | Ollama: up
+- 2026-05-25T23:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 43285 chars absorbed | Ollama: up
+- 2026-05-25T23:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 40514 chars absorbed | Ollama: up
+- 2026-05-26T00:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 25473 chars absorbed | Ollama: up
+- 2026-05-26T00:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 8 turns, 46767 chars absorbed | Ollama: up
+- 2026-05-26T01:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 35378 chars absorbed | Ollama: up
+- 2026-05-26T01:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 40514 chars absorbed | Ollama: up
+- 2026-05-26T02:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 8 turns, 48421 chars absorbed | Ollama: up
+- 2026-05-26T02:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 4 turns, 35378 chars absorbed | Ollama: up
+- 2026-05-26T03:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 40514 chars absorbed | Ollama: up
+- 2026-05-26T04:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 25473 chars absorbed | Ollama: up
+- 2026-05-26T04:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 40514 chars absorbed | Ollama: up
+- 2026-05-26T05:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 43285 chars absorbed | Ollama: up
+- 2026-05-26T05:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 8 turns, 65987 chars absorbed | Ollama: up
+- 2026-05-26T06:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 25473 chars absorbed | Ollama: up
+- 2026-05-26T06:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 6 turns, 40514 chars absorbed | Ollama: up
+- 2026-05-26T07:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 133 turns, 54255 chars absorbed | Ollama: up
+- 2026-05-26T07:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 91 turns, 67796 chars absorbed | Ollama: up
+- 2026-05-26T08:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 79 turns, 53299 chars absorbed | Ollama: up
+- 2026-05-26T08:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 88 turns, 59609 chars absorbed | Ollama: up
+- 2026-05-26T09:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 48 turns, 42147 chars absorbed | Ollama: up
+- 2026-05-26T09:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 54 turns, 49644 chars absorbed | Ollama: up
+- 2026-05-27T23:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 18 turns, 26783 chars absorbed | Ollama: up
+- 2026-05-28T00:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 13 Qwen call(s) ok, 274 turns, 157094 chars absorbed | Ollama: up
+- 2026-05-28T01:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 103 turns, 78729 chars absorbed | Ollama: up
+- 2026-05-28T01:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 54 turns, 63436 chars absorbed | Ollama: up
+- 2026-05-28T02:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 82 turns, 47902 chars absorbed | Ollama: up
+- 2026-05-28T02:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 55 turns, 48258 chars absorbed | Ollama: up
+- 2026-05-28T03:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 34 turns, 39832 chars absorbed | Ollama: up
+- 2026-05-28T03:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 55 turns, 47781 chars absorbed | Ollama: up
+- 2026-05-28T04:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 56 turns, 51590 chars absorbed | Ollama: up
+- 2026-05-28T05:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 50 turns, 43644 chars absorbed | Ollama: up
+- 2026-05-28T05:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 82 turns, 59254 chars absorbed | Ollama: up
+- 2026-05-28T06:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 24 turns, 29097 chars absorbed | Ollama: up
+- 2026-05-28T06:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 46402 chars absorbed | Ollama: up
+- 2026-05-28T07:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 49 turns, 42072 chars absorbed | Ollama: up
+- 2026-05-28T07:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 63 turns, 75327 chars absorbed | Ollama: up
+- 2026-05-28T08:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 41 turns, 39463 chars absorbed | Ollama: up
+- 2026-05-28T08:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 50 turns, 48305 chars absorbed | Ollama: up
+- 2026-05-28T09:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 37 turns, 39939 chars absorbed | Ollama: up
+- 2026-05-28T09:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 46 turns, 47697 chars absorbed | Ollama: up
+- 2026-05-28T10:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 25 turns, 28639 chars absorbed | Ollama: up
+- 2026-05-28T10:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 46 turns, 46561 chars absorbed | Ollama: up
+- 2026-05-28T11:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 71 turns, 52921 chars absorbed | Ollama: up
+- 2026-05-28T11:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 66 turns, 49528 chars absorbed | Ollama: up
+- 2026-05-28T12:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 29 turns, 28328 chars absorbed | Ollama: up
+- 2026-05-28T12:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 54 turns, 49099 chars absorbed | Ollama: up
+- 2026-05-28T13:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 41 turns, 40988 chars absorbed | Ollama: up
+- 2026-05-28T13:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 62 turns, 48589 chars absorbed | Ollama: up
+- 2026-05-28T14:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 50 turns, 39755 chars absorbed | Ollama: up
+- 2026-05-28T15:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 88 turns, 88524 chars absorbed | Ollama: up
+- 2026-05-28T15:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 94 turns, 53721 chars absorbed | Ollama: up
+- 2026-05-28T16:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 44 turns, 33395 chars absorbed | Ollama: up
+- 2026-05-28T16:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 49 turns, 55301 chars absorbed | Ollama: up
+- 2026-05-28T17:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 62 turns, 60596 chars absorbed | Ollama: up
+- 2026-05-28T17:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 42 turns, 45780 chars absorbed | Ollama: up
+- 2026-05-28T18:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 28 turns, 28251 chars absorbed | Ollama: up
+- 2026-05-28T18:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 55 turns, 48408 chars absorbed | Ollama: up
+- 2026-05-28T19:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 135 turns, 67591 chars absorbed | Ollama: up
+- 2026-05-28T19:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 97 turns, 59929 chars absorbed | Ollama: up
+- 2026-05-28T20:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 93 turns, 55184 chars absorbed | Ollama: up
+- 2026-05-28T20:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 75 turns, 59772 chars absorbed | Ollama: up
+- 2026-05-28T21:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 53 turns, 46453 chars absorbed | Ollama: up
+- 2026-05-28T21:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 51 turns, 34020 chars absorbed | Ollama: up
+- 2026-05-28T22:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 47067 chars absorbed | Ollama: up
+- 2026-05-28T23:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 46 turns, 48251 chars absorbed | Ollama: up
+- 2026-05-28T23:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 71 turns, 50341 chars absorbed | Ollama: up
+- 2026-05-29T00:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 30 turns, 29597 chars absorbed | Ollama: up
+- 2026-05-29T00:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 80 turns, 93194 chars absorbed | Ollama: up
+- 2026-05-29T01:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 51 turns, 41376 chars absorbed | Ollama: up
+- 2026-05-29T01:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 44 turns, 46727 chars absorbed | Ollama: up
+- 2026-05-29T02:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 43 turns, 36753 chars absorbed | Ollama: up
+- 2026-05-29T02:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 44 turns, 45884 chars absorbed | Ollama: up
+- 2026-05-29T03:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 34 turns, 39498 chars absorbed | Ollama: up
+- 2026-05-29T03:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 42 turns, 45149 chars absorbed | Ollama: up
+- 2026-05-29T04:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 25 turns, 27758 chars absorbed | Ollama: up
+- 2026-05-29T04:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 44 turns, 44668 chars absorbed | Ollama: up
+- 2026-05-29T05:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 41 turns, 52872 chars absorbed | Ollama: up
+- 2026-05-29T05:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 76 turns, 56416 chars absorbed | Ollama: up
+- 2026-05-29T06:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 25 turns, 41134 chars absorbed | Ollama: up
+- 2026-05-29T06:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 57 turns, 58732 chars absorbed | Ollama: up
+- 2026-05-29T07:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 47 turns, 39574 chars absorbed | Ollama: up
+- 2026-05-29T07:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 53 turns, 37383 chars absorbed | Ollama: up
+- 2026-05-29T08:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 49 turns, 53811 chars absorbed | Ollama: up
+- 2026-05-29T09:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 28 turns, 38489 chars absorbed | Ollama: up
+- 2026-05-29T09:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 46 turns, 45607 chars absorbed | Ollama: up
+- 2026-05-29T10:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 25 turns, 27912 chars absorbed | Ollama: up
+- 2026-05-29T10:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 73 turns, 48002 chars absorbed | Ollama: up
+- 2026-05-29T11:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 69 turns, 75838 chars absorbed | Ollama: up
+- 2026-05-29T11:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 45 turns, 45605 chars absorbed | Ollama: up
+- 2026-05-29T12:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 20 turns, 27686 chars absorbed | Ollama: up
+- 2026-05-29T12:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 37 turns, 44015 chars absorbed | Ollama: up
+- 2026-05-29T13:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 39 turns, 41004 chars absorbed | Ollama: up
+- 2026-05-29T13:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 45257 chars absorbed | Ollama: up
+- 2026-05-29T14:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 38 turns, 37052 chars absorbed | Ollama: up
+- 2026-05-29T14:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 69 turns, 46701 chars absorbed | Ollama: up
+- 2026-05-29T15:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 40 turns, 39254 chars absorbed | Ollama: up
+- 2026-05-29T15:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 89 turns, 50648 chars absorbed | Ollama: up
+- 2026-05-29T16:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 25 turns, 28140 chars absorbed | Ollama: up
+- 2026-05-29T16:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 46 turns, 57562 chars absorbed | Ollama: up
+- 2026-05-29T17:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 67 turns, 69598 chars absorbed | Ollama: up
+- 2026-05-29T17:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 31 turns, 34284 chars absorbed | Ollama: up
+- 2026-05-29T18:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 27 turns, 30226 chars absorbed | Ollama: up
+- 2026-05-29T18:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 52 turns, 56027 chars absorbed | Ollama: up
+- 2026-05-29T19:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 90 turns, 65493 chars absorbed | Ollama: up
+- 2026-05-29T20:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 68 turns, 64320 chars absorbed | Ollama: up
+- 2026-05-29T20:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 73 turns, 56974 chars absorbed | Ollama: up
+- 2026-05-29T21:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 42 turns, 40170 chars absorbed | Ollama: up
+- 2026-05-29T21:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 54 turns, 71320 chars absorbed | Ollama: up
+- 2026-05-29T22:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 48 turns, 30608 chars absorbed | Ollama: up
+- 2026-05-29T22:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 46 turns, 46579 chars absorbed | Ollama: up
+- 2026-05-29T23:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 53 turns, 49227 chars absorbed | Ollama: up
+- 2026-05-29T23:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 41 turns, 44941 chars absorbed | Ollama: up
+- 2026-05-30T00:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 30 turns, 28790 chars absorbed | Ollama: up
+- 2026-05-30T00:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 89 turns, 57974 chars absorbed | Ollama: up
+- 2026-05-30T01:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 33 turns, 38919 chars absorbed | Ollama: up
+- 2026-05-30T01:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 46 turns, 45123 chars absorbed | Ollama: up
+- 2026-05-30T02:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 39 turns, 40561 chars absorbed | Ollama: up
+- 2026-05-30T02:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 45617 chars absorbed | Ollama: up
+- 2026-05-30T03:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 39 turns, 40302 chars absorbed | Ollama: up
+- 2026-05-30T03:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 57 turns, 47153 chars absorbed | Ollama: up
+- 2026-05-30T04:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 19 turns, 29868 chars absorbed | Ollama: up
+- 2026-05-30T04:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 53 turns, 59666 chars absorbed | Ollama: up
+- 2026-05-30T05:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 63 turns, 54946 chars absorbed | Ollama: up
+- 2026-05-30T05:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 22 turns, 27802 chars absorbed | Ollama: up
+- 2026-05-30T06:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 100 turns, 57797 chars absorbed | Ollama: up
+- 2026-05-30T07:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 28 turns, 38160 chars absorbed | Ollama: up
+- 2026-05-30T07:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 45 turns, 45173 chars absorbed | Ollama: up
+- 2026-05-30T08:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 45 turns, 37244 chars absorbed | Ollama: up
+- 2026-05-30T08:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 39 turns, 46499 chars absorbed | Ollama: up
+- 2026-05-30T09:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 50 turns, 65772 chars absorbed | Ollama: up
+- 2026-05-30T09:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 65 turns, 46765 chars absorbed | Ollama: up
+- 2026-05-30T10:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 21 turns, 27846 chars absorbed | Ollama: up
+- 2026-05-30T10:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 50 turns, 45341 chars absorbed | Ollama: up
+- 2026-05-30T11:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 47 turns, 48606 chars absorbed | Ollama: up
+- 2026-05-30T11:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 42 turns, 45340 chars absorbed | Ollama: up
+- 2026-05-30T12:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 21 turns, 27721 chars absorbed | Ollama: up
+- 2026-05-30T12:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 36 turns, 45327 chars absorbed | Ollama: up
+- 2026-05-30T13:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 24 turns, 37947 chars absorbed | Ollama: up
+- 2026-05-30T13:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 35 turns, 44280 chars absorbed | Ollama: up
+- 2026-05-30T14:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 37 turns, 37548 chars absorbed | Ollama: up
+- 2026-05-30T14:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 49 turns, 45396 chars absorbed | Ollama: up
+- 2026-05-30T15:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 41 turns, 39535 chars absorbed | Ollama: up
+- 2026-05-30T15:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 46146 chars absorbed | Ollama: up
+- 2026-05-30T16:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 27 turns, 28266 chars absorbed | Ollama: up
+- 2026-05-30T16:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 45 turns, 55263 chars absorbed | Ollama: up
+- 2026-05-30T17:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 43 turns, 47281 chars absorbed | Ollama: up
+- 2026-05-30T17:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 35 turns, 35609 chars absorbed | Ollama: up
+- 2026-05-30T18:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 51 turns, 45912 chars absorbed | Ollama: up
+- 2026-05-30T18:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 32 turns, 39056 chars absorbed | Ollama: up
+- 2026-05-30T19:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 104 turns, 67030 chars absorbed | Ollama: up
+- 2026-05-30T20:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 85 turns, 57456 chars absorbed | Ollama: up
+- 2026-05-30T20:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 41 turns, 45331 chars absorbed | Ollama: up
+- 2026-05-30T21:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 56 turns, 66230 chars absorbed | Ollama: up
+- 2026-05-30T21:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 54 turns, 47451 chars absorbed | Ollama: up
+- 2026-05-30T22:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 31 turns, 29075 chars absorbed | Ollama: up
+- 2026-05-30T22:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 48 turns, 45595 chars absorbed | Ollama: up
+- 2026-05-30T23:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 45 turns, 47936 chars absorbed | Ollama: up
+- 2026-05-30T23:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 46 turns, 45157 chars absorbed | Ollama: up
+- 2026-05-31T00:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 17 turns, 27537 chars absorbed | Ollama: up
+- 2026-05-31T00:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 52 turns, 51256 chars absorbed | Ollama: up
+- 2026-05-31T01:36Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1163 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T02:06Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1163 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T02:36Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1163 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T03:06Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1163 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T03:36Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1163 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T04:06Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1163 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T04:37Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1163 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T05:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 72 turns, 7848 chars absorbed | Ollama: up
+- 2026-05-31T05:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 13018 chars absorbed | Ollama: up
+- 2026-05-31T06:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 3149 chars absorbed | Ollama: up
+- 2026-05-31T06:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 8 turns, 7013 chars absorbed | Ollama: up
+- 2026-05-31T07:10Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T07:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 8 turns, 3640 chars absorbed | Ollama: up
+- 2026-05-31T08:10Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T08:40Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T09:10Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T09:40Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T10:10Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T10:40Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T11:10Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T11:40Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T12:10Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T12:40Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T13:10Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T13:40Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T14:10Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T14:40Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T15:10Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T15:40Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T16:10Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T16:40Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T17:10Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T17:40Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T18:10Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T18:40Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T19:10Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T19:40Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T20:10Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T20:40Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T21:10Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T21:40Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T22:10Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T22:40Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T23:10Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-05-31T23:40Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T00:10Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T00:40Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T01:10Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T01:40Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T02:10Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T02:40Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T03:10Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T03:40Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1164 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T04:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 56 turns, 7557 chars absorbed | Ollama: up
+- 2026-06-01T04:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 15242 chars absorbed | Ollama: up
+- 2026-06-01T05:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 8 turns, 4066 chars absorbed | Ollama: up
+- 2026-06-01T05:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 17 turns, 16166 chars absorbed | Ollama: up
+- 2026-06-01T06:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 64 turns, 11591 chars absorbed | Ollama: up
+- 2026-06-01T06:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 18 turns, 15408 chars absorbed | Ollama: up
+- 2026-06-01T07:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 1 turns, 4924 chars absorbed | Ollama: up
+- 2026-06-01T07:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 1 turns, 8328 chars absorbed | Ollama: up
+- 2026-06-01T08:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 18 turns, 10344 chars absorbed | Ollama: up
+- 2026-06-01T08:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T09:18Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T09:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T10:18Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T10:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T11:18Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T11:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T12:18Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T12:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T13:18Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T13:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T14:18Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T14:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T15:18Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T15:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T16:18Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T16:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T17:18Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T17:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T18:18Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T18:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T19:18Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T19:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T20:18Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T20:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T21:18Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T21:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T22:18Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T22:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T23:18Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-01T23:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-02T00:18Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-02T00:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-02T01:18Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-02T01:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1166 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-02T02:18Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1167 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-02T02:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 58 turns, 12599 chars absorbed | Ollama: up
+- 2026-06-02T03:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 45 turns, 10261 chars absorbed | Ollama: up
+- 2026-06-02T03:52Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1168 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-02T04:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 8 turns, 11090 chars absorbed | Ollama: up
+- 2026-06-02T04:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 8 turns, 11362 chars absorbed | Ollama: up
+- 2026-06-02T05:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2351 chars absorbed | Ollama: up
+- 2026-06-02T05:54Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1170 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-02T06:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2278 chars absorbed | Ollama: up
+- 2026-06-02T06:54Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1171 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-02T07:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2424 chars absorbed | Ollama: up
+- 2026-06-02T07:54Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1172 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-02T08:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2351 chars absorbed | Ollama: up
+- 2026-06-02T08:55Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1173 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-02T09:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2350 chars absorbed | Ollama: up
+- 2026-06-02T09:55Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1174 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-02T10:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-02T10:56Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1175 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-02T11:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2246 chars absorbed | Ollama: up
+- 2026-06-02T11:56Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1176 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-02T12:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2392 chars absorbed | Ollama: up
+- 2026-06-02T12:56Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1177 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-02T13:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-02T13:56Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1178 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-02T14:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-02T14:57Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1179 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-02T15:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-02T15:57Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1180 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-02T16:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-02T16:57Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1181 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-02T17:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2376 chars absorbed | Ollama: up
+- 2026-06-02T17:58Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1182 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-02T18:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-02T18:58Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1183 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-02T19:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 9 turns, 2611 chars absorbed | Ollama: up
+- 2026-06-02T19:58Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1184 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-02T20:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-02T20:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1185 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-02T21:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-02T21:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1186 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-02T22:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-02T22:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1187 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-02T23:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-03T00:00Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1188 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-03T00:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-03T01:00Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1189 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-03T01:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 8 turns, 2538 chars absorbed | Ollama: up
+- 2026-06-03T02:00Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1190 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-03T02:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2392 chars absorbed | Ollama: up
+- 2026-06-03T03:00Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1191 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-03T03:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 8 turns, 2538 chars absorbed | Ollama: up
+- 2026-06-03T04:01Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1192 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-03T04:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-03T05:01Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1193 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-03T05:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2392 chars absorbed | Ollama: up
+- 2026-06-03T06:01Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1194 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-03T06:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 36 turns, 7084 chars absorbed | Ollama: up
+- 2026-06-03T07:02Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1196 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-03T07:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 15 turns, 24918 chars absorbed | Ollama: up
+- 2026-06-03T08:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 8 turns, 8027 chars absorbed | Ollama: up
+- 2026-06-03T08:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2351 chars absorbed | Ollama: up
+- 2026-06-03T09:04Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1198 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-03T09:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2351 chars absorbed | Ollama: up
+- 2026-06-03T10:04Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1199 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-03T10:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2424 chars absorbed | Ollama: up
+- 2026-06-03T11:05Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1200 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-03T11:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2351 chars absorbed | Ollama: up
+- 2026-06-03T12:05Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1201 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-03T12:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2351 chars absorbed | Ollama: up
+- 2026-06-03T13:06Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1202 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-03T13:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2351 chars absorbed | Ollama: up
+- 2026-06-03T14:07Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1203 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-03T14:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2351 chars absorbed | Ollama: up
+- 2026-06-03T15:07Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1204 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-03T15:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2351 chars absorbed | Ollama: up
+- 2026-06-03T16:08Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1205 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-03T16:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2350 chars absorbed | Ollama: up
+- 2026-06-03T17:08Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1206 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-03T17:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-03T18:08Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1207 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-03T18:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-03T19:09Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1208 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-03T19:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-03T20:09Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1209 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-03T20:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 60 turns, 7522 chars absorbed | Ollama: up
+- 2026-06-03T21:09Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1211 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-03T21:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-03T22:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 9 turns, 18732 chars absorbed | Ollama: up
+- 2026-06-03T22:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 16 turns, 37458 chars absorbed | Ollama: up
+- 2026-06-03T23:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 11 turns, 14563 chars absorbed | Ollama: up
+- 2026-06-03T23:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 12 turns, 20196 chars absorbed | Ollama: up
+- 2026-06-04T00:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 16 turns, 23212 chars absorbed | Ollama: up
+- 2026-06-04T00:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1215 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-04T01:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2351 chars absorbed | Ollama: up
+- 2026-06-04T01:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1216 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-04T02:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2351 chars absorbed | Ollama: up
+- 2026-06-04T02:49Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1217 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-04T03:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2351 chars absorbed | Ollama: up
+- 2026-06-04T03:49Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1218 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-04T04:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2351 chars absorbed | Ollama: up
+- 2026-06-04T04:49Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1219 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-04T05:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-04T05:50Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1220 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-04T06:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-04T06:50Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1221 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-04T07:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2246 chars absorbed | Ollama: up
+- 2026-06-04T07:50Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1222 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-04T08:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-04T08:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1223 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-04T09:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-04T09:52Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1224 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-04T10:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-04T10:52Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1225 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-04T11:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-04T11:52Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1226 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-04T12:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-04T12:52Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1227 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-04T13:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-04T13:53Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1228 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-04T14:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2309 chars absorbed | Ollama: up
+- 2026-06-04T14:53Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1229 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-04T15:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-04T15:53Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1230 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-04T16:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-04T16:53Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1231 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-04T17:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-04T17:54Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1232 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-04T18:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-04T18:54Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1233 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-04T19:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-04T19:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 20 turns, 15159 chars absorbed | Ollama: up
+- 2026-06-04T20:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 9 turns, 8254 chars absorbed | Ollama: up
+- 2026-06-04T20:56Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1236 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-04T21:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2633 chars absorbed | Ollama: up
+- 2026-06-04T21:57Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1237 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-04T22:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2474 chars absorbed | Ollama: up
+- 2026-06-04T22:57Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1238 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-04T23:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2392 chars absorbed | Ollama: up
+- 2026-06-04T23:57Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1239 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-05T00:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-05T00:58Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1240 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-05T01:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 2100 chars absorbed | Ollama: up
+- 2026-06-05T01:58Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1241 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-05T02:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2246 chars absorbed | Ollama: up
+- 2026-06-05T02:58Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1242 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-05T03:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 2100 chars absorbed | Ollama: up
+- 2026-06-05T03:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 1866 chars absorbed | Ollama: up
+- 2026-06-05T04:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2248 chars absorbed | Ollama: up
+- 2026-06-05T05:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 5225 chars absorbed | Ollama: up
+- 2026-06-05T05:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 29 turns, 9301 chars absorbed | Ollama: up
+- 2026-06-05T06:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 16 turns, 9362 chars absorbed | Ollama: up
+- 2026-06-05T06:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 9 turns, 6403 chars absorbed | Ollama: up
+- 2026-06-05T07:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 5230 chars absorbed | Ollama: up
+- 2026-06-05T07:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 2100 chars absorbed | Ollama: up
+- 2026-06-05T08:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 8719 chars absorbed | Ollama: up
+- 2026-06-05T08:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2750 chars absorbed | Ollama: up
+- 2026-06-05T09:06Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1248 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-05T09:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2425 chars absorbed | Ollama: up
+- 2026-06-05T10:06Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1249 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-05T10:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 8 turns, 2538 chars absorbed | Ollama: up
+- 2026-06-05T11:07Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1250 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-05T11:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2465 chars absorbed | Ollama: up
+- 2026-06-05T12:07Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1251 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-05T12:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 8 turns, 2538 chars absorbed | Ollama: up
+- 2026-06-05T13:08Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1252 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-05T13:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 8 turns, 2538 chars absorbed | Ollama: up
+- 2026-06-05T14:08Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1253 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-05T14:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 11 turns, 2923 chars absorbed | Ollama: up
+- 2026-06-05T15:08Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1254 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-05T15:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 8 turns, 2538 chars absorbed | Ollama: up
+- 2026-06-05T16:09Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1255 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-05T16:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 27 turns, 4142 chars absorbed | Ollama: up
+- 2026-06-05T17:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 48 turns, 8823 chars absorbed | Ollama: up
+- 2026-06-05T17:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 6 turns, 13525 chars absorbed | Ollama: up
+- 2026-06-05T18:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 9 turns, 7906 chars absorbed | Ollama: up
+- 2026-06-05T18:43Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1259 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-05T19:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 11 turns, 2757 chars absorbed | Ollama: up
+- 2026-06-05T19:43Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1260 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-05T20:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2465 chars absorbed | Ollama: up
+- 2026-06-05T20:44Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1261 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-05T21:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2423 chars absorbed | Ollama: up
+- 2026-06-05T21:44Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1262 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-05T22:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-05T22:44Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1263 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-05T23:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2465 chars absorbed | Ollama: up
+- 2026-06-05T23:44Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1264 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-06T00:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-06T00:45Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1265 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-06T01:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-06T01:45Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1266 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-06T02:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-06T02:45Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1267 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-06T03:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 9 turns, 2642 chars absorbed | Ollama: up
+- 2026-06-06T03:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 2315 chars absorbed | Ollama: up
+- 2026-06-06T04:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 38 turns, 11066 chars absorbed | Ollama: up
+- 2026-06-06T04:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 6660 chars absorbed | Ollama: up
+- 2026-06-06T05:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 13 turns, 12921 chars absorbed | Ollama: up
+- 2026-06-06T05:49Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1271 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-06T06:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2497 chars absorbed | Ollama: up
+- 2026-06-06T06:49Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1272 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-06T07:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2424 chars absorbed | Ollama: up
+- 2026-06-06T07:50Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1273 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-06T08:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2497 chars absorbed | Ollama: up
+- 2026-06-06T08:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1274 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-06T09:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 10 turns, 2866 chars absorbed | Ollama: up
+- 2026-06-06T09:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1275 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-06T10:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 9 turns, 2643 chars absorbed | Ollama: up
+- 2026-06-06T10:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1276 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-06T11:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2424 chars absorbed | Ollama: up
+- 2026-06-06T11:52Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1277 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-06T12:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2351 chars absorbed | Ollama: up
+- 2026-06-06T12:52Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1278 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-06T13:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2497 chars absorbed | Ollama: up
+- 2026-06-06T13:53Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1279 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-06T14:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2351 chars absorbed | Ollama: up
+- 2026-06-06T14:53Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1280 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-06T15:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2465 chars absorbed | Ollama: up
+- 2026-06-06T15:53Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1281 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-06T16:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2246 chars absorbed | Ollama: up
+- 2026-06-06T16:54Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1282 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-06T17:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2343 chars absorbed | Ollama: up
+- 2026-06-06T17:54Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1283 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-06T18:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2246 chars absorbed | Ollama: up
+- 2026-06-06T18:54Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1284 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-06T19:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 9 turns, 2611 chars absorbed | Ollama: up
+- 2026-06-06T19:55Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1285 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-06T20:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 9 turns, 2611 chars absorbed | Ollama: up
+- 2026-06-06T20:55Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1286 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-06T21:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2512 chars absorbed | Ollama: up
+- 2026-06-06T21:55Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1287 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-06T22:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2442 chars absorbed | Ollama: up
+- 2026-06-06T22:55Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1288 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-06T23:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2392 chars absorbed | Ollama: up
+- 2026-06-06T23:56Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1289 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-07T00:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2465 chars absorbed | Ollama: up
+- 2026-06-07T00:56Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1290 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-07T01:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2465 chars absorbed | Ollama: up
+- 2026-06-07T01:57Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1291 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-07T02:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-07T02:57Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1292 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-07T03:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2402 chars absorbed | Ollama: up
+- 2026-06-07T03:57Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1293 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-07T04:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2465 chars absorbed | Ollama: up
+- 2026-06-07T04:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 29 turns, 2489 chars absorbed | Ollama: up
+- 2026-06-07T05:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 25 turns, 8224 chars absorbed | Ollama: up
+- 2026-06-07T06:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 29 turns, 27065 chars absorbed | Ollama: up
+- 2026-06-07T06:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 36 turns, 25610 chars absorbed | Ollama: up
+- 2026-06-07T07:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 8 turns, 10123 chars absorbed | Ollama: up
+- 2026-06-07T07:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2392 chars absorbed | Ollama: up
+- 2026-06-07T08:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 15539 chars absorbed | Ollama: up
+- 2026-06-07T08:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 14 turns, 7899 chars absorbed | Ollama: up
+- 2026-06-07T09:06Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1299 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-07T09:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2423 chars absorbed | Ollama: up
+- 2026-06-07T10:06Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1300 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-07T10:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 8 turns, 2538 chars absorbed | Ollama: up
+- 2026-06-07T11:07Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1301 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-07T11:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2392 chars absorbed | Ollama: up
+- 2026-06-07T12:07Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1302 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-07T12:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2465 chars absorbed | Ollama: up
+- 2026-06-07T13:07Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1303 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-07T13:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 9 turns, 2611 chars absorbed | Ollama: up
+- 2026-06-07T14:07Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1304 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-07T14:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-07T15:08Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1305 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-07T15:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-07T16:08Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1306 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-07T16:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2355 chars absorbed | Ollama: up
+- 2026-06-07T17:08Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1307 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-07T17:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2514 chars absorbed | Ollama: up
+- 2026-06-07T18:09Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1308 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-07T18:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2465 chars absorbed | Ollama: up
+- 2026-06-07T19:09Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1309 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-07T19:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2465 chars absorbed | Ollama: up
+- 2026-06-07T20:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 3 turns, 2197 chars absorbed | Ollama: up
+- 2026-06-07T20:40Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1311 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-07T21:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2489 chars absorbed | Ollama: up
+- 2026-06-07T21:40Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1312 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-07T22:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-07T22:41Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1313 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-07T23:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2542 chars absorbed | Ollama: up
+- 2026-06-07T23:41Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1314 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-08T00:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 8 turns, 2538 chars absorbed | Ollama: up
+- 2026-06-08T00:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 43 turns, 6504 chars absorbed | Ollama: up
+- 2026-06-08T01:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 10 turns, 2715 chars absorbed | Ollama: up
+- 2026-06-08T01:44Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1317 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-08T02:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 8 turns, 2538 chars absorbed | Ollama: up
+- 2026-06-08T02:45Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1318 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-08T03:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2392 chars absorbed | Ollama: up
+- 2026-06-08T03:45Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1319 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-08T04:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 11 turns, 6949 chars absorbed | Ollama: up
+- 2026-06-08T04:47Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1320 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-08T05:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 33 turns, 39747 chars absorbed | Ollama: up
+- 2026-06-08T05:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 8 turns, 11269 chars absorbed | Ollama: up
+- 2026-06-08T06:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 22 turns, 13814 chars absorbed | Ollama: up
+- 2026-06-08T06:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 10 turns, 7208 chars absorbed | Ollama: up
+- 2026-06-08T07:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 65 turns, 65303 chars absorbed | Ollama: up
+- 2026-06-08T07:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 20 turns, 15396 chars absorbed | Ollama: up
+- 2026-06-08T08:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2423 chars absorbed | Ollama: up
+- 2026-06-08T08:57Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1325 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-08T09:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2277 chars absorbed | Ollama: up
+- 2026-06-08T09:57Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1326 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-08T10:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2465 chars absorbed | Ollama: up
+- 2026-06-08T10:58Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1327 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-08T11:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2246 chars absorbed | Ollama: up
+- 2026-06-08T11:58Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1328 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-08T12:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2246 chars absorbed | Ollama: up
+- 2026-06-08T12:58Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1329 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-08T13:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 10 turns, 2684 chars absorbed | Ollama: up
+- 2026-06-08T13:58Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1330 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-08T14:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 9 turns, 2611 chars absorbed | Ollama: up
+- 2026-06-08T14:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1331 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-08T15:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 8 turns, 2538 chars absorbed | Ollama: up
+- 2026-06-08T15:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1332 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-08T16:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 9 turns, 2611 chars absorbed | Ollama: up
+- 2026-06-08T16:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1333 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-08T17:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2246 chars absorbed | Ollama: up
+- 2026-06-08T17:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1334 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-08T18:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2392 chars absorbed | Ollama: up
+- 2026-06-08T19:00Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1335 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-08T19:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 9 turns, 2611 chars absorbed | Ollama: up
+- 2026-06-08T20:00Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1336 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-08T20:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 36 turns, 5980 chars absorbed | Ollama: up
+- 2026-06-08T21:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 55 turns, 30655 chars absorbed | Ollama: up
+- 2026-06-08T21:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 9 turns, 2611 chars absorbed | Ollama: up
+- 2026-06-08T22:04Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1340 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-08T22:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 8 turns, 2642 chars absorbed | Ollama: up
+- 2026-06-08T23:04Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1341 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-08T23:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 10 turns, 2684 chars absorbed | Ollama: up
+- 2026-06-09T00:05Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1342 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-09T00:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 9 turns, 2611 chars absorbed | Ollama: up
+- 2026-06-09T01:05Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1343 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-09T01:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2246 chars absorbed | Ollama: up
+- 2026-06-09T02:05Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1344 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-09T02:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2392 chars absorbed | Ollama: up
+- 2026-06-09T03:05Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1345 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-09T03:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 8 turns, 6435 chars absorbed | Ollama: up
+- 2026-06-09T04:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 16663 chars absorbed | Ollama: up
+- 2026-06-09T04:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 38 turns, 37722 chars absorbed | Ollama: up
+- 2026-06-09T05:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 25 turns, 6335 chars absorbed | Ollama: up
+- 2026-06-09T05:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 10 turns, 2684 chars absorbed | Ollama: up
+- 2026-06-09T06:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 3 turns, 2197 chars absorbed | Ollama: up
+- 2026-06-09T06:41Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1349 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-09T07:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2583 chars absorbed | Ollama: up
+- 2026-06-09T07:41Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1350 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-09T08:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2392 chars absorbed | Ollama: up
+- 2026-06-09T08:41Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1351 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-09T09:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 9 turns, 2611 chars absorbed | Ollama: up
+- 2026-06-09T09:41Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1352 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-09T10:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-09T10:41Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1353 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-09T11:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-09T11:42Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1354 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-09T12:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 10 turns, 2684 chars absorbed | Ollama: up
+- 2026-06-09T12:42Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1355 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-09T13:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 9 turns, 2611 chars absorbed | Ollama: up
+- 2026-06-09T13:42Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1356 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-09T14:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 10 turns, 2684 chars absorbed | Ollama: up
+- 2026-06-09T14:43Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1357 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-09T15:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 8 turns, 2647 chars absorbed | Ollama: up
+- 2026-06-09T15:43Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1358 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-09T16:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 9 turns, 2611 chars absorbed | Ollama: up
+- 2026-06-09T16:43Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1359 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-09T17:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2246 chars absorbed | Ollama: up
+- 2026-06-09T17:43Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1360 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-09T18:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-09T18:43Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1361 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-09T19:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 10 turns, 2684 chars absorbed | Ollama: up
+- 2026-06-09T19:44Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1362 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-09T20:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 9 turns, 2611 chars absorbed | Ollama: up
+- 2026-06-09T20:44Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1363 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-09T21:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 10 turns, 2841 chars absorbed | Ollama: up
+- 2026-06-09T21:44Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1364 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-09T22:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2637 chars absorbed | Ollama: up
+- 2026-06-09T22:44Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1365 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-09T23:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2465 chars absorbed | Ollama: up
+- 2026-06-09T23:45Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1366 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-10T00:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-10T00:45Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1367 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-10T01:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-10T01:45Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1368 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-10T02:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 9 turns, 2611 chars absorbed | Ollama: up
+- 2026-06-10T02:46Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1369 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-10T03:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2392 chars absorbed | Ollama: up
+- 2026-06-10T03:46Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1370 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-10T04:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 44 turns, 7588 chars absorbed | Ollama: up
+- 2026-06-10T04:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 27 turns, 36722 chars absorbed | Ollama: up
+- 2026-06-10T05:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 15 turns, 13288 chars absorbed | Ollama: up
+- 2026-06-10T05:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 18 turns, 14751 chars absorbed | Ollama: up
+- 2026-06-10T06:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 39 turns, 8080 chars absorbed | Ollama: up
+- 2026-06-10T06:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 103 turns, 64812 chars absorbed | Ollama: up
+- 2026-06-10T07:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 51 turns, 37723 chars absorbed | Ollama: up
+- 2026-06-10T08:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 9 turns, 14266 chars absorbed | Ollama: up
+- 2026-06-10T08:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 9 turns, 2642 chars absorbed | Ollama: up
+- 2026-06-10T09:01Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1377 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-10T09:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2465 chars absorbed | Ollama: up
+- 2026-06-10T10:01Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1378 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-10T10:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2465 chars absorbed | Ollama: up
+- 2026-06-10T11:01Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1379 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-10T11:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 8 turns, 2538 chars absorbed | Ollama: up
+- 2026-06-10T12:02Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1380 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-10T12:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 9 turns, 2611 chars absorbed | Ollama: up
+- 2026-06-10T13:02Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1381 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-10T13:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 9 turns, 2697 chars absorbed | Ollama: up
+- 2026-06-10T14:02Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1382 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-10T14:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 9 turns, 2611 chars absorbed | Ollama: up
+- 2026-06-10T15:03Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1383 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-10T15:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-10T16:03Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1384 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-10T16:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 8 turns, 2676 chars absorbed | Ollama: up
+- 2026-06-10T17:03Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1385 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-10T17:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2246 chars absorbed | Ollama: up
+- 2026-06-10T18:03Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1386 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-10T18:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 37 turns, 8990 chars absorbed | Ollama: up
+- 2026-06-10T19:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 10119 chars absorbed | Ollama: up
+- 2026-06-10T19:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 75 turns, 44038 chars absorbed | Ollama: up
+- 2026-06-10T20:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 42 turns, 14805 chars absorbed | Ollama: up
+- 2026-06-10T20:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 107 turns, 44632 chars absorbed | Ollama: up
+- 2026-06-10T21:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 11 turns, 3209 chars absorbed | Ollama: up
+- 2026-06-10T21:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2246 chars absorbed | Ollama: up
+- 2026-06-10T21:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 21 turns, 6245 chars absorbed | Ollama: up
+- 2026-06-10T21:42Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1392 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-10T22:06Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1392 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-10T22:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2246 chars absorbed | Ollama: up
+- 2026-06-10T22:36Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1393 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-10T22:42Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1393 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-10T23:06Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1393 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-10T23:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2246 chars absorbed | Ollama: up
+- 2026-06-10T23:36Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1394 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-10T23:42Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1394 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T00:06Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1394 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T00:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2319 chars absorbed | Ollama: up
+- 2026-06-11T00:36Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1395 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T00:43Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1395 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T01:06Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1395 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T01:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2246 chars absorbed | Ollama: up
+- 2026-06-11T01:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2243 chars absorbed | Ollama: up
+- 2026-06-11T01:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 44 turns, 6376 chars absorbed | Ollama: up
+- 2026-06-11T02:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 69 turns, 36581 chars absorbed | Ollama: up
+- 2026-06-11T02:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 67 turns, 35291 chars absorbed | Ollama: up
+- 2026-06-11T02:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 30 turns, 8526 chars absorbed | Ollama: up
+- 2026-06-11T02:46Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1397 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T03:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 13 turns, 7160 chars absorbed | Ollama: up
+- 2026-06-11T03:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2246 chars absorbed | Ollama: up
+- 2026-06-11T03:46Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1398 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T03:46Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1398 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T04:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 18 turns, 24325 chars absorbed | Ollama: up
+- 2026-06-11T04:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 18 turns, 24325 chars absorbed | Ollama: up
+- 2026-06-11T04:49Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1399 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T04:49Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1399 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T05:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2246 chars absorbed | Ollama: up
+- 2026-06-11T05:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2246 chars absorbed | Ollama: up
+- 2026-06-11T05:49Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1400 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T05:49Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1400 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T06:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2246 chars absorbed | Ollama: up
+- 2026-06-11T06:19Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1401 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T06:49Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1401 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T06:49Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1401 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T07:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2246 chars absorbed | Ollama: up
+- 2026-06-11T07:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2246 chars absorbed | Ollama: up
+- 2026-06-11T07:49Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1402 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T07:49Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1402 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T08:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2425 chars absorbed | Ollama: up
+- 2026-06-11T08:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2425 chars absorbed | Ollama: up
+- 2026-06-11T08:50Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1403 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T08:50Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1403 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T09:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2351 chars absorbed | Ollama: up
+- 2026-06-11T09:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2351 chars absorbed | Ollama: up
+- 2026-06-11T09:50Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1404 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T09:50Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1404 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T10:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2278 chars absorbed | Ollama: up
+- 2026-06-11T10:20Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1405 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T10:50Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1405 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T10:50Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1405 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T11:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2351 chars absorbed | Ollama: up
+- 2026-06-11T11:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2351 chars absorbed | Ollama: up
+- 2026-06-11T11:50Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1406 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T11:50Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1406 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T12:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2278 chars absorbed | Ollama: up
+- 2026-06-11T12:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2278 chars absorbed | Ollama: up
+- 2026-06-11T12:50Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1407 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T12:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1407 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T13:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2278 chars absorbed | Ollama: up
+- 2026-06-11T13:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2278 chars absorbed | Ollama: up
+- 2026-06-11T13:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1408 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T13:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1408 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T14:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2278 chars absorbed | Ollama: up
+- 2026-06-11T14:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2278 chars absorbed | Ollama: up
+- 2026-06-11T14:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1409 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T14:52Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1409 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T15:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2278 chars absorbed | Ollama: up
+- 2026-06-11T15:22Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1410 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T15:52Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1410 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T15:52Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1410 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T16:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2425 chars absorbed | Ollama: up
+- 2026-06-11T16:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2425 chars absorbed | Ollama: up
+- 2026-06-11T16:52Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1411 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T16:53Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1411 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T17:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2350 chars absorbed | Ollama: up
+- 2026-06-11T17:23Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1412 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T17:53Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1412 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T17:53Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1412 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T18:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2492 chars absorbed | Ollama: up
+- 2026-06-11T18:23Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1413 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T18:53Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1413 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T18:54Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1413 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T19:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 2147 chars absorbed | Ollama: up
+- 2026-06-11T19:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 2147 chars absorbed | Ollama: up
+- 2026-06-11T19:54Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1414 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T19:54Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1414 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T20:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 2147 chars absorbed | Ollama: up
+- 2026-06-11T20:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 2 turns, 2147 chars absorbed | Ollama: up
+- 2026-06-11T20:54Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1415 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T20:54Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1415 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T21:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2277 chars absorbed | Ollama: up
+- 2026-06-11T21:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2277 chars absorbed | Ollama: up
+- 2026-06-11T21:55Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1416 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T21:55Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1416 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T22:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 40 turns, 8857 chars absorbed | Ollama: up
+- 2026-06-11T22:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 45 turns, 9459 chars absorbed | Ollama: up
+- 2026-06-11T22:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 57 turns, 25649 chars absorbed | Ollama: up
+- 2026-06-11T22:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 61 turns, 25979 chars absorbed | Ollama: up
+- 2026-06-11T23:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 37 turns, 9704 chars absorbed | Ollama: up
+- 2026-06-11T23:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 37 turns, 9704 chars absorbed | Ollama: up
+- 2026-06-11T23:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1419 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-11T23:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1419 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T00:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2678 chars absorbed | Ollama: up
+- 2026-06-12T00:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2678 chars absorbed | Ollama: up
+- 2026-06-12T01:00Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1420 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T01:00Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1420 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T01:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2277 chars absorbed | Ollama: up
+- 2026-06-12T01:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2277 chars absorbed | Ollama: up
+- 2026-06-12T02:00Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1421 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T02:00Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1421 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T02:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2277 chars absorbed | Ollama: up
+- 2026-06-12T02:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2277 chars absorbed | Ollama: up
+- 2026-06-12T03:00Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1422 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T03:01Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1422 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T03:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2277 chars absorbed | Ollama: up
+- 2026-06-12T03:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2277 chars absorbed | Ollama: up
+- 2026-06-12T04:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 9604 chars absorbed | Ollama: up
+- 2026-06-12T04:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 9604 chars absorbed | Ollama: up
+- 2026-06-12T04:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 17 turns, 15054 chars absorbed | Ollama: up
+- 2026-06-12T04:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 17 turns, 15054 chars absorbed | Ollama: up
+- 2026-06-12T05:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 27 turns, 9403 chars absorbed | Ollama: up
+- 2026-06-12T05:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 27 turns, 9403 chars absorbed | Ollama: up
+- 2026-06-12T05:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2279 chars absorbed | Ollama: up
+- 2026-06-12T05:36Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1425 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T06:06Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1425 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T06:06Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1425 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T06:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2279 chars absorbed | Ollama: up
+- 2026-06-12T06:36Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1426 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T07:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2679 chars absorbed | Ollama: up
+- 2026-06-12T07:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 21 turns, 62437 chars absorbed | Ollama: up
+- 2026-06-12T07:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 24 turns, 60085 chars absorbed | Ollama: up
+- 2026-06-12T08:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 48 turns, 16625 chars absorbed | Ollama: up
+- 2026-06-12T08:13Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1428 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T08:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 28 turns, 22180 chars absorbed | Ollama: up
+- 2026-06-12T08:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 28 turns, 22180 chars absorbed | Ollama: up
+- 2026-06-12T09:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2279 chars absorbed | Ollama: up
+- 2026-06-12T09:15Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1429 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T09:44Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1429 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T09:45Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1429 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T10:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2279 chars absorbed | Ollama: up
+- 2026-06-12T10:15Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1430 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T10:45Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1430 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T10:45Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1430 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T11:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2279 chars absorbed | Ollama: up
+- 2026-06-12T11:15Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1431 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T11:45Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1431 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T11:45Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1431 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T12:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2279 chars absorbed | Ollama: up
+- 2026-06-12T12:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2279 chars absorbed | Ollama: up
+- 2026-06-12T12:45Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1432 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T12:46Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1432 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T13:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2279 chars absorbed | Ollama: up
+- 2026-06-12T13:16Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1433 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T13:46Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1433 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T13:46Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1433 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T14:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2352 chars absorbed | Ollama: up
+- 2026-06-12T14:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2352 chars absorbed | Ollama: up
+- 2026-06-12T14:46Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1434 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T14:46Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1434 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T15:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2279 chars absorbed | Ollama: up
+- 2026-06-12T15:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2279 chars absorbed | Ollama: up
+- 2026-06-12T15:47Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1435 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T15:47Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1435 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T16:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2498 chars absorbed | Ollama: up
+- 2026-06-12T16:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2498 chars absorbed | Ollama: up
+- 2026-06-12T16:47Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1436 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T16:47Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1436 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T17:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2680 chars absorbed | Ollama: up
+- 2026-06-12T17:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2680 chars absorbed | Ollama: up
+- 2026-06-12T17:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1437 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T17:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1437 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T18:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2279 chars absorbed | Ollama: up
+- 2026-06-12T18:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2279 chars absorbed | Ollama: up
+- 2026-06-12T18:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1438 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T18:49Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1438 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T19:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 33 turns, 6598 chars absorbed | Ollama: up
+- 2026-06-12T19:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 33 turns, 6598 chars absorbed | Ollama: up
+- 2026-06-12T19:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 11748 chars absorbed | Ollama: up
+- 2026-06-12T19:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 11748 chars absorbed | Ollama: up
+- 2026-06-12T20:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 10 turns, 7966 chars absorbed | Ollama: up
+- 2026-06-12T20:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 10 turns, 7966 chars absorbed | Ollama: up
+- 2026-06-12T20:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 6586 chars absorbed | Ollama: up
+- 2026-06-12T20:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 6586 chars absorbed | Ollama: up
+- 2026-06-12T21:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 58 turns, 41587 chars absorbed | Ollama: up
+- 2026-06-12T21:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 62 turns, 51501 chars absorbed | Ollama: up
+- 2026-06-12T22:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 88 turns, 41161 chars absorbed | Ollama: up
+- 2026-06-12T23:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 19 turns, 2987 chars absorbed | Ollama: up
+- 2026-06-12T23:05Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1444 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-12T23:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2423 chars absorbed | Ollama: up
+- 2026-06-12T23:35Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1445 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T00:02Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1445 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T00:05Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1445 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T00:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 11 turns, 2962 chars absorbed | Ollama: up
+- 2026-06-13T00:35Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1446 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T01:02Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1446 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T01:05Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1446 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T01:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2496 chars absorbed | Ollama: up
+- 2026-06-13T01:35Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1447 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T02:03Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1447 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T02:05Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1447 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T02:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2350 chars absorbed | Ollama: up
+- 2026-06-13T02:35Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1448 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T03:03Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1448 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T03:05Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1448 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T03:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 9 turns, 2642 chars absorbed | Ollama: up
+- 2026-06-13T03:35Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1449 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T04:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 33 turns, 29334 chars absorbed | Ollama: up
+- 2026-06-13T04:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 44 turns, 30558 chars absorbed | Ollama: up
+- 2026-06-13T04:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 25 turns, 8658 chars absorbed | Ollama: up
+- 2026-06-13T05:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 21 turns, 13974 chars absorbed | Ollama: up
+- 2026-06-13T05:09Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1450 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T05:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 114 turns, 15036 chars absorbed | Ollama: up
+- 2026-06-13T05:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 115 turns, 16693 chars absorbed | Ollama: up
+- 2026-06-13T06:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 96 turns, 43738 chars absorbed | Ollama: up
+- 2026-06-13T06:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 80 turns, 24278 chars absorbed | Ollama: up
+- 2026-06-13T06:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 80 turns, 24278 chars absorbed | Ollama: up
+- 2026-06-13T07:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 10 turns, 2820 chars absorbed | Ollama: up
+- 2026-06-13T07:17Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1453 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T07:46Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1453 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T07:47Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1453 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T08:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2496 chars absorbed | Ollama: up
+- 2026-06-13T08:17Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1454 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T08:46Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1454 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T08:47Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1454 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T09:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2350 chars absorbed | Ollama: up
+- 2026-06-13T09:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2350 chars absorbed | Ollama: up
+- 2026-06-13T09:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1455 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T09:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1455 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T10:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2350 chars absorbed | Ollama: up
+- 2026-06-13T10:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2350 chars absorbed | Ollama: up
+- 2026-06-13T10:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1456 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T10:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1456 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T11:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 9 turns, 2643 chars absorbed | Ollama: up
+- 2026-06-13T11:18Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1457 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T11:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1457 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T11:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1457 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T12:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2278 chars absorbed | Ollama: up
+- 2026-06-13T12:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2278 chars absorbed | Ollama: up
+- 2026-06-13T12:49Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1458 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T12:49Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1458 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T13:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 9 turns, 2642 chars absorbed | Ollama: up
+- 2026-06-13T13:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 9 turns, 2642 chars absorbed | Ollama: up
+- 2026-06-13T13:49Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1459 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T13:49Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1459 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T14:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2423 chars absorbed | Ollama: up
+- 2026-06-13T14:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2423 chars absorbed | Ollama: up
+- 2026-06-13T14:49Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1460 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T14:50Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1460 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T15:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 8 turns, 2569 chars absorbed | Ollama: up
+- 2026-06-13T15:20Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1461 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T15:50Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1461 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T15:50Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1461 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T16:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2423 chars absorbed | Ollama: up
+- 2026-06-13T16:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2423 chars absorbed | Ollama: up
+- 2026-06-13T16:50Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1462 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T16:50Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1462 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T17:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2423 chars absorbed | Ollama: up
+- 2026-06-13T17:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 2423 chars absorbed | Ollama: up
+- 2026-06-13T17:50Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1463 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T17:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1463 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T18:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2655 chars absorbed | Ollama: up
+- 2026-06-13T18:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1464 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T18:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1464 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T18:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1464 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T19:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 9 turns, 2642 chars absorbed | Ollama: up
+- 2026-06-13T19:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 9 turns, 2642 chars absorbed | Ollama: up
+- 2026-06-13T19:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1465 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T19:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1465 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T20:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2350 chars absorbed | Ollama: up
+- 2026-06-13T20:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2350 chars absorbed | Ollama: up
+- 2026-06-13T20:52Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1466 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T20:52Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1466 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T21:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2496 chars absorbed | Ollama: up
+- 2026-06-13T21:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2496 chars absorbed | Ollama: up
+- 2026-06-13T21:53Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1467 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T21:53Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1467 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T22:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2496 chars absorbed | Ollama: up
+- 2026-06-13T22:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 7 turns, 2496 chars absorbed | Ollama: up
+- 2026-06-13T22:53Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1468 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T22:54Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1468 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T23:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2401 chars absorbed | Ollama: up
+- 2026-06-13T23:24Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1469 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T23:54Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1469 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-13T23:54Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1469 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-14T00:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 8 turns, 2871 chars absorbed | Ollama: up
+- 2026-06-14T00:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 8 turns, 2871 chars absorbed | Ollama: up
+- 2026-06-14T00:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 27 turns, 4440 chars absorbed | Ollama: up
+- 2026-06-14T00:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 35 turns, 4982 chars absorbed | Ollama: up
+- 2026-06-14T01:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 30 turns, 19551 chars absorbed | Ollama: up
+- 2026-06-14T02:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 14 turns, 43807 chars absorbed | Ollama: up
+- 2026-06-14T02:02Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1473 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-14T02:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 14 turns, 9686 chars absorbed | Ollama: up
+- 2026-06-14T02:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 5 turns, 2350 chars absorbed | Ollama: up
+- 2026-06-14T03:02Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1474 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-14T03:03Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 1474 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-14T03:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2277 chars absorbed | Ollama: up
+- 2026-06-14T03:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 2277 chars absorbed | Ollama: up
+- 2026-06-14T04:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 30 turns, 9564 chars absorbed | Ollama: up
+- 2026-06-14T04:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 30 turns, 9564 chars absorbed | Ollama: up
+- 2026-06-14T04:55Z [cousin: qwen-context-absorber] Status: error | Detail: 2 Qwen call(s) failed, 0 ok. First error: timeout: timed out | Ollama: up
+- 2026-06-14T05:55Z [cousin: qwen-context-absorber] Status: error | Detail: 3 Qwen call(s) failed, 0 ok. First error: timeout: timed out | Ollama: up
+- 2026-06-14T07:05Z [cousin: qwen-context-absorber] Status: error | Detail: 4 Qwen call(s) failed, 0 ok. First error: timeout: timed out | Ollama: up
+- 2026-06-14T08:25Z [cousin: qwen-context-absorber] Status: error | Detail: 5 Qwen call(s) failed, 0 ok. First error: timeout: timed out | Ollama: up
+- 2026-06-14T09:55Z [cousin: qwen-context-absorber] Status: error | Detail: 6 Qwen call(s) failed, 0 ok. First error: timeout: timed out | Ollama: up
+- 2026-06-14T11:45Z [cousin: qwen-context-absorber] Status: error | Detail: 8 Qwen call(s) failed, 0 ok. First error: timeout: timed out | Ollama: up
+- 2026-06-14T13:55Z [cousin: qwen-context-absorber] Status: error | Detail: 10 Qwen call(s) failed, 0 ok. First error: timeout: timed out | Ollama: up
+- 2026-06-14T16:25Z [cousin: qwen-context-absorber] Status: error | Detail: 12 Qwen call(s) failed, 0 ok. First error: timeout: timed out | Ollama: up
+- 2026-06-14T19:15Z [cousin: qwen-context-absorber] Status: error | Detail: 14 Qwen call(s) failed, 0 ok. First error: timeout: timed out | Ollama: up
+- 2026-06-14T22:35Z [cousin: qwen-context-absorber] Status: error | Detail: 17 Qwen call(s) failed, 0 ok. First error: timeout: timed out | Ollama: up
+- 2026-06-15T02:25Z [cousin: qwen-context-absorber] Status: error | Detail: 20 Qwen call(s) failed, 0 ok. First error: timeout: timed out | Ollama: up
+- 2026-06-15T06:55Z [cousin: qwen-context-absorber] Status: error | Detail: 24 Qwen call(s) failed, 0 ok. First error: timeout: timed out | Ollama: up
+- 2026-06-15T06:59Z [cousin: qwen-context-absorber] Status: error | Detail: 29 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T07:25Z [cousin: qwen-context-absorber] Status: error | Detail: 30 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T07:29Z [cousin: qwen-context-absorber] Status: error | Detail: 30 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T07:56Z [cousin: qwen-context-absorber] Status: error | Detail: 30 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T07:59Z [cousin: qwen-context-absorber] Status: error | Detail: 30 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T08:26Z [cousin: qwen-context-absorber] Status: error | Detail: 31 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T08:29Z [cousin: qwen-context-absorber] Status: error | Detail: 31 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T08:56Z [cousin: qwen-context-absorber] Status: error | Detail: 31 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T08:59Z [cousin: qwen-context-absorber] Status: error | Detail: 31 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T09:26Z [cousin: qwen-context-absorber] Status: error | Detail: 32 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T09:29Z [cousin: qwen-context-absorber] Status: error | Detail: 32 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T09:56Z [cousin: qwen-context-absorber] Status: error | Detail: 32 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T09:59Z [cousin: qwen-context-absorber] Status: error | Detail: 32 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T10:26Z [cousin: qwen-context-absorber] Status: error | Detail: 33 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T10:29Z [cousin: qwen-context-absorber] Status: error | Detail: 33 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T10:56Z [cousin: qwen-context-absorber] Status: error | Detail: 33 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T10:59Z [cousin: qwen-context-absorber] Status: error | Detail: 33 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T11:26Z [cousin: qwen-context-absorber] Status: error | Detail: 34 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T11:29Z [cousin: qwen-context-absorber] Status: error | Detail: 34 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T11:56Z [cousin: qwen-context-absorber] Status: error | Detail: 34 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T11:59Z [cousin: qwen-context-absorber] Status: error | Detail: 34 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T12:26Z [cousin: qwen-context-absorber] Status: error | Detail: 35 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T12:29Z [cousin: qwen-context-absorber] Status: error | Detail: 35 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T12:56Z [cousin: qwen-context-absorber] Status: error | Detail: 35 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T12:59Z [cousin: qwen-context-absorber] Status: error | Detail: 35 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T13:26Z [cousin: qwen-context-absorber] Status: error | Detail: 36 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T13:29Z [cousin: qwen-context-absorber] Status: error | Detail: 36 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T13:56Z [cousin: qwen-context-absorber] Status: error | Detail: 36 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T13:59Z [cousin: qwen-context-absorber] Status: error | Detail: 36 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T14:26Z [cousin: qwen-context-absorber] Status: error | Detail: 37 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T14:29Z [cousin: qwen-context-absorber] Status: error | Detail: 37 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T14:56Z [cousin: qwen-context-absorber] Status: error | Detail: 37 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T14:59Z [cousin: qwen-context-absorber] Status: error | Detail: 37 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T15:26Z [cousin: qwen-context-absorber] Status: error | Detail: 38 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T15:29Z [cousin: qwen-context-absorber] Status: error | Detail: 38 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T15:56Z [cousin: qwen-context-absorber] Status: error | Detail: 38 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T15:59Z [cousin: qwen-context-absorber] Status: error | Detail: 38 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T16:26Z [cousin: qwen-context-absorber] Status: error | Detail: 39 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T16:29Z [cousin: qwen-context-absorber] Status: error | Detail: 39 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T16:56Z [cousin: qwen-context-absorber] Status: error | Detail: 39 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T16:59Z [cousin: qwen-context-absorber] Status: error | Detail: 39 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T17:26Z [cousin: qwen-context-absorber] Status: error | Detail: 40 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T17:29Z [cousin: qwen-context-absorber] Status: error | Detail: 40 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T17:56Z [cousin: qwen-context-absorber] Status: error | Detail: 40 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T17:59Z [cousin: qwen-context-absorber] Status: error | Detail: 40 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T18:26Z [cousin: qwen-context-absorber] Status: error | Detail: 41 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T18:29Z [cousin: qwen-context-absorber] Status: error | Detail: 41 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T18:56Z [cousin: qwen-context-absorber] Status: error | Detail: 41 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T18:59Z [cousin: qwen-context-absorber] Status: error | Detail: 41 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T19:26Z [cousin: qwen-context-absorber] Status: error | Detail: 42 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T19:29Z [cousin: qwen-context-absorber] Status: error | Detail: 42 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T19:56Z [cousin: qwen-context-absorber] Status: error | Detail: 42 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T19:59Z [cousin: qwen-context-absorber] Status: error | Detail: 42 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T20:26Z [cousin: qwen-context-absorber] Status: error | Detail: 43 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T20:29Z [cousin: qwen-context-absorber] Status: error | Detail: 43 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T20:56Z [cousin: qwen-context-absorber] Status: error | Detail: 43 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T21:00Z [cousin: qwen-context-absorber] Status: error | Detail: 43 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T21:26Z [cousin: qwen-context-absorber] Status: error | Detail: 44 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T21:30Z [cousin: qwen-context-absorber] Status: error | Detail: 44 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T21:56Z [cousin: qwen-context-absorber] Status: error | Detail: 44 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T22:00Z [cousin: qwen-context-absorber] Status: error | Detail: 44 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T22:26Z [cousin: qwen-context-absorber] Status: error | Detail: 45 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T22:30Z [cousin: qwen-context-absorber] Status: error | Detail: 45 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T22:56Z [cousin: qwen-context-absorber] Status: error | Detail: 45 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T23:00Z [cousin: qwen-context-absorber] Status: error | Detail: 45 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T23:26Z [cousin: qwen-context-absorber] Status: error | Detail: 46 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T23:30Z [cousin: qwen-context-absorber] Status: error | Detail: 46 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-15T23:56Z [cousin: qwen-context-absorber] Status: error | Detail: 46 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T00:00Z [cousin: qwen-context-absorber] Status: error | Detail: 46 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T00:26Z [cousin: qwen-context-absorber] Status: error | Detail: 47 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T00:30Z [cousin: qwen-context-absorber] Status: error | Detail: 47 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T00:57Z [cousin: qwen-context-absorber] Status: error | Detail: 47 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T01:00Z [cousin: qwen-context-absorber] Status: error | Detail: 47 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T01:27Z [cousin: qwen-context-absorber] Status: error | Detail: 48 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T01:30Z [cousin: qwen-context-absorber] Status: error | Detail: 48 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T01:57Z [cousin: qwen-context-absorber] Status: error | Detail: 48 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T02:00Z [cousin: qwen-context-absorber] Status: error | Detail: 48 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T02:27Z [cousin: qwen-context-absorber] Status: error | Detail: 49 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T02:30Z [cousin: qwen-context-absorber] Status: error | Detail: 49 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T02:57Z [cousin: qwen-context-absorber] Status: error | Detail: 49 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T03:00Z [cousin: qwen-context-absorber] Status: error | Detail: 49 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T03:27Z [cousin: qwen-context-absorber] Status: error | Detail: 50 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T03:30Z [cousin: qwen-context-absorber] Status: error | Detail: 50 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T03:57Z [cousin: qwen-context-absorber] Status: error | Detail: 50 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T04:00Z [cousin: qwen-context-absorber] Status: error | Detail: 50 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T04:27Z [cousin: qwen-context-absorber] Status: error | Detail: 51 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T04:30Z [cousin: qwen-context-absorber] Status: error | Detail: 51 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T04:57Z [cousin: qwen-context-absorber] Status: error | Detail: 51 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T05:00Z [cousin: qwen-context-absorber] Status: error | Detail: 51 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T05:27Z [cousin: qwen-context-absorber] Status: error | Detail: 52 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T05:30Z [cousin: qwen-context-absorber] Status: error | Detail: 52 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T05:57Z [cousin: qwen-context-absorber] Status: error | Detail: 52 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T06:00Z [cousin: qwen-context-absorber] Status: error | Detail: 52 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T06:27Z [cousin: qwen-context-absorber] Status: error | Detail: 53 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T06:30Z [cousin: qwen-context-absorber] Status: error | Detail: 53 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T06:57Z [cousin: qwen-context-absorber] Status: error | Detail: 53 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T07:00Z [cousin: qwen-context-absorber] Status: error | Detail: 53 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T07:27Z [cousin: qwen-context-absorber] Status: error | Detail: 54 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T07:30Z [cousin: qwen-context-absorber] Status: error | Detail: 54 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T07:57Z [cousin: qwen-context-absorber] Status: error | Detail: 54 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T08:00Z [cousin: qwen-context-absorber] Status: error | Detail: 54 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T08:27Z [cousin: qwen-context-absorber] Status: error | Detail: 55 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T08:30Z [cousin: qwen-context-absorber] Status: error | Detail: 55 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T08:57Z [cousin: qwen-context-absorber] Status: error | Detail: 55 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T09:00Z [cousin: qwen-context-absorber] Status: error | Detail: 55 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T09:27Z [cousin: qwen-context-absorber] Status: error | Detail: 56 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T09:30Z [cousin: qwen-context-absorber] Status: error | Detail: 56 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T09:57Z [cousin: qwen-context-absorber] Status: error | Detail: 56 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T10:00Z [cousin: qwen-context-absorber] Status: error | Detail: 56 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T10:27Z [cousin: qwen-context-absorber] Status: error | Detail: 57 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T10:31Z [cousin: qwen-context-absorber] Status: error | Detail: 57 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T10:57Z [cousin: qwen-context-absorber] Status: error | Detail: 57 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T11:01Z [cousin: qwen-context-absorber] Status: error | Detail: 57 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T11:27Z [cousin: qwen-context-absorber] Status: error | Detail: 58 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T11:31Z [cousin: qwen-context-absorber] Status: error | Detail: 58 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T11:57Z [cousin: qwen-context-absorber] Status: error | Detail: 58 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T12:01Z [cousin: qwen-context-absorber] Status: error | Detail: 58 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T12:27Z [cousin: qwen-context-absorber] Status: error | Detail: 59 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T12:31Z [cousin: qwen-context-absorber] Status: error | Detail: 59 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T12:57Z [cousin: qwen-context-absorber] Status: error | Detail: 59 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T13:01Z [cousin: qwen-context-absorber] Status: error | Detail: 59 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T13:27Z [cousin: qwen-context-absorber] Status: error | Detail: 60 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T13:31Z [cousin: qwen-context-absorber] Status: error | Detail: 60 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T13:58Z [cousin: qwen-context-absorber] Status: error | Detail: 60 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T14:01Z [cousin: qwen-context-absorber] Status: error | Detail: 60 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T14:28Z [cousin: qwen-context-absorber] Status: error | Detail: 61 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T14:31Z [cousin: qwen-context-absorber] Status: error | Detail: 61 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T14:58Z [cousin: qwen-context-absorber] Status: error | Detail: 61 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T15:01Z [cousin: qwen-context-absorber] Status: error | Detail: 61 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T15:28Z [cousin: qwen-context-absorber] Status: error | Detail: 62 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T15:31Z [cousin: qwen-context-absorber] Status: error | Detail: 62 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T15:58Z [cousin: qwen-context-absorber] Status: error | Detail: 62 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T16:01Z [cousin: qwen-context-absorber] Status: error | Detail: 62 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T16:28Z [cousin: qwen-context-absorber] Status: error | Detail: 63 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T16:31Z [cousin: qwen-context-absorber] Status: error | Detail: 63 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T16:58Z [cousin: qwen-context-absorber] Status: error | Detail: 63 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T17:01Z [cousin: qwen-context-absorber] Status: error | Detail: 63 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T17:28Z [cousin: qwen-context-absorber] Status: error | Detail: 64 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T17:31Z [cousin: qwen-context-absorber] Status: error | Detail: 64 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T17:58Z [cousin: qwen-context-absorber] Status: error | Detail: 64 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T18:01Z [cousin: qwen-context-absorber] Status: error | Detail: 64 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T18:28Z [cousin: qwen-context-absorber] Status: error | Detail: 65 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T18:31Z [cousin: qwen-context-absorber] Status: error | Detail: 65 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T18:58Z [cousin: qwen-context-absorber] Status: error | Detail: 65 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T19:01Z [cousin: qwen-context-absorber] Status: error | Detail: 65 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T19:28Z [cousin: qwen-context-absorber] Status: error | Detail: 66 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T19:31Z [cousin: qwen-context-absorber] Status: error | Detail: 66 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T19:58Z [cousin: qwen-context-absorber] Status: error | Detail: 66 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T20:01Z [cousin: qwen-context-absorber] Status: error | Detail: 66 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T20:28Z [cousin: qwen-context-absorber] Status: error | Detail: 67 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T20:31Z [cousin: qwen-context-absorber] Status: error | Detail: 67 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T20:58Z [cousin: qwen-context-absorber] Status: error | Detail: 67 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T21:01Z [cousin: qwen-context-absorber] Status: error | Detail: 67 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T21:28Z [cousin: qwen-context-absorber] Status: error | Detail: 68 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T21:31Z [cousin: qwen-context-absorber] Status: error | Detail: 68 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T21:58Z [cousin: qwen-context-absorber] Status: error | Detail: 68 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T22:02Z [cousin: qwen-context-absorber] Status: error | Detail: 68 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T22:28Z [cousin: qwen-context-absorber] Status: error | Detail: 69 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T22:32Z [cousin: qwen-context-absorber] Status: error | Detail: 69 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T22:58Z [cousin: qwen-context-absorber] Status: error | Detail: 69 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T23:02Z [cousin: qwen-context-absorber] Status: error | Detail: 69 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T23:28Z [cousin: qwen-context-absorber] Status: error | Detail: 70 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T23:32Z [cousin: qwen-context-absorber] Status: error | Detail: 70 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-16T23:58Z [cousin: qwen-context-absorber] Status: error | Detail: 70 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T00:02Z [cousin: qwen-context-absorber] Status: error | Detail: 70 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T00:28Z [cousin: qwen-context-absorber] Status: error | Detail: 71 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T00:32Z [cousin: qwen-context-absorber] Status: error | Detail: 71 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T00:59Z [cousin: qwen-context-absorber] Status: error | Detail: 71 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T01:02Z [cousin: qwen-context-absorber] Status: error | Detail: 71 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T01:29Z [cousin: qwen-context-absorber] Status: error | Detail: 72 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T01:32Z [cousin: qwen-context-absorber] Status: error | Detail: 72 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T01:59Z [cousin: qwen-context-absorber] Status: error | Detail: 72 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T02:02Z [cousin: qwen-context-absorber] Status: error | Detail: 72 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T02:29Z [cousin: qwen-context-absorber] Status: error | Detail: 73 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T02:32Z [cousin: qwen-context-absorber] Status: error | Detail: 73 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T02:59Z [cousin: qwen-context-absorber] Status: error | Detail: 73 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T03:02Z [cousin: qwen-context-absorber] Status: error | Detail: 73 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T03:29Z [cousin: qwen-context-absorber] Status: error | Detail: 74 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T03:32Z [cousin: qwen-context-absorber] Status: error | Detail: 74 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T03:59Z [cousin: qwen-context-absorber] Status: error | Detail: 74 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T04:02Z [cousin: qwen-context-absorber] Status: error | Detail: 74 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T04:29Z [cousin: qwen-context-absorber] Status: error | Detail: 75 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T04:32Z [cousin: qwen-context-absorber] Status: error | Detail: 75 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T04:59Z [cousin: qwen-context-absorber] Status: error | Detail: 76 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T05:02Z [cousin: qwen-context-absorber] Status: error | Detail: 76 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T05:29Z [cousin: qwen-context-absorber] Status: error | Detail: 77 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T05:32Z [cousin: qwen-context-absorber] Status: error | Detail: 77 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T05:59Z [cousin: qwen-context-absorber] Status: error | Detail: 77 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T06:02Z [cousin: qwen-context-absorber] Status: error | Detail: 77 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T06:29Z [cousin: qwen-context-absorber] Status: error | Detail: 78 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T06:32Z [cousin: qwen-context-absorber] Status: error | Detail: 78 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T06:59Z [cousin: qwen-context-absorber] Status: error | Detail: 78 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T07:02Z [cousin: qwen-context-absorber] Status: error | Detail: 78 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T07:29Z [cousin: qwen-context-absorber] Status: error | Detail: 81 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T07:33Z [cousin: qwen-context-absorber] Status: error | Detail: 81 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T07:59Z [cousin: qwen-context-absorber] Status: error | Detail: 82 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T08:03Z [cousin: qwen-context-absorber] Status: error | Detail: 82 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T08:29Z [cousin: qwen-context-absorber] Status: error | Detail: 85 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T08:33Z [cousin: qwen-context-absorber] Status: error | Detail: 85 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T08:59Z [cousin: qwen-context-absorber] Status: error | Detail: 86 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T09:03Z [cousin: qwen-context-absorber] Status: error | Detail: 86 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T09:29Z [cousin: qwen-context-absorber] Status: error | Detail: 89 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T09:33Z [cousin: qwen-context-absorber] Status: error | Detail: 89 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T10:00Z [cousin: qwen-context-absorber] Status: error | Detail: 90 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T10:03Z [cousin: qwen-context-absorber] Status: error | Detail: 90 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T10:30Z [cousin: qwen-context-absorber] Status: error | Detail: 93 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T10:33Z [cousin: qwen-context-absorber] Status: error | Detail: 93 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T11:00Z [cousin: qwen-context-absorber] Status: error | Detail: 94 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T11:03Z [cousin: qwen-context-absorber] Status: error | Detail: 94 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T11:30Z [cousin: qwen-context-absorber] Status: error | Detail: 97 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T11:33Z [cousin: qwen-context-absorber] Status: error | Detail: 97 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T12:00Z [cousin: qwen-context-absorber] Status: error | Detail: 98 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T12:03Z [cousin: qwen-context-absorber] Status: error | Detail: 98 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T12:30Z [cousin: qwen-context-absorber] Status: error | Detail: 101 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T12:33Z [cousin: qwen-context-absorber] Status: error | Detail: 101 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T13:00Z [cousin: qwen-context-absorber] Status: error | Detail: 102 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T13:03Z [cousin: qwen-context-absorber] Status: error | Detail: 102 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T13:30Z [cousin: qwen-context-absorber] Status: error | Detail: 105 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T13:33Z [cousin: qwen-context-absorber] Status: error | Detail: 105 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T14:00Z [cousin: qwen-context-absorber] Status: error | Detail: 106 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T14:03Z [cousin: qwen-context-absorber] Status: error | Detail: 106 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T14:30Z [cousin: qwen-context-absorber] Status: error | Detail: 109 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T14:33Z [cousin: qwen-context-absorber] Status: error | Detail: 109 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T15:00Z [cousin: qwen-context-absorber] Status: error | Detail: 110 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T15:03Z [cousin: qwen-context-absorber] Status: error | Detail: 110 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T15:30Z [cousin: qwen-context-absorber] Status: error | Detail: 113 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T15:34Z [cousin: qwen-context-absorber] Status: error | Detail: 113 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T16:00Z [cousin: qwen-context-absorber] Status: error | Detail: 114 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T16:04Z [cousin: qwen-context-absorber] Status: error | Detail: 114 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T16:30Z [cousin: qwen-context-absorber] Status: error | Detail: 117 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T16:34Z [cousin: qwen-context-absorber] Status: error | Detail: 117 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T17:00Z [cousin: qwen-context-absorber] Status: error | Detail: 118 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T17:04Z [cousin: qwen-context-absorber] Status: error | Detail: 118 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T17:31Z [cousin: qwen-context-absorber] Status: error | Detail: 121 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T17:34Z [cousin: qwen-context-absorber] Status: error | Detail: 121 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T18:01Z [cousin: qwen-context-absorber] Status: error | Detail: 122 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T18:04Z [cousin: qwen-context-absorber] Status: error | Detail: 122 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T18:31Z [cousin: qwen-context-absorber] Status: error | Detail: 125 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T18:34Z [cousin: qwen-context-absorber] Status: error | Detail: 125 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T19:01Z [cousin: qwen-context-absorber] Status: error | Detail: 126 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T19:04Z [cousin: qwen-context-absorber] Status: error | Detail: 126 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T19:31Z [cousin: qwen-context-absorber] Status: error | Detail: 129 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T19:34Z [cousin: qwen-context-absorber] Status: error | Detail: 129 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T20:01Z [cousin: qwen-context-absorber] Status: error | Detail: 130 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T20:04Z [cousin: qwen-context-absorber] Status: error | Detail: 130 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T20:31Z [cousin: qwen-context-absorber] Status: error | Detail: 133 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T20:34Z [cousin: qwen-context-absorber] Status: error | Detail: 134 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T21:01Z [cousin: qwen-context-absorber] Status: error | Detail: 135 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T21:04Z [cousin: qwen-context-absorber] Status: error | Detail: 135 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T21:31Z [cousin: qwen-context-absorber] Status: error | Detail: 138 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T21:35Z [cousin: qwen-context-absorber] Status: error | Detail: 138 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T22:01Z [cousin: qwen-context-absorber] Status: error | Detail: 139 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T22:05Z [cousin: qwen-context-absorber] Status: error | Detail: 140 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T22:31Z [cousin: qwen-context-absorber] Status: error | Detail: 142 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T22:35Z [cousin: qwen-context-absorber] Status: error | Detail: 142 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T23:02Z [cousin: qwen-context-absorber] Status: error | Detail: 143 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T23:05Z [cousin: qwen-context-absorber] Status: error | Detail: 144 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T23:32Z [cousin: qwen-context-absorber] Status: error | Detail: 146 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-17T23:35Z [cousin: qwen-context-absorber] Status: error | Detail: 146 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T00:02Z [cousin: qwen-context-absorber] Status: error | Detail: 147 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T00:05Z [cousin: qwen-context-absorber] Status: error | Detail: 148 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T00:32Z [cousin: qwen-context-absorber] Status: error | Detail: 150 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T00:35Z [cousin: qwen-context-absorber] Status: error | Detail: 150 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T01:02Z [cousin: qwen-context-absorber] Status: error | Detail: 151 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T01:05Z [cousin: qwen-context-absorber] Status: error | Detail: 152 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T01:32Z [cousin: qwen-context-absorber] Status: error | Detail: 154 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T01:35Z [cousin: qwen-context-absorber] Status: error | Detail: 154 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T02:02Z [cousin: qwen-context-absorber] Status: error | Detail: 155 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T02:05Z [cousin: qwen-context-absorber] Status: error | Detail: 156 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T02:32Z [cousin: qwen-context-absorber] Status: error | Detail: 158 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T02:36Z [cousin: qwen-context-absorber] Status: error | Detail: 158 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T03:02Z [cousin: qwen-context-absorber] Status: error | Detail: 159 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T03:06Z [cousin: qwen-context-absorber] Status: error | Detail: 160 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T03:32Z [cousin: qwen-context-absorber] Status: error | Detail: 162 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T03:36Z [cousin: qwen-context-absorber] Status: error | Detail: 162 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T04:03Z [cousin: qwen-context-absorber] Status: error | Detail: 163 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T04:06Z [cousin: qwen-context-absorber] Status: error | Detail: 164 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T04:33Z [cousin: qwen-context-absorber] Status: error | Detail: 166 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T04:36Z [cousin: qwen-context-absorber] Status: error | Detail: 166 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T05:03Z [cousin: qwen-context-absorber] Status: error | Detail: 167 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T05:07Z [cousin: qwen-context-absorber] Status: error | Detail: 168 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T05:33Z [cousin: qwen-context-absorber] Status: error | Detail: 170 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T05:37Z [cousin: qwen-context-absorber] Status: error | Detail: 170 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T06:03Z [cousin: qwen-context-absorber] Status: error | Detail: 171 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T06:07Z [cousin: qwen-context-absorber] Status: error | Detail: 172 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T06:34Z [cousin: qwen-context-absorber] Status: error | Detail: 174 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T06:37Z [cousin: qwen-context-absorber] Status: error | Detail: 174 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T07:04Z [cousin: qwen-context-absorber] Status: error | Detail: 175 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T07:07Z [cousin: qwen-context-absorber] Status: error | Detail: 176 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T07:34Z [cousin: qwen-context-absorber] Status: error | Detail: 178 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T07:37Z [cousin: qwen-context-absorber] Status: error | Detail: 178 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T08:04Z [cousin: qwen-context-absorber] Status: error | Detail: 179 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T08:07Z [cousin: qwen-context-absorber] Status: error | Detail: 180 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T08:34Z [cousin: qwen-context-absorber] Status: error | Detail: 182 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T08:37Z [cousin: qwen-context-absorber] Status: error | Detail: 182 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T09:04Z [cousin: qwen-context-absorber] Status: error | Detail: 183 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T09:08Z [cousin: qwen-context-absorber] Status: error | Detail: 184 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T09:34Z [cousin: qwen-context-absorber] Status: error | Detail: 186 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T09:38Z [cousin: qwen-context-absorber] Status: error | Detail: 186 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T10:04Z [cousin: qwen-context-absorber] Status: error | Detail: 187 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T10:08Z [cousin: qwen-context-absorber] Status: error | Detail: 188 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T10:35Z [cousin: qwen-context-absorber] Status: error | Detail: 190 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T10:38Z [cousin: qwen-context-absorber] Status: error | Detail: 190 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T11:05Z [cousin: qwen-context-absorber] Status: error | Detail: 192 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T11:08Z [cousin: qwen-context-absorber] Status: error | Detail: 192 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T11:35Z [cousin: qwen-context-absorber] Status: error | Detail: 194 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T11:38Z [cousin: qwen-context-absorber] Status: error | Detail: 194 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T12:05Z [cousin: qwen-context-absorber] Status: error | Detail: 196 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T12:08Z [cousin: qwen-context-absorber] Status: error | Detail: 196 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T12:35Z [cousin: qwen-context-absorber] Status: error | Detail: 198 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T12:38Z [cousin: qwen-context-absorber] Status: error | Detail: 198 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T13:05Z [cousin: qwen-context-absorber] Status: error | Detail: 200 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T13:09Z [cousin: qwen-context-absorber] Status: error | Detail: 200 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T13:35Z [cousin: qwen-context-absorber] Status: error | Detail: 202 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T13:39Z [cousin: qwen-context-absorber] Status: error | Detail: 202 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T14:05Z [cousin: qwen-context-absorber] Status: error | Detail: 204 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T14:09Z [cousin: qwen-context-absorber] Status: error | Detail: 204 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T14:36Z [cousin: qwen-context-absorber] Status: error | Detail: 206 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T14:39Z [cousin: qwen-context-absorber] Status: error | Detail: 206 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T15:06Z [cousin: qwen-context-absorber] Status: error | Detail: 208 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T15:09Z [cousin: qwen-context-absorber] Status: error | Detail: 208 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T15:36Z [cousin: qwen-context-absorber] Status: error | Detail: 210 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T15:39Z [cousin: qwen-context-absorber] Status: error | Detail: 210 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T16:06Z [cousin: qwen-context-absorber] Status: error | Detail: 212 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T16:09Z [cousin: qwen-context-absorber] Status: error | Detail: 212 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T16:36Z [cousin: qwen-context-absorber] Status: error | Detail: 214 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T16:39Z [cousin: qwen-context-absorber] Status: error | Detail: 214 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T17:06Z [cousin: qwen-context-absorber] Status: error | Detail: 216 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T17:10Z [cousin: qwen-context-absorber] Status: error | Detail: 216 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T17:36Z [cousin: qwen-context-absorber] Status: error | Detail: 218 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T17:40Z [cousin: qwen-context-absorber] Status: error | Detail: 218 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T18:07Z [cousin: qwen-context-absorber] Status: error | Detail: 220 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T18:10Z [cousin: qwen-context-absorber] Status: error | Detail: 220 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T18:37Z [cousin: qwen-context-absorber] Status: error | Detail: 222 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T18:40Z [cousin: qwen-context-absorber] Status: error | Detail: 222 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T19:07Z [cousin: qwen-context-absorber] Status: error | Detail: 224 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T19:10Z [cousin: qwen-context-absorber] Status: error | Detail: 224 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T19:37Z [cousin: qwen-context-absorber] Status: error | Detail: 226 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T19:40Z [cousin: qwen-context-absorber] Status: error | Detail: 226 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T20:07Z [cousin: qwen-context-absorber] Status: error | Detail: 228 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T20:10Z [cousin: qwen-context-absorber] Status: error | Detail: 229 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T20:37Z [cousin: qwen-context-absorber] Status: error | Detail: 230 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T20:41Z [cousin: qwen-context-absorber] Status: error | Detail: 230 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T21:07Z [cousin: qwen-context-absorber] Status: error | Detail: 232 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T21:11Z [cousin: qwen-context-absorber] Status: error | Detail: 233 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T21:38Z [cousin: qwen-context-absorber] Status: error | Detail: 234 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T21:41Z [cousin: qwen-context-absorber] Status: error | Detail: 234 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T22:08Z [cousin: qwen-context-absorber] Status: error | Detail: 236 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T22:11Z [cousin: qwen-context-absorber] Status: error | Detail: 237 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T22:38Z [cousin: qwen-context-absorber] Status: error | Detail: 238 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T22:41Z [cousin: qwen-context-absorber] Status: error | Detail: 238 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T23:08Z [cousin: qwen-context-absorber] Status: error | Detail: 240 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T23:11Z [cousin: qwen-context-absorber] Status: error | Detail: 241 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T23:38Z [cousin: qwen-context-absorber] Status: error | Detail: 242 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-18T23:41Z [cousin: qwen-context-absorber] Status: error | Detail: 242 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T00:08Z [cousin: qwen-context-absorber] Status: error | Detail: 244 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T00:12Z [cousin: qwen-context-absorber] Status: error | Detail: 245 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T00:38Z [cousin: qwen-context-absorber] Status: error | Detail: 246 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T00:42Z [cousin: qwen-context-absorber] Status: error | Detail: 246 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T01:09Z [cousin: qwen-context-absorber] Status: error | Detail: 248 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T01:12Z [cousin: qwen-context-absorber] Status: error | Detail: 249 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T01:39Z [cousin: qwen-context-absorber] Status: error | Detail: 250 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T01:42Z [cousin: qwen-context-absorber] Status: error | Detail: 250 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T02:09Z [cousin: qwen-context-absorber] Status: error | Detail: 252 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T02:12Z [cousin: qwen-context-absorber] Status: error | Detail: 253 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T02:39Z [cousin: qwen-context-absorber] Status: error | Detail: 254 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T02:42Z [cousin: qwen-context-absorber] Status: error | Detail: 254 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T03:09Z [cousin: qwen-context-absorber] Status: error | Detail: 256 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T03:13Z [cousin: qwen-context-absorber] Status: error | Detail: 257 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T03:39Z [cousin: qwen-context-absorber] Status: error | Detail: 258 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T03:43Z [cousin: qwen-context-absorber] Status: error | Detail: 258 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T04:10Z [cousin: qwen-context-absorber] Status: error | Detail: 261 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T04:13Z [cousin: qwen-context-absorber] Status: error | Detail: 262 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T04:40Z [cousin: qwen-context-absorber] Status: error | Detail: 263 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T04:43Z [cousin: qwen-context-absorber] Status: error | Detail: 263 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T05:10Z [cousin: qwen-context-absorber] Status: error | Detail: 265 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T05:13Z [cousin: qwen-context-absorber] Status: error | Detail: 266 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T05:40Z [cousin: qwen-context-absorber] Status: error | Detail: 267 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T05:43Z [cousin: qwen-context-absorber] Status: error | Detail: 267 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T06:10Z [cousin: qwen-context-absorber] Status: error | Detail: 270 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T06:14Z [cousin: qwen-context-absorber] Status: error | Detail: 270 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T06:40Z [cousin: qwen-context-absorber] Status: error | Detail: 272 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T06:44Z [cousin: qwen-context-absorber] Status: error | Detail: 272 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T07:11Z [cousin: qwen-context-absorber] Status: error | Detail: 275 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T07:14Z [cousin: qwen-context-absorber] Status: error | Detail: 275 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T07:41Z [cousin: qwen-context-absorber] Status: error | Detail: 276 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T07:44Z [cousin: qwen-context-absorber] Status: error | Detail: 276 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T08:11Z [cousin: qwen-context-absorber] Status: error | Detail: 279 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T08:15Z [cousin: qwen-context-absorber] Status: error | Detail: 279 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T08:42Z [cousin: qwen-context-absorber] Status: error | Detail: 280 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T08:45Z [cousin: qwen-context-absorber] Status: error | Detail: 281 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T09:12Z [cousin: qwen-context-absorber] Status: error | Detail: 283 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T09:15Z [cousin: qwen-context-absorber] Status: error | Detail: 283 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T09:42Z [cousin: qwen-context-absorber] Status: error | Detail: 284 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T09:45Z [cousin: qwen-context-absorber] Status: error | Detail: 285 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T10:12Z [cousin: qwen-context-absorber] Status: error | Detail: 287 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T10:16Z [cousin: qwen-context-absorber] Status: error | Detail: 287 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T10:42Z [cousin: qwen-context-absorber] Status: error | Detail: 288 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T10:46Z [cousin: qwen-context-absorber] Status: error | Detail: 289 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T11:13Z [cousin: qwen-context-absorber] Status: error | Detail: 291 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T11:16Z [cousin: qwen-context-absorber] Status: error | Detail: 291 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T11:43Z [cousin: qwen-context-absorber] Status: error | Detail: 292 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T11:46Z [cousin: qwen-context-absorber] Status: error | Detail: 293 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T12:13Z [cousin: qwen-context-absorber] Status: error | Detail: 295 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T12:16Z [cousin: qwen-context-absorber] Status: error | Detail: 295 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T12:43Z [cousin: qwen-context-absorber] Status: error | Detail: 296 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T12:46Z [cousin: qwen-context-absorber] Status: error | Detail: 297 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T13:13Z [cousin: qwen-context-absorber] Status: error | Detail: 299 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T13:17Z [cousin: qwen-context-absorber] Status: error | Detail: 299 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T13:43Z [cousin: qwen-context-absorber] Status: error | Detail: 300 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T13:47Z [cousin: qwen-context-absorber] Status: error | Detail: 301 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T14:14Z [cousin: qwen-context-absorber] Status: error | Detail: 303 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T14:17Z [cousin: qwen-context-absorber] Status: error | Detail: 303 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T14:44Z [cousin: qwen-context-absorber] Status: error | Detail: 304 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T14:47Z [cousin: qwen-context-absorber] Status: error | Detail: 305 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T15:14Z [cousin: qwen-context-absorber] Status: error | Detail: 307 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T15:17Z [cousin: qwen-context-absorber] Status: error | Detail: 307 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T15:44Z [cousin: qwen-context-absorber] Status: error | Detail: 308 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T15:48Z [cousin: qwen-context-absorber] Status: error | Detail: 309 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T16:14Z [cousin: qwen-context-absorber] Status: error | Detail: 311 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T16:18Z [cousin: qwen-context-absorber] Status: error | Detail: 311 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T16:45Z [cousin: qwen-context-absorber] Status: error | Detail: 312 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T16:48Z [cousin: qwen-context-absorber] Status: error | Detail: 313 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T17:15Z [cousin: qwen-context-absorber] Status: error | Detail: 315 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T17:18Z [cousin: qwen-context-absorber] Status: error | Detail: 315 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T17:45Z [cousin: qwen-context-absorber] Status: error | Detail: 317 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T17:48Z [cousin: qwen-context-absorber] Status: error | Detail: 317 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T18:15Z [cousin: qwen-context-absorber] Status: error | Detail: 319 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T18:19Z [cousin: qwen-context-absorber] Status: error | Detail: 319 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T18:45Z [cousin: qwen-context-absorber] Status: error | Detail: 321 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T18:49Z [cousin: qwen-context-absorber] Status: error | Detail: 321 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T19:16Z [cousin: qwen-context-absorber] Status: error | Detail: 323 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T19:19Z [cousin: qwen-context-absorber] Status: error | Detail: 323 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T19:46Z [cousin: qwen-context-absorber] Status: error | Detail: 325 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T19:49Z [cousin: qwen-context-absorber] Status: error | Detail: 325 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T20:16Z [cousin: qwen-context-absorber] Status: error | Detail: 327 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T20:19Z [cousin: qwen-context-absorber] Status: error | Detail: 327 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T20:46Z [cousin: qwen-context-absorber] Status: error | Detail: 329 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T20:50Z [cousin: qwen-context-absorber] Status: error | Detail: 329 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T21:16Z [cousin: qwen-context-absorber] Status: error | Detail: 331 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T21:20Z [cousin: qwen-context-absorber] Status: error | Detail: 331 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T21:47Z [cousin: qwen-context-absorber] Status: error | Detail: 333 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T21:50Z [cousin: qwen-context-absorber] Status: error | Detail: 333 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T22:17Z [cousin: qwen-context-absorber] Status: error | Detail: 335 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T22:20Z [cousin: qwen-context-absorber] Status: error | Detail: 335 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T22:47Z [cousin: qwen-context-absorber] Status: error | Detail: 337 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T22:51Z [cousin: qwen-context-absorber] Status: error | Detail: 337 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T23:17Z [cousin: qwen-context-absorber] Status: error | Detail: 339 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T23:21Z [cousin: qwen-context-absorber] Status: error | Detail: 339 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T23:48Z [cousin: qwen-context-absorber] Status: error | Detail: 341 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-19T23:51Z [cousin: qwen-context-absorber] Status: error | Detail: 341 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T00:18Z [cousin: qwen-context-absorber] Status: error | Detail: 343 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T00:21Z [cousin: qwen-context-absorber] Status: error | Detail: 343 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T00:48Z [cousin: qwen-context-absorber] Status: error | Detail: 345 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T00:51Z [cousin: qwen-context-absorber] Status: error | Detail: 345 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T01:18Z [cousin: qwen-context-absorber] Status: error | Detail: 347 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T01:22Z [cousin: qwen-context-absorber] Status: error | Detail: 347 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T01:48Z [cousin: qwen-context-absorber] Status: error | Detail: 349 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T01:52Z [cousin: qwen-context-absorber] Status: error | Detail: 349 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T02:19Z [cousin: qwen-context-absorber] Status: error | Detail: 351 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T02:22Z [cousin: qwen-context-absorber] Status: error | Detail: 351 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T02:49Z [cousin: qwen-context-absorber] Status: error | Detail: 353 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T02:52Z [cousin: qwen-context-absorber] Status: error | Detail: 353 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T03:19Z [cousin: qwen-context-absorber] Status: error | Detail: 355 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T03:22Z [cousin: qwen-context-absorber] Status: error | Detail: 355 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T03:49Z [cousin: qwen-context-absorber] Status: error | Detail: 357 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T03:53Z [cousin: qwen-context-absorber] Status: error | Detail: 357 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T04:20Z [cousin: qwen-context-absorber] Status: error | Detail: 359 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T04:23Z [cousin: qwen-context-absorber] Status: error | Detail: 359 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T04:50Z [cousin: qwen-context-absorber] Status: error | Detail: 362 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T04:53Z [cousin: qwen-context-absorber] Status: error | Detail: 362 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T05:20Z [cousin: qwen-context-absorber] Status: error | Detail: 364 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T05:23Z [cousin: qwen-context-absorber] Status: error | Detail: 364 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T05:50Z [cousin: qwen-context-absorber] Status: error | Detail: 366 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T05:54Z [cousin: qwen-context-absorber] Status: error | Detail: 366 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T06:21Z [cousin: qwen-context-absorber] Status: error | Detail: 370 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T06:24Z [cousin: qwen-context-absorber] Status: error | Detail: 370 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T06:51Z [cousin: qwen-context-absorber] Status: error | Detail: 372 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T06:54Z [cousin: qwen-context-absorber] Status: error | Detail: 372 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T07:21Z [cousin: qwen-context-absorber] Status: error | Detail: 374 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T07:24Z [cousin: qwen-context-absorber] Status: error | Detail: 374 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T07:51Z [cousin: qwen-context-absorber] Status: error | Detail: 376 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T07:55Z [cousin: qwen-context-absorber] Status: error | Detail: 376 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T08:22Z [cousin: qwen-context-absorber] Status: error | Detail: 378 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T08:25Z [cousin: qwen-context-absorber] Status: error | Detail: 379 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T08:52Z [cousin: qwen-context-absorber] Status: error | Detail: 380 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T08:55Z [cousin: qwen-context-absorber] Status: error | Detail: 380 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T09:22Z [cousin: qwen-context-absorber] Status: error | Detail: 382 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T09:25Z [cousin: qwen-context-absorber] Status: error | Detail: 383 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T09:52Z [cousin: qwen-context-absorber] Status: error | Detail: 384 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T09:56Z [cousin: qwen-context-absorber] Status: error | Detail: 384 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T10:23Z [cousin: qwen-context-absorber] Status: error | Detail: 386 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T10:26Z [cousin: qwen-context-absorber] Status: error | Detail: 387 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T10:53Z [cousin: qwen-context-absorber] Status: error | Detail: 388 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T10:56Z [cousin: qwen-context-absorber] Status: error | Detail: 388 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T11:23Z [cousin: qwen-context-absorber] Status: error | Detail: 390 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T11:26Z [cousin: qwen-context-absorber] Status: error | Detail: 391 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T11:53Z [cousin: qwen-context-absorber] Status: error | Detail: 392 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T11:57Z [cousin: qwen-context-absorber] Status: error | Detail: 392 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T12:24Z [cousin: qwen-context-absorber] Status: error | Detail: 394 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T12:27Z [cousin: qwen-context-absorber] Status: error | Detail: 395 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T12:54Z [cousin: qwen-context-absorber] Status: error | Detail: 396 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T12:57Z [cousin: qwen-context-absorber] Status: error | Detail: 396 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T13:24Z [cousin: qwen-context-absorber] Status: error | Detail: 398 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T13:27Z [cousin: qwen-context-absorber] Status: error | Detail: 399 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T13:54Z [cousin: qwen-context-absorber] Status: error | Detail: 400 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T13:58Z [cousin: qwen-context-absorber] Status: error | Detail: 400 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T14:25Z [cousin: qwen-context-absorber] Status: error | Detail: 402 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T14:28Z [cousin: qwen-context-absorber] Status: error | Detail: 403 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T14:55Z [cousin: qwen-context-absorber] Status: error | Detail: 404 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T14:58Z [cousin: qwen-context-absorber] Status: error | Detail: 404 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T15:25Z [cousin: qwen-context-absorber] Status: error | Detail: 407 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T15:29Z [cousin: qwen-context-absorber] Status: error | Detail: 407 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T15:55Z [cousin: qwen-context-absorber] Status: error | Detail: 408 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T15:59Z [cousin: qwen-context-absorber] Status: error | Detail: 408 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T16:26Z [cousin: qwen-context-absorber] Status: error | Detail: 411 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T16:29Z [cousin: qwen-context-absorber] Status: error | Detail: 411 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T16:56Z [cousin: qwen-context-absorber] Status: error | Detail: 412 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T16:59Z [cousin: qwen-context-absorber] Status: error | Detail: 412 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T17:26Z [cousin: qwen-context-absorber] Status: error | Detail: 415 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T17:30Z [cousin: qwen-context-absorber] Status: error | Detail: 415 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T17:56Z [cousin: qwen-context-absorber] Status: error | Detail: 416 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T18:00Z [cousin: qwen-context-absorber] Status: error | Detail: 416 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T18:27Z [cousin: qwen-context-absorber] Status: error | Detail: 419 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T18:30Z [cousin: qwen-context-absorber] Status: error | Detail: 419 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T18:57Z [cousin: qwen-context-absorber] Status: error | Detail: 420 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T19:00Z [cousin: qwen-context-absorber] Status: error | Detail: 420 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T19:27Z [cousin: qwen-context-absorber] Status: error | Detail: 423 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T19:31Z [cousin: qwen-context-absorber] Status: error | Detail: 423 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T19:58Z [cousin: qwen-context-absorber] Status: error | Detail: 424 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T20:01Z [cousin: qwen-context-absorber] Status: error | Detail: 424 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T20:28Z [cousin: qwen-context-absorber] Status: error | Detail: 427 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T20:31Z [cousin: qwen-context-absorber] Status: error | Detail: 427 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T20:58Z [cousin: qwen-context-absorber] Status: error | Detail: 428 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T21:01Z [cousin: qwen-context-absorber] Status: error | Detail: 428 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T21:28Z [cousin: qwen-context-absorber] Status: error | Detail: 431 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T21:32Z [cousin: qwen-context-absorber] Status: error | Detail: 431 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T21:59Z [cousin: qwen-context-absorber] Status: error | Detail: 432 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T22:02Z [cousin: qwen-context-absorber] Status: error | Detail: 432 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T22:29Z [cousin: qwen-context-absorber] Status: error | Detail: 435 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T22:32Z [cousin: qwen-context-absorber] Status: error | Detail: 435 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T22:59Z [cousin: qwen-context-absorber] Status: error | Detail: 436 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T23:03Z [cousin: qwen-context-absorber] Status: error | Detail: 436 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T23:29Z [cousin: qwen-context-absorber] Status: error | Detail: 439 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-20T23:33Z [cousin: qwen-context-absorber] Status: error | Detail: 439 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T00:00Z [cousin: qwen-context-absorber] Status: error | Detail: 440 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T00:03Z [cousin: qwen-context-absorber] Status: error | Detail: 440 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T00:30Z [cousin: qwen-context-absorber] Status: error | Detail: 443 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T00:33Z [cousin: qwen-context-absorber] Status: error | Detail: 443 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T01:00Z [cousin: qwen-context-absorber] Status: error | Detail: 444 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T01:04Z [cousin: qwen-context-absorber] Status: error | Detail: 444 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T01:31Z [cousin: qwen-context-absorber] Status: error | Detail: 447 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T01:34Z [cousin: qwen-context-absorber] Status: error | Detail: 447 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T02:01Z [cousin: qwen-context-absorber] Status: error | Detail: 448 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T02:04Z [cousin: qwen-context-absorber] Status: error | Detail: 448 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T02:31Z [cousin: qwen-context-absorber] Status: error | Detail: 451 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T02:35Z [cousin: qwen-context-absorber] Status: error | Detail: 451 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T03:02Z [cousin: qwen-context-absorber] Status: error | Detail: 452 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T03:05Z [cousin: qwen-context-absorber] Status: error | Detail: 453 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T03:32Z [cousin: qwen-context-absorber] Status: error | Detail: 455 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T03:35Z [cousin: qwen-context-absorber] Status: error | Detail: 455 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T04:02Z [cousin: qwen-context-absorber] Status: error | Detail: 456 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T04:05Z [cousin: qwen-context-absorber] Status: error | Detail: 457 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T04:32Z [cousin: qwen-context-absorber] Status: error | Detail: 459 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T04:36Z [cousin: qwen-context-absorber] Status: error | Detail: 459 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T05:03Z [cousin: qwen-context-absorber] Status: error | Detail: 465 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T05:06Z [cousin: qwen-context-absorber] Status: error | Detail: 467 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T05:33Z [cousin: qwen-context-absorber] Status: error | Detail: 474 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T05:36Z [cousin: qwen-context-absorber] Status: error | Detail: 475 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T06:03Z [cousin: qwen-context-absorber] Status: error | Detail: 481 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T06:07Z [cousin: qwen-context-absorber] Status: error | Detail: 483 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T06:34Z [cousin: qwen-context-absorber] Status: error | Detail: 490 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T06:37Z [cousin: qwen-context-absorber] Status: error | Detail: 491 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T07:04Z [cousin: qwen-context-absorber] Status: error | Detail: 497 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T07:07Z [cousin: qwen-context-absorber] Status: error | Detail: 499 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T07:34Z [cousin: qwen-context-absorber] Status: error | Detail: 507 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T07:38Z [cousin: qwen-context-absorber] Status: error | Detail: 507 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T08:05Z [cousin: qwen-context-absorber] Status: error | Detail: 514 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T08:08Z [cousin: qwen-context-absorber] Status: error | Detail: 515 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T08:35Z [cousin: qwen-context-absorber] Status: error | Detail: 523 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T08:38Z [cousin: qwen-context-absorber] Status: error | Detail: 523 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T09:05Z [cousin: qwen-context-absorber] Status: error | Detail: 531 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T09:09Z [cousin: qwen-context-absorber] Status: error | Detail: 531 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T09:36Z [cousin: qwen-context-absorber] Status: error | Detail: 539 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T09:39Z [cousin: qwen-context-absorber] Status: error | Detail: 539 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T10:06Z [cousin: qwen-context-absorber] Status: error | Detail: 547 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T10:09Z [cousin: qwen-context-absorber] Status: error | Detail: 548 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T10:36Z [cousin: qwen-context-absorber] Status: error | Detail: 555 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T10:40Z [cousin: qwen-context-absorber] Status: error | Detail: 556 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T11:07Z [cousin: qwen-context-absorber] Status: error | Detail: 563 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T11:10Z [cousin: qwen-context-absorber] Status: error | Detail: 564 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T11:37Z [cousin: qwen-context-absorber] Status: error | Detail: 571 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T11:40Z [cousin: qwen-context-absorber] Status: error | Detail: 572 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T12:07Z [cousin: qwen-context-absorber] Status: error | Detail: 579 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T12:11Z [cousin: qwen-context-absorber] Status: error | Detail: 581 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T12:38Z [cousin: qwen-context-absorber] Status: error | Detail: 587 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T12:41Z [cousin: qwen-context-absorber] Status: error | Detail: 588 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T13:08Z [cousin: qwen-context-absorber] Status: error | Detail: 595 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T13:11Z [cousin: qwen-context-absorber] Status: error | Detail: 597 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T13:38Z [cousin: qwen-context-absorber] Status: error | Detail: 603 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T13:42Z [cousin: qwen-context-absorber] Status: error | Detail: 604 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T14:09Z [cousin: qwen-context-absorber] Status: error | Detail: 611 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T14:12Z [cousin: qwen-context-absorber] Status: error | Detail: 613 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T14:39Z [cousin: qwen-context-absorber] Status: error | Detail: 620 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T14:43Z [cousin: qwen-context-absorber] Status: error | Detail: 620 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T15:10Z [cousin: qwen-context-absorber] Status: error | Detail: 628 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T15:13Z [cousin: qwen-context-absorber] Status: error | Detail: 629 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T15:40Z [cousin: qwen-context-absorber] Status: error | Detail: 636 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T15:43Z [cousin: qwen-context-absorber] Status: error | Detail: 636 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T16:10Z [cousin: qwen-context-absorber] Status: error | Detail: 645 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T16:14Z [cousin: qwen-context-absorber] Status: error | Detail: 645 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T16:41Z [cousin: qwen-context-absorber] Status: error | Detail: 652 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T16:44Z [cousin: qwen-context-absorber] Status: error | Detail: 653 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T17:11Z [cousin: qwen-context-absorber] Status: error | Detail: 661 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T17:15Z [cousin: qwen-context-absorber] Status: error | Detail: 662 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T17:42Z [cousin: qwen-context-absorber] Status: error | Detail: 668 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T17:45Z [cousin: qwen-context-absorber] Status: error | Detail: 670 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T18:12Z [cousin: qwen-context-absorber] Status: error | Detail: 677 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T18:16Z [cousin: qwen-context-absorber] Status: error | Detail: 678 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T18:43Z [cousin: qwen-context-absorber] Status: error | Detail: 684 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T18:46Z [cousin: qwen-context-absorber] Status: error | Detail: 686 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T19:13Z [cousin: qwen-context-absorber] Status: error | Detail: 693 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T19:16Z [cousin: qwen-context-absorber] Status: error | Detail: 694 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T19:43Z [cousin: qwen-context-absorber] Status: error | Detail: 700 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T19:47Z [cousin: qwen-context-absorber] Status: error | Detail: 702 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T20:14Z [cousin: qwen-context-absorber] Status: error | Detail: 709 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T20:17Z [cousin: qwen-context-absorber] Status: error | Detail: 710 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T20:44Z [cousin: qwen-context-absorber] Status: error | Detail: 717 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T20:48Z [cousin: qwen-context-absorber] Status: error | Detail: 718 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T21:15Z [cousin: qwen-context-absorber] Status: error | Detail: 726 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T21:18Z [cousin: qwen-context-absorber] Status: error | Detail: 726 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T21:45Z [cousin: qwen-context-absorber] Status: error | Detail: 734 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T21:49Z [cousin: qwen-context-absorber] Status: error | Detail: 734 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T22:16Z [cousin: qwen-context-absorber] Status: error | Detail: 742 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T22:19Z [cousin: qwen-context-absorber] Status: error | Detail: 742 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T22:46Z [cousin: qwen-context-absorber] Status: error | Detail: 750 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T22:50Z [cousin: qwen-context-absorber] Status: error | Detail: 751 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T23:17Z [cousin: qwen-context-absorber] Status: error | Detail: 758 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T23:20Z [cousin: qwen-context-absorber] Status: error | Detail: 759 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T23:47Z [cousin: qwen-context-absorber] Status: error | Detail: 766 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-21T23:51Z [cousin: qwen-context-absorber] Status: error | Detail: 767 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T00:18Z [cousin: qwen-context-absorber] Status: error | Detail: 774 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T00:21Z [cousin: qwen-context-absorber] Status: error | Detail: 775 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T00:48Z [cousin: qwen-context-absorber] Status: error | Detail: 782 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T00:52Z [cousin: qwen-context-absorber] Status: error | Detail: 782 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T01:19Z [cousin: qwen-context-absorber] Status: error | Detail: 789 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T01:22Z [cousin: qwen-context-absorber] Status: error | Detail: 790 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T01:49Z [cousin: qwen-context-absorber] Status: error | Detail: 798 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T01:53Z [cousin: qwen-context-absorber] Status: error | Detail: 798 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T02:20Z [cousin: qwen-context-absorber] Status: error | Detail: 806 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T02:23Z [cousin: qwen-context-absorber] Status: error | Detail: 806 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T02:50Z [cousin: qwen-context-absorber] Status: error | Detail: 814 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T02:54Z [cousin: qwen-context-absorber] Status: error | Detail: 814 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T03:21Z [cousin: qwen-context-absorber] Status: error | Detail: 822 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T03:24Z [cousin: qwen-context-absorber] Status: error | Detail: 822 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T03:51Z [cousin: qwen-context-absorber] Status: error | Detail: 830 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T03:55Z [cousin: qwen-context-absorber] Status: error | Detail: 831 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T04:22Z [cousin: qwen-context-absorber] Status: error | Detail: 838 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T04:25Z [cousin: qwen-context-absorber] Status: error | Detail: 840 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T04:53Z [cousin: qwen-context-absorber] Status: error | Detail: 846 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T04:56Z [cousin: qwen-context-absorber] Status: error | Detail: 847 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T05:23Z [cousin: qwen-context-absorber] Status: error | Detail: 854 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T05:27Z [cousin: qwen-context-absorber] Status: error | Detail: 856 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T05:54Z [cousin: qwen-context-absorber] Status: error | Detail: 862 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T05:57Z [cousin: qwen-context-absorber] Status: error | Detail: 863 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T06:24Z [cousin: qwen-context-absorber] Status: error | Detail: 871 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T06:28Z [cousin: qwen-context-absorber] Status: error | Detail: 872 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T06:55Z [cousin: qwen-context-absorber] Status: error | Detail: 880 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T06:58Z [cousin: qwen-context-absorber] Status: error | Detail: 880 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T07:26Z [cousin: qwen-context-absorber] Status: error | Detail: 888 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T07:30Z [cousin: qwen-context-absorber] Status: error | Detail: 889 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T07:57Z [cousin: qwen-context-absorber] Status: error | Detail: 895 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T08:00Z [cousin: qwen-context-absorber] Status: error | Detail: 896 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T08:28Z [cousin: qwen-context-absorber] Status: error | Detail: 904 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T08:31Z [cousin: qwen-context-absorber] Status: error | Detail: 905 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T08:58Z [cousin: qwen-context-absorber] Status: error | Detail: 911 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T09:02Z [cousin: qwen-context-absorber] Status: error | Detail: 912 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T09:29Z [cousin: qwen-context-absorber] Status: error | Detail: 920 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T09:32Z [cousin: qwen-context-absorber] Status: error | Detail: 921 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T09:59Z [cousin: qwen-context-absorber] Status: error | Detail: 927 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T10:03Z [cousin: qwen-context-absorber] Status: error | Detail: 928 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T10:30Z [cousin: qwen-context-absorber] Status: error | Detail: 937 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T10:33Z [cousin: qwen-context-absorber] Status: error | Detail: 937 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T11:00Z [cousin: qwen-context-absorber] Status: error | Detail: 944 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T11:04Z [cousin: qwen-context-absorber] Status: error | Detail: 944 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T11:31Z [cousin: qwen-context-absorber] Status: error | Detail: 953 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T11:35Z [cousin: qwen-context-absorber] Status: error | Detail: 953 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T12:02Z [cousin: qwen-context-absorber] Status: error | Detail: 960 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T12:05Z [cousin: qwen-context-absorber] Status: error | Detail: 961 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T12:32Z [cousin: qwen-context-absorber] Status: error | Detail: 969 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T12:36Z [cousin: qwen-context-absorber] Status: error | Detail: 970 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T13:03Z [cousin: qwen-context-absorber] Status: error | Detail: 976 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T13:06Z [cousin: qwen-context-absorber] Status: error | Detail: 978 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T13:33Z [cousin: qwen-context-absorber] Status: error | Detail: 985 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T13:37Z [cousin: qwen-context-absorber] Status: error | Detail: 986 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T14:04Z [cousin: qwen-context-absorber] Status: error | Detail: 992 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T14:08Z [cousin: qwen-context-absorber] Status: error | Detail: 994 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T14:35Z [cousin: qwen-context-absorber] Status: error | Detail: 1002 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T14:38Z [cousin: qwen-context-absorber] Status: error | Detail: 1002 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T15:05Z [cousin: qwen-context-absorber] Status: error | Detail: 1009 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T15:09Z [cousin: qwen-context-absorber] Status: error | Detail: 1010 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T15:36Z [cousin: qwen-context-absorber] Status: error | Detail: 1018 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T15:40Z [cousin: qwen-context-absorber] Status: error | Detail: 1018 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T16:07Z [cousin: qwen-context-absorber] Status: error | Detail: 1026 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T16:10Z [cousin: qwen-context-absorber] Status: error | Detail: 1027 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T16:37Z [cousin: qwen-context-absorber] Status: error | Detail: 1034 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T16:41Z [cousin: qwen-context-absorber] Status: error | Detail: 1035 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T17:08Z [cousin: qwen-context-absorber] Status: error | Detail: 1042 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T17:11Z [cousin: qwen-context-absorber] Status: error | Detail: 1044 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T17:39Z [cousin: qwen-context-absorber] Status: error | Detail: 1050 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T17:42Z [cousin: qwen-context-absorber] Status: error | Detail: 1051 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T18:09Z [cousin: qwen-context-absorber] Status: error | Detail: 1058 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T18:13Z [cousin: qwen-context-absorber] Status: error | Detail: 1060 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T18:40Z [cousin: qwen-context-absorber] Status: error | Detail: 1067 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T18:43Z [cousin: qwen-context-absorber] Status: error | Detail: 1067 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T19:11Z [cousin: qwen-context-absorber] Status: error | Detail: 1075 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T19:14Z [cousin: qwen-context-absorber] Status: error | Detail: 1076 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T19:41Z [cousin: qwen-context-absorber] Status: error | Detail: 1083 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T19:45Z [cousin: qwen-context-absorber] Status: error | Detail: 1084 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T20:12Z [cousin: qwen-context-absorber] Status: error | Detail: 1092 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T20:15Z [cousin: qwen-context-absorber] Status: error | Detail: 1093 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T20:43Z [cousin: qwen-context-absorber] Status: error | Detail: 1099 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T20:46Z [cousin: qwen-context-absorber] Status: error | Detail: 1101 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T21:13Z [cousin: qwen-context-absorber] Status: error | Detail: 1108 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T21:17Z [cousin: qwen-context-absorber] Status: error | Detail: 1109 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T21:44Z [cousin: qwen-context-absorber] Status: error | Detail: 1115 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T21:48Z [cousin: qwen-context-absorber] Status: error | Detail: 1117 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T22:15Z [cousin: qwen-context-absorber] Status: error | Detail: 1124 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T22:18Z [cousin: qwen-context-absorber] Status: error | Detail: 1125 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T22:45Z [cousin: qwen-context-absorber] Status: error | Detail: 1132 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T22:49Z [cousin: qwen-context-absorber] Status: error | Detail: 1133 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T23:16Z [cousin: qwen-context-absorber] Status: error | Detail: 1141 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T23:20Z [cousin: qwen-context-absorber] Status: error | Detail: 1141 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T23:47Z [cousin: qwen-context-absorber] Status: error | Detail: 1149 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-22T23:50Z [cousin: qwen-context-absorber] Status: error | Detail: 1150 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T00:18Z [cousin: qwen-context-absorber] Status: error | Detail: 1157 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T00:21Z [cousin: qwen-context-absorber] Status: error | Detail: 1158 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T00:48Z [cousin: qwen-context-absorber] Status: error | Detail: 1165 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T00:52Z [cousin: qwen-context-absorber] Status: error | Detail: 1166 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T01:19Z [cousin: qwen-context-absorber] Status: error | Detail: 1173 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T01:23Z [cousin: qwen-context-absorber] Status: error | Detail: 1174 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T01:50Z [cousin: qwen-context-absorber] Status: error | Detail: 1182 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T01:53Z [cousin: qwen-context-absorber] Status: error | Detail: 1182 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T02:21Z [cousin: qwen-context-absorber] Status: error | Detail: 1190 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T02:24Z [cousin: qwen-context-absorber] Status: error | Detail: 1190 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T02:51Z [cousin: qwen-context-absorber] Status: error | Detail: 1198 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T02:55Z [cousin: qwen-context-absorber] Status: error | Detail: 1199 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T03:22Z [cousin: qwen-context-absorber] Status: error | Detail: 1206 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T03:26Z [cousin: qwen-context-absorber] Status: error | Detail: 1208 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T03:53Z [cousin: qwen-context-absorber] Status: error | Detail: 1214 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T03:56Z [cousin: qwen-context-absorber] Status: error | Detail: 1215 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T04:24Z [cousin: qwen-context-absorber] Status: error | Detail: 1222 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T04:27Z [cousin: qwen-context-absorber] Status: error | Detail: 1224 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T04:54Z [cousin: qwen-context-absorber] Status: error | Detail: 1230 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T04:58Z [cousin: qwen-context-absorber] Status: error | Detail: 1231 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T05:25Z [cousin: qwen-context-absorber] Status: error | Detail: 1239 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T05:29Z [cousin: qwen-context-absorber] Status: error | Detail: 1240 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T05:56Z [cousin: qwen-context-absorber] Status: error | Detail: 1247 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T06:00Z [cousin: qwen-context-absorber] Status: error | Detail: 1247 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T06:27Z [cousin: qwen-context-absorber] Status: error | Detail: 1256 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T06:31Z [cousin: qwen-context-absorber] Status: error | Detail: 1257 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T06:58Z [cousin: qwen-context-absorber] Status: error | Detail: 1263 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T07:01Z [cousin: qwen-context-absorber] Status: error | Detail: 1264 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T07:28Z [cousin: qwen-context-absorber] Status: error | Detail: 1272 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T07:32Z [cousin: qwen-context-absorber] Status: error | Detail: 1273 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T07:59Z [cousin: qwen-context-absorber] Status: error | Detail: 1279 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T08:03Z [cousin: qwen-context-absorber] Status: error | Detail: 1280 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T08:30Z [cousin: qwen-context-absorber] Status: error | Detail: 1289 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T08:34Z [cousin: qwen-context-absorber] Status: error | Detail: 1289 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T09:01Z [cousin: qwen-context-absorber] Status: error | Detail: 1296 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T09:05Z [cousin: qwen-context-absorber] Status: error | Detail: 1296 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T09:32Z [cousin: qwen-context-absorber] Status: error | Detail: 1305 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T09:35Z [cousin: qwen-context-absorber] Status: error | Detail: 1306 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T10:02Z [cousin: qwen-context-absorber] Status: error | Detail: 1312 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T10:06Z [cousin: qwen-context-absorber] Status: error | Detail: 1314 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T10:33Z [cousin: qwen-context-absorber] Status: error | Detail: 1321 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T10:37Z [cousin: qwen-context-absorber] Status: error | Detail: 1322 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T11:04Z [cousin: qwen-context-absorber] Status: error | Detail: 1328 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T11:08Z [cousin: qwen-context-absorber] Status: error | Detail: 1330 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T11:35Z [cousin: qwen-context-absorber] Status: error | Detail: 1338 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T11:39Z [cousin: qwen-context-absorber] Status: error | Detail: 1338 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T12:06Z [cousin: qwen-context-absorber] Status: error | Detail: 1346 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T12:10Z [cousin: qwen-context-absorber] Status: error | Detail: 1346 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T12:37Z [cousin: qwen-context-absorber] Status: error | Detail: 1354 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T12:40Z [cousin: qwen-context-absorber] Status: error | Detail: 1355 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T13:08Z [cousin: qwen-context-absorber] Status: error | Detail: 1362 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T13:11Z [cousin: qwen-context-absorber] Status: error | Detail: 1364 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T13:38Z [cousin: qwen-context-absorber] Status: error | Detail: 1370 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T13:42Z [cousin: qwen-context-absorber] Status: error | Detail: 1371 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T14:09Z [cousin: qwen-context-absorber] Status: error | Detail: 1378 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T14:13Z [cousin: qwen-context-absorber] Status: error | Detail: 1380 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T14:40Z [cousin: qwen-context-absorber] Status: error | Detail: 1387 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T14:44Z [cousin: qwen-context-absorber] Status: error | Detail: 1387 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T15:11Z [cousin: qwen-context-absorber] Status: error | Detail: 1395 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T15:15Z [cousin: qwen-context-absorber] Status: error | Detail: 1396 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T15:42Z [cousin: qwen-context-absorber] Status: error | Detail: 1403 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T15:46Z [cousin: qwen-context-absorber] Status: error | Detail: 1405 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T16:13Z [cousin: qwen-context-absorber] Status: error | Detail: 1412 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T16:17Z [cousin: qwen-context-absorber] Status: error | Detail: 1413 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T16:44Z [cousin: qwen-context-absorber] Status: error | Detail: 1419 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T16:48Z [cousin: qwen-context-absorber] Status: error | Detail: 1421 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T17:15Z [cousin: qwen-context-absorber] Status: error | Detail: 1428 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T17:18Z [cousin: qwen-context-absorber] Status: error | Detail: 1429 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T17:45Z [cousin: qwen-context-absorber] Status: error | Detail: 1436 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T17:49Z [cousin: qwen-context-absorber] Status: error | Detail: 1437 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T18:16Z [cousin: qwen-context-absorber] Status: error | Detail: 1445 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T18:20Z [cousin: qwen-context-absorber] Status: error | Detail: 1446 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T19:02Z [cousin: qwen-context-absorber] Status: error | Detail: 1451 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T19:06Z [cousin: qwen-context-absorber] Status: error | Detail: 1453 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T19:33Z [cousin: qwen-context-absorber] Status: error | Detail: 1460 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T19:37Z [cousin: qwen-context-absorber] Status: error | Detail: 1461 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T20:04Z [cousin: qwen-context-absorber] Status: error | Detail: 1467 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T20:08Z [cousin: qwen-context-absorber] Status: error | Detail: 1469 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T20:35Z [cousin: qwen-context-absorber] Status: error | Detail: 1477 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T20:39Z [cousin: qwen-context-absorber] Status: error | Detail: 1477 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T21:06Z [cousin: qwen-context-absorber] Status: error | Detail: 1485 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T21:10Z [cousin: qwen-context-absorber] Status: error | Detail: 1486 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T21:37Z [cousin: qwen-context-absorber] Status: error | Detail: 1493 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T21:41Z [cousin: qwen-context-absorber] Status: error | Detail: 1494 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T22:08Z [cousin: qwen-context-absorber] Status: error | Detail: 1501 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T22:12Z [cousin: qwen-context-absorber] Status: error | Detail: 1503 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T22:39Z [cousin: qwen-context-absorber] Status: error | Detail: 1509 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T22:43Z [cousin: qwen-context-absorber] Status: error | Detail: 1510 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T23:10Z [cousin: qwen-context-absorber] Status: error | Detail: 1518 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T23:14Z [cousin: qwen-context-absorber] Status: error | Detail: 1519 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T23:41Z [cousin: qwen-context-absorber] Status: error | Detail: 1526 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-23T23:45Z [cousin: qwen-context-absorber] Status: error | Detail: 1526 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T00:12Z [cousin: qwen-context-absorber] Status: error | Detail: 1535 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T00:16Z [cousin: qwen-context-absorber] Status: error | Detail: 1536 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T00:43Z [cousin: qwen-context-absorber] Status: error | Detail: 1542 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T00:47Z [cousin: qwen-context-absorber] Status: error | Detail: 1544 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T01:14Z [cousin: qwen-context-absorber] Status: error | Detail: 1551 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T01:18Z [cousin: qwen-context-absorber] Status: error | Detail: 1552 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T01:45Z [cousin: qwen-context-absorber] Status: error | Detail: 1558 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T01:49Z [cousin: qwen-context-absorber] Status: error | Detail: 1560 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T02:16Z [cousin: qwen-context-absorber] Status: error | Detail: 1568 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T02:20Z [cousin: qwen-context-absorber] Status: error | Detail: 1568 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T02:47Z [cousin: qwen-context-absorber] Status: error | Detail: 1576 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T02:51Z [cousin: qwen-context-absorber] Status: error | Detail: 1577 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T03:18Z [cousin: qwen-context-absorber] Status: error | Detail: 1584 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T03:22Z [cousin: qwen-context-absorber] Status: error | Detail: 1585 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T03:49Z [cousin: qwen-context-absorber] Status: error | Detail: 1592 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T03:53Z [cousin: qwen-context-absorber] Status: error | Detail: 1593 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T04:20Z [cousin: qwen-context-absorber] Status: error | Detail: 1600 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T04:24Z [cousin: qwen-context-absorber] Status: error | Detail: 1601 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T04:51Z [cousin: qwen-context-absorber] Status: error | Detail: 1609 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T04:55Z [cousin: qwen-context-absorber] Status: error | Detail: 1609 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T05:22Z [cousin: qwen-context-absorber] Status: error | Detail: 1617 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T05:26Z [cousin: qwen-context-absorber] Status: error | Detail: 1619 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T05:53Z [cousin: qwen-context-absorber] Status: error | Detail: 1625 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T05:57Z [cousin: qwen-context-absorber] Status: error | Detail: 1626 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T06:24Z [cousin: qwen-context-absorber] Status: error | Detail: 1633 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T06:28Z [cousin: qwen-context-absorber] Status: error | Detail: 1635 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T06:55Z [cousin: qwen-context-absorber] Status: error | Detail: 1642 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T06:59Z [cousin: qwen-context-absorber] Status: error | Detail: 1642 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T07:26Z [cousin: qwen-context-absorber] Status: error | Detail: 1651 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T07:30Z [cousin: qwen-context-absorber] Status: error | Detail: 1652 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T07:57Z [cousin: qwen-context-absorber] Status: error | Detail: 1658 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T08:01Z [cousin: qwen-context-absorber] Status: error | Detail: 1659 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T08:28Z [cousin: qwen-context-absorber] Status: error | Detail: 1667 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T08:32Z [cousin: qwen-context-absorber] Status: error | Detail: 1669 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T09:00Z [cousin: qwen-context-absorber] Status: error | Detail: 1675 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T09:03Z [cousin: qwen-context-absorber] Status: error | Detail: 1676 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T09:31Z [cousin: qwen-context-absorber] Status: error | Detail: 1685 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T09:34Z [cousin: qwen-context-absorber] Status: error | Detail: 1685 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T10:02Z [cousin: qwen-context-absorber] Status: error | Detail: 1692 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T10:06Z [cousin: qwen-context-absorber] Status: error | Detail: 1693 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T10:33Z [cousin: qwen-context-absorber] Status: error | Detail: 1701 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T10:37Z [cousin: qwen-context-absorber] Status: error | Detail: 1702 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T11:04Z [cousin: qwen-context-absorber] Status: error | Detail: 1708 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T11:08Z [cousin: qwen-context-absorber] Status: error | Detail: 1710 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T11:35Z [cousin: qwen-context-absorber] Status: error | Detail: 1717 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T11:39Z [cousin: qwen-context-absorber] Status: error | Detail: 1718 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T12:06Z [cousin: qwen-context-absorber] Status: error | Detail: 1726 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T12:10Z [cousin: qwen-context-absorber] Status: error | Detail: 1726 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T12:37Z [cousin: qwen-context-absorber] Status: error | Detail: 1734 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T12:41Z [cousin: qwen-context-absorber] Status: error | Detail: 1735 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T13:08Z [cousin: qwen-context-absorber] Status: error | Detail: 1742 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T13:12Z [cousin: qwen-context-absorber] Status: error | Detail: 1744 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T13:39Z [cousin: qwen-context-absorber] Status: error | Detail: 1750 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T13:43Z [cousin: qwen-context-absorber] Status: error | Detail: 1751 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T14:10Z [cousin: qwen-context-absorber] Status: error | Detail: 1759 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T14:14Z [cousin: qwen-context-absorber] Status: error | Detail: 1760 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T14:42Z [cousin: qwen-context-absorber] Status: error | Detail: 1767 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T14:45Z [cousin: qwen-context-absorber] Status: error | Detail: 1768 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T15:13Z [cousin: qwen-context-absorber] Status: error | Detail: 1776 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T15:17Z [cousin: qwen-context-absorber] Status: error | Detail: 1777 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T15:44Z [cousin: qwen-context-absorber] Status: error | Detail: 1783 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T15:48Z [cousin: qwen-context-absorber] Status: error | Detail: 1785 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T16:15Z [cousin: qwen-context-absorber] Status: error | Detail: 1792 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T16:19Z [cousin: qwen-context-absorber] Status: error | Detail: 1793 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T16:46Z [cousin: qwen-context-absorber] Status: error | Detail: 1801 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T16:50Z [cousin: qwen-context-absorber] Status: error | Detail: 1801 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T17:17Z [cousin: qwen-context-absorber] Status: error | Detail: 1809 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T17:21Z [cousin: qwen-context-absorber] Status: error | Detail: 1810 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T17:48Z [cousin: qwen-context-absorber] Status: error | Detail: 1817 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T17:52Z [cousin: qwen-context-absorber] Status: error | Detail: 1818 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T18:20Z [cousin: qwen-context-absorber] Status: error | Detail: 1825 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T18:24Z [cousin: qwen-context-absorber] Status: error | Detail: 1826 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T18:51Z [cousin: qwen-context-absorber] Status: error | Detail: 1834 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T18:55Z [cousin: qwen-context-absorber] Status: error | Detail: 1834 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T19:22Z [cousin: qwen-context-absorber] Status: error | Detail: 1841 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T19:26Z [cousin: qwen-context-absorber] Status: error | Detail: 1843 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T19:53Z [cousin: qwen-context-absorber] Status: error | Detail: 1849 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T19:57Z [cousin: qwen-context-absorber] Status: error | Detail: 1850 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T20:25Z [cousin: qwen-context-absorber] Status: error | Detail: 1857 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T20:29Z [cousin: qwen-context-absorber] Status: error | Detail: 1859 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T20:56Z [cousin: qwen-context-absorber] Status: error | Detail: 1866 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T21:00Z [cousin: qwen-context-absorber] Status: error | Detail: 1866 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T21:27Z [cousin: qwen-context-absorber] Status: error | Detail: 1875 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T21:31Z [cousin: qwen-context-absorber] Status: error | Detail: 1876 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T21:58Z [cousin: qwen-context-absorber] Status: error | Detail: 1882 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T22:02Z [cousin: qwen-context-absorber] Status: error | Detail: 1883 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T22:29Z [cousin: qwen-context-absorber] Status: error | Detail: 1891 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T22:33Z [cousin: qwen-context-absorber] Status: error | Detail: 1892 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T23:01Z [cousin: qwen-context-absorber] Status: error | Detail: 1899 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T23:05Z [cousin: qwen-context-absorber] Status: error | Detail: 1899 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T23:32Z [cousin: qwen-context-absorber] Status: error | Detail: 1908 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-24T23:36Z [cousin: qwen-context-absorber] Status: error | Detail: 1909 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T00:03Z [cousin: qwen-context-absorber] Status: error | Detail: 1915 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T00:07Z [cousin: qwen-context-absorber] Status: error | Detail: 1917 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T00:34Z [cousin: qwen-context-absorber] Status: error | Detail: 1924 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T00:38Z [cousin: qwen-context-absorber] Status: error | Detail: 1925 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T01:06Z [cousin: qwen-context-absorber] Status: error | Detail: 1932 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T01:10Z [cousin: qwen-context-absorber] Status: error | Detail: 1933 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T01:37Z [cousin: qwen-context-absorber] Status: error | Detail: 1941 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T01:41Z [cousin: qwen-context-absorber] Status: error | Detail: 1942 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T02:08Z [cousin: qwen-context-absorber] Status: error | Detail: 1949 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T02:12Z [cousin: qwen-context-absorber] Status: error | Detail: 1951 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T02:39Z [cousin: qwen-context-absorber] Status: error | Detail: 1957 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T02:43Z [cousin: qwen-context-absorber] Status: error | Detail: 1958 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T03:11Z [cousin: qwen-context-absorber] Status: error | Detail: 1966 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T03:15Z [cousin: qwen-context-absorber] Status: error | Detail: 1967 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T03:42Z [cousin: qwen-context-absorber] Status: error | Detail: 1974 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T03:46Z [cousin: qwen-context-absorber] Status: error | Detail: 1976 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T04:13Z [cousin: qwen-context-absorber] Status: error | Detail: 1983 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T04:17Z [cousin: qwen-context-absorber] Status: error | Detail: 1984 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T04:45Z [cousin: qwen-context-absorber] Status: error | Detail: 1990 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T04:49Z [cousin: qwen-context-absorber] Status: error | Detail: 1992 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T05:16Z [cousin: qwen-context-absorber] Status: error | Detail: 2000 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T05:20Z [cousin: qwen-context-absorber] Status: error | Detail: 2001 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T05:47Z [cousin: qwen-context-absorber] Status: error | Detail: 2008 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T05:52Z [cousin: qwen-context-absorber] Status: error | Detail: 2009 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T06:19Z [cousin: qwen-context-absorber] Status: error | Detail: 2016 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T06:23Z [cousin: qwen-context-absorber] Status: error | Detail: 2017 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T06:50Z [cousin: qwen-context-absorber] Status: error | Detail: 2024 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T06:54Z [cousin: qwen-context-absorber] Status: error | Detail: 2025 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T07:21Z [cousin: qwen-context-absorber] Status: error | Detail: 2033 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T07:26Z [cousin: qwen-context-absorber] Status: error | Detail: 2034 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T07:53Z [cousin: qwen-context-absorber] Status: error | Detail: 2041 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T07:57Z [cousin: qwen-context-absorber] Status: error | Detail: 2042 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T08:24Z [cousin: qwen-context-absorber] Status: error | Detail: 2049 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T08:28Z [cousin: qwen-context-absorber] Status: error | Detail: 2051 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T08:55Z [cousin: qwen-context-absorber] Status: error | Detail: 2058 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T09:00Z [cousin: qwen-context-absorber] Status: error | Detail: 2058 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T09:27Z [cousin: qwen-context-absorber] Status: error | Detail: 2067 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T09:31Z [cousin: qwen-context-absorber] Status: error | Detail: 2068 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T09:58Z [cousin: qwen-context-absorber] Status: error | Detail: 2074 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T10:02Z [cousin: qwen-context-absorber] Status: error | Detail: 2075 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T10:29Z [cousin: qwen-context-absorber] Status: error | Detail: 2083 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T10:34Z [cousin: qwen-context-absorber] Status: error | Detail: 2084 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T11:01Z [cousin: qwen-context-absorber] Status: error | Detail: 2091 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T11:05Z [cousin: qwen-context-absorber] Status: error | Detail: 2091 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T11:32Z [cousin: qwen-context-absorber] Status: error | Detail: 2100 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T11:36Z [cousin: qwen-context-absorber] Status: error | Detail: 2101 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T12:03Z [cousin: qwen-context-absorber] Status: error | Detail: 2107 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T12:08Z [cousin: qwen-context-absorber] Status: error | Detail: 2109 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T12:35Z [cousin: qwen-context-absorber] Status: error | Detail: 2116 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T12:39Z [cousin: qwen-context-absorber] Status: error | Detail: 2117 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T13:06Z [cousin: qwen-context-absorber] Status: error | Detail: 2125 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T13:10Z [cousin: qwen-context-absorber] Status: error | Detail: 2126 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T13:37Z [cousin: qwen-context-absorber] Status: error | Detail: 2133 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T13:42Z [cousin: qwen-context-absorber] Status: error | Detail: 2134 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T14:09Z [cousin: qwen-context-absorber] Status: error | Detail: 2141 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T14:13Z [cousin: qwen-context-absorber] Status: error | Detail: 2143 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T14:40Z [cousin: qwen-context-absorber] Status: error | Detail: 2149 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T14:44Z [cousin: qwen-context-absorber] Status: error | Detail: 2150 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T15:12Z [cousin: qwen-context-absorber] Status: error | Detail: 2158 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T15:16Z [cousin: qwen-context-absorber] Status: error | Detail: 2160 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T15:43Z [cousin: qwen-context-absorber] Status: error | Detail: 2166 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T15:47Z [cousin: qwen-context-absorber] Status: error | Detail: 2168 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T16:14Z [cousin: qwen-context-absorber] Status: error | Detail: 2175 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T16:19Z [cousin: qwen-context-absorber] Status: error | Detail: 2176 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T16:46Z [cousin: qwen-context-absorber] Status: error | Detail: 2183 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T16:50Z [cousin: qwen-context-absorber] Status: error | Detail: 2184 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T17:17Z [cousin: qwen-context-absorber] Status: error | Detail: 2192 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T17:21Z [cousin: qwen-context-absorber] Status: error | Detail: 2193 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T17:48Z [cousin: qwen-context-absorber] Status: error | Detail: 2200 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T17:53Z [cousin: qwen-context-absorber] Status: error | Detail: 2201 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T18:20Z [cousin: qwen-context-absorber] Status: error | Detail: 2208 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T18:24Z [cousin: qwen-context-absorber] Status: error | Detail: 2209 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T18:51Z [cousin: qwen-context-absorber] Status: error | Detail: 2217 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T18:56Z [cousin: qwen-context-absorber] Status: error | Detail: 2218 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T19:23Z [cousin: qwen-context-absorber] Status: error | Detail: 2225 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T19:27Z [cousin: qwen-context-absorber] Status: error | Detail: 2227 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T19:54Z [cousin: qwen-context-absorber] Status: error | Detail: 2233 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T19:58Z [cousin: qwen-context-absorber] Status: error | Detail: 2234 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T20:26Z [cousin: qwen-context-absorber] Status: error | Detail: 2242 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T20:30Z [cousin: qwen-context-absorber] Status: error | Detail: 2243 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T20:57Z [cousin: qwen-context-absorber] Status: error | Detail: 2250 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T21:01Z [cousin: qwen-context-absorber] Status: error | Detail: 2251 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T21:29Z [cousin: qwen-context-absorber] Status: error | Detail: 2259 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T21:33Z [cousin: qwen-context-absorber] Status: error | Detail: 2261 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T22:00Z [cousin: qwen-context-absorber] Status: error | Detail: 2266 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T22:04Z [cousin: qwen-context-absorber] Status: error | Detail: 2267 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T22:31Z [cousin: qwen-context-absorber] Status: error | Detail: 2276 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T22:36Z [cousin: qwen-context-absorber] Status: error | Detail: 2277 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T23:03Z [cousin: qwen-context-absorber] Status: error | Detail: 2283 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T23:07Z [cousin: qwen-context-absorber] Status: error | Detail: 2285 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T23:34Z [cousin: qwen-context-absorber] Status: error | Detail: 2293 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-25T23:39Z [cousin: qwen-context-absorber] Status: error | Detail: 2293 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T00:06Z [cousin: qwen-context-absorber] Status: error | Detail: 2300 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T00:10Z [cousin: qwen-context-absorber] Status: error | Detail: 2301 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T00:37Z [cousin: qwen-context-absorber] Status: error | Detail: 2309 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T00:42Z [cousin: qwen-context-absorber] Status: error | Detail: 2310 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T01:09Z [cousin: qwen-context-absorber] Status: error | Detail: 2317 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T01:13Z [cousin: qwen-context-absorber] Status: error | Detail: 2319 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T01:40Z [cousin: qwen-context-absorber] Status: error | Detail: 2325 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T01:45Z [cousin: qwen-context-absorber] Status: error | Detail: 2326 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T02:12Z [cousin: qwen-context-absorber] Status: error | Detail: 2335 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T02:16Z [cousin: qwen-context-absorber] Status: error | Detail: 2336 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T02:43Z [cousin: qwen-context-absorber] Status: error | Detail: 2342 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T02:48Z [cousin: qwen-context-absorber] Status: error | Detail: 2344 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T03:15Z [cousin: qwen-context-absorber] Status: error | Detail: 2351 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T03:19Z [cousin: qwen-context-absorber] Status: error | Detail: 2352 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T03:46Z [cousin: qwen-context-absorber] Status: error | Detail: 2360 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T03:51Z [cousin: qwen-context-absorber] Status: error | Detail: 2361 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T04:18Z [cousin: qwen-context-absorber] Status: error | Detail: 2368 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T04:22Z [cousin: qwen-context-absorber] Status: error | Detail: 2369 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T04:49Z [cousin: qwen-context-absorber] Status: error | Detail: 2376 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T04:54Z [cousin: qwen-context-absorber] Status: error | Detail: 2377 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T05:21Z [cousin: qwen-context-absorber] Status: error | Detail: 2385 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T05:25Z [cousin: qwen-context-absorber] Status: error | Detail: 2385 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T05:53Z [cousin: qwen-context-absorber] Status: error | Detail: 2393 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T05:57Z [cousin: qwen-context-absorber] Status: error | Detail: 2394 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T06:24Z [cousin: qwen-context-absorber] Status: error | Detail: 2401 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T06:28Z [cousin: qwen-context-absorber] Status: error | Detail: 2403 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T06:56Z [cousin: qwen-context-absorber] Status: error | Detail: 2410 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T07:00Z [cousin: qwen-context-absorber] Status: error | Detail: 2410 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T07:27Z [cousin: qwen-context-absorber] Status: error | Detail: 2419 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T07:32Z [cousin: qwen-context-absorber] Status: error | Detail: 2420 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T07:59Z [cousin: qwen-context-absorber] Status: error | Detail: 2426 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T08:03Z [cousin: qwen-context-absorber] Status: error | Detail: 2427 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T08:31Z [cousin: qwen-context-absorber] Status: error | Detail: 2436 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T08:35Z [cousin: qwen-context-absorber] Status: error | Detail: 2436 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T09:02Z [cousin: qwen-context-absorber] Status: error | Detail: 2443 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T09:06Z [cousin: qwen-context-absorber] Status: error | Detail: 2445 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T09:34Z [cousin: qwen-context-absorber] Status: error | Detail: 2452 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T09:38Z [cousin: qwen-context-absorber] Status: error | Detail: 2453 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T10:05Z [cousin: qwen-context-absorber] Status: error | Detail: 2459 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T10:10Z [cousin: qwen-context-absorber] Status: error | Detail: 2461 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T10:37Z [cousin: qwen-context-absorber] Status: error | Detail: 2469 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T10:41Z [cousin: qwen-context-absorber] Status: error | Detail: 2470 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T11:09Z [cousin: qwen-context-absorber] Status: error | Detail: 2477 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T11:13Z [cousin: qwen-context-absorber] Status: error | Detail: 2479 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T11:40Z [cousin: qwen-context-absorber] Status: error | Detail: 2485 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T11:44Z [cousin: qwen-context-absorber] Status: error | Detail: 2486 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T12:12Z [cousin: qwen-context-absorber] Status: error | Detail: 2494 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T12:16Z [cousin: qwen-context-absorber] Status: error | Detail: 2496 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T12:43Z [cousin: qwen-context-absorber] Status: error | Detail: 2502 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T12:48Z [cousin: qwen-context-absorber] Status: error | Detail: 2504 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T13:15Z [cousin: qwen-context-absorber] Status: error | Detail: 2511 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T13:19Z [cousin: qwen-context-absorber] Status: error | Detail: 2512 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T13:46Z [cousin: qwen-context-absorber] Status: error | Detail: 2520 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T13:51Z [cousin: qwen-context-absorber] Status: error | Detail: 2521 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T14:18Z [cousin: qwen-context-absorber] Status: error | Detail: 2528 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T14:22Z [cousin: qwen-context-absorber] Status: error | Detail: 2529 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T14:50Z [cousin: qwen-context-absorber] Status: error | Detail: 2536 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T14:54Z [cousin: qwen-context-absorber] Status: error | Detail: 2537 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T15:21Z [cousin: qwen-context-absorber] Status: error | Detail: 2545 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T15:26Z [cousin: qwen-context-absorber] Status: error | Detail: 2546 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T15:53Z [cousin: qwen-context-absorber] Status: error | Detail: 2553 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T15:57Z [cousin: qwen-context-absorber] Status: error | Detail: 2554 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T16:25Z [cousin: qwen-context-absorber] Status: error | Detail: 2561 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T16:29Z [cousin: qwen-context-absorber] Status: error | Detail: 2563 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T16:56Z [cousin: qwen-context-absorber] Status: error | Detail: 2570 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T17:01Z [cousin: qwen-context-absorber] Status: error | Detail: 2570 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T17:28Z [cousin: qwen-context-absorber] Status: error | Detail: 2579 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T17:32Z [cousin: qwen-context-absorber] Status: error | Detail: 2580 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T17:59Z [cousin: qwen-context-absorber] Status: error | Detail: 2586 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T18:04Z [cousin: qwen-context-absorber] Status: error | Detail: 2587 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T18:31Z [cousin: qwen-context-absorber] Status: error | Detail: 2596 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T18:36Z [cousin: qwen-context-absorber] Status: error | Detail: 2597 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T19:03Z [cousin: qwen-context-absorber] Status: error | Detail: 2604 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T19:08Z [cousin: qwen-context-absorber] Status: error | Detail: 2606 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T19:35Z [cousin: qwen-context-absorber] Status: error | Detail: 2613 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T19:39Z [cousin: qwen-context-absorber] Status: error | Detail: 2614 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T20:06Z [cousin: qwen-context-absorber] Status: error | Detail: 2621 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T20:11Z [cousin: qwen-context-absorber] Status: error | Detail: 2623 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T20:38Z [cousin: qwen-context-absorber] Status: error | Detail: 2630 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T20:43Z [cousin: qwen-context-absorber] Status: error | Detail: 2631 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T21:10Z [cousin: qwen-context-absorber] Status: error | Detail: 2638 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T21:15Z [cousin: qwen-context-absorber] Status: error | Detail: 2639 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T21:42Z [cousin: qwen-context-absorber] Status: error | Detail: 2639 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T21:46Z [cousin: qwen-context-absorber] Status: error | Detail: 2639 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T22:23Z [cousin: qwen-context-absorber] Status: error | Detail: 2642 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T22:27Z [cousin: qwen-context-absorber] Status: error | Detail: 2644 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T22:54Z [cousin: qwen-context-absorber] Status: error | Detail: 2650 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T22:59Z [cousin: qwen-context-absorber] Status: error | Detail: 2651 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T23:26Z [cousin: qwen-context-absorber] Status: error | Detail: 2659 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T23:31Z [cousin: qwen-context-absorber] Status: error | Detail: 2661 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-26T23:58Z [cousin: qwen-context-absorber] Status: error | Detail: 2667 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T00:03Z [cousin: qwen-context-absorber] Status: error | Detail: 2668 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T00:29Z [cousin: qwen-context-absorber] Status: error | Detail: 2676 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T00:34Z [cousin: qwen-context-absorber] Status: error | Detail: 2677 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T01:01Z [cousin: qwen-context-absorber] Status: error | Detail: 2684 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T01:06Z [cousin: qwen-context-absorber] Status: error | Detail: 2685 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T01:33Z [cousin: qwen-context-absorber] Status: error | Detail: 2693 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T01:38Z [cousin: qwen-context-absorber] Status: error | Detail: 2694 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T02:05Z [cousin: qwen-context-absorber] Status: error | Detail: 2700 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T02:09Z [cousin: qwen-context-absorber] Status: error | Detail: 2702 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T02:36Z [cousin: qwen-context-absorber] Status: error | Detail: 2710 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T02:41Z [cousin: qwen-context-absorber] Status: error | Detail: 2711 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T03:08Z [cousin: qwen-context-absorber] Status: error | Detail: 2718 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T03:13Z [cousin: qwen-context-absorber] Status: error | Detail: 2720 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T03:40Z [cousin: qwen-context-absorber] Status: error | Detail: 2726 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T03:45Z [cousin: qwen-context-absorber] Status: error | Detail: 2727 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T04:27Z [cousin: qwen-context-absorber] Status: error | Detail: 2736 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T04:32Z [cousin: qwen-context-absorber] Status: error | Detail: 2737 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T04:59Z [cousin: qwen-context-absorber] Status: error | Detail: 2743 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T05:04Z [cousin: qwen-context-absorber] Status: error | Detail: 2744 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T05:31Z [cousin: qwen-context-absorber] Status: error | Detail: 2752 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T05:36Z [cousin: qwen-context-absorber] Status: error | Detail: 2753 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T06:03Z [cousin: qwen-context-absorber] Status: error | Detail: 2760 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T06:08Z [cousin: qwen-context-absorber] Status: error | Detail: 2762 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T06:35Z [cousin: qwen-context-absorber] Status: error | Detail: 2769 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T06:39Z [cousin: qwen-context-absorber] Status: error | Detail: 2770 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T07:06Z [cousin: qwen-context-absorber] Status: error | Detail: 2777 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T07:11Z [cousin: qwen-context-absorber] Status: error | Detail: 2779 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-27T09:58Z [cousin: qwen-context-absorber] Status: error | Detail: 2795 Qwen call(s) failed, 0 ok. First error: HTTPError: HTTP Error 503: Service Unavailable | Ollama: up
+- 2026-06-28T02:52Z [cousin: qwen-context-absorber] Status: ollama-down | Detail: pre-flight health check failed; skipped cycle without attempting absorption | Ollama: down
+- 2026-06-28T15:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 2811 Qwen call(s) ok, 17013 turns, 10667005 chars absorbed | Ollama: up
+- 2026-06-28T16:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 117 Qwen call(s) ok, 1789 turns, 705907 chars absorbed | Ollama: up
+- 2026-06-28T17:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 658 turns, 143701 chars absorbed | Ollama: up
+- 2026-06-28T17:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 482 turns, 79288 chars absorbed | Ollama: up
+- 2026-06-28T18:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 346 turns, 66330 chars absorbed | Ollama: up
+- 2026-06-28T18:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 155 turns, 77726 chars absorbed | Ollama: up
+- 2026-06-28T19:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 48 turns, 52117 chars absorbed | Ollama: up
+- 2026-06-28T19:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 3 turns, 3140 chars absorbed | Ollama: up
+- 2026-06-28T19:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 28 turns, 22190 chars absorbed | Ollama: up
+- 2026-06-28T20:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 38 turns, 24988 chars absorbed | Ollama: up
+- 2026-06-28T20:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 28 turns, 23734 chars absorbed | Ollama: up
+- 2026-06-28T20:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 14 turns, 12674 chars absorbed | Ollama: up
+- 2026-06-28T21:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 44 turns, 31403 chars absorbed | Ollama: up
+- 2026-06-28T22:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 36 turns, 24362 chars absorbed | Ollama: up
+- 2026-06-28T22:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 22 turns, 14590 chars absorbed | Ollama: up
+- 2026-06-28T22:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 46 turns, 31580 chars absorbed | Ollama: up
+- 2026-06-28T23:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 28495 chars absorbed | Ollama: up
+- 2026-06-28T23:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 30 turns, 22249 chars absorbed | Ollama: up
+- 2026-06-28T23:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 42 turns, 26884 chars absorbed | Ollama: up
+- 2026-06-29T00:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 48 turns, 31457 chars absorbed | Ollama: up
+- 2026-06-29T00:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 28 turns, 20866 chars absorbed | Ollama: up
+- 2026-06-29T01:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 24 turns, 18388 chars absorbed | Ollama: up
+- 2026-06-29T01:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 39 turns, 31735 chars absorbed | Ollama: up
+- 2026-06-29T01:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 28612 chars absorbed | Ollama: up
+- 2026-06-29T02:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 35 turns, 25019 chars absorbed | Ollama: up
+- 2026-06-29T03:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 28623 chars absorbed | Ollama: up
+- 2026-06-29T03:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 28623 chars absorbed | Ollama: up
+- 2026-06-29T03:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 48 turns, 34342 chars absorbed | Ollama: up
+- 2026-06-29T04:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 32 turns, 24178 chars absorbed | Ollama: up
+- 2026-06-29T04:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 8 turns, 6450 chars absorbed | Ollama: up
+- 2026-06-29T04:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 38 turns, 27779 chars absorbed | Ollama: up
+- 2026-06-29T05:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 41 turns, 28931 chars absorbed | Ollama: up
+- 2026-06-29T05:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 3 turns, 3140 chars absorbed | Ollama: up
+- 2026-06-29T05:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 33 turns, 19294 chars absorbed | Ollama: up
+- 2026-06-29T06:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 39 turns, 24959 chars absorbed | Ollama: up
+- 2026-06-29T06:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 38 turns, 31705 chars absorbed | Ollama: up
+- 2026-06-29T06:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 23 turns, 20471 chars absorbed | Ollama: up
+- 2026-06-29T07:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 44 turns, 37881 chars absorbed | Ollama: up
+- 2026-06-29T07:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 65 turns, 41522 chars absorbed | Ollama: up
+- 2026-06-29T08:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 198 turns, 90760 chars absorbed | Ollama: up
+- 2026-06-29T09:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 183 turns, 60726 chars absorbed | Ollama: up
+- 2026-06-29T09:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 148 turns, 70985 chars absorbed | Ollama: up
+- 2026-06-29T10:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 26 turns, 20644 chars absorbed | Ollama: up
+- 2026-06-29T10:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 13 turns, 8154 chars absorbed | Ollama: up
+- 2026-06-29T10:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 33 turns, 26042 chars absorbed | Ollama: up
+- 2026-06-29T10:38Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 4787 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-29T11:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 38 turns, 28837 chars absorbed | Ollama: up
+- 2026-06-29T11:08Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 4795 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-29T11:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 33 turns, 24320 chars absorbed | Ollama: up
+- 2026-06-29T12:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 48 turns, 34370 chars absorbed | Ollama: up
+- 2026-06-29T12:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 32 turns, 24084 chars absorbed | Ollama: up
+- 2026-06-29T12:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 31 turns, 24076 chars absorbed | Ollama: up
+- 2026-06-29T12:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 31 turns, 24076 chars absorbed | Ollama: up
+- 2026-06-29T13:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 48 turns, 34366 chars absorbed | Ollama: up
+- 2026-06-29T13:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 43 turns, 29306 chars absorbed | Ollama: up
+- 2026-06-29T13:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 27 turns, 21010 chars absorbed | Ollama: up
+- 2026-06-29T14:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 43 turns, 26857 chars absorbed | Ollama: up
+- 2026-06-29T14:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 41 turns, 31909 chars absorbed | Ollama: up
+- 2026-06-29T14:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 19 turns, 14431 chars absorbed | Ollama: up
+- 2026-06-29T15:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 47 turns, 31362 chars absorbed | Ollama: up
+- 2026-06-29T16:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 27422 chars absorbed | Ollama: up
+- 2026-06-29T16:00Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 4873 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-29T16:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 40 turns, 31019 chars absorbed | Ollama: up
+- 2026-06-29T17:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 28 turns, 23751 chars absorbed | Ollama: up
+- 2026-06-29T17:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 24 turns, 20518 chars absorbed | Ollama: up
+- 2026-06-29T17:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 49 turns, 31545 chars absorbed | Ollama: up
+- 2026-06-29T17:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 46 turns, 28423 chars absorbed | Ollama: up
+- 2026-06-29T18:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 28562 chars absorbed | Ollama: up
+- 2026-06-29T18:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 28562 chars absorbed | Ollama: up
+- 2026-06-29T18:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 39 turns, 29497 chars absorbed | Ollama: up
+- 2026-06-29T18:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 26374 chars absorbed | Ollama: up
+- 2026-06-29T19:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 47 turns, 34187 chars absorbed | Ollama: up
+- 2026-06-29T19:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 37 turns, 28847 chars absorbed | Ollama: up
+- 2026-06-29T19:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 17 turns, 15927 chars absorbed | Ollama: up
+- 2026-06-29T20:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 40 turns, 29809 chars absorbed | Ollama: up
+- 2026-06-29T20:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 42 turns, 28998 chars absorbed | Ollama: up
+- 2026-06-29T20:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 18 turns, 11389 chars absorbed | Ollama: up
+- 2026-06-29T21:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 44 turns, 29814 chars absorbed | Ollama: up
+- 2026-06-29T21:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 34 turns, 28452 chars absorbed | Ollama: up
+- 2026-06-29T21:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 23 turns, 20490 chars absorbed | Ollama: up
+- 2026-06-29T22:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 34 turns, 24718 chars absorbed | Ollama: up
+- 2026-06-29T22:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 34 turns, 24718 chars absorbed | Ollama: up
+- 2026-06-29T23:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 32 turns, 24164 chars absorbed | Ollama: up
+- 2026-06-29T23:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 32 turns, 24164 chars absorbed | Ollama: up
+- 2026-06-29T23:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 35 turns, 23676 chars absorbed | Ollama: up
+- 2026-06-30T00:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 28568 chars absorbed | Ollama: up
+- 2026-06-30T00:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 31 turns, 25280 chars absorbed | Ollama: up
+- 2026-06-30T00:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 42 turns, 29831 chars absorbed | Ollama: up
+- 2026-06-30T01:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 42 turns, 30945 chars absorbed | Ollama: up
+- 2026-06-30T01:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 33 turns, 25382 chars absorbed | Ollama: up
+- 2026-06-30T01:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 36 turns, 31509 chars absorbed | Ollama: up
+- 2026-06-30T02:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 26412 chars absorbed | Ollama: up
+- 2026-06-30T02:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 42 turns, 32112 chars absorbed | Ollama: up
+- 2026-06-30T02:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 15 turns, 12732 chars absorbed | Ollama: up
+- 2026-06-30T03:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 26319 chars absorbed | Ollama: up
+- 2026-06-30T04:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 77 turns, 36648 chars absorbed | Ollama: up
+- 2026-06-30T04:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 54 turns, 52595 chars absorbed | Ollama: up
+- 2026-06-30T05:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 179 turns, 44268 chars absorbed | Ollama: up
+- 2026-06-30T05:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 41 turns, 27170 chars absorbed | Ollama: up
+- 2026-06-30T05:38Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 5086 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-06-30T06:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 41 turns, 28993 chars absorbed | Ollama: up
+- 2026-06-30T06:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 26 turns, 17847 chars absorbed | Ollama: up
+- 2026-06-30T06:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 40 turns, 29605 chars absorbed | Ollama: up
+- 2026-06-30T07:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 37 turns, 27699 chars absorbed | Ollama: up
+- 2026-06-30T07:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 42 turns, 32016 chars absorbed | Ollama: up
+- 2026-06-30T07:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 3 turns, 3122 chars absorbed | Ollama: up
+- 2026-06-30T08:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 30 turns, 21818 chars absorbed | Ollama: up
+- 2026-06-30T08:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 48 turns, 32593 chars absorbed | Ollama: up
+- 2026-06-30T08:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 40 turns, 26151 chars absorbed | Ollama: up
+- 2026-06-30T09:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 39 turns, 26643 chars absorbed | Ollama: up
+- 2026-06-30T09:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 31 turns, 21849 chars absorbed | Ollama: up
+- 2026-06-30T09:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 39 turns, 31701 chars absorbed | Ollama: up
+- 2026-06-30T10:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 49 turns, 34608 chars absorbed | Ollama: up
+- 2026-06-30T11:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 31 turns, 23919 chars absorbed | Ollama: up
+- 2026-06-30T11:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 17 turns, 12875 chars absorbed | Ollama: up
+- 2026-06-30T11:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 45 turns, 31318 chars absorbed | Ollama: up
+- 2026-06-30T12:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 27 turns, 20958 chars absorbed | Ollama: up
+- 2026-06-30T12:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 37 turns, 29502 chars absorbed | Ollama: up
+- 2026-06-30T12:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 34 turns, 26341 chars absorbed | Ollama: up
+- 2026-06-30T13:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 40 turns, 30816 chars absorbed | Ollama: up
+- 2026-06-30T13:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 41 turns, 32002 chars absorbed | Ollama: up
+- 2026-06-30T13:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 25 turns, 17814 chars absorbed | Ollama: up
+- 2026-06-30T14:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 38 turns, 23934 chars absorbed | Ollama: up
+- 2026-06-30T14:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 43 turns, 32170 chars absorbed | Ollama: up
+- 2026-06-30T15:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 39 turns, 26591 chars absorbed | Ollama: up
+- 2026-06-30T15:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 27 turns, 22479 chars absorbed | Ollama: up
+- 2026-06-30T15:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 28475 chars absorbed | Ollama: up
+- 2026-06-30T15:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 33 turns, 25344 chars absorbed | Ollama: up
+- 2026-06-30T16:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 42 turns, 33940 chars absorbed | Ollama: up
+- 2026-06-30T17:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 28 turns, 23750 chars absorbed | Ollama: up
+- 2026-06-30T17:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 48 turns, 31634 chars absorbed | Ollama: up
+- 2026-06-30T18:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 28725 chars absorbed | Ollama: up
+- 2026-06-30T18:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 28725 chars absorbed | Ollama: up
+- 2026-06-30T18:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 37 turns, 29347 chars absorbed | Ollama: up
+- 2026-06-30T19:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 54 turns, 34826 chars absorbed | Ollama: up
+- 2026-06-30T19:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 37 turns, 28809 chars absorbed | Ollama: up
+- 2026-06-30T20:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 112 turns, 44141 chars absorbed | Ollama: up
+- 2026-06-30T20:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 31 turns, 22525 chars absorbed | Ollama: up
+- 2026-06-30T21:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 49 turns, 31543 chars absorbed | Ollama: up
+- 2026-06-30T21:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 39 turns, 25923 chars absorbed | Ollama: up
+- 2026-06-30T22:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 35 turns, 24375 chars absorbed | Ollama: up
+- 2026-06-30T22:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 35 turns, 24375 chars absorbed | Ollama: up
+- 2026-06-30T22:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 49 turns, 34598 chars absorbed | Ollama: up
+- 2026-06-30T23:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 31 turns, 27016 chars absorbed | Ollama: up
+- 2026-06-30T23:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 18 turns, 11386 chars absorbed | Ollama: up
+- 2026-06-30T23:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 32 turns, 23299 chars absorbed | Ollama: up
+- 2026-07-01T00:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 51 turns, 32861 chars absorbed | Ollama: up
+- 2026-07-01T00:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 23 turns, 17686 chars absorbed | Ollama: up
+- 2026-07-01T01:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 117 turns, 66620 chars absorbed | Ollama: up
+- 2026-07-01T01:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 22 turns, 17457 chars absorbed | Ollama: up
+- 2026-07-01T02:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 111 turns, 46193 chars absorbed | Ollama: up
+- 2026-07-01T02:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 38 turns, 32903 chars absorbed | Ollama: up
+- 2026-07-01T02:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 6 turns, 6598 chars absorbed | Ollama: up
+- 2026-07-01T03:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 46 turns, 33899 chars absorbed | Ollama: up
+- 2026-07-01T04:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 37 turns, 29707 chars absorbed | Ollama: up
+- 2026-07-01T04:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 37 turns, 29707 chars absorbed | Ollama: up
+- 2026-07-01T04:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 42 turns, 33669 chars absorbed | Ollama: up
+- 2026-07-01T04:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 33 turns, 28507 chars absorbed | Ollama: up
+- 2026-07-01T05:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 42 turns, 34432 chars absorbed | Ollama: up
+- 2026-07-01T05:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 56 turns, 40835 chars absorbed | Ollama: up
+- 2026-07-01T06:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 39 turns, 30284 chars absorbed | Ollama: up
+- 2026-07-01T06:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 60 turns, 68768 chars absorbed | Ollama: up
+- 2026-07-01T07:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 49 turns, 24872 chars absorbed | Ollama: up
+- 2026-07-01T07:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 50 turns, 35439 chars absorbed | Ollama: up
+- 2026-07-01T08:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 37 turns, 28862 chars absorbed | Ollama: up
+- 2026-07-01T08:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 19 turns, 15616 chars absorbed | Ollama: up
+- 2026-07-01T08:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 38 turns, 34168 chars absorbed | Ollama: up
+- 2026-07-01T08:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 38 turns, 34168 chars absorbed | Ollama: up
+- 2026-07-01T09:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 45 turns, 33878 chars absorbed | Ollama: up
+- 2026-07-01T10:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 34 turns, 29351 chars absorbed | Ollama: up
+- 2026-07-01T10:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 31 turns, 25954 chars absorbed | Ollama: up
+- 2026-07-01T10:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 48 turns, 34085 chars absorbed | Ollama: up
+- 2026-07-01T11:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 37 turns, 31032 chars absorbed | Ollama: up
+- 2026-07-01T11:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 42 turns, 32438 chars absorbed | Ollama: up
+- 2026-07-01T12:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 33 turns, 25617 chars absorbed | Ollama: up
+- 2026-07-01T12:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 42 turns, 34590 chars absorbed | Ollama: up
+- 2026-07-01T12:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 28 turns, 25861 chars absorbed | Ollama: up
+- 2026-07-01T13:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 35 turns, 28543 chars absorbed | Ollama: up
+- 2026-07-01T13:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 47 turns, 34866 chars absorbed | Ollama: up
+- 2026-07-01T14:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 52 turns, 34369 chars absorbed | Ollama: up
+- 2026-07-01T15:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 26 turns, 19250 chars absorbed | Ollama: up
+- 2026-07-01T15:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 50 turns, 37791 chars absorbed | Ollama: up
+- 2026-07-01T16:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 21 turns, 18889 chars absorbed | Ollama: up
+- 2026-07-01T16:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 43 turns, 37157 chars absorbed | Ollama: up
+- 2026-07-01T17:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 38 turns, 34240 chars absorbed | Ollama: up
+- 2026-07-01T17:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 26 turns, 24577 chars absorbed | Ollama: up
+- 2026-07-01T17:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 29 turns, 25912 chars absorbed | Ollama: up
+- 2026-07-01T17:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 26 turns, 22428 chars absorbed | Ollama: up
+- 2026-07-01T18:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 50 turns, 37489 chars absorbed | Ollama: up
+- 2026-07-01T18:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 35 turns, 30778 chars absorbed | Ollama: up
+- 2026-07-01T18:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 24 turns, 20360 chars absorbed | Ollama: up
+- 2026-07-01T19:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 37 turns, 32100 chars absorbed | Ollama: up
+- 2026-07-01T19:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 36 turns, 27709 chars absorbed | Ollama: up
+- 2026-07-01T20:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 46 turns, 37146 chars absorbed | Ollama: up
+- 2026-07-01T21:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 33 turns, 29308 chars absorbed | Ollama: up
+- 2026-07-01T21:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 26 turns, 22380 chars absorbed | Ollama: up
+- 2026-07-01T21:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 48 turns, 30861 chars absorbed | Ollama: up
+- 2026-07-01T22:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 46 turns, 34859 chars absorbed | Ollama: up
+- 2026-07-01T22:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 26 turns, 22529 chars absorbed | Ollama: up
+- 2026-07-01T22:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 33 turns, 28763 chars absorbed | Ollama: up
+- 2026-07-01T22:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 33 turns, 28763 chars absorbed | Ollama: up
+- 2026-07-01T23:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 47 turns, 37196 chars absorbed | Ollama: up
+- 2026-07-01T23:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 26 turns, 25656 chars absorbed | Ollama: up
+- 2026-07-01T23:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 18 turns, 20582 chars absorbed | Ollama: up
+- 2026-07-02T00:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 39 turns, 27171 chars absorbed | Ollama: up
+- 2026-07-02T00:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 30928 chars absorbed | Ollama: up
+- 2026-07-02T01:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 34 turns, 25348 chars absorbed | Ollama: up
+- 2026-07-02T01:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 43 turns, 31294 chars absorbed | Ollama: up
+- 2026-07-02T02:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 40 turns, 33572 chars absorbed | Ollama: up
+- 2026-07-02T02:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 37 turns, 30129 chars absorbed | Ollama: up
+- 2026-07-02T03:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 30 turns, 29267 chars absorbed | Ollama: up
+- 2026-07-02T03:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 30 turns, 29267 chars absorbed | Ollama: up
+- 2026-07-02T03:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 50 turns, 37914 chars absorbed | Ollama: up
+- 2026-07-02T04:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 27 turns, 28022 chars absorbed | Ollama: up
+- 2026-07-02T04:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 117 turns, 65493 chars absorbed | Ollama: up
+- 2026-07-02T05:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 22 turns, 14925 chars absorbed | Ollama: up
+- 2026-07-02T05:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 34 turns, 30787 chars absorbed | Ollama: up
+- 2026-07-02T05:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 25 turns, 20478 chars absorbed | Ollama: up
+- 2026-07-02T06:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 31 turns, 28422 chars absorbed | Ollama: up
+- 2026-07-02T06:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 31 turns, 28422 chars absorbed | Ollama: up
+- 2026-07-02T06:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 39 turns, 34320 chars absorbed | Ollama: up
+- 2026-07-02T07:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 32 turns, 25285 chars absorbed | Ollama: up
+- 2026-07-02T07:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 34 turns, 30717 chars absorbed | Ollama: up
+- 2026-07-02T07:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 13 turns, 13819 chars absorbed | Ollama: up
+- 2026-07-02T08:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 42 turns, 33768 chars absorbed | Ollama: up
+- 2026-07-02T09:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 39 turns, 29724 chars absorbed | Ollama: up
+- 2026-07-02T09:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 33 turns, 26105 chars absorbed | Ollama: up
+- 2026-07-02T09:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 49 turns, 37289 chars absorbed | Ollama: up
+- 2026-07-02T10:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 28 turns, 25741 chars absorbed | Ollama: up
+- 2026-07-02T10:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 34 turns, 28575 chars absorbed | Ollama: up
+- 2026-07-02T11:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 44 turns, 33839 chars absorbed | Ollama: up
+- 2026-07-02T11:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 43 turns, 34595 chars absorbed | Ollama: up
+- 2026-07-02T12:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 43 turns, 32434 chars absorbed | Ollama: up
+- 2026-07-02T12:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 43 turns, 32434 chars absorbed | Ollama: up
+- 2026-07-02T12:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 35 turns, 30711 chars absorbed | Ollama: up
+- 2026-07-02T13:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 31 turns, 27186 chars absorbed | Ollama: up
+- 2026-07-02T14:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 23 turns, 22300 chars absorbed | Ollama: up
+- 2026-07-02T14:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 47 turns, 34051 chars absorbed | Ollama: up
+- 2026-07-02T15:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 38 turns, 29650 chars absorbed | Ollama: up
+- 2026-07-02T15:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 38 turns, 29650 chars absorbed | Ollama: up
+- 2026-07-02T15:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 53 turns, 31242 chars absorbed | Ollama: up
+- 2026-07-02T16:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 39 turns, 34311 chars absorbed | Ollama: up
+- 2026-07-02T16:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 36 turns, 31919 chars absorbed | Ollama: up
+- 2026-07-02T16:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 30 turns, 25963 chars absorbed | Ollama: up
+- 2026-07-02T16:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 27 turns, 22506 chars absorbed | Ollama: up
+- 2026-07-02T17:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 56 turns, 38078 chars absorbed | Ollama: up
+- 2026-07-02T17:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 34 turns, 24314 chars absorbed | Ollama: up
+- 2026-07-02T18:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 31 turns, 28621 chars absorbed | Ollama: up
+- 2026-07-02T18:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 37 turns, 30996 chars absorbed | Ollama: up
+- 2026-07-02T18:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 28 turns, 20669 chars absorbed | Ollama: up
+- 2026-07-02T19:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 40 turns, 27100 chars absorbed | Ollama: up
+- 2026-07-02T20:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 29614 chars absorbed | Ollama: up
+- 2026-07-02T20:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 33 turns, 26157 chars absorbed | Ollama: up
+- 2026-07-02T20:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 44 turns, 34010 chars absorbed | Ollama: up
+- 2026-07-02T21:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 40 turns, 34517 chars absorbed | Ollama: up
+- 2026-07-02T21:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 39 turns, 28957 chars absorbed | Ollama: up
+- 2026-07-02T21:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 22 turns, 13588 chars absorbed | Ollama: up
+- 2026-07-02T22:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 46 turns, 37228 chars absorbed | Ollama: up
+- 2026-07-02T22:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 31 turns, 26016 chars absorbed | Ollama: up
+- 2026-07-02T22:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 34 turns, 29457 chars absorbed | Ollama: up
+- 2026-07-02T23:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 49 turns, 34135 chars absorbed | Ollama: up
+- 2026-07-02T23:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 39 turns, 34309 chars absorbed | Ollama: up
+- 2026-07-02T23:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 22 turns, 18862 chars absorbed | Ollama: up
+- 2026-07-03T00:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 40 turns, 28908 chars absorbed | Ollama: up
+- 2026-07-03T00:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 40 turns, 28908 chars absorbed | Ollama: up
+- 2026-07-03T00:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 40 turns, 34335 chars absorbed | Ollama: up
+- 2026-07-03T01:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 46 turns, 34154 chars absorbed | Ollama: up
+- 2026-07-03T02:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 38 turns, 29525 chars absorbed | Ollama: up
+- 2026-07-03T02:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 15 turns, 13800 chars absorbed | Ollama: up
+- 2026-07-03T02:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 49 turns, 34175 chars absorbed | Ollama: up
+- 2026-07-03T03:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 41 turns, 34462 chars absorbed | Ollama: up
+- 2026-07-03T03:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 27 turns, 22514 chars absorbed | Ollama: up
+- 2026-07-03T03:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 34 turns, 28640 chars absorbed | Ollama: up
+- 2026-07-03T03:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 34 turns, 28640 chars absorbed | Ollama: up
+- 2026-07-03T04:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 48 turns, 37301 chars absorbed | Ollama: up
+- 2026-07-03T04:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 34 turns, 24280 chars absorbed | Ollama: up
+- 2026-07-03T05:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 41 turns, 29252 chars absorbed | Ollama: up
+- 2026-07-03T05:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 41 turns, 29252 chars absorbed | Ollama: up
+- 2026-07-03T05:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 39 turns, 34193 chars absorbed | Ollama: up
+- 2026-07-03T06:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 35 turns, 28689 chars absorbed | Ollama: up
+- 2026-07-03T06:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 29 turns, 21828 chars absorbed | Ollama: up
+- 2026-07-03T07:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 44 turns, 34721 chars absorbed | Ollama: up
+- 2026-07-03T07:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 53 turns, 43286 chars absorbed | Ollama: up
+- 2026-07-03T08:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 34 turns, 35522 chars absorbed | Ollama: up
+- 2026-07-03T08:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 57 turns, 33388 chars absorbed | Ollama: up
+- 2026-07-03T09:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 50 turns, 57051 chars absorbed | Ollama: up
+- 2026-07-03T09:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 31 turns, 28456 chars absorbed | Ollama: up
+- 2026-07-03T09:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 11 turns, 8499 chars absorbed | Ollama: up
+- 2026-07-03T10:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 35 turns, 25385 chars absorbed | Ollama: up
+- 2026-07-03T10:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 3 turns, 3433 chars absorbed | Ollama: up
+- 2026-07-03T10:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 25 turns, 25554 chars absorbed | Ollama: up
+- 2026-07-03T10:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 8 turns, 5032 chars absorbed | Ollama: up
+- 2026-07-03T11:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 35 turns, 25444 chars absorbed | Ollama: up
+- 2026-07-03T11:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 44 turns, 31348 chars absorbed | Ollama: up
+- 2026-07-03T11:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 12 turns, 8581 chars absorbed | Ollama: up
+- 2026-07-03T12:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 36 turns, 25479 chars absorbed | Ollama: up
+- 2026-07-03T12:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 34 turns, 29312 chars absorbed | Ollama: up
+- 2026-07-03T13:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 31 turns, 28650 chars absorbed | Ollama: up
+- 2026-07-03T14:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 32 turns, 29195 chars absorbed | Ollama: up
+- 2026-07-03T14:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 45 turns, 33822 chars absorbed | Ollama: up
+- 2026-07-03T14:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 42 turns, 30402 chars absorbed | Ollama: up
+- 2026-07-03T15:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 42 turns, 34531 chars absorbed | Ollama: up
+- 2026-07-03T15:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 42 turns, 34531 chars absorbed | Ollama: up
+- 2026-07-03T15:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 32 turns, 28592 chars absorbed | Ollama: up
+- 2026-07-03T15:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 32 turns, 28592 chars absorbed | Ollama: up
+- 2026-07-03T16:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 36 turns, 34009 chars absorbed | Ollama: up
+- 2026-07-03T16:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 76 turns, 33948 chars absorbed | Ollama: up
+- 2026-07-03T17:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 45 turns, 33832 chars absorbed | Ollama: up
+- 2026-07-03T17:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 24 turns, 20337 chars absorbed | Ollama: up
+- 2026-07-03T17:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 35 turns, 33989 chars absorbed | Ollama: up
+- 2026-07-03T18:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 38 turns, 29200 chars absorbed | Ollama: up
+- 2026-07-03T19:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 44 turns, 28410 chars absorbed | Ollama: up
+- 2026-07-03T19:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 118 turns, 72543 chars absorbed | Ollama: up
+- 2026-07-03T20:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 33 turns, 26021 chars absorbed | Ollama: up
+- 2026-07-03T20:03Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6466 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-03T20:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 29 turns, 23792 chars absorbed | Ollama: up
+- 2026-07-03T21:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 30834 chars absorbed | Ollama: up
+- 2026-07-03T21:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 35 turns, 28531 chars absorbed | Ollama: up
+- 2026-07-03T21:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 37 turns, 28666 chars absorbed | Ollama: up
+- 2026-07-03T22:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 52 turns, 31126 chars absorbed | Ollama: up
+- 2026-07-03T22:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 38 turns, 34220 chars absorbed | Ollama: up
+- 2026-07-03T22:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 35 turns, 30782 chars absorbed | Ollama: up
+- 2026-07-03T23:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 31 turns, 28439 chars absorbed | Ollama: up
+- 2026-07-03T23:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 31 turns, 28439 chars absorbed | Ollama: up
+- 2026-07-03T23:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 42 turns, 31201 chars absorbed | Ollama: up
+- 2026-07-04T00:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 33 turns, 28673 chars absorbed | Ollama: up
+- 2026-07-04T00:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 30 turns, 25278 chars absorbed | Ollama: up
+- 2026-07-04T00:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 40 turns, 34277 chars absorbed | Ollama: up
+- 2026-07-04T01:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 45 turns, 33928 chars absorbed | Ollama: up
+- 2026-07-04T02:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 30 turns, 25839 chars absorbed | Ollama: up
+- 2026-07-04T02:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 20 turns, 18717 chars absorbed | Ollama: up
+- 2026-07-04T02:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 41 turns, 33352 chars absorbed | Ollama: up
+- 2026-07-04T03:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 40 turns, 31035 chars absorbed | Ollama: up
+- 2026-07-04T03:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 27 turns, 22449 chars absorbed | Ollama: up
+- 2026-07-04T03:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 32 turns, 29161 chars absorbed | Ollama: up
+- 2026-07-04T04:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 41 turns, 27063 chars absorbed | Ollama: up
+- 2026-07-04T04:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 42 turns, 34398 chars absorbed | Ollama: up
+- 2026-07-04T05:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 64 turns, 38515 chars absorbed | Ollama: up
+- 2026-07-04T05:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 38 turns, 30813 chars absorbed | Ollama: up
+- 2026-07-04T05:53Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 6623 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-04T06:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 41 turns, 29272 chars absorbed | Ollama: up
+- 2026-07-04T06:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 41 turns, 29272 chars absorbed | Ollama: up
+- 2026-07-04T07:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 61 turns, 30205 chars absorbed | Ollama: up
+- 2026-07-04T07:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 66 turns, 31491 chars absorbed | Ollama: up
+- 2026-07-04T08:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 29 turns, 25804 chars absorbed | Ollama: up
+- 2026-07-04T08:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 3 turns, 3432 chars absorbed | Ollama: up
+- 2026-07-04T08:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 40 turns, 33473 chars absorbed | Ollama: up
+- 2026-07-04T08:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 37 turns, 30036 chars absorbed | Ollama: up
+- 2026-07-04T09:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 35 turns, 30725 chars absorbed | Ollama: up
+- 2026-07-04T09:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 29 turns, 23851 chars absorbed | Ollama: up
+- 2026-07-04T09:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 39 turns, 32061 chars absorbed | Ollama: up
+- 2026-07-04T10:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 42 turns, 29213 chars absorbed | Ollama: up
+- 2026-07-04T10:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 34 turns, 26217 chars absorbed | Ollama: up
+- 2026-07-04T11:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 32 turns, 27274 chars absorbed | Ollama: up
+- 2026-07-04T11:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 40 turns, 31125 chars absorbed | Ollama: up
+- 2026-07-04T11:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 32 turns, 26069 chars absorbed | Ollama: up
+- 2026-07-04T12:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 50 turns, 37519 chars absorbed | Ollama: up
+- 2026-07-04T12:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 26 turns, 25579 chars absorbed | Ollama: up
+- 2026-07-04T13:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 8 turns, 6982 chars absorbed | Ollama: up
+- 2026-07-04T13:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 36 turns, 31942 chars absorbed | Ollama: up
+- 2026-07-04T14:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 34 turns, 26129 chars absorbed | Ollama: up
+- 2026-07-04T14:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 31 turns, 22682 chars absorbed | Ollama: up
+- 2026-07-04T14:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 48 turns, 37364 chars absorbed | Ollama: up
+- 2026-07-04T15:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 34 turns, 30787 chars absorbed | Ollama: up
+- 2026-07-04T15:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 34 turns, 30787 chars absorbed | Ollama: up
+- 2026-07-04T15:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 36 turns, 31822 chars absorbed | Ollama: up
+- 2026-07-04T16:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 43 turns, 33587 chars absorbed | Ollama: up
+- 2026-07-04T16:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 37 turns, 26747 chars absorbed | Ollama: up
+- 2026-07-04T16:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 19 turns, 17415 chars absorbed | Ollama: up
+- 2026-07-04T17:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 66 turns, 31409 chars absorbed | Ollama: up
+- 2026-07-04T17:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 58 turns, 44096 chars absorbed | Ollama: up
+- 2026-07-04T18:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 70 turns, 24641 chars absorbed | Ollama: up
+- 2026-07-04T19:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 27 turns, 25710 chars absorbed | Ollama: up
+- 2026-07-04T19:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 24 turns, 22308 chars absorbed | Ollama: up
+- 2026-07-04T19:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 51 turns, 37531 chars absorbed | Ollama: up
+- 2026-07-04T20:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 34 turns, 29408 chars absorbed | Ollama: up
+- 2026-07-04T20:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 36 turns, 27555 chars absorbed | Ollama: up
+- 2026-07-04T20:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 32 turns, 25188 chars absorbed | Ollama: up
+- 2026-07-04T21:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 38 turns, 34170 chars absorbed | Ollama: up
+- 2026-07-04T21:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 22 turns, 20054 chars absorbed | Ollama: up
+- 2026-07-04T21:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 28 turns, 25817 chars absorbed | Ollama: up
+- 2026-07-04T21:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 22 turns, 18924 chars absorbed | Ollama: up
+- 2026-07-04T22:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 43 turns, 36932 chars absorbed | Ollama: up
+- 2026-07-04T22:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 39 turns, 31020 chars absorbed | Ollama: up
+- 2026-07-04T22:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 36 turns, 27579 chars absorbed | Ollama: up
+- 2026-07-04T23:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 37 turns, 32442 chars absorbed | Ollama: up
+- 2026-07-04T23:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 34 turns, 29047 chars absorbed | Ollama: up
+- 2026-07-04T23:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 37 turns, 30794 chars absorbed | Ollama: up
+- 2026-07-04T23:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 37 turns, 30794 chars absorbed | Ollama: up
+- 2026-07-05T00:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 49 turns, 37423 chars absorbed | Ollama: up
+- 2026-07-05T01:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 29 turns, 29077 chars absorbed | Ollama: up
+- 2026-07-05T01:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 9 turns, 10305 chars absorbed | Ollama: up
+- 2026-07-05T01:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 40 turns, 33780 chars absorbed | Ollama: up
+- 2026-07-05T02:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 28 turns, 28981 chars absorbed | Ollama: up
+- 2026-07-05T02:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 22 turns, 22107 chars absorbed | Ollama: up
+- 2026-07-05T02:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 42 turns, 30396 chars absorbed | Ollama: up
+- 2026-07-05T03:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 40 turns, 34237 chars absorbed | Ollama: up
+- 2026-07-05T03:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 29 turns, 25790 chars absorbed | Ollama: up
+- 2026-07-05T03:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 31 turns, 28769 chars absorbed | Ollama: up
+- 2026-07-05T03:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 31 turns, 28769 chars absorbed | Ollama: up
+- 2026-07-05T04:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 11 Qwen call(s) ok, 56 turns, 43320 chars absorbed | Ollama: up
+- 2026-07-05T04:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 15 turns, 13143 chars absorbed | Ollama: up
+- 2026-07-05T05:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 34 turns, 14613 chars absorbed | Ollama: up
+- 2026-07-05T05:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 37 turns, 30813 chars absorbed | Ollama: up
+- 2026-07-05T05:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 30682 chars absorbed | Ollama: up
+- 2026-07-05T06:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 32 turns, 26621 chars absorbed | Ollama: up
+- 2026-07-05T07:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 26 turns, 25664 chars absorbed | Ollama: up
+- 2026-07-05T07:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 34 turns, 25331 chars absorbed | Ollama: up
+- 2026-07-05T08:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 26 turns, 22302 chars absorbed | Ollama: up
+- 2026-07-05T08:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 30 turns, 28395 chars absorbed | Ollama: up
+- 2026-07-05T08:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 29 turns, 25801 chars absorbed | Ollama: up
+- 2026-07-05T09:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 40 turns, 30230 chars absorbed | Ollama: up
+- 2026-07-05T09:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 32 turns, 29234 chars absorbed | Ollama: up
+- 2026-07-05T10:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 41 turns, 33447 chars absorbed | Ollama: up
+- 2026-07-05T10:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 6 turns, 6839 chars absorbed | Ollama: up
+- 2026-07-05T10:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 41 turns, 34262 chars absorbed | Ollama: up
+- 2026-07-05T11:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 34 turns, 28661 chars absorbed | Ollama: up
+- 2026-07-05T11:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 24 turns, 18267 chars absorbed | Ollama: up
+- 2026-07-05T11:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 37 turns, 34040 chars absorbed | Ollama: up
+- 2026-07-05T12:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 29918 chars absorbed | Ollama: up
+- 2026-07-05T13:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 29 turns, 28924 chars absorbed | Ollama: up
+- 2026-07-05T13:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 26 turns, 25528 chars absorbed | Ollama: up
+- 2026-07-05T13:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 47 turns, 33959 chars absorbed | Ollama: up
+- 2026-07-05T14:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 27 turns, 23690 chars absorbed | Ollama: up
+- 2026-07-05T14:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 36 turns, 31966 chars absorbed | Ollama: up
+- 2026-07-05T15:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 30 turns, 21929 chars absorbed | Ollama: up
+- 2026-07-05T15:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 36 turns, 34031 chars absorbed | Ollama: up
+- 2026-07-05T15:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 33 turns, 30550 chars absorbed | Ollama: up
+- 2026-07-05T16:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 32 turns, 28406 chars absorbed | Ollama: up
+- 2026-07-05T16:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 32 turns, 28406 chars absorbed | Ollama: up
+- 2026-07-05T16:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 45 turns, 34537 chars absorbed | Ollama: up
+- 2026-07-05T16:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 45 turns, 34537 chars absorbed | Ollama: up
+- 2026-07-05T17:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 28571 chars absorbed | Ollama: up
+- 2026-07-05T17:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 34 turns, 30612 chars absorbed | Ollama: up
+- 2026-07-05T17:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 9 turns, 10270 chars absorbed | Ollama: up
+- 2026-07-05T18:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 47 turns, 37140 chars absorbed | Ollama: up
+- 2026-07-05T19:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 26 turns, 25652 chars absorbed | Ollama: up
+- 2026-07-05T19:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 9 turns, 10358 chars absorbed | Ollama: up
+- 2026-07-05T19:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 46 turns, 33896 chars absorbed | Ollama: up
+- 2026-07-05T20:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 39 turns, 34281 chars absorbed | Ollama: up
+- 2026-07-05T20:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 17 turns, 15348 chars absorbed | Ollama: up
+- 2026-07-05T20:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 39 turns, 29044 chars absorbed | Ollama: up
+- 2026-07-05T20:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 39 turns, 29044 chars absorbed | Ollama: up
+- 2026-07-05T21:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 44 turns, 37271 chars absorbed | Ollama: up
+- 2026-07-05T21:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 29 turns, 29131 chars absorbed | Ollama: up
+- 2026-07-05T21:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 25 turns, 20423 chars absorbed | Ollama: up
+- 2026-07-05T22:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 39 turns, 28883 chars absorbed | Ollama: up
+- 2026-07-05T22:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 39 turns, 34130 chars absorbed | Ollama: up
+- 2026-07-05T23:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 33 turns, 28476 chars absorbed | Ollama: up
+- 2026-07-05T23:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 30 turns, 25060 chars absorbed | Ollama: up
+- 2026-07-05T23:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 40 turns, 34265 chars absorbed | Ollama: up
+- 2026-07-06T00:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 34 turns, 28622 chars absorbed | Ollama: up
+- 2026-07-06T01:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 33 turns, 29320 chars absorbed | Ollama: up
+- 2026-07-06T01:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 43 turns, 30406 chars absorbed | Ollama: up
+- 2026-07-06T02:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 46 turns, 31525 chars absorbed | Ollama: up
+- 2026-07-06T02:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 26 turns, 15969 chars absorbed | Ollama: up
+- 2026-07-06T02:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 38 turns, 28909 chars absorbed | Ollama: up
+- 2026-07-06T03:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 41 turns, 30157 chars absorbed | Ollama: up
+- 2026-07-06T03:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 43 turns, 34482 chars absorbed | Ollama: up
+- 2026-07-06T04:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 38 turns, 28776 chars absorbed | Ollama: up
+- 2026-07-06T04:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 32 turns, 21910 chars absorbed | Ollama: up
+- 2026-07-06T04:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 41 turns, 34213 chars absorbed | Ollama: up
+- 2026-07-06T05:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 39 turns, 32152 chars absorbed | Ollama: up
+- 2026-07-06T05:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 21 turns, 14772 chars absorbed | Ollama: up
+- 2026-07-06T06:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 73 turns, 26712 chars absorbed | Ollama: up
+- 2026-07-06T06:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 44 turns, 30508 chars absorbed | Ollama: up
+- 2026-07-06T07:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 16 turns, 25479 chars absorbed | Ollama: up
+- 2026-07-06T07:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 91 turns, 73463 chars absorbed | Ollama: up
+- 2026-07-06T08:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 72 turns, 40039 chars absorbed | Ollama: up
+- 2026-07-06T08:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 9 turns, 6184 chars absorbed | Ollama: up
+- 2026-07-06T08:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 34 turns, 26137 chars absorbed | Ollama: up
+- 2026-07-06T09:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 40 turns, 28852 chars absorbed | Ollama: up
+- 2026-07-06T09:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 37 turns, 30845 chars absorbed | Ollama: up
+- 2026-07-06T10:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 38 turns, 28760 chars absorbed | Ollama: up
+- 2026-07-06T10:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 37 turns, 30924 chars absorbed | Ollama: up
+- 2026-07-06T10:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 28 turns, 20624 chars absorbed | Ollama: up
+- 2026-07-06T11:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 48 turns, 37204 chars absorbed | Ollama: up
+- 2026-07-06T12:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 31 turns, 26024 chars absorbed | Ollama: up
+- 2026-07-06T12:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 8 turns, 6989 chars absorbed | Ollama: up
+- 2026-07-06T12:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 41 turns, 25848 chars absorbed | Ollama: up
+- 2026-07-06T13:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 28 turns, 25728 chars absorbed | Ollama: up
+- 2026-07-06T13:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 3519 chars absorbed | Ollama: up
+- 2026-07-06T13:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 47 turns, 30701 chars absorbed | Ollama: up
+- 2026-07-06T13:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 22 turns, 18879 chars absorbed | Ollama: up
+- 2026-07-06T14:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 34 turns, 30698 chars absorbed | Ollama: up
+- 2026-07-06T14:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 26 turns, 25648 chars absorbed | Ollama: up
+- 2026-07-06T14:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 42 turns, 28983 chars absorbed | Ollama: up
+- 2026-07-06T14:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 42 turns, 28983 chars absorbed | Ollama: up
+- 2026-07-06T15:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 48 turns, 37299 chars absorbed | Ollama: up
+- 2026-07-06T15:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 33 turns, 26199 chars absorbed | Ollama: up
+- 2026-07-06T16:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 28 turns, 20375 chars absorbed | Ollama: up
+- 2026-07-06T16:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 37 turns, 33991 chars absorbed | Ollama: up
+- 2026-07-06T17:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 35 turns, 28603 chars absorbed | Ollama: up
+- 2026-07-06T18:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 40 turns, 30933 chars absorbed | Ollama: up
+- 2026-07-06T18:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 37 turns, 31975 chars absorbed | Ollama: up
+- 2026-07-06T19:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 27 turns, 25727 chars absorbed | Ollama: up
+- 2026-07-06T19:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 38 turns, 30201 chars absorbed | Ollama: up
+- 2026-07-06T20:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 38 turns, 33910 chars absorbed | Ollama: up
+- 2026-07-06T20:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 38 turns, 28881 chars absorbed | Ollama: up
+- 2026-07-06T20:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 26 turns, 20303 chars absorbed | Ollama: up
+- 2026-07-06T21:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 45 turns, 34055 chars absorbed | Ollama: up
+- 2026-07-06T21:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 30750 chars absorbed | Ollama: up
+- 2026-07-06T21:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 23 turns, 22173 chars absorbed | Ollama: up
+- 2026-07-06T22:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 38 turns, 32041 chars absorbed | Ollama: up
+- 2026-07-06T22:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 30799 chars absorbed | Ollama: up
+- 2026-07-06T22:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 30799 chars absorbed | Ollama: up
+- 2026-07-06T23:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 47 turns, 37181 chars absorbed | Ollama: up
+- 2026-07-07T00:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 33 turns, 26080 chars absorbed | Ollama: up
+- 2026-07-07T00:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 24 turns, 19032 chars absorbed | Ollama: up
+- 2026-07-07T00:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 49 turns, 37225 chars absorbed | Ollama: up
+- 2026-07-07T01:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 38 turns, 29589 chars absorbed | Ollama: up
+- 2026-07-07T01:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 29 turns, 20570 chars absorbed | Ollama: up
+- 2026-07-07T01:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 34 turns, 25294 chars absorbed | Ollama: up
+- 2026-07-07T02:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 35 turns, 30768 chars absorbed | Ollama: up
+- 2026-07-07T02:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 35 turns, 28832 chars absorbed | Ollama: up
+- 2026-07-07T02:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 32 turns, 25397 chars absorbed | Ollama: up
+- 2026-07-07T03:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 49 turns, 37411 chars absorbed | Ollama: up
+- 2026-07-07T03:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 34 turns, 27520 chars absorbed | Ollama: up
+- 2026-07-07T04:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 36 turns, 25405 chars absorbed | Ollama: up
+- 2026-07-07T04:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 84 turns, 41519 chars absorbed | Ollama: up
+- 2026-07-07T05:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 41 turns, 33857 chars absorbed | Ollama: up
+- 2026-07-07T05:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 6 turns, 6856 chars absorbed | Ollama: up
+- 2026-07-07T06:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 29 turns, 28986 chars absorbed | Ollama: up
+- 2026-07-07T06:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 50 turns, 34129 chars absorbed | Ollama: up
+- 2026-07-07T07:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 41 turns, 34349 chars absorbed | Ollama: up
+- 2026-07-07T07:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 32 turns, 24036 chars absorbed | Ollama: up
+- 2026-07-07T07:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 28676 chars absorbed | Ollama: up
+- 2026-07-07T08:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 34 turns, 26585 chars absorbed | Ollama: up
+- 2026-07-07T08:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 35 turns, 29486 chars absorbed | Ollama: up
+- 2026-07-07T08:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 35 turns, 29486 chars absorbed | Ollama: up
+- 2026-07-07T09:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 47 turns, 34079 chars absorbed | Ollama: up
+- 2026-07-07T09:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 37 turns, 34193 chars absorbed | Ollama: up
+- 2026-07-07T09:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 28 turns, 23862 chars absorbed | Ollama: up
+- 2026-07-07T10:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 31 turns, 28385 chars absorbed | Ollama: up
+- 2026-07-07T10:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 43 turns, 34559 chars absorbed | Ollama: up
+- 2026-07-07T10:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 16 turns, 12058 chars absorbed | Ollama: up
+- 2026-07-07T11:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 51 turns, 34227 chars absorbed | Ollama: up
+- 2026-07-07T12:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 38 turns, 29585 chars absorbed | Ollama: up
+- 2026-07-07T12:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 25 turns, 19072 chars absorbed | Ollama: up
+- 2026-07-07T12:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 46 turns, 37187 chars absorbed | Ollama: up
+- 2026-07-07T13:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 45 turns, 31405 chars absorbed | Ollama: up
+- 2026-07-07T13:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 32 turns, 22727 chars absorbed | Ollama: up
+- 2026-07-07T13:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 40 turns, 32157 chars absorbed | Ollama: up
+- 2026-07-07T14:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 45 turns, 33869 chars absorbed | Ollama: up
+- 2026-07-07T14:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 26 turns, 17209 chars absorbed | Ollama: up
+- 2026-07-07T14:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 30 turns, 29060 chars absorbed | Ollama: up
+- 2026-07-07T14:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 34 turns, 33614 chars absorbed | Ollama: up
+- 2026-07-07T15:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 55 turns, 30795 chars absorbed | Ollama: up
+- 2026-07-07T15:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 47 turns, 24337 chars absorbed | Ollama: up
+- 2026-07-07T15:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 60 turns, 35520 chars absorbed | Ollama: up
+- 2026-07-07T16:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 42 turns, 26216 chars absorbed | Ollama: up
+- 2026-07-07T16:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 87 turns, 37691 chars absorbed | Ollama: up
+- 2026-07-07T16:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 55 turns, 30759 chars absorbed | Ollama: up
+- 2026-07-07T17:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 74 turns, 36906 chars absorbed | Ollama: up
+- 2026-07-07T18:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 54 turns, 27693 chars absorbed | Ollama: up
+- 2026-07-07T18:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 68 turns, 39304 chars absorbed | Ollama: up
+- 2026-07-07T19:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 52 turns, 31970 chars absorbed | Ollama: up
+- 2026-07-07T19:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 32 turns, 13089 chars absorbed | Ollama: up
+- 2026-07-07T19:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 44 turns, 29413 chars absorbed | Ollama: up
+- 2026-07-07T20:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 77 turns, 33010 chars absorbed | Ollama: up
+- 2026-07-07T20:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 68 turns, 35937 chars absorbed | Ollama: up
+- 2026-07-07T20:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 32 turns, 19377 chars absorbed | Ollama: up
+- 2026-07-07T21:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 57 turns, 30533 chars absorbed | Ollama: up
+- 2026-07-07T21:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 52 turns, 26976 chars absorbed | Ollama: up
+- 2026-07-07T21:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 55 turns, 35386 chars absorbed | Ollama: up
+- 2026-07-07T22:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 58 turns, 33688 chars absorbed | Ollama: up
+- 2026-07-07T22:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 80 turns, 33100 chars absorbed | Ollama: up
+- 2026-07-07T22:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 47 turns, 27633 chars absorbed | Ollama: up
+- 2026-07-07T23:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 41 turns, 20792 chars absorbed | Ollama: up
+- 2026-07-07T23:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 85 turns, 40230 chars absorbed | Ollama: up
+- 2026-07-08T00:06Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 28 turns, 22418 chars absorbed | Ollama: up
+- 2026-07-08T00:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 72 turns, 36014 chars absorbed | Ollama: up
+- 2026-07-08T01:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 55 turns, 32308 chars absorbed | Ollama: up
+- 2026-07-08T01:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 52 turns, 28864 chars absorbed | Ollama: up
+- 2026-07-08T01:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 47 turns, 32827 chars absorbed | Ollama: up
+- 2026-07-08T01:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 40 turns, 29766 chars absorbed | Ollama: up
+- 2026-07-08T02:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 67 turns, 35750 chars absorbed | Ollama: up
+- 2026-07-08T02:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 65 turns, 32954 chars absorbed | Ollama: up
+- 2026-07-08T02:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 35 turns, 16528 chars absorbed | Ollama: up
+- 2026-07-08T03:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 70 turns, 34722 chars absorbed | Ollama: up
+- 2026-07-08T03:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 35 turns, 26575 chars absorbed | Ollama: up
+- 2026-07-08T04:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 47 turns, 23155 chars absorbed | Ollama: up
+- 2026-07-08T05:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 45 turns, 36299 chars absorbed | Ollama: up
+- 2026-07-08T05:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 40 turns, 25832 chars absorbed | Ollama: up
+- 2026-07-08T06:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 53 turns, 32858 chars absorbed | Ollama: up
+- 2026-07-08T06:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 67 turns, 34208 chars absorbed | Ollama: up
+- 2026-07-08T06:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 44 turns, 17091 chars absorbed | Ollama: up
+- 2026-07-08T07:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 52 turns, 34316 chars absorbed | Ollama: up
+- 2026-07-08T07:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 25 turns, 22099 chars absorbed | Ollama: up
+- 2026-07-08T08:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 91 turns, 40655 chars absorbed | Ollama: up
+- 2026-07-08T08:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 9 turns, 10295 chars absorbed | Ollama: up
+- 2026-07-08T08:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 89 turns, 34661 chars absorbed | Ollama: up
+- 2026-07-08T09:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 58 turns, 33542 chars absorbed | Ollama: up
+- 2026-07-08T09:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 3 turns, 3431 chars absorbed | Ollama: up
+- 2026-07-08T09:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 79 turns, 33986 chars absorbed | Ollama: up
+- 2026-07-08T10:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 32 turns, 22680 chars absorbed | Ollama: up
+- 2026-07-08T11:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 52 turns, 30796 chars absorbed | Ollama: up
+- 2026-07-08T11:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 52 turns, 30796 chars absorbed | Ollama: up
+- 2026-07-08T11:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 71 turns, 36068 chars absorbed | Ollama: up
+- 2026-07-08T12:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 51 turns, 35048 chars absorbed | Ollama: up
+- 2026-07-08T12:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 57 turns, 30123 chars absorbed | Ollama: up
+- 2026-07-08T12:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 47 turns, 26772 chars absorbed | Ollama: up
+- 2026-07-08T13:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 86 turns, 40224 chars absorbed | Ollama: up
+- 2026-07-08T13:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 30 turns, 25724 chars absorbed | Ollama: up
+- 2026-07-08T13:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 21 turns, 18517 chars absorbed | Ollama: up
+- 2026-07-08T14:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 30 turns, 25265 chars absorbed | Ollama: up
+- 2026-07-08T14:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 58 turns, 27883 chars absorbed | Ollama: up
+- 2026-07-08T15:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 57 turns, 30027 chars absorbed | Ollama: up
+- 2026-07-08T15:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 44 turns, 19524 chars absorbed | Ollama: up
+- 2026-07-08T15:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 58 turns, 36223 chars absorbed | Ollama: up
+- 2026-07-08T15:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 58 turns, 36223 chars absorbed | Ollama: up
+- 2026-07-08T16:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 79 turns, 36233 chars absorbed | Ollama: up
+- 2026-07-08T17:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 43 turns, 29957 chars absorbed | Ollama: up
+- 2026-07-08T17:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 25 turns, 9393 chars absorbed | Ollama: up
+- 2026-07-08T17:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 70 turns, 32198 chars absorbed | Ollama: up
+- 2026-07-08T18:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 52 turns, 31903 chars absorbed | Ollama: up
+- 2026-07-08T18:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 54 turns, 30368 chars absorbed | Ollama: up
+- 2026-07-08T19:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 55 turns, 30427 chars absorbed | Ollama: up
+- 2026-07-08T19:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 56 turns, 35579 chars absorbed | Ollama: up
+- 2026-07-08T20:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 31 turns, 28409 chars absorbed | Ollama: up
+- 2026-07-08T20:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 65 turns, 35651 chars absorbed | Ollama: up
+- 2026-07-08T20:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 62 turns, 32241 chars absorbed | Ollama: up
+- 2026-07-08T21:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 66 turns, 30747 chars absorbed | Ollama: up
+- 2026-07-08T21:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 66 turns, 30747 chars absorbed | Ollama: up
+- 2026-07-08T22:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 74 turns, 37033 chars absorbed | Ollama: up
+- 2026-07-08T22:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 65 turns, 32168 chars absorbed | Ollama: up
+- 2026-07-08T23:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 42 turns, 26839 chars absorbed | Ollama: up
+- 2026-07-08T23:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 15 turns, 17224 chars absorbed | Ollama: up
+- 2026-07-08T23:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 89 turns, 40011 chars absorbed | Ollama: up
+- 2026-07-09T00:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 63 turns, 33043 chars absorbed | Ollama: up
+- 2026-07-09T00:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 57 turns, 26214 chars absorbed | Ollama: up
+- 2026-07-09T00:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 52 turns, 33428 chars absorbed | Ollama: up
+- 2026-07-09T00:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 52 turns, 33428 chars absorbed | Ollama: up
+- 2026-07-09T01:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 93 turns, 37805 chars absorbed | Ollama: up
+- 2026-07-09T01:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 77 turns, 37421 chars absorbed | Ollama: up
+- 2026-07-09T02:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 44 turns, 32403 chars absorbed | Ollama: up
+- 2026-07-09T02:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 34 turns, 26278 chars absorbed | Ollama: up
+- 2026-07-09T02:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 59 turns, 28860 chars absorbed | Ollama: up
+- 2026-07-09T02:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 59 turns, 28860 chars absorbed | Ollama: up
+- 2026-07-09T03:24Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 8494 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-09T03:24Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 8494 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-09T03:54Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 8494 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-09T03:54Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 8494 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-09T04:24Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 8494 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-09T04:24Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 8494 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-09T04:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 67 turns, 40569 chars absorbed | Ollama: up
+- 2026-07-09T05:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 64 turns, 21601 chars absorbed | Ollama: up
+- 2026-07-09T06:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 62 turns, 31039 chars absorbed | Ollama: up
+- 2026-07-09T06:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 59 turns, 27633 chars absorbed | Ollama: up
+- 2026-07-09T06:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 86 turns, 37350 chars absorbed | Ollama: up
+- 2026-07-09T06:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 83 turns, 33860 chars absorbed | Ollama: up
+- 2026-07-09T07:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 54 turns, 32500 chars absorbed | Ollama: up
+- 2026-07-09T07:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 61 turns, 30682 chars absorbed | Ollama: up
+- 2026-07-09T07:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 61 turns, 30670 chars absorbed | Ollama: up
+- 2026-07-09T08:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 80 turns, 29790 chars absorbed | Ollama: up
+- 2026-07-09T08:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 65 turns, 31971 chars absorbed | Ollama: up
+- 2026-07-09T08:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 62 turns, 28540 chars absorbed | Ollama: up
+- 2026-07-09T09:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 77 turns, 33197 chars absorbed | Ollama: up
+- 2026-07-09T09:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 45 turns, 30150 chars absorbed | Ollama: up
+- 2026-07-09T10:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 53 turns, 29657 chars absorbed | Ollama: up
+- 2026-07-09T10:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 83 turns, 38022 chars absorbed | Ollama: up
+- 2026-07-09T10:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 55 turns, 21678 chars absorbed | Ollama: up
+- 2026-07-09T11:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 98 turns, 42267 chars absorbed | Ollama: up
+- 2026-07-09T12:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 58 turns, 27917 chars absorbed | Ollama: up
+- 2026-07-09T12:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 52 turns, 20996 chars absorbed | Ollama: up
+- 2026-07-09T12:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 107 turns, 41393 chars absorbed | Ollama: up
+- 2026-07-09T13:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 73 turns, 33687 chars absorbed | Ollama: up
+- 2026-07-09T13:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 38 turns, 23739 chars absorbed | Ollama: up
+- 2026-07-09T13:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 74 turns, 34590 chars absorbed | Ollama: up
+- 2026-07-09T14:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 78 turns, 35851 chars absorbed | Ollama: up
+- 2026-07-09T14:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 75 turns, 32421 chars absorbed | Ollama: up
+- 2026-07-09T14:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 69 turns, 35906 chars absorbed | Ollama: up
+- 2026-07-09T14:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 68 turns, 32527 chars absorbed | Ollama: up
+- 2026-07-09T15:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 78 turns, 31800 chars absorbed | Ollama: up
+- 2026-07-09T15:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 78 turns, 31800 chars absorbed | Ollama: up
+- 2026-07-09T15:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 58 turns, 32418 chars absorbed | Ollama: up
+- 2026-07-09T16:28Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 40 turns, 29072 chars absorbed | Ollama: up
+- 2026-07-09T17:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 66 turns, 32939 chars absorbed | Ollama: up
+- 2026-07-09T17:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 27 turns, 19234 chars absorbed | Ollama: up
+- 2026-07-09T17:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 101 turns, 40588 chars absorbed | Ollama: up
+- 2026-07-09T18:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 62 turns, 28280 chars absorbed | Ollama: up
+- 2026-07-09T18:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 54 turns, 21284 chars absorbed | Ollama: up
+- 2026-07-09T18:36Z [cousin: qwen-context-absorber] Status: error | Detail: 10 Qwen call(s) failed, 0 ok. First error: URLError: <urlopen error [Errno 61] Connection refused> | Ollama: up
+- 2026-07-09T18:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 122 turns, 52106 chars absorbed | Ollama: up
+- 2026-07-09T19:17Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 8721 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-09T19:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 8721 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-09T19:47Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 8721 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-09T19:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 8721 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-09T20:17Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 8721 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-09T20:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 8721 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-09T20:47Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 8721 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-09T20:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 8721 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-09T21:18Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 8721 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-09T21:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 8721 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-09T21:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 8721 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-09T21:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 8721 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-09T22:18Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 8721 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-09T22:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 8721 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-09T22:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 8721 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-09T22:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 8721 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-09T23:18Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 8721 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-09T23:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 8721 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-09T23:48Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 8721 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-09T23:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 8721 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-10T00:18Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 8721 transcript(s); nothing above MIN_NEW_CHARS_THRESHOLD (1500) | Ollama: up
+- 2026-07-21T08:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 294 Qwen call(s) ok, 2167 turns, 1145610 chars absorbed | Ollama: up
+- 2026-07-21T08:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 17 Qwen call(s) ok, 97 turns, 59135 chars absorbed | Ollama: up
+- 2026-07-21T08:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 3 Qwen call(s) ok, 20 turns, 11418 chars absorbed | Ollama: up
+- 2026-07-21T09:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 60 turns, 25009 chars absorbed | Ollama: up
+- 2026-07-21T09:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 6 turns, 3407 chars absorbed | Ollama: up
+- 2026-07-21T09:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 31 turns, 21211 chars absorbed | Ollama: up
+- 2026-07-21T09:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 16 turns, 8381 chars absorbed | Ollama: up
+- 2026-07-21T10:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 51 turns, 27918 chars absorbed | Ollama: up
+- 2026-07-21T10:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 27 turns, 6564 chars absorbed | Ollama: up
+- 2026-07-21T10:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 53 turns, 30427 chars absorbed | Ollama: up
+- 2026-07-21T10:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 53 turns, 30427 chars absorbed | Ollama: up
+- 2026-07-21T11:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 45 turns, 29880 chars absorbed | Ollama: up
+- 2026-07-21T11:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 45 turns, 29880 chars absorbed | Ollama: up
+- 2026-07-21T11:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 70 turns, 32069 chars absorbed | Ollama: up
+- 2026-07-21T11:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 70 turns, 32069 chars absorbed | Ollama: up
+- 2026-07-21T12:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 79 turns, 36985 chars absorbed | Ollama: up
+- 2026-07-21T12:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 79 turns, 36985 chars absorbed | Ollama: up
+- 2026-07-21T13:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 75 turns, 29760 chars absorbed | Ollama: up
+- 2026-07-21T13:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 75 turns, 29760 chars absorbed | Ollama: up
+- 2026-07-21T13:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 58 turns, 32174 chars absorbed | Ollama: up
+- 2026-07-21T13:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 58 turns, 32174 chars absorbed | Ollama: up
+- 2026-07-21T14:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 77 turns, 35452 chars absorbed | Ollama: up
+- 2026-07-21T14:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 77 turns, 35452 chars absorbed | Ollama: up
+- 2026-07-21T14:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 45 turns, 30331 chars absorbed | Ollama: up
+- 2026-07-21T14:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 45 turns, 30331 chars absorbed | Ollama: up
+- 2026-07-21T15:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 83 turns, 34351 chars absorbed | Ollama: up
+- 2026-07-21T15:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 83 turns, 34351 chars absorbed | Ollama: up
+- 2026-07-21T15:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 60 turns, 33371 chars absorbed | Ollama: up
+- 2026-07-21T15:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 60 turns, 33371 chars absorbed | Ollama: up
+- 2026-07-21T16:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 92 turns, 33124 chars absorbed | Ollama: up
+- 2026-07-21T16:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 92 turns, 33124 chars absorbed | Ollama: up
+- 2026-07-21T16:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 74 turns, 34264 chars absorbed | Ollama: up
+- 2026-07-21T16:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 74 turns, 34264 chars absorbed | Ollama: up
+- 2026-07-21T17:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 64 turns, 35730 chars absorbed | Ollama: up
+- 2026-07-21T17:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 64 turns, 35730 chars absorbed | Ollama: up
+- 2026-07-21T18:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 43 turns, 25011 chars absorbed | Ollama: up
+- 2026-07-21T18:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 43 turns, 25011 chars absorbed | Ollama: up
+- 2026-07-21T18:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 83 turns, 37627 chars absorbed | Ollama: up
+- 2026-07-21T18:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 83 turns, 37627 chars absorbed | Ollama: up
+- 2026-07-21T19:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 59 turns, 34207 chars absorbed | Ollama: up
+- 2026-07-21T19:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 59 turns, 34207 chars absorbed | Ollama: up
+- 2026-07-21T19:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 46 turns, 27036 chars absorbed | Ollama: up
+- 2026-07-21T19:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 46 turns, 27036 chars absorbed | Ollama: up
+- 2026-07-21T20:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 66 turns, 35756 chars absorbed | Ollama: up
+- 2026-07-21T20:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 66 turns, 35756 chars absorbed | Ollama: up
+- 2026-07-21T20:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 74 turns, 31671 chars absorbed | Ollama: up
+- 2026-07-21T20:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 74 turns, 31671 chars absorbed | Ollama: up
+- 2026-07-21T21:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 62 turns, 31579 chars absorbed | Ollama: up
+- 2026-07-21T21:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 62 turns, 31579 chars absorbed | Ollama: up
+- 2026-07-21T22:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 55 turns, 33167 chars absorbed | Ollama: up
+- 2026-07-21T22:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 55 turns, 33167 chars absorbed | Ollama: up
+- 2026-07-21T22:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 76 turns, 36228 chars absorbed | Ollama: up
+- 2026-07-21T22:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 76 turns, 36228 chars absorbed | Ollama: up
+- 2026-07-21T23:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 90 turns, 35455 chars absorbed | Ollama: up
+- 2026-07-21T23:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 44 turns, 27145 chars absorbed | Ollama: up
+- 2026-07-21T23:39Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 12633 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-22T00:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 60 turns, 31085 chars absorbed | Ollama: up
+- 2026-07-22T00:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 37 turns, 19054 chars absorbed | Ollama: up
+- 2026-07-22T00:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 50 turns, 30576 chars absorbed | Ollama: up
+- 2026-07-22T00:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 50 turns, 30576 chars absorbed | Ollama: up
+- 2026-07-22T01:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 74 turns, 33186 chars absorbed | Ollama: up
+- 2026-07-22T01:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 74 turns, 33186 chars absorbed | Ollama: up
+- 2026-07-22T01:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 84 turns, 35791 chars absorbed | Ollama: up
+- 2026-07-22T01:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 84 turns, 35791 chars absorbed | Ollama: up
+- 2026-07-22T02:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 61 turns, 31043 chars absorbed | Ollama: up
+- 2026-07-22T02:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 61 turns, 31043 chars absorbed | Ollama: up
+- 2026-07-22T02:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 63 turns, 33901 chars absorbed | Ollama: up
+- 2026-07-22T02:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 63 turns, 33901 chars absorbed | Ollama: up
+- 2026-07-22T03:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 60 turns, 32356 chars absorbed | Ollama: up
+- 2026-07-22T03:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 60 turns, 32356 chars absorbed | Ollama: up
+- 2026-07-22T04:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 41 turns, 27826 chars absorbed | Ollama: up
+- 2026-07-22T04:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 41 turns, 27826 chars absorbed | Ollama: up
+- 2026-07-22T04:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 74 turns, 33459 chars absorbed | Ollama: up
+- 2026-07-22T04:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 74 turns, 33459 chars absorbed | Ollama: up
+- 2026-07-22T05:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 76 turns, 34291 chars absorbed | Ollama: up
+- 2026-07-22T05:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 61 turns, 35797 chars absorbed | Ollama: up
+- 2026-07-22T05:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 11 Qwen call(s) ok, 64 turns, 38941 chars absorbed | Ollama: up
+- 2026-07-22T06:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 57 turns, 30745 chars absorbed | Ollama: up
+- 2026-07-22T06:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 57 turns, 30745 chars absorbed | Ollama: up
+- 2026-07-22T06:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 49 turns, 32453 chars absorbed | Ollama: up
+- 2026-07-22T06:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 49 turns, 32453 chars absorbed | Ollama: up
+- 2026-07-22T07:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 73 turns, 36165 chars absorbed | Ollama: up
+- 2026-07-22T07:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 73 turns, 36165 chars absorbed | Ollama: up
+- 2026-07-22T08:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 62 turns, 33594 chars absorbed | Ollama: up
+- 2026-07-22T08:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 62 turns, 33594 chars absorbed | Ollama: up
+- 2026-07-22T08:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 58 turns, 31203 chars absorbed | Ollama: up
+- 2026-07-22T08:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 58 turns, 31203 chars absorbed | Ollama: up
+- 2026-07-22T09:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 66 turns, 35440 chars absorbed | Ollama: up
+- 2026-07-22T09:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 66 turns, 35440 chars absorbed | Ollama: up
+- 2026-07-22T09:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 68 turns, 34229 chars absorbed | Ollama: up
+- 2026-07-22T09:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 68 turns, 34229 chars absorbed | Ollama: up
+- 2026-07-22T10:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 93 turns, 37703 chars absorbed | Ollama: up
+- 2026-07-22T10:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 93 turns, 37703 chars absorbed | Ollama: up
+- 2026-07-22T11:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 46 turns, 30980 chars absorbed | Ollama: up
+- 2026-07-22T11:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 46 turns, 30980 chars absorbed | Ollama: up
+- 2026-07-22T11:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 61 turns, 32449 chars absorbed | Ollama: up
+- 2026-07-22T11:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 61 turns, 32449 chars absorbed | Ollama: up
+- 2026-07-22T12:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 53 turns, 33193 chars absorbed | Ollama: up
+- 2026-07-22T12:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 53 turns, 33193 chars absorbed | Ollama: up
+- 2026-07-22T12:42Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 12834 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-22T12:42Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 12834 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-22T13:12Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 12834 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-22T13:12Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 12834 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-22T13:42Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 12834 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-22T13:42Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 12834 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-22T14:12Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 12834 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-22T14:12Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 12834 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-22T14:42Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 12834 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-22T14:42Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 12834 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-22T15:12Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 12834 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-22T15:12Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 12834 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-22T15:42Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 12834 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-22T15:42Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 12834 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-22T16:12Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 12834 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-22T16:12Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 12834 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-22T16:42Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 12834 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-22T16:42Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 12834 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-22T17:12Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 12834 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-22T17:12Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 12834 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-22T17:42Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 12834 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-22T17:42Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 12834 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-22T18:12Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 12834 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-22T18:12Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 12834 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-22T18:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 75 turns, 34261 chars absorbed | Ollama: up
+- 2026-07-22T18:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 75 turns, 34261 chars absorbed | Ollama: up
+- 2026-07-22T19:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 81 turns, 37051 chars absorbed | Ollama: up
+- 2026-07-22T19:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 81 turns, 37051 chars absorbed | Ollama: up
+- 2026-07-22T20:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 72 turns, 37333 chars absorbed | Ollama: up
+- 2026-07-22T20:02Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 72 turns, 37333 chars absorbed | Ollama: up
+- 2026-07-22T20:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 60 turns, 35708 chars absorbed | Ollama: up
+- 2026-07-22T21:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 42 turns, 24673 chars absorbed | Ollama: up
+- 2026-07-22T21:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 3 turns, 3130 chars absorbed | Ollama: up
+- 2026-07-22T21:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 72 turns, 31284 chars absorbed | Ollama: up
+- 2026-07-22T21:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 55 turns, 25263 chars absorbed | Ollama: up
+- 2026-07-22T22:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 51 turns, 29444 chars absorbed | Ollama: up
+- 2026-07-22T22:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 51 turns, 29444 chars absorbed | Ollama: up
+- 2026-07-22T22:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 43 turns, 29854 chars absorbed | Ollama: up
+- 2026-07-22T22:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 43 turns, 29854 chars absorbed | Ollama: up
+- 2026-07-22T23:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 85 turns, 35565 chars absorbed | Ollama: up
+- 2026-07-22T23:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 85 turns, 35565 chars absorbed | Ollama: up
+- 2026-07-22T23:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 60 turns, 33683 chars absorbed | Ollama: up
+- 2026-07-22T23:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 60 turns, 33683 chars absorbed | Ollama: up
+- 2026-07-23T00:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 15 Qwen call(s) ok, 114 turns, 55535 chars absorbed | Ollama: up
+- 2026-07-23T00:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 15 Qwen call(s) ok, 114 turns, 55535 chars absorbed | Ollama: up
+- 2026-07-23T01:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 85 turns, 37422 chars absorbed | Ollama: up
+- 2026-07-23T01:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 85 turns, 37422 chars absorbed | Ollama: up
+- 2026-07-23T02:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 43 turns, 28398 chars absorbed | Ollama: up
+- 2026-07-23T02:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 43 turns, 28398 chars absorbed | Ollama: up
+- 2026-07-23T02:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 100 turns, 37820 chars absorbed | Ollama: up
+- 2026-07-23T02:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 100 turns, 37820 chars absorbed | Ollama: up
+- 2026-07-23T03:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 93 turns, 37881 chars absorbed | Ollama: up
+- 2026-07-23T03:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 93 turns, 37881 chars absorbed | Ollama: up
+- 2026-07-23T03:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 71 turns, 34308 chars absorbed | Ollama: up
+- 2026-07-23T03:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 71 turns, 34308 chars absorbed | Ollama: up
+- 2026-07-23T04:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 46 turns, 30195 chars absorbed | Ollama: up
+- 2026-07-23T04:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 46 turns, 30195 chars absorbed | Ollama: up
+- 2026-07-23T05:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 74 turns, 31275 chars absorbed | Ollama: up
+- 2026-07-23T05:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 11 Qwen call(s) ok, 55 turns, 38115 chars absorbed | Ollama: up
+- 2026-07-23T05:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 27 turns, 23678 chars absorbed | Ollama: up
+- 2026-07-23T06:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 54 turns, 29882 chars absorbed | Ollama: up
+- 2026-07-23T06:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 54 turns, 29882 chars absorbed | Ollama: up
+- 2026-07-23T06:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 60 turns, 30736 chars absorbed | Ollama: up
+- 2026-07-23T06:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 60 turns, 30736 chars absorbed | Ollama: up
+- 2026-07-23T07:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 73 turns, 32941 chars absorbed | Ollama: up
+- 2026-07-23T07:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 73 turns, 32941 chars absorbed | Ollama: up
+- 2026-07-23T07:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 59 turns, 33231 chars absorbed | Ollama: up
+- 2026-07-23T07:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 59 turns, 33231 chars absorbed | Ollama: up
+- 2026-07-23T08:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 59 turns, 27844 chars absorbed | Ollama: up
+- 2026-07-23T08:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 59 turns, 27844 chars absorbed | Ollama: up
+- 2026-07-23T08:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 81 turns, 34306 chars absorbed | Ollama: up
+- 2026-07-23T08:54Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 81 turns, 34306 chars absorbed | Ollama: up
+- 2026-07-23T09:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 70 turns, 28724 chars absorbed | Ollama: up
+- 2026-07-23T09:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 70 turns, 28724 chars absorbed | Ollama: up
+- 2026-07-23T10:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 82 turns, 34753 chars absorbed | Ollama: up
+- 2026-07-23T10:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 82 turns, 34753 chars absorbed | Ollama: up
+- 2026-07-23T10:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 65 turns, 36196 chars absorbed | Ollama: up
+- 2026-07-23T10:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 65 turns, 36196 chars absorbed | Ollama: up
+- 2026-07-23T11:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 77 turns, 35142 chars absorbed | Ollama: up
+- 2026-07-23T11:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 77 turns, 35142 chars absorbed | Ollama: up
+- 2026-07-23T11:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 48 turns, 30576 chars absorbed | Ollama: up
+- 2026-07-23T11:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 48 turns, 30576 chars absorbed | Ollama: up
+- 2026-07-23T12:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 68 turns, 36846 chars absorbed | Ollama: up
+- 2026-07-23T12:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 68 turns, 36846 chars absorbed | Ollama: up
+- 2026-07-23T12:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 63 turns, 33368 chars absorbed | Ollama: up
+- 2026-07-23T12:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 63 turns, 33368 chars absorbed | Ollama: up
+- 2026-07-23T13:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 32 turns, 26220 chars absorbed | Ollama: up
+- 2026-07-23T13:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 32 turns, 26220 chars absorbed | Ollama: up
+- 2026-07-23T13:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 68 turns, 33909 chars absorbed | Ollama: up
+- 2026-07-23T13:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 68 turns, 33909 chars absorbed | Ollama: up
+- 2026-07-23T14:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 84 turns, 33758 chars absorbed | Ollama: up
+- 2026-07-23T14:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 85 turns, 33815 chars absorbed | Ollama: up
+- 2026-07-23T15:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 37 turns, 27291 chars absorbed | Ollama: up
+- 2026-07-23T15:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 37 turns, 27291 chars absorbed | Ollama: up
+- 2026-07-23T15:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 91 turns, 34215 chars absorbed | Ollama: up
+- 2026-07-23T15:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 91 turns, 34215 chars absorbed | Ollama: up
+- 2026-07-23T16:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 72 turns, 34508 chars absorbed | Ollama: up
+- 2026-07-23T16:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 72 turns, 34508 chars absorbed | Ollama: up
+- 2026-07-23T16:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 42 turns, 29842 chars absorbed | Ollama: up
+- 2026-07-23T16:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 42 turns, 29842 chars absorbed | Ollama: up
+- 2026-07-23T17:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 65 turns, 32911 chars absorbed | Ollama: up
+- 2026-07-23T17:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 65 turns, 32911 chars absorbed | Ollama: up
+- 2026-07-23T17:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 59 turns, 33685 chars absorbed | Ollama: up
+- 2026-07-23T17:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 59 turns, 33685 chars absorbed | Ollama: up
+- 2026-07-23T18:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 58 turns, 30576 chars absorbed | Ollama: up
+- 2026-07-23T18:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 58 turns, 30576 chars absorbed | Ollama: up
+- 2026-07-23T18:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 80 turns, 31387 chars absorbed | Ollama: up
+- 2026-07-23T18:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 80 turns, 31387 chars absorbed | Ollama: up
+- 2026-07-23T19:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 62 turns, 35506 chars absorbed | Ollama: up
+- 2026-07-23T19:30Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 62 turns, 35506 chars absorbed | Ollama: up
+- 2026-07-23T20:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 50 turns, 28475 chars absorbed | Ollama: up
+- 2026-07-23T20:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 50 turns, 28475 chars absorbed | Ollama: up
+- 2026-07-23T20:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 68 turns, 33054 chars absorbed | Ollama: up
+- 2026-07-23T20:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 68 turns, 33054 chars absorbed | Ollama: up
+- 2026-07-23T21:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 61 turns, 33359 chars absorbed | Ollama: up
+- 2026-07-23T21:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 61 turns, 33359 chars absorbed | Ollama: up
+- 2026-07-23T21:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 37 turns, 29614 chars absorbed | Ollama: up
+- 2026-07-23T21:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 37 turns, 29614 chars absorbed | Ollama: up
+- 2026-07-23T22:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 162 turns, 38628 chars absorbed | Ollama: up
+- 2026-07-23T22:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 162 turns, 38628 chars absorbed | Ollama: up
+- 2026-07-23T22:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 167 turns, 39481 chars absorbed | Ollama: up
+- 2026-07-23T22:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 168 turns, 39538 chars absorbed | Ollama: up
+- 2026-07-23T23:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 12 Qwen call(s) ok, 110 turns, 41501 chars absorbed | Ollama: up
+- 2026-07-23T23:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 12 Qwen call(s) ok, 110 turns, 41501 chars absorbed | Ollama: up
+- 2026-07-24T00:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 76 turns, 29573 chars absorbed | Ollama: up
+- 2026-07-24T00:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 76 turns, 29573 chars absorbed | Ollama: up
+- 2026-07-24T00:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 63 turns, 30092 chars absorbed | Ollama: up
+- 2026-07-24T00:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 63 turns, 30092 chars absorbed | Ollama: up
+- 2026-07-24T01:08Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 13320 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-24T01:08Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 13320 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-24T01:38Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 13320 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-24T01:38Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 13320 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-24T02:08Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 13320 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-24T02:08Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 13320 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-24T02:38Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 13320 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-24T02:38Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 13320 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-24T03:08Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 13320 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-24T03:08Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 13320 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-24T03:38Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 13320 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-24T03:38Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 13320 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-24T04:08Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 13320 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-24T04:08Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 13320 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-24T04:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 231 turns, 37737 chars absorbed | Ollama: up
+- 2026-07-24T05:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 11 Qwen call(s) ok, 83 turns, 39661 chars absorbed | Ollama: up
+- 2026-07-24T05:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 3 turns, 3123 chars absorbed | Ollama: up
+- 2026-07-24T05:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 90 turns, 32954 chars absorbed | Ollama: up
+- 2026-07-24T05:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 41 turns, 19573 chars absorbed | Ollama: up
+- 2026-07-24T06:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 62 turns, 28501 chars absorbed | Ollama: up
+- 2026-07-24T06:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 59 turns, 25339 chars absorbed | Ollama: up
+- 2026-07-24T07:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 72 turns, 30940 chars absorbed | Ollama: up
+- 2026-07-24T07:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 72 turns, 30940 chars absorbed | Ollama: up
+- 2026-07-24T07:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 11 Qwen call(s) ok, 83 turns, 39857 chars absorbed | Ollama: up
+- 2026-07-24T07:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 11 Qwen call(s) ok, 83 turns, 39857 chars absorbed | Ollama: up
+- 2026-07-24T08:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 56 turns, 33018 chars absorbed | Ollama: up
+- 2026-07-24T08:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 56 turns, 33018 chars absorbed | Ollama: up
+- 2026-07-24T08:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 53 turns, 30892 chars absorbed | Ollama: up
+- 2026-07-24T09:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 76 turns, 34566 chars absorbed | Ollama: up
+- 2026-07-24T09:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 3 turns, 3122 chars absorbed | Ollama: up
+- 2026-07-24T09:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 39 turns, 24575 chars absorbed | Ollama: up
+- 2026-07-24T09:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 39 turns, 24575 chars absorbed | Ollama: up
+- 2026-07-24T10:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 56 turns, 32546 chars absorbed | Ollama: up
+- 2026-07-24T10:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 56 turns, 32546 chars absorbed | Ollama: up
+- 2026-07-24T10:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 58 turns, 30186 chars absorbed | Ollama: up
+- 2026-07-24T10:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 58 turns, 30186 chars absorbed | Ollama: up
+- 2026-07-24T11:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 44 turns, 30048 chars absorbed | Ollama: up
+- 2026-07-24T11:24Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 44 turns, 30048 chars absorbed | Ollama: up
+- 2026-07-24T11:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 53 turns, 33397 chars absorbed | Ollama: up
+- 2026-07-24T11:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 53 turns, 33397 chars absorbed | Ollama: up
+- 2026-07-24T12:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 77 turns, 34024 chars absorbed | Ollama: up
+- 2026-07-24T12:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 77 turns, 34024 chars absorbed | Ollama: up
+- 2026-07-24T13:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 27368 chars absorbed | Ollama: up
+- 2026-07-24T13:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 27368 chars absorbed | Ollama: up
+- 2026-07-24T13:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 76 turns, 33679 chars absorbed | Ollama: up
+- 2026-07-24T13:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 76 turns, 33679 chars absorbed | Ollama: up
+- 2026-07-24T14:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 79 turns, 34543 chars absorbed | Ollama: up
+- 2026-07-24T14:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 79 turns, 34543 chars absorbed | Ollama: up
+- 2026-07-24T14:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 48 turns, 30566 chars absorbed | Ollama: up
+- 2026-07-24T14:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 48 turns, 30566 chars absorbed | Ollama: up
+- 2026-07-24T15:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 68 turns, 33460 chars absorbed | Ollama: up
+- 2026-07-24T15:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 68 turns, 33460 chars absorbed | Ollama: up
+- 2026-07-24T15:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 67 turns, 33806 chars absorbed | Ollama: up
+- 2026-07-24T15:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 67 turns, 33806 chars absorbed | Ollama: up
+- 2026-07-24T16:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 51 turns, 30580 chars absorbed | Ollama: up
+- 2026-07-24T16:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 51 turns, 30580 chars absorbed | Ollama: up
+- 2026-07-24T16:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 52 turns, 30504 chars absorbed | Ollama: up
+- 2026-07-24T16:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 52 turns, 30504 chars absorbed | Ollama: up
+- 2026-07-24T17:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 64 turns, 35846 chars absorbed | Ollama: up
+- 2026-07-24T17:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 64 turns, 35846 chars absorbed | Ollama: up
+- 2026-07-24T18:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 38 turns, 27942 chars absorbed | Ollama: up
+- 2026-07-24T18:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 38 turns, 27942 chars absorbed | Ollama: up
+- 2026-07-24T18:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 67 turns, 33264 chars absorbed | Ollama: up
+- 2026-07-24T18:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 67 turns, 33264 chars absorbed | Ollama: up
+- 2026-07-24T19:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 53 turns, 33831 chars absorbed | Ollama: up
+- 2026-07-24T19:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 53 turns, 33831 chars absorbed | Ollama: up
+- 2026-07-24T19:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 60 turns, 32056 chars absorbed | Ollama: up
+- 2026-07-24T19:42Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 60 turns, 32056 chars absorbed | Ollama: up
+- 2026-07-24T20:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 88 turns, 34565 chars absorbed | Ollama: up
+- 2026-07-24T20:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 88 turns, 34565 chars absorbed | Ollama: up
+- 2026-07-24T20:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 89 turns, 35089 chars absorbed | Ollama: up
+- 2026-07-24T20:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 89 turns, 35089 chars absorbed | Ollama: up
+- 2026-07-24T21:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 131 turns, 35655 chars absorbed | Ollama: up
+- 2026-07-24T21:27Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 131 turns, 35655 chars absorbed | Ollama: up
+- 2026-07-24T22:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 64 turns, 33810 chars absorbed | Ollama: up
+- 2026-07-24T22:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 64 turns, 33810 chars absorbed | Ollama: up
+- 2026-07-24T22:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 67 turns, 36137 chars absorbed | Ollama: up
+- 2026-07-24T22:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 67 turns, 36137 chars absorbed | Ollama: up
+- 2026-07-24T23:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 66 turns, 33634 chars absorbed | Ollama: up
+- 2026-07-24T23:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 64 turns, 33453 chars absorbed | Ollama: up
+- 2026-07-24T23:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 47 turns, 27537 chars absorbed | Ollama: up
+- 2026-07-24T23:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 47 turns, 27537 chars absorbed | Ollama: up
+- 2026-07-25T00:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 64 turns, 36501 chars absorbed | Ollama: up
+- 2026-07-25T00:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 64 turns, 36501 chars absorbed | Ollama: up
+- 2026-07-25T00:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 43 turns, 28034 chars absorbed | Ollama: up
+- 2026-07-25T00:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 43 turns, 28034 chars absorbed | Ollama: up
+- 2026-07-25T01:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 96 turns, 34741 chars absorbed | Ollama: up
+- 2026-07-25T01:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 96 turns, 34741 chars absorbed | Ollama: up
+- 2026-07-25T01:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 65 turns, 36351 chars absorbed | Ollama: up
+- 2026-07-25T01:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 65 turns, 36351 chars absorbed | Ollama: up
+- 2026-07-25T02:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 71 turns, 33592 chars absorbed | Ollama: up
+- 2026-07-25T02:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 71 turns, 33592 chars absorbed | Ollama: up
+- 2026-07-25T03:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 52 turns, 28906 chars absorbed | Ollama: up
+- 2026-07-25T03:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 52 turns, 28906 chars absorbed | Ollama: up
+- 2026-07-25T03:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 66 turns, 36570 chars absorbed | Ollama: up
+- 2026-07-25T03:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 66 turns, 36570 chars absorbed | Ollama: up
+- 2026-07-25T04:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 67 turns, 31831 chars absorbed | Ollama: up
+- 2026-07-25T04:12Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 67 turns, 31831 chars absorbed | Ollama: up
+- 2026-07-25T04:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 45 turns, 30448 chars absorbed | Ollama: up
+- 2026-07-25T04:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 45 turns, 30448 chars absorbed | Ollama: up
+- 2026-07-25T05:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 72 turns, 36444 chars absorbed | Ollama: up
+- 2026-07-25T05:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 72 turns, 36444 chars absorbed | Ollama: up
+- 2026-07-25T06:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 94 turns, 35431 chars absorbed | Ollama: up
+- 2026-07-25T06:49Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 39 turns, 19176 chars absorbed | Ollama: up
+- 2026-07-25T07:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 86 turns, 36106 chars absorbed | Ollama: up
+- 2026-07-25T07:19Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 13744 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-25T07:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 57 turns, 21502 chars absorbed | Ollama: up
+- 2026-07-25T07:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 66 turns, 30954 chars absorbed | Ollama: up
+- 2026-07-25T08:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 11 Qwen call(s) ok, 76 turns, 39213 chars absorbed | Ollama: up
+- 2026-07-25T08:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 11 Qwen call(s) ok, 76 turns, 39213 chars absorbed | Ollama: up
+- 2026-07-25T09:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 49 turns, 28147 chars absorbed | Ollama: up
+- 2026-07-25T09:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 49 turns, 28147 chars absorbed | Ollama: up
+- 2026-07-25T09:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 80 turns, 36538 chars absorbed | Ollama: up
+- 2026-07-25T09:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 80 turns, 36538 chars absorbed | Ollama: up
+- 2026-07-25T10:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 60 turns, 35510 chars absorbed | Ollama: up
+- 2026-07-25T10:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 60 turns, 35510 chars absorbed | Ollama: up
+- 2026-07-25T10:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 38 turns, 27881 chars absorbed | Ollama: up
+- 2026-07-25T10:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 38 turns, 27881 chars absorbed | Ollama: up
+- 2026-07-25T11:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 59 turns, 32729 chars absorbed | Ollama: up
+- 2026-07-25T11:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 59 turns, 32729 chars absorbed | Ollama: up
+- 2026-07-25T11:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 74 turns, 31363 chars absorbed | Ollama: up
+- 2026-07-25T11:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 78 turns, 34584 chars absorbed | Ollama: up
+- 2026-07-25T12:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 49 turns, 27126 chars absorbed | Ollama: up
+- 2026-07-25T12:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 49 turns, 27126 chars absorbed | Ollama: up
+- 2026-07-25T12:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 62 turns, 33481 chars absorbed | Ollama: up
+- 2026-07-25T12:59Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 62 turns, 33481 chars absorbed | Ollama: up
+- 2026-07-25T13:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 60 turns, 35726 chars absorbed | Ollama: up
+- 2026-07-25T13:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 60 turns, 35726 chars absorbed | Ollama: up
+- 2026-07-25T14:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 27 turns, 23872 chars absorbed | Ollama: up
+- 2026-07-25T14:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 27 turns, 23872 chars absorbed | Ollama: up
+- 2026-07-25T14:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 73 turns, 33436 chars absorbed | Ollama: up
+- 2026-07-25T14:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 73 turns, 33436 chars absorbed | Ollama: up
+- 2026-07-25T15:09Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 57 turns, 33661 chars absorbed | Ollama: up
+- 2026-07-25T15:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 57 turns, 33661 chars absorbed | Ollama: up
+- 2026-07-25T15:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 54 turns, 30959 chars absorbed | Ollama: up
+- 2026-07-25T15:43Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 54 turns, 30959 chars absorbed | Ollama: up
+- 2026-07-25T16:16Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 82 turns, 34140 chars absorbed | Ollama: up
+- 2026-07-25T16:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 82 turns, 34140 chars absorbed | Ollama: up
+- 2026-07-25T16:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 81 turns, 34529 chars absorbed | Ollama: up
+- 2026-07-25T16:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 81 turns, 34529 chars absorbed | Ollama: up
+- 2026-07-25T17:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 50 turns, 30316 chars absorbed | Ollama: up
+- 2026-07-25T17:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 50 turns, 30316 chars absorbed | Ollama: up
+- 2026-07-25T17:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 58 turns, 31153 chars absorbed | Ollama: up
+- 2026-07-25T17:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 58 turns, 31153 chars absorbed | Ollama: up
+- 2026-07-25T18:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 53 turns, 34782 chars absorbed | Ollama: up
+- 2026-07-25T18:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 53 turns, 34782 chars absorbed | Ollama: up
+- 2026-07-25T19:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 27753 chars absorbed | Ollama: up
+- 2026-07-25T19:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 36 turns, 27753 chars absorbed | Ollama: up
+- 2026-07-25T19:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 63 turns, 32779 chars absorbed | Ollama: up
+- 2026-07-25T19:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 63 turns, 32779 chars absorbed | Ollama: up
+- 2026-07-25T20:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 52 turns, 32526 chars absorbed | Ollama: up
+- 2026-07-25T20:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 52 turns, 32526 chars absorbed | Ollama: up
+- 2026-07-25T20:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 40 turns, 26925 chars absorbed | Ollama: up
+- 2026-07-25T20:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 40 turns, 26925 chars absorbed | Ollama: up
+- 2026-07-25T21:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 109 turns, 38543 chars absorbed | Ollama: up
+- 2026-07-25T21:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 109 turns, 38543 chars absorbed | Ollama: up
+- 2026-07-25T21:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 39 turns, 27483 chars absorbed | Ollama: up
+- 2026-07-25T21:46Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 39 turns, 27483 chars absorbed | Ollama: up
+- 2026-07-25T22:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 64 turns, 32512 chars absorbed | Ollama: up
+- 2026-07-25T22:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 64 turns, 32512 chars absorbed | Ollama: up
+- 2026-07-25T22:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 50 turns, 32619 chars absorbed | Ollama: up
+- 2026-07-25T22:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 50 turns, 32619 chars absorbed | Ollama: up
+- 2026-07-25T23:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 40 turns, 26770 chars absorbed | Ollama: up
+- 2026-07-25T23:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 40 turns, 26770 chars absorbed | Ollama: up
+- 2026-07-25T23:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 66 turns, 33464 chars absorbed | Ollama: up
+- 2026-07-25T23:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 66 turns, 33464 chars absorbed | Ollama: up
+- 2026-07-26T00:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 68 turns, 33082 chars absorbed | Ollama: up
+- 2026-07-26T00:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 68 turns, 33082 chars absorbed | Ollama: up
+- 2026-07-26T01:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 40 turns, 27615 chars absorbed | Ollama: up
+- 2026-07-26T01:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 40 turns, 27615 chars absorbed | Ollama: up
+- 2026-07-26T01:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 66 turns, 32734 chars absorbed | Ollama: up
+- 2026-07-26T01:37Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 66 turns, 32734 chars absorbed | Ollama: up
+- 2026-07-26T02:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 62 turns, 33313 chars absorbed | Ollama: up
+- 2026-07-26T02:13Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 62 turns, 33313 chars absorbed | Ollama: up
+- 2026-07-26T02:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 61 turns, 30900 chars absorbed | Ollama: up
+- 2026-07-26T02:45Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 61 turns, 30900 chars absorbed | Ollama: up
+- 2026-07-26T03:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 69 turns, 36027 chars absorbed | Ollama: up
+- 2026-07-26T03:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 69 turns, 36027 chars absorbed | Ollama: up
+- 2026-07-26T03:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 46 turns, 29677 chars absorbed | Ollama: up
+- 2026-07-26T03:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 46 turns, 29677 chars absorbed | Ollama: up
+- 2026-07-26T04:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 65 turns, 31353 chars absorbed | Ollama: up
+- 2026-07-26T04:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 65 turns, 31353 chars absorbed | Ollama: up
+- 2026-07-26T04:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 64 turns, 31458 chars absorbed | Ollama: up
+- 2026-07-26T04:56Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 64 turns, 31458 chars absorbed | Ollama: up
+- 2026-07-26T05:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 54 turns, 34718 chars absorbed | Ollama: up
+- 2026-07-26T06:10Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 76 turns, 37098 chars absorbed | Ollama: up
+- 2026-07-26T06:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 76 turns, 37098 chars absorbed | Ollama: up
+- 2026-07-26T06:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 47 turns, 30445 chars absorbed | Ollama: up
+- 2026-07-26T06:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 47 turns, 30445 chars absorbed | Ollama: up
+- 2026-07-26T07:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 80 turns, 33629 chars absorbed | Ollama: up
+- 2026-07-26T07:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 80 turns, 33629 chars absorbed | Ollama: up
+- 2026-07-26T07:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 79 turns, 35134 chars absorbed | Ollama: up
+- 2026-07-26T07:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 79 turns, 35134 chars absorbed | Ollama: up
+- 2026-07-26T08:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 48 turns, 30212 chars absorbed | Ollama: up
+- 2026-07-26T08:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 48 turns, 30212 chars absorbed | Ollama: up
+- 2026-07-26T08:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 55 turns, 32646 chars absorbed | Ollama: up
+- 2026-07-26T08:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 55 turns, 32646 chars absorbed | Ollama: up
+- 2026-07-26T09:28Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T09:28Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T09:58Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T09:58Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T10:28Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T10:28Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T10:58Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T10:58Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T11:28Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T11:28Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T11:58Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T11:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T12:28Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T12:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T12:58Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T12:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T13:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T13:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T13:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T13:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T14:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T14:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T14:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T14:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T15:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T15:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T15:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T15:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T16:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T16:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T16:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T16:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T17:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T17:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T17:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T17:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T18:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T18:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T18:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T18:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T19:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T19:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T19:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T19:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T20:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T20:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T20:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T20:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T21:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T21:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T21:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T21:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T22:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T22:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T22:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T22:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T23:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T23:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T23:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-26T23:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-27T00:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-27T00:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-27T00:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-27T00:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-27T01:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-27T01:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-27T01:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-27T01:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-27T02:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-27T02:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-27T02:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-27T02:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-27T03:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-27T03:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-27T03:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-27T03:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-27T04:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-27T04:29Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-27T04:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-27T04:59Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14154 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-27T05:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 56 turns, 26724 chars absorbed | Ollama: up
+- 2026-07-27T05:33Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 56 turns, 26724 chars absorbed | Ollama: up
+- 2026-07-27T06:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 41 turns, 24862 chars absorbed | Ollama: up
+- 2026-07-27T06:05Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 41 turns, 24862 chars absorbed | Ollama: up
+- 2026-07-27T06:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 80 turns, 36815 chars absorbed | Ollama: up
+- 2026-07-27T06:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 80 turns, 36815 chars absorbed | Ollama: up
+- 2026-07-27T07:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 64 turns, 35936 chars absorbed | Ollama: up
+- 2026-07-27T07:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 64 turns, 35936 chars absorbed | Ollama: up
+- 2026-07-27T07:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 43 turns, 32480 chars absorbed | Ollama: up
+- 2026-07-27T07:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 43 turns, 32480 chars absorbed | Ollama: up
+- 2026-07-27T08:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 42 turns, 26716 chars absorbed | Ollama: up
+- 2026-07-27T08:22Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 42 turns, 26716 chars absorbed | Ollama: up
+- 2026-07-27T08:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 72 turns, 34186 chars absorbed | Ollama: up
+- 2026-07-27T08:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 72 turns, 34186 chars absorbed | Ollama: up
+- 2026-07-27T09:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 93 turns, 37681 chars absorbed | Ollama: up
+- 2026-07-27T09:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 93 turns, 37681 chars absorbed | Ollama: up
+- 2026-07-27T10:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 57 turns, 28986 chars absorbed | Ollama: up
+- 2026-07-27T10:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 57 turns, 28986 chars absorbed | Ollama: up
+- 2026-07-27T10:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 73 turns, 33604 chars absorbed | Ollama: up
+- 2026-07-27T10:40Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 73 turns, 33604 chars absorbed | Ollama: up
+- 2026-07-27T11:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 11 Qwen call(s) ok, 73 turns, 39183 chars absorbed | Ollama: up
+- 2026-07-27T11:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 11 Qwen call(s) ok, 73 turns, 39183 chars absorbed | Ollama: up
+- 2026-07-27T11:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 50 turns, 28362 chars absorbed | Ollama: up
+- 2026-07-27T11:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 50 turns, 28362 chars absorbed | Ollama: up
+- 2026-07-27T12:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 77 turns, 33612 chars absorbed | Ollama: up
+- 2026-07-27T12:20Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 77 turns, 33612 chars absorbed | Ollama: up
+- 2026-07-27T12:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 59 turns, 33482 chars absorbed | Ollama: up
+- 2026-07-27T12:53Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 59 turns, 33482 chars absorbed | Ollama: up
+- 2026-07-27T13:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 54 turns, 27755 chars absorbed | Ollama: up
+- 2026-07-27T13:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 54 turns, 27755 chars absorbed | Ollama: up
+- 2026-07-27T14:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 89 turns, 34769 chars absorbed | Ollama: up
+- 2026-07-27T14:00Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 89 turns, 34769 chars absorbed | Ollama: up
+- 2026-07-27T14:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 64 turns, 35654 chars absorbed | Ollama: up
+- 2026-07-27T14:32Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 64 turns, 35654 chars absorbed | Ollama: up
+- 2026-07-27T15:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 28 turns, 23765 chars absorbed | Ollama: up
+- 2026-07-27T15:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 28 turns, 23765 chars absorbed | Ollama: up
+- 2026-07-27T15:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 85 turns, 37716 chars absorbed | Ollama: up
+- 2026-07-27T15:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 85 turns, 37716 chars absorbed | Ollama: up
+- 2026-07-27T16:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 60 turns, 29981 chars absorbed | Ollama: up
+- 2026-07-27T16:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 60 turns, 29981 chars absorbed | Ollama: up
+- 2026-07-27T16:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 58 turns, 30906 chars absorbed | Ollama: up
+- 2026-07-27T16:44Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 58 turns, 30906 chars absorbed | Ollama: up
+- 2026-07-27T17:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 57 turns, 35365 chars absorbed | Ollama: up
+- 2026-07-27T17:17Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 57 turns, 35365 chars absorbed | Ollama: up
+- 2026-07-27T17:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 61 turns, 30309 chars absorbed | Ollama: up
+- 2026-07-27T17:51Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 61 turns, 30309 chars absorbed | Ollama: up
+- 2026-07-27T18:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 48 turns, 30146 chars absorbed | Ollama: up
+- 2026-07-27T18:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 48 turns, 30146 chars absorbed | Ollama: up
+- 2026-07-27T18:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 70 turns, 31017 chars absorbed | Ollama: up
+- 2026-07-27T18:57Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 73 turns, 34177 chars absorbed | Ollama: up
+- 2026-07-27T19:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 69 turns, 33242 chars absorbed | Ollama: up
+- 2026-07-27T19:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 69 turns, 33242 chars absorbed | Ollama: up
+- 2026-07-27T20:04Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 47 turns, 28043 chars absorbed | Ollama: up
+- 2026-07-27T20:36Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 23 turns, 18404 chars absorbed | Ollama: up
+- 2026-07-27T21:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 63 turns, 30194 chars absorbed | Ollama: up
+- 2026-07-27T21:07Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 15 turns, 15652 chars absorbed | Ollama: up
+- 2026-07-27T21:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 44 turns, 27105 chars absorbed | Ollama: up
+- 2026-07-27T21:39Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 44 turns, 27105 chars absorbed | Ollama: up
+- 2026-07-27T22:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 64 turns, 33646 chars absorbed | Ollama: up
+- 2026-07-27T22:18Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 64 turns, 33646 chars absorbed | Ollama: up
+- 2026-07-27T22:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 79 turns, 36888 chars absorbed | Ollama: up
+- 2026-07-27T22:52Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 79 turns, 36888 chars absorbed | Ollama: up
+- 2026-07-27T23:25Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 89 turns, 33603 chars absorbed | Ollama: up
+- 2026-07-27T23:26Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 89 turns, 33603 chars absorbed | Ollama: up
+- 2026-07-27T23:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 67 turns, 33780 chars absorbed | Ollama: up
+- 2026-07-27T23:58Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 67 turns, 33780 chars absorbed | Ollama: up
+- 2026-07-28T00:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 66 turns, 32773 chars absorbed | Ollama: up
+- 2026-07-28T00:31Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 66 turns, 32773 chars absorbed | Ollama: up
+- 2026-07-28T01:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 49 turns, 28423 chars absorbed | Ollama: up
+- 2026-07-28T01:03Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 49 turns, 28423 chars absorbed | Ollama: up
+- 2026-07-28T01:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 98 turns, 34664 chars absorbed | Ollama: up
+- 2026-07-28T01:38Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 98 turns, 34664 chars absorbed | Ollama: up
+- 2026-07-28T02:11Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 68 turns, 33809 chars absorbed | Ollama: up
+- 2026-07-28T02:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 47 turns, 27280 chars absorbed | Ollama: up
+- 2026-07-28T02:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 1 Qwen call(s) ok, 4 turns, 3227 chars absorbed | Ollama: up
+- 2026-07-28T03:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 74 turns, 33230 chars absorbed | Ollama: up
+- 2026-07-28T03:14Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 65 turns, 27526 chars absorbed | Ollama: up
+- 2026-07-28T03:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 73 turns, 34068 chars absorbed | Ollama: up
+- 2026-07-28T03:47Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 73 turns, 34068 chars absorbed | Ollama: up
+- 2026-07-28T04:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 32 turns, 17483 chars absorbed | Ollama: up
+- 2026-07-28T04:19Z [cousin: qwen-context-absorber] Status: processed | Detail: 5 Qwen call(s) ok, 32 turns, 17483 chars absorbed | Ollama: up
+- 2026-07-28T04:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 36 turns, 21458 chars absorbed | Ollama: up
+- 2026-07-28T04:50Z [cousin: qwen-context-absorber] Status: processed | Detail: 6 Qwen call(s) ok, 36 turns, 21458 chars absorbed | Ollama: up
+- 2026-07-28T05:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 15 turns, 8103 chars absorbed | Ollama: up
+- 2026-07-28T05:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 2 Qwen call(s) ok, 15 turns, 8103 chars absorbed | Ollama: up
+- 2026-07-28T05:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T05:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T06:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T06:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T06:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T06:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T07:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T07:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T07:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T07:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T08:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T08:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T08:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T08:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T09:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T09:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T09:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T09:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T10:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T10:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T10:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T10:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T11:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T11:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T11:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T11:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T12:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T12:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T12:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T12:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T13:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T13:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T13:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T13:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T14:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T14:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T14:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T14:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T15:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T15:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T15:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T15:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T16:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T16:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T16:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T16:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T17:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T17:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T17:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T17:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T18:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T18:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T18:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T18:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T19:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T19:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T19:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T19:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T20:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T20:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T20:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T20:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T21:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T21:21Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T21:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T21:51Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T22:22Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T22:22Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T22:52Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T22:52Z [cousin: qwen-context-absorber] Status: no-new | Detail: scanned 14530 transcript(s); nothing above threshold (1500) | Ollama: up
+- 2026-07-28T23:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 26 turns, 14078 chars absorbed | Ollama: up
+- 2026-07-28T23:23Z [cousin: qwen-context-absorber] Status: processed | Detail: 4 Qwen call(s) ok, 26 turns, 14078 chars absorbed | Ollama: up
+- 2026-07-28T23:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 38 turns, 25074 chars absorbed | Ollama: up
+- 2026-07-28T23:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 7 Qwen call(s) ok, 38 turns, 25074 chars absorbed | Ollama: up
+- 2026-07-29T00:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 75 turns, 36866 chars absorbed | Ollama: up
+- 2026-07-29T00:35Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 74 turns, 36603 chars absorbed | Ollama: up
+- 2026-07-29T01:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 61 turns, 36292 chars absorbed | Ollama: up
+- 2026-07-29T01:08Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 61 turns, 36292 chars absorbed | Ollama: up
+- 2026-07-29T01:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 55 turns, 27992 chars absorbed | Ollama: up
+- 2026-07-29T01:41Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 55 turns, 27992 chars absorbed | Ollama: up
+- 2026-07-29T02:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 86 turns, 37182 chars absorbed | Ollama: up
+- 2026-07-29T02:15Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 86 turns, 37182 chars absorbed | Ollama: up
+- 2026-07-29T02:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 73 turns, 34567 chars absorbed | Ollama: up
+- 2026-07-29T02:48Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 73 turns, 34567 chars absorbed | Ollama: up
+- 2026-07-29T03:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 55 turns, 28345 chars absorbed | Ollama: up
+- 2026-07-29T03:21Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 55 turns, 28345 chars absorbed | Ollama: up
+- 2026-07-29T03:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 79 turns, 34540 chars absorbed | Ollama: up
+- 2026-07-29T03:55Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 79 turns, 34540 chars absorbed | Ollama: up
+- 2026-07-29T04:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 83 turns, 36857 chars absorbed | Ollama: up
+- 2026-07-29T04:29Z [cousin: qwen-context-absorber] Status: processed | Detail: 10 Qwen call(s) ok, 83 turns, 36857 chars absorbed | Ollama: up
+- 2026-07-29T05:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 38 turns, 27595 chars absorbed | Ollama: up
+- 2026-07-29T05:01Z [cousin: qwen-context-absorber] Status: processed | Detail: 8 Qwen call(s) ok, 38 turns, 27595 chars absorbed | Ollama: up
+- 2026-07-29T05:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 72 turns, 33270 chars absorbed | Ollama: up
+- 2026-07-29T05:34Z [cousin: qwen-context-absorber] Status: processed | Detail: 9 Qwen call(s) ok, 72 turns, 33270 chars absorbed | Ollama: up

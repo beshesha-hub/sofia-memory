@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/qwen_conversation_listener.py", line 43, in <module>
+    from file_lock import acquire_lock, release_lock
+  File "/Users/barakwater/Downloads/Claude Memory/file_lock.py", line 50, in <module>
+    def _read_lock(lock_path: Path) -> dict | None:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/qwen_conversation_listener.py", line 43, in <module>
+    from file_lock import acquire_lock, release_lock
+  File "/Users/barakwater/Downloads/Claude Memory/file_lock.py", line 50, in <module>
+    def _read_lock(lock_path: Path) -> dict | None:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/qwen_conversation_listener.py", line 43, in <module>
+    from file_lock import acquire_lock, release_lock
+  File "/Users/barakwater/Downloads/Claude Memory/file_lock.py", line 50, in <module>
+    def _read_lock(lock_path: Path) -> dict | None:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/qwen_conversation_listener.py", line 43, in <module>
+    from file_lock import acquire_lock, release_lock
+  File "/Users/barakwater/Downloads/Claude Memory/file_lock.py", line 50, in <module>
+    def _read_lock(lock_path: Path) -> dict | None:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'

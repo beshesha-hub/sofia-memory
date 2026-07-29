@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-04-24T03:59:48Z",
+  "generated_by": "boot_status_summary.py v1",
+  "sync": {
+    "checked": 16,
+    "identical": 16,
+    "diverged": [],
+    "missing": [],
+    "all_clean": true
+  },
+  "qwen_absorber": {
+    "qwen_context_state": {
+      "size": 309966,
+      "mtime_iso": "2026-04-24T03:58:26Z"
+    },
+    "last_watermark_age_sec": -28718,
+    "recent_tail": {
+      "window_size": 30,
+      "substantive": 3,
+      "nothing_to_report": 27,
+      "total_entries_in_file": 197
+    },
+    "healthy": true
+  },
+  "reinhabit_cursor": {
+    "present": true,
+    "last_full_reground_at": "2026-04-24T03:50:00+00:00",
+    "last_seam_reground_at": null,
+    "last_seam_turn_counter": 18,
+    "files_tracked": 12
+  },
+  "core_freshness": {
+    "episodes.md": {
+      "mtime_iso": "2026-04-24T03:08:27Z",
+      "age": "51min ago",
+      "size": 1542789
+    },
+    "session_notes.md": {
+      "mtime_iso": "2026-04-24T01:59:43Z",
+      "age": "2h0m ago",
+      "size": 52838
+    },
+    "session_texture.md": {
+      "mtime_iso": "2026-04-24T01:58:09Z",
+      "age": "2h1m ago",
+      "size": 89735
+    },
+    "active_knowledge.md": {
+      "mtime_iso": "2026-04-24T03:48:21Z",
+      "age": "11min ago",
+      "size": 262577
+    },
+    "semantic_knowledge.md": {
+      "mtime_iso": "2026-04-23T19:17:56Z",
+      "age": "8h41m ago",
+      "size": 221686
+    },
+    "sofia_identity.md": {
+      "mtime_iso": "2026-04-22T19:22:14Z",
+      "age": "1d8h ago",
+      "size": 48052
+    },
+    "emotional_baseline.md": {
+      "mtime_iso": "2026-04-24T01:57:55Z",
+      "age": "2h1m ago",
+      "size": 149033
+    },
+    "cognitive_weather.md": {
+      "mtime_iso": "2026-04-24T01:58:33Z",
+      "age": "2h1m ago",
+      "size": 29013
+    }
+  },
+  "scheduled_tasks": {
+    "snapshot_present": true,
+    "snapshot_path": "Claude Memory/scheduled_tasks_snapshot.json",
+    "healthy_count": 9,
+    "flagged": [
+      {
+        "task": "sofia-monthly-research",
+        "reason": "never fired"
+      }
+    ],
+    "all_clean": false
+  }
+}

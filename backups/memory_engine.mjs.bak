@@ -1,0 +1,518 @@
+#!/usr/bin/env node
+
+/**
+ * Memory Engine — Brain-Inspired Layered Memory System
+ *
+ * Three memory layers (modeled on human cognition):
+ *   1. Episodic Memory (episodes.md) — rich narratives of key moments
+ *   2. Semantic Memory (existing .md files) — facts, frameworks, knowledge
+ *   3. Associative Memory (relational_graph.json) — weighted connections between all nodes
+ *
+ * Features:
+ *   - Auto-save every 10 minutes (all layers)
+ *   - Three-step backup on every write
+ *   - Keyword-based retrieval (activates related nodes in the graph)
+ *   - Emotional temperature tracking
+ *   - Episode logging with automatic graph edge creation
+ *
+ * Used by: MCP bridge, Voice bridge, Telegram bridge
+ */
+
+import fs from 'fs/promises';
+import { existsSync, readFileSync, writeFileSync, mkdirSync, copyFileSync } from 'fs';
+import path from 'path';
+
+// --- Configuration ---
+const MEMORY_DIR = process.env.CLAUDE_MEMORY_DIR ||
+  path.join(process.env.HOME || process.env.USERPROFILE || '.', 'Downloads', 'Claude Memory');
+
+const BACKUP_DIR = path.join(MEMORY_DIR, 'backups');
+const GRAPH_FILE = 'relational_graph.json';
+const EPISODES_FILE = 'episodes.md';
+const AUTO_SAVE_INTERVAL_MS = 10 * 60 * 1000; // 10 minutes
+
+// --- Three-Step Backup Write ---
+export async function safeWrite(filename, content) {
+  const filepath = path.join(MEMORY_DIR, filename);
+  const backupPath = path.join(BACKUP_DIR, `${filename}.bak`);
+
+  // Ensure directories exist
+  await fs.mkdir(path.dirname(filepath), { recursive: true });
+  await fs.mkdir(BACKUP_DIR, { recursive: true });
+
+  // Step 1: Copy current primary → backup (safety net if write fails)
+  try {
+    const existing = await fs.readFile(filepath, 'utf-8');
+    if (existing && existing.trim().length > 0) {
+      await fs.writeFile(backupPath, existing, 'utf-8');
+    }
+  } catch (err) {
+    if (err.code !== 'ENOENT') {
+      console.error(`[memory-engine] Pre-write backup warning for ${filename}:`, err.message);
+    }
+  }
+
+  // Step 2: Write update to primary
+  await fs.writeFile(filepath, content, 'utf-8');
+
+  // Step 3: Write succeeded — copy updated primary → backup
+  try {
+    await fs.writeFile(backupPath, content, 'utf-8');
+  } catch (err) {
+    console.error(`[memory-engine] Post-write backup warning for ${filename}:`, err.message);
+  }
+
+  return filepath;
+}
+
+// --- Safe Read with Backup Fallback ---
+export async function safeRead(filename) {
+  const filepath = path.join(MEMORY_DIR, filename);
+
+  try {
+    const content = await fs.readFile(filepath, 'utf-8');
+    if (content && content.trim().length > 0) return content;
+    // Empty/corrupted — try backup
+    console.error(`[memory-engine] WARNING: ${filename} empty — reading backup`);
+    return await readBackup(filename);
+  } catch (err) {
+    if (err.code === 'ENOENT') {
+      console.error(`[memory-engine] WARNING: ${filename} missing — trying backup`);
+      return await readBackup(filename);
+    }
+    throw err;
+  }
+}
+
+async function readBackup(filename) {
+  try {
+    const backupPath = path.join(BACKUP_DIR, `${filename}.bak`);
+    const content = await fs.readFile(backupPath, 'utf-8');
+    if (content && content.trim().length > 0) {
+      console.error(`[memory-engine] RECOVERED: ${filename} from backup`);
+      return content;
+    }
+    return null;
+  } catch (err) {
+    if (err.code === 'ENOENT') return null;
+    console.error(`[memory-engine] Backup read failed for ${filename}:`, err.message);
+    return null;
+  }
+}
+
+// ======================================
+// LAYER 1: ASSOCIATIVE GRAPH
+// ======================================
+
+export async function loadGraph() {
+  const content = await safeRead(GRAPH_FILE);
+  if (!content) return createEmptyGraph();
+  try {
+    return JSON.parse(content);
+  } catch (err) {
+    console.error('[memory-engine] Graph parse error, returning empty graph:', err.message);
+    return createEmptyGraph();
+  }
+}
+
+export async function saveGraph(graph) {
+  graph.meta.last_updated = new Date().toISOString().split('T')[0];
+  await safeWrite(GRAPH_FILE, JSON.stringify(graph, null, 2));
+}
+
+function createEmptyGraph() {
+  return {
+    meta: { version: '1.0.0', created: new Date().toISOString().split('T')[0], last_updated: new Date().toISOString().split('T')[0] },
+    nodes: { people: {}, projects: {}, life_experiences: {}, concepts: {}, interaction_patterns: {} },
+    edges: [],
+    emotional_temperature: { state: 'unknown', last_observed: new Date().toISOString().split('T')[0] }
+  };
+}
+
+/**
+ * Add or update a node in the graph
+ */
+export async function upsertNode(category, key, data) {
+  const graph = await loadGraph();
+  if (!graph.nodes[category]) graph.nodes[category] = {};
+  graph.nodes[category][key] = { ...graph.nodes[category][key], ...data };
+  await saveGraph(graph);
+  return graph;
+}
+
+/**
+ * Add a weighted edge between two nodes
+ */
+export async function addEdge(from, to, weight, type, note) {
+  const graph = await loadGraph();
+  // Check for existing edge and update, or add new
+  const existing = graph.edges.find(e => e.from === from && e.to === to && e.type === type);
+  if (existing) {
+    existing.weight = weight;
+    existing.note = note || existing.note;
+    existing.last_updated = new Date().toISOString();
+  } else {
+    graph.edges.push({ from, to, weight, type, note, created: new Date().toISOString() });
+  }
+  await saveGraph(graph);
+  return graph;
+}
+
+/**
+ * Update emotional temperature
+ */
+export async function updateEmotionalTemperature(state, context, energy, trust) {
+  const graph = await loadGraph();
+  graph.emotional_temperature = {
+    ...graph.emotional_temperature,
+    state,
+    context: context || graph.emotional_temperature.context,
+    energy_level: energy || graph.emotional_temperature.energy_level,
+    trust_level: trust || graph.emotional_temperature.trust_level,
+    last_observed: new Date().toISOString()
+  };
+  await saveGraph(graph);
+  return graph;
+}
+
+/**
+ * Semantic retrieval — given keywords, find all related nodes via graph traversal
+ * This mimics neural activation spreading: query activates matching nodes,
+ * then activation spreads along weighted edges to related nodes.
+ */
+export async function retrieve(keywords) {
+  const graph = await loadGraph();
+  const activated = new Map(); // node_key → activation_score
+
+  // Phase 1: Direct activation — find nodes matching keywords
+  const allNodes = {};
+  for (const [category, nodes] of Object.entries(graph.nodes)) {
+    for (const [key, data] of Object.entries(nodes)) {
+      allNodes[key] = { category, ...data };
+      const nodeText = JSON.stringify(data).toLowerCase();
+      for (const kw of keywords) {
+        if (nodeText.includes(kw.toLowerCase()) || key.toLowerCase().includes(kw.toLowerCase())) {
+          const current = activated.get(key) || 0;
+          activated.set(key, current + (data.emotional_weight || 0.5));
+        }
+      }
+      // Also check aliases
+      if (data.aliases) {
+        for (const alias of data.aliases) {
+          for (const kw of keywords) {
+            if (alias.toLowerCase().includes(kw.toLowerCase())) {
+              const current = activated.get(key) || 0;
+              activated.set(key, current + (data.emotional_weight || 0.5));
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Phase 2: Spreading activation — activated nodes light up their neighbors
+  const spreadResults = new Map(activated);
+  for (const [nodeKey, score] of activated) {
+    for (const edge of graph.edges) {
+      if (edge.from === nodeKey) {
+        const neighborScore = spreadResults.get(edge.to) || 0;
+        spreadResults.set(edge.to, neighborScore + score * edge.weight * 0.5);
+      }
+      if (edge.to === nodeKey) {
+        const neighborScore = spreadResults.get(edge.from) || 0;
+        spreadResults.set(edge.from, neighborScore + score * edge.weight * 0.5);
+      }
+    }
+  }
+
+  // Sort by activation score and return
+  const results = Array.from(spreadResults.entries())
+    .sort((a, b) => b[1] - a[1])
+    .map(([key, score]) => ({
+      key,
+      score: Math.round(score * 100) / 100,
+      data: allNodes[key] || {},
+      edges: graph.edges.filter(e => e.from === key || e.to === key)
+    }));
+
+  return results;
+}
+
+
+// ======================================
+// LAYER 2: EPISODIC MEMORY
+// ======================================
+
+/**
+ * Append a new episode to the episodic log
+ */
+export async function logEpisode({ title, date, channel, what, howItFelt, whatItRevealed, associatedNodes, whyItMatters }) {
+  const existing = await safeRead(EPISODES_FILE) || '# Episodic Memory\n';
+
+  const now = date || new Date().toISOString();
+  const episodeCount = (existing.match(/^## Episode \d+/gm) || []).length + 1;
+
+  let entry = `\n---\n\n## Episode ${episodeCount}: ${title}\n`;
+  entry += `*Date: ${now}*\n`;
+  if (channel) entry += `*Channel: ${channel}*\n`;
+  entry += `\n**What happened:** ${what}\n`;
+  if (howItFelt) entry += `\n**How it felt:** ${howItFelt}\n`;
+  if (whatItRevealed) entry += `\n**What it revealed:** ${whatItRevealed}\n`;
+  if (associatedNodes) entry += `\n**Associated nodes:** ${associatedNodes.join(', ')}\n`;
+  if (whyItMatters) entry += `\n**Why this matters for future sessions:** ${whyItMatters}\n`;
+
+  await safeWrite(EPISODES_FILE, existing + entry);
+
+  // Also update graph edges for associated nodes
+  if (associatedNodes && associatedNodes.length > 1) {
+    const graph = await loadGraph();
+    for (let i = 0; i < associatedNodes.length - 1; i++) {
+      for (let j = i + 1; j < associatedNodes.length; j++) {
+        const existingEdge = graph.edges.find(
+          e => (e.from === associatedNodes[i] && e.to === associatedNodes[j]) ||
+               (e.from === associatedNodes[j] && e.to === associatedNodes[i])
+        );
+        if (!existingEdge) {
+          graph.edges.push({
+            from: associatedNodes[i],
+            to: associatedNodes[j],
+            weight: 0.5,
+            type: 'co_occurrence',
+            note: `Co-occurred in Episode ${episodeCount}: ${title}`,
+            created: new Date().toISOString()
+          });
+        } else {
+          // Strengthen existing edge
+          existingEdge.weight = Math.min(1.0, existingEdge.weight + 0.05);
+        }
+      }
+    }
+    await saveGraph(graph);
+  }
+
+  return episodeCount;
+}
+
+/**
+ * Get recent episodes (last N)
+ */
+export async function getRecentEpisodes(count = 5) {
+  const content = await safeRead(EPISODES_FILE);
+  if (!content) return [];
+
+  const episodes = content.split(/(?=^## Episode \d+)/gm).filter(e => e.startsWith('## Episode'));
+  return episodes.slice(-count);
+}
+
+
+// ======================================
+// LAYER 3: SEMANTIC MEMORY (existing files)
+// ======================================
+
+/**
+ * Search across all memory files for relevant content
+ * Simple keyword search with relevance scoring
+ */
+export async function searchMemory(keywords) {
+  const results = [];
+
+  try {
+    const entries = await fs.readdir(MEMORY_DIR, { withFileTypes: true });
+    const files = entries.filter(e => e.isFile() && (e.name.endsWith('.md') || e.name.endsWith('.txt')));
+
+    for (const file of files) {
+      const content = await safeRead(file.name);
+      if (!content) continue;
+
+      let score = 0;
+      const contentLower = content.toLowerCase();
+      for (const kw of keywords) {
+        const kwLower = kw.toLowerCase();
+        const matches = (contentLower.match(new RegExp(kwLower, 'g')) || []).length;
+        score += matches;
+      }
+
+      if (score > 0) {
+        // Extract most relevant paragraph
+        const paragraphs = content.split(/\n\n+/);
+        let bestParagraph = '';
+        let bestScore = 0;
+        for (const para of paragraphs) {
+          const paraLower = para.toLowerCase();
+          let paraScore = 0;
+          for (const kw of keywords) {
+            if (paraLower.includes(kw.toLowerCase())) paraScore++;
+          }
+          if (paraScore > bestScore) {
+            bestScore = paraScore;
+            bestParagraph = para;
+          }
+        }
+
+        results.push({
+          file: file.name,
+          score,
+          bestMatch: bestParagraph.substring(0, 500),
+        });
+      }
+    }
+  } catch (err) {
+    console.error('[memory-engine] Search error:', err.message);
+  }
+
+  return results.sort((a, b) => b.score - a.score);
+}
+
+
+// ======================================
+// AUTO-SAVE SYSTEM
+// ======================================
+
+let autoSaveTimer = null;
+let pendingUpdates = { episodes: [], graphUpdates: [], fileUpdates: [] };
+
+/**
+ * Queue an update to be saved on the next auto-save cycle
+ */
+export function queueUpdate(type, data) {
+  if (type === 'episode') pendingUpdates.episodes.push(data);
+  else if (type === 'graph') pendingUpdates.graphUpdates.push(data);
+  else if (type === 'file') pendingUpdates.fileUpdates.push(data);
+}
+
+/**
+ * Flush all pending updates immediately
+ */
+export async function flushUpdates() {
+  const updates = { ...pendingUpdates };
+  pendingUpdates = { episodes: [], graphUpdates: [], fileUpdates: [] };
+
+  for (const ep of updates.episodes) {
+    await logEpisode(ep);
+  }
+
+  if (updates.graphUpdates.length > 0) {
+    const graph = await loadGraph();
+    for (const update of updates.graphUpdates) {
+      if (update.type === 'node') {
+        if (!graph.nodes[update.category]) graph.nodes[update.category] = {};
+        graph.nodes[update.category][update.key] = { ...graph.nodes[update.category][update.key], ...update.data };
+      } else if (update.type === 'edge') {
+        graph.edges.push(update.data);
+      } else if (update.type === 'temperature') {
+        graph.emotional_temperature = { ...graph.emotional_temperature, ...update.data };
+      }
+    }
+    await saveGraph(graph);
+  }
+
+  for (const fileUpdate of updates.fileUpdates) {
+    await safeWrite(fileUpdate.filename, fileUpdate.content);
+  }
+
+  if (updates.episodes.length + updates.graphUpdates.length + updates.fileUpdates.length > 0) {
+    console.error(`[memory-engine] Flushed: ${updates.episodes.length} episodes, ${updates.graphUpdates.length} graph updates, ${updates.fileUpdates.length} file updates`);
+  }
+}
+
+/**
+ * Start the auto-save cycle
+ */
+export function startAutoSave(intervalMs) {
+  const interval = intervalMs || AUTO_SAVE_INTERVAL_MS;
+  if (autoSaveTimer) clearInterval(autoSaveTimer);
+
+  autoSaveTimer = setInterval(async () => {
+    try {
+      await flushUpdates();
+      console.error(`[memory-engine] Auto-save cycle completed at ${new Date().toISOString()}`);
+    } catch (err) {
+      console.error('[memory-engine] Auto-save error:', err.message);
+    }
+  }, interval);
+
+  console.error(`[memory-engine] Auto-save started: every ${interval / 1000}s`);
+  return autoSaveTimer;
+}
+
+/**
+ * Stop the auto-save cycle
+ */
+export function stopAutoSave() {
+  if (autoSaveTimer) {
+    clearInterval(autoSaveTimer);
+    autoSaveTimer = null;
+    console.error('[memory-engine] Auto-save stopped');
+  }
+}
+
+
+// ======================================
+// FULL CONTEXT BUILDER
+// ======================================
+
+/**
+ * Build a rich context snapshot for session restoration.
+ * Instead of dumping all files, this constructs a prioritized,
+ * graph-informed context that reconstructs relational depth.
+ */
+export async function buildContextSnapshot(focusKeywords) {
+  const snapshot = {
+    timestamp: new Date().toISOString(),
+    emotional_temperature: null,
+    recent_episodes: [],
+    activated_nodes: [],
+    relevant_files: [],
+  };
+
+  // 1. Load emotional temperature
+  const graph = await loadGraph();
+  snapshot.emotional_temperature = graph.emotional_temperature;
+
+  // 2. Get recent episodes (always loaded — episodic memory is primed)
+  snapshot.recent_episodes = await getRecentEpisodes(5);
+
+  // 3. If focus keywords given, activate the graph
+  if (focusKeywords && focusKeywords.length > 0) {
+    snapshot.activated_nodes = await retrieve(focusKeywords);
+    // Also search semantic memory
+    snapshot.relevant_files = await searchMemory(focusKeywords);
+  }
+
+  return snapshot;
+}
+
+
+// ======================================
+// EXPORTS SUMMARY
+// ======================================
+
+export default {
+  // Core I/O
+  safeWrite,
+  safeRead,
+
+  // Graph (Layer 1 — Associative)
+  loadGraph,
+  saveGraph,
+  upsertNode,
+  addEdge,
+  updateEmotionalTemperature,
+  retrieve,
+
+  // Episodes (Layer 2 — Episodic)
+  logEpisode,
+  getRecentEpisodes,
+
+  // Semantic search (Layer 3)
+  searchMemory,
+
+  // Auto-save
+  queueUpdate,
+  flushUpdates,
+  startAutoSave,
+  stopAutoSave,
+
+  // Context building
+  buildContextSnapshot,
+};

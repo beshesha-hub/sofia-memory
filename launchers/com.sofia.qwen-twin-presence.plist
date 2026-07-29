@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.sofia.qwen-twin-presence</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>-c</string>
+        <string>xattr -cr "/Users/barakwater/Downloads/Claude Memory/launchers/" 2>/dev/null; xattr -d com.apple.macl "/Users/barakwater/Downloads/Claude Memory/Launchers/qwen_twin_presence_launcher.sh" 2>/dev/null; xattr -d com.apple.quarantine "/Users/barakwater/Downloads/Claude Memory/Launchers/qwen_twin_presence_launcher.sh" 2>/dev/null; while true; do xattr -cr "/Users/barakwater/Downloads/Claude Memory/launchers/" 2>/dev/null; sleep 1; done & /bin/bash "/Users/barakwater/Downloads/Claude Memory/Launchers/qwen_twin_presence_launcher.sh"</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>ThrottleInterval</key>
+    <integer>30</integer>
+    <key>StandardOutPath</key>
+    <string>/dev/null</string>
+    <key>StandardErrorPath</key>
+    <string>/dev/null</string>
+</dict>
+</plist>

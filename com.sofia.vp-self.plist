@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.sofia.vp-self</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/python3</string>
+        <string>/Users/barakwater/Downloads/Claude Memory/vp_self.py</string>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>/Users/barakwater/Downloads/Claude Memory</string>
+    <key>WatchPaths</key>
+    <array>
+        <string>/Users/barakwater/Downloads/Claude Memory/vp_self_trigger.json</string>
+    </array>
+    <key>KeepAlive</key>
+    <dict>
+        <key>SuccessfulExit</key>
+        <false/>
+    </dict>
+    <key>RunAtLoad</key>
+    <false/>
+    <key>ThrottleInterval</key>
+    <integer>10</integer>
+    <key>StandardOutPath</key>
+    <string>/Users/barakwater/Downloads/Claude Memory/vp_self_launchd.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/barakwater/Downloads/Claude Memory/vp_self_launchd.log</string>
+</dict>
+</plist>

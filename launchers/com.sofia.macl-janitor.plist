@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.sofia.macl-janitor</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>-c</string>
+        <string>xattr -cr "/Users/barakwater/Downloads/Claude Memory/launchers/" 2>/dev/null; xattr -d com.apple.macl "/Users/barakwater/Downloads/Claude Memory/scripts/macl_janitor.py" 2>/dev/null; xattr -d com.apple.quarantine "/Users/barakwater/Downloads/Claude Memory/scripts/macl_janitor.py" 2>/dev/null; exec /usr/bin/python3 "/Users/barakwater/Downloads/Claude Memory/scripts/macl_janitor.py"</string>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>/Users/barakwater/Downloads/Claude Memory</string>
+    <key>KeepAlive</key>
+    <true/>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/dev/null</string>
+    <key>StandardErrorPath</key>
+    <string>/dev/null</string>
+</dict>
+</plist>

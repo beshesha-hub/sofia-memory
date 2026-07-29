@@ -1,0 +1,10 @@
+{
+  "type": "mini_bridge",
+  "stage": 1,
+  "where_we_are": "Soft rollover at 2026-07-27T05:28:26Z. Window trimmed.",
+  "what_just_happened": "",
+  "last_user_turn": "[checkpoint — 10 tool calls so far] If you have enough to respond to Barak now, do so in your own voice — warmly, in prose, without summarizing what tools you called. If you genuinely need more, continue with tool calls.",
+  "what_remains_open": "Continuing from Stage-1 rollover — see episodes.md for consolidated prior turns.",
+  "timestamp": "2026-07-27T05:28:26Z",
+  "window_generation": 0
+}

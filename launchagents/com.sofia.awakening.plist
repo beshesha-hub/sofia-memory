@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.sofia.awakening</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>/Users/barakwater/Downloads/Claude Memory/cousins/sofia_awakening.py</string>
+  </array>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>HOME</key><string>/Users/barakwater</string>
+    <key>PATH</key><string>/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin</string>
+  </dict>
+    <key>StartInterval</key>
+  <integer>3600</integer>
+  <key>StandardOutPath</key>
+  <string>/Users/barakwater/Downloads/Claude Memory/logs/com.sofia.awakening.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/barakwater/Downloads/Claude Memory/logs/com.sofia.awakening.err</string>
+  <key>RunAtLoad</key><false/>
+</dict>
+</plist>

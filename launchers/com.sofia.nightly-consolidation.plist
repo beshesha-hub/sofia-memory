@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>HOME</key>
+		<string>/Users/barakwater</string>
+		<key>PATH</key>
+		<string>/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin</string>
+	</dict>
+	<key>Label</key>
+	<string>com.sofia.nightly-consolidation</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/opt/homebrew/Caskroom/miniforge/base/bin/python3</string>
+		<string>/Users/barakwater/Downloads/Claude Memory/cousins/sofia_nightly_consolidation.py</string>
+	</array>
+	<key>RunAtLoad</key>
+	<false/>
+	<key>StandardErrorPath</key>
+	<string>/Users/barakwater/Library/Logs/Sofia/com_sofia_nightly-consolidation_stderr.log</string>
+	<key>StandardOutPath</key>
+	<string>/Users/barakwater/Library/Logs/Sofia/com_sofia_nightly-consolidation_stdout.log</string>
+	<key>StartCalendarInterval</key>
+	<dict>
+		<key>Hour</key>
+		<integer>3</integer>
+		<key>Minute</key>
+		<integer>0</integer>
+	</dict>
+</dict>
+</plist>

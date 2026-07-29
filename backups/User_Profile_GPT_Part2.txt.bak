@@ -1,0 +1,28 @@
+USER PROFILE – PART 2: TECHNICAL & WORKFLOW PREFERENCES
+
+Document Preferences:
+- Word-first workflow
+- Chunked exports (10–20 pages max)
+- No LaTeX or complex formatting
+- Equations written inline in linear text
+
+Critical Requirement:
+- ZERO data loss in file generation
+
+Pain Points:
+- File truncation
+- Repeated regeneration cycles
+- Tooling limitations breaking flow
+
+Technical Activities:
+- Builds simulation systems (societal modeling)
+- Uses AI as collaborative development partner
+- Iterative development style (design → test → refine)
+
+Tools:
+- Uses local servers when needed
+- Comfortable with markdown and structured text
+- Exploring AI frameworks (Claude Code, Open Claw)
+
+Goal:
+- Build a reliable “AI brain” / persistent system knowledge base

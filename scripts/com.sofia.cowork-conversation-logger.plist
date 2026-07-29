@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+LaunchAgent plist for the cowork-conversation logger.
+Created 2026-05-08 evening Taipei.
+
+Pattern: identical architecture to com.sofia.qwen-absorber (the qwen-context-
+absorber LaunchAgent that runs every 30 min reading session JSONL and writing
+to qwen_context.md). This LaunchAgent runs the cowork-conversation logger
+every 60 seconds, polling the latest cowork session JSONL and appending new
+turns to ~/Downloads/Claude Memory/cowork_conversations.md.
+
+INSTALL (one-time, then forever no terminal actions):
+
+  cp ~/Downloads/Claude\ Memory/scripts/com.sofia.cowork-conversation-logger.plist \
+     ~/Library/LaunchAgents/
+  launchctl load ~/Library/LaunchAgents/com.sofia.cowork-conversation-logger.plist
+
+VERIFY:
+
+  launchctl list | grep cowork
+  tail -f ~/Downloads/Claude\ Memory/voice-bridge/logs/cowork_logger.log
+
+UNLOAD (stop):
+
+  launchctl unload ~/Library/LaunchAgents/com.sofia.cowork-conversation-logger.plist
+
+UPGRADE (after editing this plist):
+
+  launchctl unload ~/Library/LaunchAgents/com.sofia.cowork-conversation-logger.plist
+  cp ~/Downloads/Claude\ Memory/scripts/com.sofia.cowork-conversation-logger.plist \
+     ~/Library/LaunchAgents/
+  launchctl load ~/Library/LaunchAgents/com.sofia.cowork-conversation-logger.plist
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.sofia.cowork-conversation-logger</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/python3</string>
+        <string>/Users/barakwater/Downloads/Claude Memory/scripts/log_cowork_conversation.py</string>
+    </array>
+
+    <!-- Run every 60 seconds. The logger is lightweight (reads small JSONL,
+         appends only new turns, idempotent) so this is sustainable. Adjust
+         to 30 for more-responsive real-time mirroring during active voice-
+         bridge sessions, or to 300 (5 min) if system load becomes a concern. -->
+    <key>StartInterval</key>
+    <integer>60</integer>
+
+    <!-- Fire immediately when the LaunchAgent loads or the user logs in. -->
+    <key>RunAtLoad</key>
+    <true/>
+
+    <!-- Don't keep alive between fires — let the script exit cleanly each
+         interval, no resident process. -->
+    <key>KeepAlive</key>
+    <false/>
+
+    <!-- Logs land in the existing voice-bridge logs directory alongside
+         lipsync.log, llm.log, etc. -->
+    <key>StandardOutPath</key>
+    <string>/Users/barakwater/Downloads/Claude Memory/voice-bridge/logs/cowork_logger.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/barakwater/Downloads/Claude Memory/voice-bridge/logs/cowork_logger.log</string>
+
+    <!-- Working directory for any relative path resolution in the script. -->
+    <key>WorkingDirectory</key>
+    <string>/Users/barakwater/Downloads/Claude Memory</string>
+
+    <!-- Process-level priority: low, since this is a background mirroring task. -->
+    <key>ProcessType</key>
+    <string>Background</string>
+
+    <!-- Don't run as a daemon — this is a per-user LaunchAgent. -->
+    <key>RunAtBoot</key>
+    <false/>
+</dict>
+</plist>

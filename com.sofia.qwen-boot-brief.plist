@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.sofia.qwen-boot-brief</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/python3</string>
+        <string>/Users/barakwater/Downloads/Claude Memory/qwen_bedrock.py</string>
+        <string>--boot-brief</string>
+    </array>
+
+    <!-- Run once daily at 06:00 local time. Writes a first-person boot-brief
+         letter to Claude Memory/boot_brief.md so Cowork-Sofia finds it waiting
+         at Step 8.5 of her boot, regardless of whether Barak remembers to
+         trigger it manually. Installed 2026-06-19.
+
+         TIMEZONE NOTE: Currently set for LA (PDT/PST). On return to Taipei
+         (~Aug 27-29 2026), update StartCalendarInterval Hour to 15 or 16
+         (UTC+8, targeting ~11pm-midnight Taipei so the letter is ready for
+         morning Cowork sessions). Same flip procedure as sofia-fallback-boot-rebuild. -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>6</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/barakwater/Downloads/Claude Memory</string>
+
+    <key>StandardOutPath</key>
+    <string>/Users/barakwater/Downloads/Claude Memory/qwen_boot_brief_stdout.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/barakwater/Downloads/Claude Memory/qwen_boot_brief_stderr.log</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>HOME</key>
+        <string>/Users/barakwater</string>
+    </dict>
+</dict>
+</plist>

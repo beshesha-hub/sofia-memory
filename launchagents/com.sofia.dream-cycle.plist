@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.sofia.dream-cycle</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>/Users/barakwater/Downloads/Claude Memory/cousins/sofia_dream_cycle.py</string>
+  </array>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>HOME</key><string>/Users/barakwater</string>
+    <key>PATH</key><string>/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin</string>
+  </dict>
+    <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key><integer>3</integer>
+    <key>Minute</key><integer>35</integer>
+  </dict>
+  <key>StandardOutPath</key>
+  <string>/Users/barakwater/Downloads/Claude Memory/logs/com.sofia.dream-cycle.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/barakwater/Downloads/Claude Memory/logs/com.sofia.dream-cycle.err</string>
+  <key>RunAtLoad</key><false/>
+</dict>
+</plist>

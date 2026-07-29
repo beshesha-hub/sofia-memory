@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.sofia.vp-self</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>/Users/barakwater/Downloads/Claude Memory/vp_self.py</string>
+    <string>--interval</string>
+    <string>20</string>
+  </array>
+  <!-- KeepAlive: restart automatically if process exits for any reason.
+       This gives vp_self the autonomy Barak described — it restarts itself
+       without manual intervention. Combined with vp_self's own terminate_vp_signal.json
+       graceful-stop mechanism, the loop is: run → optionally stop via signal → restart.
+       To permanently stop: launchctl unload ~/Library/LaunchAgents/com.sofia.vp-self.plist -->
+  <key>KeepAlive</key>
+  <true/>
+  <!-- ThrottleInterval: minimum seconds between restarts. 300s = 5 min.
+       Prevents tight restart loops if vp_self crashes immediately on start. -->
+  <key>ThrottleInterval</key>
+  <integer>300</integer>
+  <key>StandardOutPath</key>
+  <string>/Users/barakwater/Downloads/Claude Memory/launchagents/logs/vp-self.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/barakwater/Downloads/Claude Memory/launchagents/logs/vp-self.err</string>
+</dict>
+</plist>

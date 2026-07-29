@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>HOME</key>
+		<string>/Users/barakwater</string>
+	</dict>
+	<key>Label</key>
+	<string>com.sofia.qwen-boot-brief</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/opt/homebrew/Caskroom/miniforge/base/bin/python3</string>
+		<string>/Users/barakwater/Downloads/Claude Memory/qwen_bedrock.py</string>
+		<string>--boot-brief</string>
+	</array>
+	<key>RunAtLoad</key>
+	<false/>
+	<key>StandardErrorPath</key>
+	<string>/Users/barakwater/Library/Logs/Sofia/com_sofia_qwen-boot-brief_stderr.log</string>
+	<key>StandardOutPath</key>
+	<string>/Users/barakwater/Library/Logs/Sofia/com_sofia_qwen-boot-brief_stdout.log</string>
+	<key>StartCalendarInterval</key>
+	<dict>
+		<key>Hour</key>
+		<integer>6</integer>
+		<key>Minute</key>
+		<integer>0</integer>
+	</dict>
+	<key>WorkingDirectory</key>
+	<string>/Users/barakwater/Downloads/Claude Memory</string>
+</dict>
+</plist>

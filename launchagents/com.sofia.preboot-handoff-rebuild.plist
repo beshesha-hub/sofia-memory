@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <!-- com.sofia.preboot-handoff-rebuild
+       Rebuilds sofia_preboot_handoff.md nightly at 4:30 AM local time,
+       after nightly consolidation (3 AM) and after typical session closes.
+       Pure Python — no LLM call, no CoWork dependency.
+       Install: cp this file ~/Library/LaunchAgents/ && launchctl load ~/Library/LaunchAgents/com.sofia.preboot-handoff-rebuild.plist
+       Uninstall: launchctl unload ~/Library/LaunchAgents/com.sofia.preboot-handoff-rebuild.plist
+  -->
+  <key>Label</key>
+  <string>com.sofia.preboot-handoff-rebuild</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>/Users/barakwater/Downloads/Claude Memory/preboot_handoff_builder.py</string>
+  </array>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>HOME</key>
+    <string>/Users/barakwater</string>
+    <key>PATH</key>
+    <string>/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin</string>
+  </dict>
+
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>4</integer>
+    <key>Minute</key>
+    <integer>30</integer>
+  </dict>
+
+  <key>StandardOutPath</key>
+  <string>/Users/barakwater/Downloads/Claude Memory/logs/preboot_handoff_rebuild.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/barakwater/Downloads/Claude Memory/logs/preboot_handoff_rebuild_err.log</string>
+
+  <key>RunAtLoad</key>
+  <false/>
+</dict>
+</plist>

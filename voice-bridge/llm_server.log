@@ -1,0 +1,7 @@
+  Sofia LLM Server (Voice Bridge Layer 2)
+  ───────────────────────────────────────
+  port: 3460
+  default model: qwen2.5:14b
+  ollama: up (6 models available)
+  default model present: True
+  ready: http://localhost:3460

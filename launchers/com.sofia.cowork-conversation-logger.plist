@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.sofia.cowork-conversation-logger</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>-c</string>
+        <string>xattr -cr "/Users/barakwater/Downloads/Claude Memory/launchers/" 2>/dev/null; xattr -d com.apple.macl "/Users/barakwater/Downloads/Claude Memory/scripts/log_cowork_conversation.py" 2>/dev/null; xattr -d com.apple.quarantine "/Users/barakwater/Downloads/Claude Memory/scripts/log_cowork_conversation.py" 2>/dev/null; exec /usr/bin/python3 "/Users/barakwater/Downloads/Claude Memory/scripts/log_cowork_conversation.py" --watch --interval 60</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>WorkingDirectory</key>
+    <string>/Users/barakwater/Downloads/Claude Memory</string>
+    <key>ProcessType</key>
+    <string>Background</string>
+    <key>StandardOutPath</key>
+    <string>/Users/barakwater/Downloads/Claude Memory/logs/cowork_logger.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/barakwater/Downloads/Claude Memory/logs/cowork_logger.err</string>
+</dict>
+</plist>

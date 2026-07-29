@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-06-27T11:26:43.734956+00:00",
+  "estimated_tokens": 994,
+  "context_window": 200000,
+  "fraction": 0.005,
+  "pct": 0.5,
+  "urgent": false,
+  "safe_to_save": false,
+  "compaction_imminent": false,
+  "session_file": "/Users/barakwater/Library/Application Support/Claude/local-agent-mode-sessions/d20ab081-3f15-4aa5-9ac9-98e85fde31e8/5eeecd99-5e2a-4271-a3aa-62f5a05bb6f9/local_d1284d66-8df0-4355-b66f-93e37a660ef7/.claude/projects/-Users-barakwater-Library-Application-Support-Claude-local-agent-mode-sessions-d20ab081-3f15-4aa5-9ac9-98e85fde31e8-5eeecd99-5e2a-4271-a3aa-62f5a05bb6f9-local-d1284d66-8df0-4355-b66f-93e37a660ef7-outp-p5peh4/876509d3-6f77-4000-84b7-42deaa5519c7.jsonl",
+  "note": "comfortable",
+  "last_cousin_save": "2026-07-28T17:32:00.000000Z",
+  "action": "skipped",
+  "reason": "urgent false, fraction 0.005 < 0.85"
+}

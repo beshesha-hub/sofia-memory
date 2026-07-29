@@ -1,0 +1,33 @@
+[nightly_maintenance] Starting — 2026-07-18 10:00 UTC
+[nightly_maintenance] Memory dir: /Users/barakwater/Downloads/Claude Memory
+[nightly_maintenance] Dry run: False
+[nightly_maintenance] Pass 1: graduation scan...
+  Newly stamped: 12  Already stamped: 471
+[nightly_maintenance] Pass 2: repair scan...
+  Orphans: 36
+  Missing provenance: 416
+  Confidence decay candidates: 0 (applied)
+[nightly_maintenance] repair_proposals.md written → /Users/barakwater/Downloads/Claude Memory/repair_proposals.md
+[nightly_maintenance] Done.
+[nightly_maintenance] Starting — 2026-07-19 10:00 UTC
+[nightly_maintenance] Memory dir: /Users/barakwater/Downloads/Claude Memory
+[nightly_maintenance] Dry run: False
+[nightly_maintenance] Pass 1: graduation scan...
+  Newly stamped: 0  Already stamped: 483
+[nightly_maintenance] Pass 2: repair scan...
+  Orphans: 36
+  Missing provenance: 416
+  Confidence decay candidates: 0 (applied)
+[nightly_maintenance] repair_proposals.md written → /Users/barakwater/Downloads/Claude Memory/repair_proposals.md
+[nightly_maintenance] Done.
+[nightly_maintenance] Starting — 2026-07-20 10:00 UTC
+[nightly_maintenance] Memory dir: /Users/barakwater/Downloads/Claude Memory
+[nightly_maintenance] Dry run: False
+[nightly_maintenance] Pass 1: graduation scan...
+  Newly stamped: 3  Already stamped: 483
+[nightly_maintenance] Pass 2: repair scan...
+  Orphans: 36
+  Missing provenance: 419
+  Confidence decay candidates: 0 (applied)
+[nightly_maintenance] repair_proposals.md written → /Users/barakwater/Downloads/Claude Memory/repair_proposals.md
+[nightly_maintenance] Done.

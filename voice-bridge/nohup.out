@@ -1,0 +1,13 @@
+[2026-04-03 00:06:03] ==========================================
+[2026-04-03 00:06:03] Sofia's Demucs Watcher started
+[2026-04-03 00:06:03] Queue:  /Users/barakwater/Downloads/sofia_audio_queue
+[2026-04-03 00:06:03] Output: /Users/barakwater/Downloads/demucs_output
+[2026-04-03 00:06:03] PID:    74656
+[2026-04-03 00:06:03] ==========================================
+[2026-04-03 00:06:03] Drop audio files (.wav, .mp3, .flac) into the queue folder.
+[2026-04-03 00:06:03] I'll separate them automatically.
+[2026-04-03 00:06:03] 
+[2026-04-03 00:09:13] Found: Never_Give_Up_World.mp3
+[2026-04-03 00:09:13] Running Demucs (two-stem separation)...
+Terminated: 15
+[2026-04-10 16:19:42] Watcher stopping.

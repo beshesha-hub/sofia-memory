@@ -1,0 +1,19 @@
+Loaded 233 valid pairs, skipped 0
+Train: 210 pairs → /Users/barakwater/Downloads/Claude Memory/lora_training_data/dpo/72b/train.jsonl
+Valid: 23 pairs → /Users/barakwater/Downloads/Claude Memory/lora_training_data/dpo/72b/valid.jsonl
+
+Ready for DPO training. Run:
+
+mlx_lm.lora \
+  --model ~/models/Qwen2.5-72B-Instruct-sofia-v1-fused/ \
+  --train \
+  --data ~/Downloads/Claude\ Memory/lora_training_data/dpo/72b/ \
+  --num-layers 16 \
+  --batch-size 1 \
+  --iters 300 \
+  --learning-rate 1e-5 \
+  --grad-checkpoint \
+  --adapter-path ~/models/Qwen2.5-72B-Instruct-sofia-dpo-v1/ \
+  --train-type dpo
+    
+Note: verify --train-type dpo is supported: mlx_lm.lora --help | grep -i dpo

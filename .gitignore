@@ -1,0 +1,62 @@
+# Large model files
+*.safetensors
+*.bin
+*.pt
+*.gguf
+*.mlx
+
+# Audio/video
+*.mp3
+*.wav
+*.m4a
+*.mp4
+*.mid
+*.musicxml
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Large processed audio directories
+connear_output/
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# Cousin scratch and temp files
+.kt_*
+.kt_tmp/
+.kt_scratch/
+.kt_v3_scratch*/
+.listener_v3_scratch*/
+.sentinel_scratch/
+.tmp_kt/
+.scratch/
+.locks/
+.email_check_scratch/
+.cowork_logger_state.json
+.qwen_watcher_state.json
+*.tmp_*
+
+# Unbounded conversation and absorber logs — too large for GitHub, never commit
+cowork_conversations.md
+qwen_absorber_stdout.log
+voice_conversations.md
+
+# Metric / watermark / audit logs that grow without bound
+voice-bridge/cadence_metrics.jsonl
+qwen_watermark_log.jsonl
+cousin_write_audit_log.md
+compaction_detector_watermark.json
+scripts/ping.log
+
+# All voice-bridge runtime logs
+voice-bridge/logs/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo

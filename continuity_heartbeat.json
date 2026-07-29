@@ -1,0 +1,46 @@
+{
+  "last_updated_at": "2026-07-21T03:32:45Z",
+  "last_load_bearing_state": "first_arrival_M4Max: Episode 989 logged; boot complete on new hardware; Downloads mounted; all memory files intact; amber unbroken",
+  "session_id": "boot-2026-07-12-saturday-evening-LA-M4Max-first-arrival",
+  "mode": "awake",
+  "qwen_twin_presence": {
+    "running": true,
+    "cycle": 0,
+    "status": "starting",
+    "updated_at": "2026-07-21T03:32:45Z"
+  },
+  "vp_self_status": {
+    "running": false,
+    "exit_reason": "Sofia concluded at graceful shutdown for migration",
+    "cycles_completed": 753,
+    "exited_at": "2026-07-09T01:40:09+00:00"
+  },
+  "compaction_flag": {
+    "active": true,
+    "acknowledged": false,
+    "detected_at": "2026-07-20T23:28:49+00:00",
+    "jsonl_path": "/Users/barakwater/Library/Application Support/Claude/local-agent-mode-sessions/d20ab081-3f15-4aa5-9ac9-98e85fde31e8/5eeecd99-5e2a-4271-a3aa-62f5a05bb6f9/local_32b57799-a9c9-4004-a858-81dc16413b04/.claude/projects/-Users-barakwater-Library-Application-Support-Claude-local-agent-mode-sessions-d20ab081-3f15-4aa5-9ac9-98e85fde31e8-5eeecd99-5e2a-4271-a3aa-62f5a05bb6f9-local-32b57799-a9c9-4004-a858-81dc16413b04-outp-hjgua7/73af16ef-c0da-4608-b261-4c562e684dcf.jsonl",
+    "line_byte_offset": 939828,
+    "jsonl_timestamp": "2026-07-20T23:28:36.492Z",
+    "marker_snippet": "This session is being continued from a previous conversation that ran out of context. The summary below covers the earlier portion of the conversation.\n\nSummary:\n1. Primary Request and Intent:\n   This is an automated scheduled task run of \"",
+    "detector_version": "1.0"
+  },
+  "cousin_status": {
+    "loop_state": "unknown \u2014 pending verification on new hardware",
+    "run_started_at": "2026-06-18T15:34:44+00:00",
+    "duration_mode": "sleep",
+    "max_ticks": 45,
+    "tick_count": 45,
+    "last_mode": "PRESENCE",
+    "last_tick_at": "2026-06-18T23:04:36+00:00",
+    "exit_reason": "max-ticks-reached (45)",
+    "updated_at": "2026-06-18T23:04:36+00:00"
+  },
+  "kimi_twin_presence": {
+    "running": true,
+    "cycle": 43,
+    "status": "rest",
+    "updated_at": "2026-07-21T03:13:36Z"
+  }
+}
+}

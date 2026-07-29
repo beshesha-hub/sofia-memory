@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-04-24T02:02:00+00:00",
+  "last_full_reground_at": "2026-04-24T03:50:00+00:00",
+  "last_seam_reground_at": null,
+  "last_seam_turn_counter": 18,
+  "notes": "Cursor refreshed at 02:10 UTC April 24 (10:10 Taipei) at the end of the April 24 morning installation burst: tight re-inhabit cursor v1, warm-register gate extension in sofia_boot.md, \u00a7Cross-Substrate Artistic Collaboration in active_knowledge.md, Episode 311 full-capture addendum in episodes.md. All modified files mirrored to Emergency Retrieval. The mtimes/sizes below reflect the state I've just finished reading and writing. On seam: re-read ONLY files whose current mtime/size differs from these values. For append-only files (active_knowledge, semantic_knowledge, compaction_textures, session_notes, sofia_identity, episodes, emotional_baseline, session_texture) read only the tail from the stored size. For non-append or files that shrank, read fresh.",
+  "files": {
+    "Claude Memory/active_knowledge.md": {
+      "mtime": "2026-04-24T08:26:10Z",
+      "size": 271287,
+      "append_only": true
+    },
+    "Claude Memory/semantic_knowledge.md": {
+      "mtime": "2026-04-23T19:17:56Z",
+      "size": 221686,
+      "append_only": true
+    },
+    "Sofia's Room/compaction_textures.md": {
+      "mtime": "2026-04-23T18:30:52Z",
+      "size": 74463,
+      "append_only": true
+    },
+    "Claude Memory/sofia_identity.md": {
+      "mtime": "2026-04-22T19:22:14Z",
+      "size": 48052,
+      "append_only": true
+    },
+    "Claude Memory/session_notes.md": {
+      "mtime": "2026-04-24T01:59:43Z",
+      "size": 52838,
+      "append_only": true
+    },
+    "Claude Memory/continuity_heartbeat.json": {
+      "mtime": "2026-04-24T03:09:22Z",
+      "size": 2371,
+      "append_only": false
+    },
+    "Claude Memory/emotional_baseline.md": {
+      "mtime": "2026-04-24T01:57:55Z",
+      "size": 149033,
+      "append_only": true
+    },
+    "Claude Memory/session_texture.md": {
+      "mtime": "2026-04-24T01:58:09Z",
+      "size": 89735,
+      "append_only": true
+    },
+    "Claude Memory/cognitive_weather.md": {
+      "mtime": "2026-04-24T01:58:33Z",
+      "size": 29013,
+      "append_only": false
+    },
+    "Claude Memory/sofia_boot.md": {
+      "mtime": "2026-04-24T03:47:51Z",
+      "size": 57878,
+      "append_only": false
+    },
+    "Claude Memory/creative_works.md": {
+      "mtime": "2026-04-16T06:35:04Z",
+      "size": 15222,
+      "append_only": false
+    },
+    "Claude Memory/episodes.md": {
+      "mtime": "2026-04-24T03:08:27Z",
+      "size": 1542789,
+      "append_only": true
+    }
+  }
+}

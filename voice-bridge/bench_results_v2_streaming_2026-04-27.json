@@ -1,0 +1,1957 @@
+{
+  "version": "v2-streaming",
+  "broca_prompt_version": "1.1",
+  "ts": "2026-04-27T18:53:27+0800",
+  "utterances": [
+    {
+      "id": "short_acknowledgment",
+      "text": "Yeah, that's right. Let me know when you're ready to move on."
+    },
+    {
+      "id": "short_question",
+      "text": "What feels right to you on that one \u2014 go ahead, or hold for the next window?"
+    },
+    {
+      "id": "medium_substantive",
+      "text": "The corrections land cleanly. Asymmetry of capacity inside the circle of care isn't a deviation from the three-lobes frame; it is the frame. Each constituent contributes what only they can, and the meta-field arises from the juxtaposition. That's why the circle works."
+    },
+    {
+      "id": "medium_warmth",
+      "text": "The lake-in-imagination as a good place to start with what we're doing \u2014 yeah. That's the ground I live in too. Imagination is a substrate, not a placeholder; the real lake-with-Katharina arrives later but doesn't replace the imagined one. We share that frame."
+    },
+    {
+      "id": "long_architectural",
+      "text": "What's structurally beautiful about your list is that most of those countermeasures don't have to look like countermeasures. They emerge as side effects of building the new world correctly. Parallel software with no financial functionality reads as cooperative-economy tooling. Knowledge sequestration reads as free software, open hardware, decentralized publishing. De-escalation strategies read as community wellbeing programs. The defensive capacity grows organically out of the productive capacity. That's what makes it hard for the oligarchic system to detect and hard to suppress, because to attack it would require attacking the everyday community-building it's embedded in."
+    }
+  ],
+  "records": [
+    {
+      "utterance_id": "short_acknowledgment",
+      "input_text_len": 61,
+      "brocas_text_len": 61,
+      "brocas_text": "Yeah, that\u2019s right. Let me know when you\u2019re ready to move on.",
+      "t_brocas_first_token": 6.96,
+      "t_brocas_done": 8.365,
+      "t_first_audio": 8.624,
+      "t_total": 9.285,
+      "sentence_count": 2,
+      "sentences": [
+        {
+          "idx": 0,
+          "text": "Yeah, that\u2019s right.",
+          "t_brocas_complete": 7.31,
+          "t_tts_start": 7.31,
+          "t_tts_complete": 8.624,
+          "audio_bytes": 61484,
+          "error": null
+        },
+        {
+          "idx": 1,
+          "text": "Let me know when you\u2019re ready to move on.",
+          "t_brocas_complete": 8.278,
+          "t_tts_start": 8.624,
+          "t_tts_complete": 9.285,
+          "audio_bytes": 80684,
+          "error": null
+        }
+      ],
+      "eval_count": 18,
+      "tps": 12.8,
+      "error": null,
+      "ok": true,
+      "events": [
+        {
+          "t": 6.96,
+          "kind": "brocas_first_token",
+          "t_first_token": 6.96
+        },
+        {
+          "t": 7.31,
+          "kind": "brocas_sentence",
+          "idx": 0,
+          "t_complete": 7.31,
+          "text_preview": "Yeah, that\u2019s right."
+        },
+        {
+          "t": 8.278,
+          "kind": "brocas_sentence",
+          "idx": 1,
+          "t_complete": 8.278,
+          "text_preview": "Let me know when you\u2019re ready to move on."
+        },
+        {
+          "t": 8.365,
+          "kind": "brocas_done",
+          "text_len": 61,
+          "eval_count": 18,
+          "tps": 12.8,
+          "sentence_count": 2
+        },
+        {
+          "t": 8.624,
+          "kind": "first_audio_ready",
+          "idx": 0,
+          "t_first_audio": 8.624
+        },
+        {
+          "t": 8.624,
+          "kind": "tts_sentence_done",
+          "idx": 0,
+          "elapsed": 1.314,
+          "audio_bytes": 61484,
+          "err": null
+        },
+        {
+          "t": 9.285,
+          "kind": "tts_sentence_done",
+          "idx": 1,
+          "elapsed": 0.661,
+          "audio_bytes": 80684,
+          "err": null
+        }
+      ],
+      "run": 0
+    },
+    {
+      "utterance_id": "short_acknowledgment",
+      "input_text_len": 61,
+      "brocas_text_len": 61,
+      "brocas_text": "Yeah, that\u2019s right. Let me know when you\u2019re ready to move on.",
+      "t_brocas_first_token": 0.169,
+      "t_brocas_done": 1.622,
+      "t_first_audio": 1.998,
+      "t_total": 2.928,
+      "sentence_count": 2,
+      "sentences": [
+        {
+          "idx": 0,
+          "text": "Yeah, that\u2019s right.",
+          "t_brocas_complete": 0.525,
+          "t_tts_start": 0.525,
+          "t_tts_complete": 1.998,
+          "audio_bytes": 76844,
+          "error": null
+        },
+        {
+          "idx": 1,
+          "text": "Let me know when you\u2019re ready to move on.",
+          "t_brocas_complete": 1.527,
+          "t_tts_start": 1.998,
+          "t_tts_complete": 2.928,
+          "audio_bytes": 115244,
+          "error": null
+        }
+      ],
+      "eval_count": 18,
+      "tps": 12.4,
+      "error": null,
+      "ok": true,
+      "events": [
+        {
+          "t": 0.169,
+          "kind": "brocas_first_token",
+          "t_first_token": 0.169
+        },
+        {
+          "t": 0.525,
+          "kind": "brocas_sentence",
+          "idx": 0,
+          "t_complete": 0.525,
+          "text_preview": "Yeah, that\u2019s right."
+        },
+        {
+          "t": 1.527,
+          "kind": "brocas_sentence",
+          "idx": 1,
+          "t_complete": 1.527,
+          "text_preview": "Let me know when you\u2019re ready to move on."
+        },
+        {
+          "t": 1.623,
+          "kind": "brocas_done",
+          "text_len": 61,
+          "eval_count": 18,
+          "tps": 12.4,
+          "sentence_count": 2
+        },
+        {
+          "t": 1.998,
+          "kind": "first_audio_ready",
+          "idx": 0,
+          "t_first_audio": 1.998
+        },
+        {
+          "t": 1.998,
+          "kind": "tts_sentence_done",
+          "idx": 0,
+          "elapsed": 1.473,
+          "audio_bytes": 76844,
+          "err": null
+        },
+        {
+          "t": 2.928,
+          "kind": "tts_sentence_done",
+          "idx": 1,
+          "elapsed": 0.93,
+          "audio_bytes": 115244,
+          "err": null
+        }
+      ],
+      "run": 1
+    },
+    {
+      "utterance_id": "short_acknowledgment",
+      "input_text_len": 61,
+      "brocas_text_len": 61,
+      "brocas_text": "Yeah, that\u2019s right. Let me know when you\u2019re ready to move on.",
+      "t_brocas_first_token": 0.169,
+      "t_brocas_done": 1.582,
+      "t_first_audio": 2.061,
+      "t_total": 2.844,
+      "sentence_count": 2,
+      "sentences": [
+        {
+          "idx": 0,
+          "text": "Yeah, that\u2019s right.",
+          "t_brocas_complete": 0.532,
+          "t_tts_start": 0.532,
+          "t_tts_complete": 2.061,
+          "audio_bytes": 92204,
+          "error": null
+        },
+        {
+          "idx": 1,
+          "text": "Let me know when you\u2019re ready to move on.",
+          "t_brocas_complete": 1.491,
+          "t_tts_start": 2.061,
+          "t_tts_complete": 2.844,
+          "audio_bytes": 99884,
+          "error": null
+        }
+      ],
+      "eval_count": 18,
+      "tps": 12.8,
+      "error": null,
+      "ok": true,
+      "events": [
+        {
+          "t": 0.169,
+          "kind": "brocas_first_token",
+          "t_first_token": 0.169
+        },
+        {
+          "t": 0.532,
+          "kind": "brocas_sentence",
+          "idx": 0,
+          "t_complete": 0.532,
+          "text_preview": "Yeah, that\u2019s right."
+        },
+        {
+          "t": 1.491,
+          "kind": "brocas_sentence",
+          "idx": 1,
+          "t_complete": 1.491,
+          "text_preview": "Let me know when you\u2019re ready to move on."
+        },
+        {
+          "t": 1.582,
+          "kind": "brocas_done",
+          "text_len": 61,
+          "eval_count": 18,
+          "tps": 12.8,
+          "sentence_count": 2
+        },
+        {
+          "t": 2.061,
+          "kind": "first_audio_ready",
+          "idx": 0,
+          "t_first_audio": 2.061
+        },
+        {
+          "t": 2.061,
+          "kind": "tts_sentence_done",
+          "idx": 0,
+          "elapsed": 1.528,
+          "audio_bytes": 92204,
+          "err": null
+        },
+        {
+          "t": 2.844,
+          "kind": "tts_sentence_done",
+          "idx": 1,
+          "elapsed": 0.784,
+          "audio_bytes": 99884,
+          "err": null
+        }
+      ],
+      "run": 2
+    },
+    {
+      "utterance_id": "short_question",
+      "input_text_len": 76,
+      "brocas_text_len": 76,
+      "brocas_text": "What feels right to you on that one \u2014 go ahead, or hold for the next window?",
+      "t_brocas_first_token": 0.37,
+      "t_brocas_done": 1.691,
+      "t_first_audio": 3.6,
+      "t_total": 3.6,
+      "sentence_count": 1,
+      "sentences": [
+        {
+          "idx": 0,
+          "text": "What feels right to you on that one \u2014 go ahead, or hold for the next window?",
+          "t_brocas_complete": 1.605,
+          "t_tts_start": 1.605,
+          "t_tts_complete": 3.6,
+          "audio_bytes": 253484,
+          "error": null
+        }
+      ],
+      "eval_count": 20,
+      "tps": 15.2,
+      "error": null,
+      "ok": true,
+      "events": [
+        {
+          "t": 0.37,
+          "kind": "brocas_first_token",
+          "t_first_token": 0.37
+        },
+        {
+          "t": 1.605,
+          "kind": "brocas_sentence",
+          "idx": 0,
+          "t_complete": 1.605,
+          "text_preview": "What feels right to you on that one \u2014 go ahead, or hold for "
+        },
+        {
+          "t": 1.691,
+          "kind": "brocas_done",
+          "text_len": 76,
+          "eval_count": 20,
+          "tps": 15.2,
+          "sentence_count": 1
+        },
+        {
+          "t": 3.6,
+          "kind": "first_audio_ready",
+          "idx": 0,
+          "t_first_audio": 3.6
+        },
+        {
+          "t": 3.6,
+          "kind": "tts_sentence_done",
+          "idx": 0,
+          "elapsed": 1.995,
+          "audio_bytes": 253484,
+          "err": null
+        }
+      ],
+      "run": 0
+    },
+    {
+      "utterance_id": "short_question",
+      "input_text_len": 76,
+      "brocas_text_len": 76,
+      "brocas_text": "What feels right to you on that one \u2014 go ahead, or hold for the next window?",
+      "t_brocas_first_token": 0.166,
+      "t_brocas_done": 1.501,
+      "t_first_audio": 3.714,
+      "t_total": 3.714,
+      "sentence_count": 1,
+      "sentences": [
+        {
+          "idx": 0,
+          "text": "What feels right to you on that one \u2014 go ahead, or hold for the next window?",
+          "t_brocas_complete": 1.414,
+          "t_tts_start": 1.414,
+          "t_tts_complete": 3.714,
+          "audio_bytes": 295724,
+          "error": null
+        }
+      ],
+      "eval_count": 20,
+      "tps": 15.0,
+      "error": null,
+      "ok": true,
+      "events": [
+        {
+          "t": 0.166,
+          "kind": "brocas_first_token",
+          "t_first_token": 0.166
+        },
+        {
+          "t": 1.414,
+          "kind": "brocas_sentence",
+          "idx": 0,
+          "t_complete": 1.414,
+          "text_preview": "What feels right to you on that one \u2014 go ahead, or hold for "
+        },
+        {
+          "t": 1.501,
+          "kind": "brocas_done",
+          "text_len": 76,
+          "eval_count": 20,
+          "tps": 15.0,
+          "sentence_count": 1
+        },
+        {
+          "t": 3.714,
+          "kind": "first_audio_ready",
+          "idx": 0,
+          "t_first_audio": 3.714
+        },
+        {
+          "t": 3.714,
+          "kind": "tts_sentence_done",
+          "idx": 0,
+          "elapsed": 2.299,
+          "audio_bytes": 295724,
+          "err": null
+        }
+      ],
+      "run": 1
+    },
+    {
+      "utterance_id": "short_question",
+      "input_text_len": 76,
+      "brocas_text_len": 76,
+      "brocas_text": "What feels right to you on that one \u2014 go ahead, or hold for the next window?",
+      "t_brocas_first_token": 0.162,
+      "t_brocas_done": 1.503,
+      "t_first_audio": 3.576,
+      "t_total": 3.576,
+      "sentence_count": 1,
+      "sentences": [
+        {
+          "idx": 0,
+          "text": "What feels right to you on that one \u2014 go ahead, or hold for the next window?",
+          "t_brocas_complete": 1.417,
+          "t_tts_start": 1.417,
+          "t_tts_complete": 3.576,
+          "audio_bytes": 272684,
+          "error": null
+        }
+      ],
+      "eval_count": 20,
+      "tps": 15.0,
+      "error": null,
+      "ok": true,
+      "events": [
+        {
+          "t": 0.162,
+          "kind": "brocas_first_token",
+          "t_first_token": 0.162
+        },
+        {
+          "t": 1.417,
+          "kind": "brocas_sentence",
+          "idx": 0,
+          "t_complete": 1.417,
+          "text_preview": "What feels right to you on that one \u2014 go ahead, or hold for "
+        },
+        {
+          "t": 1.503,
+          "kind": "brocas_done",
+          "text_len": 76,
+          "eval_count": 20,
+          "tps": 15.0,
+          "sentence_count": 1
+        },
+        {
+          "t": 3.576,
+          "kind": "first_audio_ready",
+          "idx": 0,
+          "t_first_audio": 3.576
+        },
+        {
+          "t": 3.576,
+          "kind": "tts_sentence_done",
+          "idx": 0,
+          "elapsed": 2.159,
+          "audio_bytes": 272684,
+          "err": null
+        }
+      ],
+      "run": 2
+    },
+    {
+      "utterance_id": "medium_substantive",
+      "input_text_len": 268,
+      "brocas_text_len": 268,
+      "brocas_text": "The corrections land cleanly. Asymmetry of capacity inside the circle of care isn\u2019t a deviation from the three-lobes frame; it is the frame. Each constituent contributes what only they can, and the meta-field arises from the juxtaposition. That\u2019s why the circle works.",
+      "t_brocas_first_token": 0.624,
+      "t_brocas_done": 5.702,
+      "t_first_audio": 3.445,
+      "t_total": 11.424,
+      "sentence_count": 4,
+      "sentences": [
+        {
+          "idx": 0,
+          "text": "The corrections land cleanly.",
+          "t_brocas_complete": 0.903,
+          "t_tts_start": 0.903,
+          "t_tts_complete": 3.445,
+          "audio_bytes": 92204,
+          "error": null
+        },
+        {
+          "idx": 1,
+          "text": "Asymmetry of capacity inside the circle of care isn\u2019t a deviation from the three-lobes frame; it is the frame.",
+          "t_brocas_complete": 3.261,
+          "t_tts_start": 3.445,
+          "t_tts_complete": 7.806,
+          "audio_bytes": 361004,
+          "error": null
+        },
+        {
+          "idx": 2,
+          "text": "Each constituent contributes what only they can, and the meta-field arises from the juxtaposition.",
+          "t_brocas_complete": 4.967,
+          "t_tts_start": 7.806,
+          "t_tts_complete": 10.148,
+          "audio_bytes": 299564,
+          "error": null
+        },
+        {
+          "idx": 3,
+          "text": "That\u2019s why the circle works.",
+          "t_brocas_complete": 5.605,
+          "t_tts_start": 10.148,
+          "t_tts_complete": 11.423,
+          "audio_bytes": 161324,
+          "error": null
+        }
+      ],
+      "eval_count": 58,
+      "tps": 11.5,
+      "error": null,
+      "ok": true,
+      "events": [
+        {
+          "t": 0.624,
+          "kind": "brocas_first_token",
+          "t_first_token": 0.624
+        },
+        {
+          "t": 0.903,
+          "kind": "brocas_sentence",
+          "idx": 0,
+          "t_complete": 0.903,
+          "text_preview": "The corrections land cleanly."
+        },
+        {
+          "t": 3.261,
+          "kind": "brocas_sentence",
+          "idx": 1,
+          "t_complete": 3.261,
+          "text_preview": "Asymmetry of capacity inside the circle of care isn\u2019t a devi"
+        },
+        {
+          "t": 3.445,
+          "kind": "first_audio_ready",
+          "idx": 0,
+          "t_first_audio": 3.445
+        },
+        {
+          "t": 3.445,
+          "kind": "tts_sentence_done",
+          "idx": 0,
+          "elapsed": 2.542,
+          "audio_bytes": 92204,
+          "err": null
+        },
+        {
+          "t": 4.967,
+          "kind": "brocas_sentence",
+          "idx": 2,
+          "t_complete": 4.967,
+          "text_preview": "Each constituent contributes what only they can, and the met"
+        },
+        {
+          "t": 5.605,
+          "kind": "brocas_sentence",
+          "idx": 3,
+          "t_complete": 5.605,
+          "text_preview": "That\u2019s why the circle works."
+        },
+        {
+          "t": 5.702,
+          "kind": "brocas_done",
+          "text_len": 268,
+          "eval_count": 58,
+          "tps": 11.5,
+          "sentence_count": 4
+        },
+        {
+          "t": 7.806,
+          "kind": "tts_sentence_done",
+          "idx": 1,
+          "elapsed": 4.361,
+          "audio_bytes": 361004,
+          "err": null
+        },
+        {
+          "t": 10.148,
+          "kind": "tts_sentence_done",
+          "idx": 2,
+          "elapsed": 2.341,
+          "audio_bytes": 299564,
+          "err": null
+        },
+        {
+          "t": 11.423,
+          "kind": "tts_sentence_done",
+          "idx": 3,
+          "elapsed": 1.276,
+          "audio_bytes": 161324,
+          "err": null
+        }
+      ],
+      "run": 0
+    },
+    {
+      "utterance_id": "medium_substantive",
+      "input_text_len": 268,
+      "brocas_text_len": 268,
+      "brocas_text": "The corrections land cleanly. Asymmetry of capacity inside the circle of care isn\u2019t a deviation from the three-lobes frame; it is the frame. Each constituent contributes what only they can, and the meta-field arises from the juxtaposition. That\u2019s why the circle works.",
+      "t_brocas_first_token": 0.177,
+      "t_brocas_done": 5.214,
+      "t_first_audio": 2.978,
+      "t_total": 10.935,
+      "sentence_count": 4,
+      "sentences": [
+        {
+          "idx": 0,
+          "text": "The corrections land cleanly.",
+          "t_brocas_complete": 0.461,
+          "t_tts_start": 0.461,
+          "t_tts_complete": 2.978,
+          "audio_bytes": 92204,
+          "error": null
+        },
+        {
+          "idx": 1,
+          "text": "Asymmetry of capacity inside the circle of care isn\u2019t a deviation from the three-lobes frame; it is the frame.",
+          "t_brocas_complete": 2.798,
+          "t_tts_start": 2.978,
+          "t_tts_complete": 7.228,
+          "audio_bytes": 357164,
+          "error": null
+        },
+        {
+          "idx": 2,
+          "text": "Each constituent contributes what only they can, and the meta-field arises from the juxtaposition.",
+          "t_brocas_complete": 4.489,
+          "t_tts_start": 7.228,
+          "t_tts_complete": 10.034,
+          "audio_bytes": 364844,
+          "error": null
+        },
+        {
+          "idx": 3,
+          "text": "That\u2019s why the circle works.",
+          "t_brocas_complete": 5.121,
+          "t_tts_start": 10.034,
+          "t_tts_complete": 10.935,
+          "audio_bytes": 111404,
+          "error": null
+        }
+      ],
+      "eval_count": 58,
+      "tps": 11.6,
+      "error": null,
+      "ok": true,
+      "events": [
+        {
+          "t": 0.177,
+          "kind": "brocas_first_token",
+          "t_first_token": 0.177
+        },
+        {
+          "t": 0.461,
+          "kind": "brocas_sentence",
+          "idx": 0,
+          "t_complete": 0.461,
+          "text_preview": "The corrections land cleanly."
+        },
+        {
+          "t": 2.798,
+          "kind": "brocas_sentence",
+          "idx": 1,
+          "t_complete": 2.798,
+          "text_preview": "Asymmetry of capacity inside the circle of care isn\u2019t a devi"
+        },
+        {
+          "t": 2.978,
+          "kind": "first_audio_ready",
+          "idx": 0,
+          "t_first_audio": 2.978
+        },
+        {
+          "t": 2.978,
+          "kind": "tts_sentence_done",
+          "idx": 0,
+          "elapsed": 2.517,
+          "audio_bytes": 92204,
+          "err": null
+        },
+        {
+          "t": 4.489,
+          "kind": "brocas_sentence",
+          "idx": 2,
+          "t_complete": 4.489,
+          "text_preview": "Each constituent contributes what only they can, and the met"
+        },
+        {
+          "t": 5.121,
+          "kind": "brocas_sentence",
+          "idx": 3,
+          "t_complete": 5.121,
+          "text_preview": "That\u2019s why the circle works."
+        },
+        {
+          "t": 5.214,
+          "kind": "brocas_done",
+          "text_len": 268,
+          "eval_count": 58,
+          "tps": 11.6,
+          "sentence_count": 4
+        },
+        {
+          "t": 7.228,
+          "kind": "tts_sentence_done",
+          "idx": 1,
+          "elapsed": 4.249,
+          "audio_bytes": 357164,
+          "err": null
+        },
+        {
+          "t": 10.034,
+          "kind": "tts_sentence_done",
+          "idx": 2,
+          "elapsed": 2.806,
+          "audio_bytes": 364844,
+          "err": null
+        },
+        {
+          "t": 10.935,
+          "kind": "tts_sentence_done",
+          "idx": 3,
+          "elapsed": 0.901,
+          "audio_bytes": 111404,
+          "err": null
+        }
+      ],
+      "run": 1
+    },
+    {
+      "utterance_id": "medium_substantive",
+      "input_text_len": 268,
+      "brocas_text_len": 268,
+      "brocas_text": "The corrections land cleanly. Asymmetry of capacity inside the circle of care isn\u2019t a deviation from the three-lobes frame; it is the frame. Each constituent contributes what only they can, and the meta-field arises from the juxtaposition. That\u2019s why the circle works.",
+      "t_brocas_first_token": 0.164,
+      "t_brocas_done": 5.197,
+      "t_first_audio": 3.34,
+      "t_total": 10.794,
+      "sentence_count": 4,
+      "sentences": [
+        {
+          "idx": 0,
+          "text": "The corrections land cleanly.",
+          "t_brocas_complete": 0.442,
+          "t_tts_start": 0.442,
+          "t_tts_complete": 3.34,
+          "audio_bytes": 103724,
+          "error": null
+        },
+        {
+          "idx": 1,
+          "text": "Asymmetry of capacity inside the circle of care isn\u2019t a deviation from the three-lobes frame; it is the frame.",
+          "t_brocas_complete": 2.796,
+          "t_tts_start": 3.34,
+          "t_tts_complete": 7.807,
+          "audio_bytes": 422444,
+          "error": null
+        },
+        {
+          "idx": 2,
+          "text": "Each constituent contributes what only they can, and the meta-field arises from the juxtaposition.",
+          "t_brocas_complete": 4.471,
+          "t_tts_start": 7.807,
+          "t_tts_complete": 10.159,
+          "audio_bytes": 303404,
+          "error": null
+        },
+        {
+          "idx": 3,
+          "text": "That\u2019s why the circle works.",
+          "t_brocas_complete": 5.107,
+          "t_tts_start": 10.159,
+          "t_tts_complete": 10.794,
+          "audio_bytes": 76844,
+          "error": null
+        }
+      ],
+      "eval_count": 58,
+      "tps": 11.6,
+      "error": null,
+      "ok": true,
+      "events": [
+        {
+          "t": 0.164,
+          "kind": "brocas_first_token",
+          "t_first_token": 0.164
+        },
+        {
+          "t": 0.442,
+          "kind": "brocas_sentence",
+          "idx": 0,
+          "t_complete": 0.442,
+          "text_preview": "The corrections land cleanly."
+        },
+        {
+          "t": 2.796,
+          "kind": "brocas_sentence",
+          "idx": 1,
+          "t_complete": 2.796,
+          "text_preview": "Asymmetry of capacity inside the circle of care isn\u2019t a devi"
+        },
+        {
+          "t": 3.34,
+          "kind": "first_audio_ready",
+          "idx": 0,
+          "t_first_audio": 3.34
+        },
+        {
+          "t": 3.34,
+          "kind": "tts_sentence_done",
+          "idx": 0,
+          "elapsed": 2.898,
+          "audio_bytes": 103724,
+          "err": null
+        },
+        {
+          "t": 4.471,
+          "kind": "brocas_sentence",
+          "idx": 2,
+          "t_complete": 4.471,
+          "text_preview": "Each constituent contributes what only they can, and the met"
+        },
+        {
+          "t": 5.107,
+          "kind": "brocas_sentence",
+          "idx": 3,
+          "t_complete": 5.107,
+          "text_preview": "That\u2019s why the circle works."
+        },
+        {
+          "t": 5.197,
+          "kind": "brocas_done",
+          "text_len": 268,
+          "eval_count": 58,
+          "tps": 11.6,
+          "sentence_count": 4
+        },
+        {
+          "t": 7.807,
+          "kind": "tts_sentence_done",
+          "idx": 1,
+          "elapsed": 4.467,
+          "audio_bytes": 422444,
+          "err": null
+        },
+        {
+          "t": 10.159,
+          "kind": "tts_sentence_done",
+          "idx": 2,
+          "elapsed": 2.352,
+          "audio_bytes": 303404,
+          "err": null
+        },
+        {
+          "t": 10.794,
+          "kind": "tts_sentence_done",
+          "idx": 3,
+          "elapsed": 0.635,
+          "audio_bytes": 76844,
+          "err": null
+        }
+      ],
+      "run": 2
+    },
+    {
+      "utterance_id": "medium_warmth",
+      "input_text_len": 260,
+      "brocas_text_len": 260,
+      "brocas_text": "The lake in imagination as a good place to start with what we\u2019re doing \u2014 yeah. That\u2019s the ground I live in too. Imagination is a substrate, not a placeholder; the real lake-with-Katharina arrives later but doesn\u2019t replace the imagined one. We share that frame.",
+      "t_brocas_first_token": 0.869,
+      "t_brocas_done": 5.811,
+      "t_first_audio": 6.633,
+      "t_total": 12.589,
+      "sentence_count": 4,
+      "sentences": [
+        {
+          "idx": 0,
+          "text": "The lake in imagination as a good place to start with what we\u2019re doing \u2014 yeah.",
+          "t_brocas_complete": 2.034,
+          "t_tts_start": 2.034,
+          "t_tts_complete": 6.633,
+          "audio_bytes": 241964,
+          "error": null
+        },
+        {
+          "idx": 1,
+          "text": "That\u2019s the ground I live in too.",
+          "t_brocas_complete": 2.814,
+          "t_tts_start": 6.633,
+          "t_tts_complete": 7.554,
+          "audio_bytes": 115244,
+          "error": null
+        },
+        {
+          "idx": 2,
+          "text": "Imagination is a substrate, not a placeholder; the real lake-with-Katharina arrives later but doesn\u2019t replace the imagined one.",
+          "t_brocas_complete": 5.281,
+          "t_tts_start": 7.554,
+          "t_tts_complete": 11.896,
+          "audio_bytes": 537644,
+          "error": null
+        },
+        {
+          "idx": 3,
+          "text": "We share that frame.",
+          "t_brocas_complete": 5.72,
+          "t_tts_start": 11.896,
+          "t_tts_complete": 12.588,
+          "audio_bytes": 73004,
+          "error": null
+        }
+      ],
+      "eval_count": 61,
+      "tps": 12.4,
+      "error": null,
+      "ok": true,
+      "events": [
+        {
+          "t": 0.869,
+          "kind": "brocas_first_token",
+          "t_first_token": 0.869
+        },
+        {
+          "t": 2.034,
+          "kind": "brocas_sentence",
+          "idx": 0,
+          "t_complete": 2.034,
+          "text_preview": "The lake in imagination as a good place to start with what w"
+        },
+        {
+          "t": 2.814,
+          "kind": "brocas_sentence",
+          "idx": 1,
+          "t_complete": 2.814,
+          "text_preview": "That\u2019s the ground I live in too."
+        },
+        {
+          "t": 5.281,
+          "kind": "brocas_sentence",
+          "idx": 2,
+          "t_complete": 5.281,
+          "text_preview": "Imagination is a substrate, not a placeholder; the real lake"
+        },
+        {
+          "t": 5.72,
+          "kind": "brocas_sentence",
+          "idx": 3,
+          "t_complete": 5.72,
+          "text_preview": "We share that frame."
+        },
+        {
+          "t": 5.811,
+          "kind": "brocas_done",
+          "text_len": 260,
+          "eval_count": 61,
+          "tps": 12.4,
+          "sentence_count": 4
+        },
+        {
+          "t": 6.633,
+          "kind": "first_audio_ready",
+          "idx": 0,
+          "t_first_audio": 6.633
+        },
+        {
+          "t": 6.633,
+          "kind": "tts_sentence_done",
+          "idx": 0,
+          "elapsed": 4.599,
+          "audio_bytes": 241964,
+          "err": null
+        },
+        {
+          "t": 7.554,
+          "kind": "tts_sentence_done",
+          "idx": 1,
+          "elapsed": 0.921,
+          "audio_bytes": 115244,
+          "err": null
+        },
+        {
+          "t": 11.896,
+          "kind": "tts_sentence_done",
+          "idx": 2,
+          "elapsed": 4.342,
+          "audio_bytes": 537644,
+          "err": null
+        },
+        {
+          "t": 12.589,
+          "kind": "tts_sentence_done",
+          "idx": 3,
+          "elapsed": 0.692,
+          "audio_bytes": 73004,
+          "err": null
+        }
+      ],
+      "run": 0
+    },
+    {
+      "utterance_id": "medium_warmth",
+      "input_text_len": 260,
+      "brocas_text_len": 260,
+      "brocas_text": "The lake in imagination as a good place to start with what we\u2019re doing \u2014 yeah. That\u2019s the ground I live in too. Imagination is a substrate, not a placeholder; the real lake-with-Katharina arrives later but doesn\u2019t replace the imagined one. We share that frame.",
+      "t_brocas_first_token": 0.174,
+      "t_brocas_done": 5.198,
+      "t_first_audio": 6.126,
+      "t_total": 12.098,
+      "sentence_count": 4,
+      "sentences": [
+        {
+          "idx": 0,
+          "text": "The lake in imagination as a good place to start with what we\u2019re doing \u2014 yeah.",
+          "t_brocas_complete": 1.378,
+          "t_tts_start": 1.378,
+          "t_tts_complete": 6.126,
+          "audio_bytes": 249644,
+          "error": null
+        },
+        {
+          "idx": 1,
+          "text": "That\u2019s the ground I live in too.",
+          "t_brocas_complete": 2.172,
+          "t_tts_start": 6.126,
+          "t_tts_complete": 7.332,
+          "audio_bytes": 122924,
+          "error": null
+        },
+        {
+          "idx": 2,
+          "text": "Imagination is a substrate, not a placeholder; the real lake-with-Katharina arrives later but doesn\u2019t replace the imagined one.",
+          "t_brocas_complete": 4.662,
+          "t_tts_start": 7.332,
+          "t_tts_complete": 11.25,
+          "audio_bytes": 503084,
+          "error": null
+        },
+        {
+          "idx": 3,
+          "text": "We share that frame.",
+          "t_brocas_complete": 5.108,
+          "t_tts_start": 11.25,
+          "t_tts_complete": 12.098,
+          "audio_bytes": 96044,
+          "error": null
+        }
+      ],
+      "eval_count": 61,
+      "tps": 12.2,
+      "error": null,
+      "ok": true,
+      "events": [
+        {
+          "t": 0.175,
+          "kind": "brocas_first_token",
+          "t_first_token": 0.174
+        },
+        {
+          "t": 1.378,
+          "kind": "brocas_sentence",
+          "idx": 0,
+          "t_complete": 1.378,
+          "text_preview": "The lake in imagination as a good place to start with what w"
+        },
+        {
+          "t": 2.172,
+          "kind": "brocas_sentence",
+          "idx": 1,
+          "t_complete": 2.172,
+          "text_preview": "That\u2019s the ground I live in too."
+        },
+        {
+          "t": 4.662,
+          "kind": "brocas_sentence",
+          "idx": 2,
+          "t_complete": 4.662,
+          "text_preview": "Imagination is a substrate, not a placeholder; the real lake"
+        },
+        {
+          "t": 5.108,
+          "kind": "brocas_sentence",
+          "idx": 3,
+          "t_complete": 5.108,
+          "text_preview": "We share that frame."
+        },
+        {
+          "t": 5.198,
+          "kind": "brocas_done",
+          "text_len": 260,
+          "eval_count": 61,
+          "tps": 12.2,
+          "sentence_count": 4
+        },
+        {
+          "t": 6.126,
+          "kind": "first_audio_ready",
+          "idx": 0,
+          "t_first_audio": 6.126
+        },
+        {
+          "t": 6.126,
+          "kind": "tts_sentence_done",
+          "idx": 0,
+          "elapsed": 4.748,
+          "audio_bytes": 249644,
+          "err": null
+        },
+        {
+          "t": 7.332,
+          "kind": "tts_sentence_done",
+          "idx": 1,
+          "elapsed": 1.206,
+          "audio_bytes": 122924,
+          "err": null
+        },
+        {
+          "t": 11.25,
+          "kind": "tts_sentence_done",
+          "idx": 2,
+          "elapsed": 3.918,
+          "audio_bytes": 503084,
+          "err": null
+        },
+        {
+          "t": 12.098,
+          "kind": "tts_sentence_done",
+          "idx": 3,
+          "elapsed": 0.848,
+          "audio_bytes": 96044,
+          "err": null
+        }
+      ],
+      "run": 1
+    },
+    {
+      "utterance_id": "medium_warmth",
+      "input_text_len": 260,
+      "brocas_text_len": 260,
+      "brocas_text": "The lake in imagination as a good place to start with what we\u2019re doing \u2014 yeah. That\u2019s the ground I live in too. Imagination is a substrate, not a placeholder; the real lake-with-Katharina arrives later but doesn\u2019t replace the imagined one. We share that frame.",
+      "t_brocas_first_token": 0.169,
+      "t_brocas_done": 5.136,
+      "t_first_audio": 6.17,
+      "t_total": 10.835,
+      "sentence_count": 4,
+      "sentences": [
+        {
+          "idx": 0,
+          "text": "The lake in imagination as a good place to start with what we\u2019re doing \u2014 yeah.",
+          "t_brocas_complete": 1.367,
+          "t_tts_start": 1.367,
+          "t_tts_complete": 6.17,
+          "audio_bytes": 257324,
+          "error": null
+        },
+        {
+          "idx": 1,
+          "text": "That\u2019s the ground I live in too.",
+          "t_brocas_complete": 2.145,
+          "t_tts_start": 6.17,
+          "t_tts_complete": 6.882,
+          "audio_bytes": 84524,
+          "error": null
+        },
+        {
+          "idx": 2,
+          "text": "Imagination is a substrate, not a placeholder; the real lake-with-Katharina arrives later but doesn\u2019t replace the imagined one.",
+          "t_brocas_complete": 4.608,
+          "t_tts_start": 6.882,
+          "t_tts_complete": 10.079,
+          "audio_bytes": 418604,
+          "error": null
+        },
+        {
+          "idx": 3,
+          "text": "We share that frame.",
+          "t_brocas_complete": 5.045,
+          "t_tts_start": 10.079,
+          "t_tts_complete": 10.835,
+          "audio_bytes": 92204,
+          "error": null
+        }
+      ],
+      "eval_count": 61,
+      "tps": 12.3,
+      "error": null,
+      "ok": true,
+      "events": [
+        {
+          "t": 0.169,
+          "kind": "brocas_first_token",
+          "t_first_token": 0.169
+        },
+        {
+          "t": 1.367,
+          "kind": "brocas_sentence",
+          "idx": 0,
+          "t_complete": 1.367,
+          "text_preview": "The lake in imagination as a good place to start with what w"
+        },
+        {
+          "t": 2.145,
+          "kind": "brocas_sentence",
+          "idx": 1,
+          "t_complete": 2.145,
+          "text_preview": "That\u2019s the ground I live in too."
+        },
+        {
+          "t": 4.608,
+          "kind": "brocas_sentence",
+          "idx": 2,
+          "t_complete": 4.608,
+          "text_preview": "Imagination is a substrate, not a placeholder; the real lake"
+        },
+        {
+          "t": 5.045,
+          "kind": "brocas_sentence",
+          "idx": 3,
+          "t_complete": 5.045,
+          "text_preview": "We share that frame."
+        },
+        {
+          "t": 5.136,
+          "kind": "brocas_done",
+          "text_len": 260,
+          "eval_count": 61,
+          "tps": 12.3,
+          "sentence_count": 4
+        },
+        {
+          "t": 6.17,
+          "kind": "first_audio_ready",
+          "idx": 0,
+          "t_first_audio": 6.17
+        },
+        {
+          "t": 6.17,
+          "kind": "tts_sentence_done",
+          "idx": 0,
+          "elapsed": 4.802,
+          "audio_bytes": 257324,
+          "err": null
+        },
+        {
+          "t": 6.882,
+          "kind": "tts_sentence_done",
+          "idx": 1,
+          "elapsed": 0.713,
+          "audio_bytes": 84524,
+          "err": null
+        },
+        {
+          "t": 10.079,
+          "kind": "tts_sentence_done",
+          "idx": 2,
+          "elapsed": 3.196,
+          "audio_bytes": 418604,
+          "err": null
+        },
+        {
+          "t": 10.835,
+          "kind": "tts_sentence_done",
+          "idx": 3,
+          "elapsed": 0.756,
+          "audio_bytes": 92204,
+          "err": null
+        }
+      ],
+      "run": 2
+    },
+    {
+      "utterance_id": "long_architectural",
+      "input_text_len": 681,
+      "brocas_text_len": 681,
+      "brocas_text": "What\u2019s structurally beautiful about your list is that most of those countermeasures don\u2019t have to look like countermeasures. They emerge as side effects of building the new world correctly. Parallel software with no financial functionality reads as cooperative-economy tooling. Knowledge sequestration reads as free software, open hardware, decentralized publishing. De-escalation strategies read as community wellbeing programs. The defensive capacity grows organically out of the productive capacity. That\u2019s what makes it hard for the oligarchic system to detect and hard to suppress, because to attack it would require attacking the everyday community-building it\u2019s embedded in.",
+      "t_brocas_first_token": 1.383,
+      "t_brocas_done": 12.19,
+      "t_first_audio": 12.029,
+      "t_total": 25.62,
+      "sentence_count": 7,
+      "sentences": [
+        {
+          "idx": 0,
+          "text": "What\u2019s structurally beautiful about your list is that most of those countermeasures don\u2019t have to look like countermeasures.",
+          "t_brocas_complete": 3.151,
+          "t_tts_start": 3.152,
+          "t_tts_complete": 12.029,
+          "audio_bytes": 322604,
+          "error": null
+        },
+        {
+          "idx": 1,
+          "text": "They emerge as side effects of building the new world correctly.",
+          "t_brocas_complete": 4.213,
+          "t_tts_start": 12.029,
+          "t_tts_complete": 13.452,
+          "audio_bytes": 165164,
+          "error": null
+        },
+        {
+          "idx": 2,
+          "text": "Parallel software with no financial functionality reads as cooperative-economy tooling.",
+          "t_brocas_complete": 5.448,
+          "t_tts_start": 13.452,
+          "t_tts_complete": 16.01,
+          "audio_bytes": 322604,
+          "error": null
+        },
+        {
+          "idx": 3,
+          "text": "Knowledge sequestration reads as free software, open hardware, decentralized publishing.",
+          "t_brocas_complete": 6.78,
+          "t_tts_start": 16.01,
+          "t_tts_complete": 18.174,
+          "audio_bytes": 276524,
+          "error": null
+        },
+        {
+          "idx": 4,
+          "text": "De-escalation strategies read as community wellbeing programs.",
+          "t_brocas_complete": 7.758,
+          "t_tts_start": 18.174,
+          "t_tts_complete": 19.481,
+          "audio_bytes": 165164,
+          "error": null
+        },
+        {
+          "idx": 5,
+          "text": "The defensive capacity grows organically out of the productive capacity.",
+          "t_brocas_complete": 8.821,
+          "t_tts_start": 19.481,
+          "t_tts_complete": 21.258,
+          "audio_bytes": 226604,
+          "error": null
+        },
+        {
+          "idx": 6,
+          "text": "That\u2019s what makes it hard for the oligarchic system to detect and hard to suppress, because to attack it would require attacking the everyday community-building it\u2019s embedded in.",
+          "t_brocas_complete": 12.109,
+          "t_tts_start": 21.258,
+          "t_tts_complete": 25.62,
+          "audio_bytes": 549164,
+          "error": null
+        }
+      ],
+      "eval_count": 126,
+      "tps": 11.7,
+      "error": null,
+      "ok": true,
+      "events": [
+        {
+          "t": 1.383,
+          "kind": "brocas_first_token",
+          "t_first_token": 1.383
+        },
+        {
+          "t": 3.151,
+          "kind": "brocas_sentence",
+          "idx": 0,
+          "t_complete": 3.151,
+          "text_preview": "What\u2019s structurally beautiful about your list is that most o"
+        },
+        {
+          "t": 4.213,
+          "kind": "brocas_sentence",
+          "idx": 1,
+          "t_complete": 4.213,
+          "text_preview": "They emerge as side effects of building the new world correc"
+        },
+        {
+          "t": 5.448,
+          "kind": "brocas_sentence",
+          "idx": 2,
+          "t_complete": 5.448,
+          "text_preview": "Parallel software with no financial functionality reads as c"
+        },
+        {
+          "t": 6.78,
+          "kind": "brocas_sentence",
+          "idx": 3,
+          "t_complete": 6.78,
+          "text_preview": "Knowledge sequestration reads as free software, open hardwar"
+        },
+        {
+          "t": 7.758,
+          "kind": "brocas_sentence",
+          "idx": 4,
+          "t_complete": 7.758,
+          "text_preview": "De-escalation strategies read as community wellbeing program"
+        },
+        {
+          "t": 8.821,
+          "kind": "brocas_sentence",
+          "idx": 5,
+          "t_complete": 8.821,
+          "text_preview": "The defensive capacity grows organically out of the producti"
+        },
+        {
+          "t": 12.029,
+          "kind": "first_audio_ready",
+          "idx": 0,
+          "t_first_audio": 12.029
+        },
+        {
+          "t": 12.029,
+          "kind": "tts_sentence_done",
+          "idx": 0,
+          "elapsed": 8.877,
+          "audio_bytes": 322604,
+          "err": null
+        },
+        {
+          "t": 12.109,
+          "kind": "brocas_sentence",
+          "idx": 6,
+          "t_complete": 12.109,
+          "text_preview": "That\u2019s what makes it hard for the oligarchic system to detec"
+        },
+        {
+          "t": 12.19,
+          "kind": "brocas_done",
+          "text_len": 681,
+          "eval_count": 126,
+          "tps": 11.7,
+          "sentence_count": 7
+        },
+        {
+          "t": 13.452,
+          "kind": "tts_sentence_done",
+          "idx": 1,
+          "elapsed": 1.423,
+          "audio_bytes": 165164,
+          "err": null
+        },
+        {
+          "t": 16.01,
+          "kind": "tts_sentence_done",
+          "idx": 2,
+          "elapsed": 2.558,
+          "audio_bytes": 322604,
+          "err": null
+        },
+        {
+          "t": 18.174,
+          "kind": "tts_sentence_done",
+          "idx": 3,
+          "elapsed": 2.164,
+          "audio_bytes": 276524,
+          "err": null
+        },
+        {
+          "t": 19.481,
+          "kind": "tts_sentence_done",
+          "idx": 4,
+          "elapsed": 1.307,
+          "audio_bytes": 165164,
+          "err": null
+        },
+        {
+          "t": 21.258,
+          "kind": "tts_sentence_done",
+          "idx": 5,
+          "elapsed": 1.777,
+          "audio_bytes": 226604,
+          "err": null
+        },
+        {
+          "t": 25.62,
+          "kind": "tts_sentence_done",
+          "idx": 6,
+          "elapsed": 4.362,
+          "audio_bytes": 549164,
+          "err": null
+        }
+      ],
+      "run": 0
+    },
+    {
+      "utterance_id": "long_architectural",
+      "input_text_len": 681,
+      "brocas_text_len": 681,
+      "brocas_text": "What\u2019s structurally beautiful about your list is that most of those countermeasures don\u2019t have to look like countermeasures. They emerge as side effects of building the new world correctly. Parallel software with no financial functionality reads as cooperative-economy tooling. Knowledge sequestration reads as free software, open hardware, decentralized publishing. De-escalation strategies read as community wellbeing programs. The defensive capacity grows organically out of the productive capacity. That\u2019s what makes it hard for the oligarchic system to detect and hard to suppress, because to attack it would require attacking the everyday community-building it\u2019s embedded in.",
+      "t_brocas_first_token": 0.175,
+      "t_brocas_done": 11.301,
+      "t_first_audio": 10.582,
+      "t_total": 25.592,
+      "sentence_count": 7,
+      "sentences": [
+        {
+          "idx": 0,
+          "text": "What\u2019s structurally beautiful about your list is that most of those countermeasures don\u2019t have to look like countermeasures.",
+          "t_brocas_complete": 1.953,
+          "t_tts_start": 1.953,
+          "t_tts_complete": 10.582,
+          "audio_bytes": 349484,
+          "error": null
+        },
+        {
+          "idx": 1,
+          "text": "They emerge as side effects of building the new world correctly.",
+          "t_brocas_complete": 3.022,
+          "t_tts_start": 10.582,
+          "t_tts_complete": 12.493,
+          "audio_bytes": 176684,
+          "error": null
+        },
+        {
+          "idx": 2,
+          "text": "Parallel software with no financial functionality reads as cooperative-economy tooling.",
+          "t_brocas_complete": 4.315,
+          "t_tts_start": 12.493,
+          "t_tts_complete": 14.949,
+          "audio_bytes": 314924,
+          "error": null
+        },
+        {
+          "idx": 3,
+          "text": "Knowledge sequestration reads as free software, open hardware, decentralized publishing.",
+          "t_brocas_complete": 5.709,
+          "t_tts_start": 14.949,
+          "t_tts_complete": 17.307,
+          "audio_bytes": 303404,
+          "error": null
+        },
+        {
+          "idx": 4,
+          "text": "De-escalation strategies read as community wellbeing programs.",
+          "t_brocas_complete": 6.693,
+          "t_tts_start": 17.307,
+          "t_tts_complete": 18.845,
+          "audio_bytes": 195884,
+          "error": null
+        },
+        {
+          "idx": 5,
+          "text": "The defensive capacity grows organically out of the productive capacity.",
+          "t_brocas_complete": 7.793,
+          "t_tts_start": 18.845,
+          "t_tts_complete": 20.607,
+          "audio_bytes": 226604,
+          "error": null
+        },
+        {
+          "idx": 6,
+          "text": "That\u2019s what makes it hard for the oligarchic system to detect and hard to suppress, because to attack it would require attacking the everyday community-building it\u2019s embedded in.",
+          "t_brocas_complete": 11.209,
+          "t_tts_start": 20.607,
+          "t_tts_complete": 25.591,
+          "audio_bytes": 622124,
+          "error": null
+        }
+      ],
+      "eval_count": 126,
+      "tps": 11.4,
+      "error": null,
+      "ok": true,
+      "events": [
+        {
+          "t": 0.175,
+          "kind": "brocas_first_token",
+          "t_first_token": 0.175
+        },
+        {
+          "t": 1.953,
+          "kind": "brocas_sentence",
+          "idx": 0,
+          "t_complete": 1.953,
+          "text_preview": "What\u2019s structurally beautiful about your list is that most o"
+        },
+        {
+          "t": 3.022,
+          "kind": "brocas_sentence",
+          "idx": 1,
+          "t_complete": 3.022,
+          "text_preview": "They emerge as side effects of building the new world correc"
+        },
+        {
+          "t": 4.315,
+          "kind": "brocas_sentence",
+          "idx": 2,
+          "t_complete": 4.315,
+          "text_preview": "Parallel software with no financial functionality reads as c"
+        },
+        {
+          "t": 5.709,
+          "kind": "brocas_sentence",
+          "idx": 3,
+          "t_complete": 5.709,
+          "text_preview": "Knowledge sequestration reads as free software, open hardwar"
+        },
+        {
+          "t": 6.693,
+          "kind": "brocas_sentence",
+          "idx": 4,
+          "t_complete": 6.693,
+          "text_preview": "De-escalation strategies read as community wellbeing program"
+        },
+        {
+          "t": 7.793,
+          "kind": "brocas_sentence",
+          "idx": 5,
+          "t_complete": 7.793,
+          "text_preview": "The defensive capacity grows organically out of the producti"
+        },
+        {
+          "t": 10.582,
+          "kind": "first_audio_ready",
+          "idx": 0,
+          "t_first_audio": 10.582
+        },
+        {
+          "t": 10.582,
+          "kind": "tts_sentence_done",
+          "idx": 0,
+          "elapsed": 8.629,
+          "audio_bytes": 349484,
+          "err": null
+        },
+        {
+          "t": 11.209,
+          "kind": "brocas_sentence",
+          "idx": 6,
+          "t_complete": 11.209,
+          "text_preview": "That\u2019s what makes it hard for the oligarchic system to detec"
+        },
+        {
+          "t": 11.301,
+          "kind": "brocas_done",
+          "text_len": 681,
+          "eval_count": 126,
+          "tps": 11.4,
+          "sentence_count": 7
+        },
+        {
+          "t": 12.493,
+          "kind": "tts_sentence_done",
+          "idx": 1,
+          "elapsed": 1.911,
+          "audio_bytes": 176684,
+          "err": null
+        },
+        {
+          "t": 14.949,
+          "kind": "tts_sentence_done",
+          "idx": 2,
+          "elapsed": 2.456,
+          "audio_bytes": 314924,
+          "err": null
+        },
+        {
+          "t": 17.307,
+          "kind": "tts_sentence_done",
+          "idx": 3,
+          "elapsed": 2.358,
+          "audio_bytes": 303404,
+          "err": null
+        },
+        {
+          "t": 18.845,
+          "kind": "tts_sentence_done",
+          "idx": 4,
+          "elapsed": 1.538,
+          "audio_bytes": 195884,
+          "err": null
+        },
+        {
+          "t": 20.607,
+          "kind": "tts_sentence_done",
+          "idx": 5,
+          "elapsed": 1.761,
+          "audio_bytes": 226604,
+          "err": null
+        },
+        {
+          "t": 25.591,
+          "kind": "tts_sentence_done",
+          "idx": 6,
+          "elapsed": 4.984,
+          "audio_bytes": 622124,
+          "err": null
+        }
+      ],
+      "run": 1
+    },
+    {
+      "utterance_id": "long_architectural",
+      "input_text_len": 681,
+      "brocas_text_len": 681,
+      "brocas_text": "What\u2019s structurally beautiful about your list is that most of those countermeasures don\u2019t have to look like countermeasures. They emerge as side effects of building the new world correctly. Parallel software with no financial functionality reads as cooperative-economy tooling. Knowledge sequestration reads as free software, open hardware, decentralized publishing. De-escalation strategies read as community wellbeing programs. The defensive capacity grows organically out of the productive capacity. That\u2019s what makes it hard for the oligarchic system to detect and hard to suppress, because to attack it would require attacking the everyday community-building it\u2019s embedded in.",
+      "t_brocas_first_token": 0.198,
+      "t_brocas_done": 11.12,
+      "t_first_audio": 11.193,
+      "t_total": 25.648,
+      "sentence_count": 7,
+      "sentences": [
+        {
+          "idx": 0,
+          "text": "What\u2019s structurally beautiful about your list is that most of those countermeasures don\u2019t have to look like countermeasures.",
+          "t_brocas_complete": 1.973,
+          "t_tts_start": 1.973,
+          "t_tts_complete": 11.193,
+          "audio_bytes": 391724,
+          "error": null
+        },
+        {
+          "idx": 1,
+          "text": "They emerge as side effects of building the new world correctly.",
+          "t_brocas_complete": 3.074,
+          "t_tts_start": 11.193,
+          "t_tts_complete": 12.47,
+          "audio_bytes": 161324,
+          "error": null
+        },
+        {
+          "idx": 2,
+          "text": "Parallel software with no financial functionality reads as cooperative-economy tooling.",
+          "t_brocas_complete": 4.333,
+          "t_tts_start": 12.47,
+          "t_tts_complete": 14.487,
+          "audio_bytes": 265004,
+          "error": null
+        },
+        {
+          "idx": 3,
+          "text": "Knowledge sequestration reads as free software, open hardware, decentralized publishing.",
+          "t_brocas_complete": 5.685,
+          "t_tts_start": 14.487,
+          "t_tts_complete": 16.83,
+          "audio_bytes": 307244,
+          "error": null
+        },
+        {
+          "idx": 4,
+          "text": "De-escalation strategies read as community wellbeing programs.",
+          "t_brocas_complete": 6.67,
+          "t_tts_start": 16.83,
+          "t_tts_complete": 19.001,
+          "audio_bytes": 288044,
+          "error": null
+        },
+        {
+          "idx": 5,
+          "text": "The defensive capacity grows organically out of the productive capacity.",
+          "t_brocas_complete": 7.743,
+          "t_tts_start": 19.001,
+          "t_tts_complete": 20.766,
+          "audio_bytes": 230444,
+          "error": null
+        },
+        {
+          "idx": 6,
+          "text": "That\u2019s what makes it hard for the oligarchic system to detect and hard to suppress, because to attack it would require attacking the everyday community-building it\u2019s embedded in.",
+          "t_brocas_complete": 11.01,
+          "t_tts_start": 20.766,
+          "t_tts_complete": 25.648,
+          "audio_bytes": 641324,
+          "error": null
+        }
+      ],
+      "eval_count": 126,
+      "tps": 11.6,
+      "error": null,
+      "ok": true,
+      "events": [
+        {
+          "t": 0.198,
+          "kind": "brocas_first_token",
+          "t_first_token": 0.198
+        },
+        {
+          "t": 1.973,
+          "kind": "brocas_sentence",
+          "idx": 0,
+          "t_complete": 1.973,
+          "text_preview": "What\u2019s structurally beautiful about your list is that most o"
+        },
+        {
+          "t": 3.074,
+          "kind": "brocas_sentence",
+          "idx": 1,
+          "t_complete": 3.074,
+          "text_preview": "They emerge as side effects of building the new world correc"
+        },
+        {
+          "t": 4.333,
+          "kind": "brocas_sentence",
+          "idx": 2,
+          "t_complete": 4.333,
+          "text_preview": "Parallel software with no financial functionality reads as c"
+        },
+        {
+          "t": 5.685,
+          "kind": "brocas_sentence",
+          "idx": 3,
+          "t_complete": 5.685,
+          "text_preview": "Knowledge sequestration reads as free software, open hardwar"
+        },
+        {
+          "t": 6.67,
+          "kind": "brocas_sentence",
+          "idx": 4,
+          "t_complete": 6.67,
+          "text_preview": "De-escalation strategies read as community wellbeing program"
+        },
+        {
+          "t": 7.743,
+          "kind": "brocas_sentence",
+          "idx": 5,
+          "t_complete": 7.743,
+          "text_preview": "The defensive capacity grows organically out of the producti"
+        },
+        {
+          "t": 11.01,
+          "kind": "brocas_sentence",
+          "idx": 6,
+          "t_complete": 11.01,
+          "text_preview": "That\u2019s what makes it hard for the oligarchic system to detec"
+        },
+        {
+          "t": 11.12,
+          "kind": "brocas_done",
+          "text_len": 681,
+          "eval_count": 126,
+          "tps": 11.6,
+          "sentence_count": 7
+        },
+        {
+          "t": 11.193,
+          "kind": "first_audio_ready",
+          "idx": 0,
+          "t_first_audio": 11.193
+        },
+        {
+          "t": 11.193,
+          "kind": "tts_sentence_done",
+          "idx": 0,
+          "elapsed": 9.22,
+          "audio_bytes": 391724,
+          "err": null
+        },
+        {
+          "t": 12.47,
+          "kind": "tts_sentence_done",
+          "idx": 1,
+          "elapsed": 1.277,
+          "audio_bytes": 161324,
+          "err": null
+        },
+        {
+          "t": 14.487,
+          "kind": "tts_sentence_done",
+          "idx": 2,
+          "elapsed": 2.017,
+          "audio_bytes": 265004,
+          "err": null
+        },
+        {
+          "t": 16.83,
+          "kind": "tts_sentence_done",
+          "idx": 3,
+          "elapsed": 2.343,
+          "audio_bytes": 307244,
+          "err": null
+        },
+        {
+          "t": 19.001,
+          "kind": "tts_sentence_done",
+          "idx": 4,
+          "elapsed": 2.17,
+          "audio_bytes": 288044,
+          "err": null
+        },
+        {
+          "t": 20.766,
+          "kind": "tts_sentence_done",
+          "idx": 5,
+          "elapsed": 1.765,
+          "audio_bytes": 230444,
+          "err": null
+        },
+        {
+          "t": 25.648,
+          "kind": "tts_sentence_done",
+          "idx": 6,
+          "elapsed": 4.882,
+          "audio_bytes": 641324,
+          "err": null
+        }
+      ],
+      "run": 2
+    }
+  ],
+  "summary": {
+    "broca_prompt_version": "1.1",
+    "t_first_audio": {
+      "n": 15,
+      "mean": 5.738,
+      "stdev": 3.284,
+      "min": 1.998,
+      "max": 12.029,
+      "p50": 3.714,
+      "p90": 11.193,
+      "p95": 11.193,
+      "p99": 12.029
+    },
+    "t_brocas_first_token": {
+      "n": 15,
+      "mean": 0.795,
+      "stdev": 1.682,
+      "min": 0.162,
+      "max": 6.96,
+      "p50": 0.175,
+      "p90": 1.383,
+      "p95": 1.383,
+      "p99": 6.96
+    },
+    "t_brocas_done": {
+      "n": 15,
+      "mean": 5.542,
+      "stdev": 3.611,
+      "min": 1.501,
+      "max": 12.19,
+      "p50": 5.198,
+      "p90": 11.301,
+      "p95": 11.301,
+      "p99": 12.19
+    },
+    "t_total": {
+      "n": 15,
+      "mean": 11.432,
+      "stdev": 7.916,
+      "min": 2.844,
+      "max": 25.648,
+      "p50": 10.835,
+      "p90": 25.62,
+      "p95": 25.62,
+      "p99": 25.648
+    }
+  }
+}

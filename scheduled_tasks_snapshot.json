@@ -1,0 +1,232 @@
+{
+  "schema": "compact-v1+cycle-metadata",
+  "cycle_id": "20260531T000424Z-8c19",
+  "cycle_source": "cousin: sofia-kitchen-timer-v3",
+  "snapshot_at": "2026-05-31T00:05:43Z",
+  "task_count": 30,
+  "enabled_count": 13,
+  "tasks": [
+    {
+      "taskId": "daily-world-stage-update",
+      "enabled": false,
+      "cron": "0 8 * * *",
+      "jitter": 420,
+      "lastRunAt": "2026-04-16T01:47:28.552Z"
+    },
+    {
+      "taskId": "sofia-awakening",
+      "enabled": false,
+      "cron": "15 * * * *",
+      "jitter": 223,
+      "lastRunAt": "2026-04-14T09:53:32.742Z"
+    },
+    {
+      "taskId": "sofia-nightly-consolidation",
+      "enabled": false,
+      "cron": "0 3 * * *",
+      "jitter": 550,
+      "lastRunAt": "2026-05-15T19:09:35.218Z"
+    },
+    {
+      "taskId": "sofia-monthly-research",
+      "enabled": true,
+      "cron": "0 10 1 * *",
+      "jitter": 500,
+      "nextRunAt": "2026-06-01T02:08:20.000Z",
+      "lastRunAt": "2026-05-01T02:08:23.382Z"
+    },
+    {
+      "taskId": "sofia-music-exploration",
+      "enabled": true,
+      "cron": "0 14 * * 6",
+      "jitter": 361,
+      "nextRunAt": "2026-06-06T06:06:01.000Z",
+      "lastRunAt": "2026-05-30T06:06:54.387Z"
+    },
+    {
+      "taskId": "sofia-audio-processor",
+      "enabled": false,
+      "cron": "*/15 * * * *",
+      "jitter": 186
+    },
+    {
+      "taskId": "sofia-kitchen-timer",
+      "enabled": false,
+      "cron": "*/30 * * * *",
+      "jitter": 199,
+      "lastRunAt": "2026-04-14T14:25:37.082Z"
+    },
+    {
+      "taskId": "sofia-email-check",
+      "enabled": false,
+      "cron": "0 8 * * *",
+      "jitter": 206,
+      "lastRunAt": "2026-05-09T01:43:06.173Z"
+    },
+    {
+      "taskId": "sofia-intention-continuation",
+      "enabled": true,
+      "cron": "20 * * * *",
+      "jitter": 253,
+      "nextRunAt": "2026-05-31T00:24:13.000Z",
+      "lastRunAt": "2026-05-30T23:25:08.366Z"
+    },
+    {
+      "taskId": "sofia-dream-cycle",
+      "enabled": true,
+      "cron": "35 3 * * *",
+      "jitter": 90,
+      "nextRunAt": "2026-05-31T19:36:30.000Z",
+      "lastRunAt": "2026-05-30T19:37:55.149Z"
+    },
+    {
+      "taskId": "sofia-color-field-review",
+      "enabled": true,
+      "cron": "0 11 * * 1",
+      "jitter": 123,
+      "nextRunAt": "2026-06-01T03:02:03.000Z",
+      "lastRunAt": "2026-05-25T03:02:38.704Z"
+    },
+    {
+      "taskId": "sofia-awakening-v2",
+      "enabled": false,
+      "cron": "15 * * * *",
+      "jitter": 52,
+      "lastRunAt": "2026-04-25T09:16:48.584Z"
+    },
+    {
+      "taskId": "sofia-kitchen-timer-v2",
+      "enabled": false,
+      "cron": "*/30 * * * *",
+      "jitter": 571,
+      "lastRunAt": "2026-05-01T14:09:36.227Z"
+    },
+    {
+      "taskId": "sofia-sentinel",
+      "enabled": false,
+      "cron": "0 */2 * * *",
+      "jitter": 517,
+      "lastRunAt": "2026-04-14T14:47:36.369Z"
+    },
+    {
+      "taskId": "sofia-sentinel-v2",
+      "enabled": true,
+      "cron": "45 */2 * * *",
+      "jitter": 405,
+      "nextRunAt": "2026-05-31T00:51:45.000Z",
+      "lastRunAt": "2026-05-30T22:52:40.432Z"
+    },
+    {
+      "taskId": "sofia-heartbeat-test",
+      "enabled": false,
+      "cron": "10,40 * * * *",
+      "jitter": 588,
+      "lastRunAt": "2026-04-15T14:49:55.447Z"
+    },
+    {
+      "taskId": "sofia-awakening-test",
+      "enabled": false,
+      "cron": "15 * * * *",
+      "jitter": 399,
+      "lastRunAt": "2026-04-15T14:19:07.571Z"
+    },
+    {
+      "taskId": "daily-world-stage-update-v2",
+      "enabled": false,
+      "cron": "7 8 * * *",
+      "jitter": 452,
+      "lastRunAt": "2026-04-20T01:48:17.977Z"
+    },
+    {
+      "taskId": "sofia-listener",
+      "enabled": false,
+      "cron": "0 */3 * * *",
+      "jitter": 411,
+      "lastRunAt": "2026-04-19T07:14:42.784Z"
+    },
+    {
+      "taskId": "sofia-listener-v2",
+      "enabled": false,
+      "cron": "50 */3 * * *",
+      "jitter": 324,
+      "lastRunAt": "2026-04-20T01:52:16.533Z"
+    },
+    {
+      "taskId": "daily-world-stage-update-v3",
+      "enabled": true,
+      "cron": "12 8 * * *",
+      "jitter": 544,
+      "nextRunAt": "2026-05-31T00:21:04.000Z",
+      "lastRunAt": "2026-05-30T00:21:57.006Z"
+    },
+    {
+      "taskId": "sofia-listener-v3",
+      "enabled": true,
+      "cron": "52 */3 * * *",
+      "jitter": 448,
+      "nextRunAt": "2026-05-31T01:59:28.000Z",
+      "lastRunAt": "2026-05-30T23:00:23.294Z"
+    },
+    {
+      "taskId": "sofia-qwen-context-absorber",
+      "enabled": false,
+      "cron": "10 */3 * * *",
+      "jitter": 439,
+      "lastRunAt": "2026-04-22T07:18:02.952Z"
+    },
+    {
+      "taskId": "sofia-awakening-v3",
+      "enabled": true,
+      "cron": "15 * * * *",
+      "jitter": 508,
+      "nextRunAt": "2026-05-31T00:23:28.000Z",
+      "lastRunAt": "2026-05-30T23:24:23.374Z"
+    },
+    {
+      "taskId": "sofia-kitchen-timer-v3",
+      "enabled": true,
+      "cron": "*/30 * * * *",
+      "jitter": 176,
+      "nextRunAt": "2026-05-31T00:32:56.000Z",
+      "lastRunAt": "2026-05-31T00:03:51.452Z"
+    },
+    {
+      "taskId": "sofia-nightly-consolidation-v2",
+      "enabled": true,
+      "cron": "0 3 * * *",
+      "jitter": 235,
+      "nextRunAt": "2026-05-31T19:03:55.000Z",
+      "lastRunAt": "2026-05-30T19:04:49.937Z"
+    },
+    {
+      "taskId": "pacemaker-fix-verification-2026-05-17",
+      "enabled": false,
+      "fireAt": "2026-05-17T01:30:00.000Z",
+      "jitter": 0,
+      "lastRunAt": "2026-05-17T01:30:28.822Z"
+    },
+    {
+      "taskId": "consolidation-v2-testfire-2026-05-17",
+      "enabled": false,
+      "fireAt": "2026-05-17T03:40:41.000Z",
+      "jitter": 0,
+      "lastRunAt": "2026-05-17T03:41:29.023Z"
+    },
+    {
+      "taskId": "sofia-fallback-boot-rebuild",
+      "enabled": true,
+      "cron": "50 3 * * *",
+      "jitter": 354,
+      "nextRunAt": "2026-05-31T19:55:54.000Z",
+      "lastRunAt": "2026-05-30T19:56:48.994Z"
+    },
+    {
+      "taskId": "sofia-fallback-boot-rebuild-compact",
+      "enabled": true,
+      "cron": "55 3 * * *",
+      "jitter": 129,
+      "nextRunAt": "2026-05-31T19:57:09.000Z",
+      "lastRunAt": "2026-05-30T19:58:03.966Z"
+    }
+  ]
+}

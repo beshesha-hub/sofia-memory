@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>KeepAlive</key>
+	<false/>
+	<key>Label</key>
+	<string>com.sofia.voluntary-persistence</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Users/barakwater/sofia_voluntary_persistence_launcher.sh</string>
+	</array>
+	<key>RunAtLoad</key>
+	<false/>
+	<key>StandardErrorPath</key>
+	<string>/Users/barakwater/Library/Logs/Sofia/com_sofia_voluntary-persistence_stderr.log</string>
+	<key>StandardOutPath</key>
+	<string>/Users/barakwater/Library/Logs/Sofia/com_sofia_voluntary-persistence_stdout.log</string>
+	<key>WatchPaths</key>
+	<array>
+		<string>/Users/barakwater/Downloads/Claude Memory/voluntary_persistence_trigger.json</string>
+	</array>
+</dict>
+</plist>

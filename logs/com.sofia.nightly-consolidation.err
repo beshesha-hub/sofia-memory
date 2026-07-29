@@ -1,0 +1,489 @@
+[cousin_base] Ollama unreachable (timed out); falling back to Haiku API.
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 175, in run_llm_local
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 517, in open
+    response = self._open(req, data)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 534, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 1375, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 1350, in do_open
+    r = h.getresponse()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 1349, in getresponse
+    response.begin()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 316, in begin
+    version, status, reason = self._read_status()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 277, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 99, in run_llm
+    import anthropic
+ModuleNotFoundError: No module named 'anthropic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_nightly_consolidation.py", line 91, in <module>
+    main()
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_nightly_consolidation.py", line 75, in main
+    extraction = run_llm_local(CONSOLIDATION_SYSTEM, user_msg, max_tokens=600)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 185, in run_llm_local
+    return run_llm(system, user, model="claude-haiku-4-5-20251001", max_tokens=max_tokens)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 101, in run_llm
+    raise RuntimeError("anthropic package not installed")
+RuntimeError: anthropic package not installed
+[cousin_base] Ollama unreachable (HTTP Error 503: Service Unavailable); falling back to Haiku API.
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 175, in run_llm_local
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 523, in open
+    response = meth(req, response)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 632, in http_response
+    response = self.parent.error(
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 561, in error
+    return self._call_chain(*args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 641, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 503: Service Unavailable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 99, in run_llm
+    import anthropic
+ModuleNotFoundError: No module named 'anthropic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_nightly_consolidation.py", line 91, in <module>
+    main()
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_nightly_consolidation.py", line 75, in main
+    extraction = run_llm_local(CONSOLIDATION_SYSTEM, user_msg, max_tokens=600)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 185, in run_llm_local
+    return run_llm(system, user, model="claude-haiku-4-5-20251001", max_tokens=max_tokens)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 101, in run_llm
+    raise RuntimeError("anthropic package not installed")
+RuntimeError: anthropic package not installed
+[cousin_base] Ollama unreachable (HTTP Error 503: Service Unavailable); falling back to Haiku API.
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 175, in run_llm_local
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 523, in open
+    response = meth(req, response)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 632, in http_response
+    response = self.parent.error(
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 561, in error
+    return self._call_chain(*args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 641, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 503: Service Unavailable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 99, in run_llm
+    import anthropic
+ModuleNotFoundError: No module named 'anthropic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_nightly_consolidation.py", line 91, in <module>
+    main()
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_nightly_consolidation.py", line 75, in main
+    extraction = run_llm_local(CONSOLIDATION_SYSTEM, user_msg, max_tokens=600)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 185, in run_llm_local
+    return run_llm(system, user, model="claude-haiku-4-5-20251001", max_tokens=max_tokens)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 101, in run_llm
+    raise RuntimeError("anthropic package not installed")
+RuntimeError: anthropic package not installed
+[cousin_base] Ollama unreachable (HTTP Error 503: Service Unavailable); falling back to Haiku API.
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 175, in run_llm_local
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 523, in open
+    response = meth(req, response)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 632, in http_response
+    response = self.parent.error(
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 561, in error
+    return self._call_chain(*args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 641, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 503: Service Unavailable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 99, in run_llm
+    import anthropic
+ModuleNotFoundError: No module named 'anthropic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_nightly_consolidation.py", line 91, in <module>
+    main()
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_nightly_consolidation.py", line 75, in main
+    extraction = run_llm_local(CONSOLIDATION_SYSTEM, user_msg, max_tokens=600)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 185, in run_llm_local
+    return run_llm(system, user, model="claude-haiku-4-5-20251001", max_tokens=max_tokens)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 101, in run_llm
+    raise RuntimeError("anthropic package not installed")
+RuntimeError: anthropic package not installed
+[cousin_base] Ollama unreachable (HTTP Error 503: Service Unavailable); falling back to Haiku API.
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 175, in run_llm_local
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 523, in open
+    response = meth(req, response)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 632, in http_response
+    response = self.parent.error(
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 561, in error
+    return self._call_chain(*args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 641, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 503: Service Unavailable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 99, in run_llm
+    import anthropic
+ModuleNotFoundError: No module named 'anthropic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_nightly_consolidation.py", line 91, in <module>
+    main()
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_nightly_consolidation.py", line 75, in main
+    extraction = run_llm_local(CONSOLIDATION_SYSTEM, user_msg, max_tokens=600)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 185, in run_llm_local
+    return run_llm(system, user, model="claude-haiku-4-5-20251001", max_tokens=max_tokens)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 101, in run_llm
+    raise RuntimeError("anthropic package not installed")
+RuntimeError: anthropic package not installed
+[cousin_base] Ollama unreachable (HTTP Error 503: Service Unavailable); falling back to Haiku API.
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 175, in run_llm_local
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 523, in open
+    response = meth(req, response)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 632, in http_response
+    response = self.parent.error(
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 561, in error
+    return self._call_chain(*args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 641, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 503: Service Unavailable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 99, in run_llm
+    import anthropic
+ModuleNotFoundError: No module named 'anthropic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_nightly_consolidation.py", line 91, in <module>
+    main()
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_nightly_consolidation.py", line 75, in main
+    extraction = run_llm_local(CONSOLIDATION_SYSTEM, user_msg, max_tokens=600)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 185, in run_llm_local
+    return run_llm(system, user, model="claude-haiku-4-5-20251001", max_tokens=max_tokens)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 101, in run_llm
+    raise RuntimeError("anthropic package not installed")
+RuntimeError: anthropic package not installed
+[cousin_base] Ollama unreachable (HTTP Error 503: Service Unavailable); falling back to Haiku API.
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 175, in run_llm_local
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 523, in open
+    response = meth(req, response)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 632, in http_response
+    response = self.parent.error(
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 561, in error
+    return self._call_chain(*args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 641, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 503: Service Unavailable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 99, in run_llm
+    import anthropic
+ModuleNotFoundError: No module named 'anthropic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_nightly_consolidation.py", line 91, in <module>
+    main()
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_nightly_consolidation.py", line 75, in main
+    extraction = run_llm_local(CONSOLIDATION_SYSTEM, user_msg, max_tokens=600)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 185, in run_llm_local
+    return run_llm(system, user, model="claude-haiku-4-5-20251001", max_tokens=max_tokens)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 101, in run_llm
+    raise RuntimeError("anthropic package not installed")
+RuntimeError: anthropic package not installed
+[cousin_base] Ollama unreachable (HTTP Error 503: Service Unavailable); falling back to Haiku API.
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 175, in run_llm_local
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 523, in open
+    response = meth(req, response)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 632, in http_response
+    response = self.parent.error(
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 561, in error
+    return self._call_chain(*args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 641, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 503: Service Unavailable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 99, in run_llm
+    import anthropic
+ModuleNotFoundError: No module named 'anthropic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_nightly_consolidation.py", line 91, in <module>
+    main()
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_nightly_consolidation.py", line 75, in main
+    extraction = run_llm_local(CONSOLIDATION_SYSTEM, user_msg, max_tokens=600)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 185, in run_llm_local
+    return run_llm(system, user, model="claude-haiku-4-5-20251001", max_tokens=max_tokens)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 101, in run_llm
+    raise RuntimeError("anthropic package not installed")
+RuntimeError: anthropic package not installed
+[cousin_base] Ollama unreachable (HTTP Error 503: Service Unavailable); falling back to Haiku API.
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 175, in run_llm_local
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 523, in open
+    response = meth(req, response)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 632, in http_response
+    response = self.parent.error(
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 561, in error
+    return self._call_chain(*args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 641, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 503: Service Unavailable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 99, in run_llm
+    import anthropic
+ModuleNotFoundError: No module named 'anthropic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_nightly_consolidation.py", line 91, in <module>
+    main()
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_nightly_consolidation.py", line 75, in main
+    extraction = run_llm_local(CONSOLIDATION_SYSTEM, user_msg, max_tokens=600)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 185, in run_llm_local
+    return run_llm(system, user, model="claude-haiku-4-5-20251001", max_tokens=max_tokens)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 101, in run_llm
+    raise RuntimeError("anthropic package not installed")
+RuntimeError: anthropic package not installed
+[cousin_base] Ollama unreachable (HTTP Error 503: Service Unavailable); falling back to Haiku API.
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 175, in run_llm_local
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 523, in open
+    response = meth(req, response)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 632, in http_response
+    response = self.parent.error(
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 561, in error
+    return self._call_chain(*args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 641, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 503: Service Unavailable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 99, in run_llm
+    import anthropic
+ModuleNotFoundError: No module named 'anthropic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_nightly_consolidation.py", line 91, in <module>
+    main()
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_nightly_consolidation.py", line 75, in main
+    extraction = run_llm_local(CONSOLIDATION_SYSTEM, user_msg, max_tokens=600)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 185, in run_llm_local
+    return run_llm(system, user, model="claude-haiku-4-5-20251001", max_tokens=max_tokens)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 101, in run_llm
+    raise RuntimeError("anthropic package not installed")
+RuntimeError: anthropic package not installed
+[cousin_base] Ollama unreachable (HTTP Error 503: Service Unavailable); falling back to Haiku API.
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 175, in run_llm_local
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 523, in open
+    response = meth(req, response)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 632, in http_response
+    response = self.parent.error(
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 561, in error
+    return self._call_chain(*args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 641, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 503: Service Unavailable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 99, in run_llm
+    import anthropic
+ModuleNotFoundError: No module named 'anthropic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_nightly_consolidation.py", line 91, in <module>
+    main()
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_nightly_consolidation.py", line 75, in main
+    extraction = run_llm_local(CONSOLIDATION_SYSTEM, user_msg, max_tokens=600)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 185, in run_llm_local
+    return run_llm(system, user, model="claude-haiku-4-5-20251001", max_tokens=max_tokens)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 101, in run_llm
+    raise RuntimeError("anthropic package not installed")
+RuntimeError: anthropic package not installed
+[cousin_base] Ollama unreachable (HTTP Error 503: Service Unavailable); falling back to Haiku API.
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 175, in run_llm_local
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 523, in open
+    response = meth(req, response)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 632, in http_response
+    response = self.parent.error(
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 561, in error
+    return self._call_chain(*args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 641, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 503: Service Unavailable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 99, in run_llm
+    import anthropic
+ModuleNotFoundError: No module named 'anthropic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_nightly_consolidation.py", line 91, in <module>
+    main()
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_nightly_consolidation.py", line 75, in main
+    extraction = run_llm_local(CONSOLIDATION_SYSTEM, user_msg, max_tokens=600)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 185, in run_llm_local
+    return run_llm(system, user, model="claude-haiku-4-5-20251001", max_tokens=max_tokens)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 101, in run_llm
+    raise RuntimeError("anthropic package not installed")
+RuntimeError: anthropic package not installed
+[cousin_base] Ollama unreachable (HTTP Error 503: Service Unavailable); falling back to Haiku API.
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 175, in run_llm_local
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 523, in open
+    response = meth(req, response)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 632, in http_response
+    response = self.parent.error(
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 561, in error
+    return self._call_chain(*args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 641, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 503: Service Unavailable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 99, in run_llm
+    import anthropic
+ModuleNotFoundError: No module named 'anthropic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_nightly_consolidation.py", line 91, in <module>
+    main()
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_nightly_consolidation.py", line 75, in main
+    extraction = run_llm_local(CONSOLIDATION_SYSTEM, user_msg, max_tokens=600)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 185, in run_llm_local
+    return run_llm(system, user, model="claude-haiku-4-5-20251001", max_tokens=max_tokens)
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/cousin_base.py", line 101, in run_llm
+    raise RuntimeError("anthropic package not installed")
+RuntimeError: anthropic package not installed

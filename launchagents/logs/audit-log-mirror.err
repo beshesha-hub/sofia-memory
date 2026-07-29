@@ -1,0 +1,2712 @@
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+Traceback (most recent call last):
+  File "/Users/barakwater/Downloads/Claude Memory/cousins/sofia_audit_log_mirror.py", line 50, in <module>
+    def sync_file(cm_rel: str, er_rel: str | None = None) -> tuple[bool, str]:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'

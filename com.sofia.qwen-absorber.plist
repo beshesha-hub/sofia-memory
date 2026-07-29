@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.sofia.qwen-absorber</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/python3</string>
+        <string>/Users/barakwater/Downloads/Claude Memory/qwen_conversation_listener.py</string>
+    </array>
+    <!-- 30 minutes. Pairs with qwen_client.py keep_alive="35m" so the model
+         stays warm continuously, and with MIN_NEW_CHARS_THRESHOLD=1500 so idle
+         intervals cost nothing. -->
+    <key>StartInterval</key>
+    <integer>1800</integer>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/Users/barakwater/Downloads/Claude Memory/qwen_absorber_stdout.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/barakwater/Downloads/Claude Memory/qwen_absorber_stderr.log</string>
+</dict>
+</plist>
